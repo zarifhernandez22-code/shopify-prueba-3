@@ -68,6 +68,32 @@
             "padding-inline-end": 0
           },
           "blocks": {
+            "product_description_Kc9pzx": {
+              "type": "product-description",
+              "name": "t:names.product_description",
+              "settings": {
+                "text": "<h3>Myo-Inositol 16 en 1 (90 cápsulas veganas)</h3><ul><li>Apoya el equilibrio hormonal y la regularidad del ciclo menstrual</li><li>Ayuda al manejo saludable de la glucosa y la sensibilidad a la insulina</li><li>Reduce antojos y favorece el balance interno</li><li>Aporta vitaminas y minerales para el bienestar hormonal, óseo e inmune</li><li>Con myo-inositol, D-chiro inositol, berberina, sauzgatillo, DIM, vitamina D3+K2, magnesio y zinc</li></ul><h3>Corti-Soothe 13 en 1 (60 cápsulas veganas)</h3><ul><li>Ayuda a reducir el estrés y los niveles de cortisol</li><li>Favorece la calma mental sin sedación</li><li>Mejora el enfoque, la memoria y la energía mental</li><li>Apoya un sueño más profundo y reparador</li><li>Con ashwagandha, L-teanina, GABA, magnesio, fosfatidilserina, rhodiola, melena de león y valeriana</li></ul>",
+                "width": "fit-content",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "rte",
+                "font": "var(--font-body--family)",
+                "font_size": "1rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "text_color": "",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
             "text_9WaLn7": {
               "type": "text",
               "name": "t:names.title",
@@ -236,41 +262,12 @@
                 "row_1": {
                   "type": "_accordion-row",
                   "settings": {
-                    "heading": "Descripción",
+                    "heading": "",
                     "open_by_default": true,
                     "icon": "none",
                     "width": 20
                   },
-                  "blocks": {
-                    "text_r1": {
-                      "type": "text",
-                      "settings": {
-                        "text": "{{ closest.product.description }}",
-                        "width": "100%",
-                        "max_width": "normal",
-                        "alignment": "left",
-                        "type_preset": "custom",
-                        "font": "var(--font-subheading--family)",
-                        "font_size": "1.125rem",
-                        "line_height": "normal",
-                        "letter_spacing": "normal",
-                        "case": "none",
-                        "wrap": "pretty",
-                        "text_color": "",
-                        "background": false,
-                        "background_color": "#00000026",
-                        "corner_radius": 0,
-                        "padding-block-start": 12,
-                        "padding-block-end": 0,
-                        "padding-inline-start": 0,
-                        "padding-inline-end": 0
-                      },
-                      "blocks": {}
-                    }
-                  },
-                  "block_order": [
-                    "text_r1"
-                  ]
+                  "blocks": {}
                 },
                 "row_2": {
                   "type": "_accordion-row",
@@ -418,6 +415,7 @@
             }
           },
           "block_order": [
+            "product_description_Kc9pzx",
             "text_9WaLn7",
             "price_a7krng",
             "divider_HrJgFt",
@@ -442,12 +440,6 @@
     },
     "confianza": {
       "type": "sommalya-trustbar",
-      "settings": {
-        "background": "soft",
-        "accent": "",
-        "padding_top": 40,
-        "padding_bottom": 40
-      },
       "blocks": {
         "item_1": {
           "type": "item",
@@ -487,7 +479,13 @@
         "item_2",
         "item_3",
         "item_4"
-      ]
+      ],
+      "settings": {
+        "background": "soft",
+        "accent": "",
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
     },
     "garantia": {
       "type": "sommalya-cta",
@@ -600,6 +598,7 @@
                 "border_opacity": 100,
                 "border_color": "",
                 "border_radius": 0,
+                "link": "",
                 "open_in_new_tab": false,
                 "padding-block-start": 2,
                 "padding-block-end": 0,
@@ -638,6 +637,7 @@
                     "border_opacity": 100,
                     "border_color": "",
                     "border_radius": 0,
+                    "link": "",
                     "open_in_new_tab": false,
                     "padding-block-start": 0,
                     "padding-block-end": 0,
@@ -729,6 +729,7 @@
                     "border_opacity": 100,
                     "border_color": "",
                     "border_radius": 0,
+                    "link": "",
                     "open_in_new_tab": false,
                     "padding-block-start": 0,
                     "padding-block-end": 0,

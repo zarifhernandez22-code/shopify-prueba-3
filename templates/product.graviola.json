@@ -505,12 +505,6 @@
     },
     "confianza": {
       "type": "sommalya-trustbar",
-      "settings": {
-        "background": "soft",
-        "accent": "#7F9A6E",
-        "padding_top": 40,
-        "padding_bottom": 40
-      },
       "blocks": {
         "item_1": {
           "type": "item",
@@ -550,22 +544,16 @@
         "item_2",
         "item_3",
         "item_4"
-      ]
+      ],
+      "settings": {
+        "background": "soft",
+        "accent": "#7F9A6E",
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
     },
     "beneficios": {
       "type": "sommalya-features",
-      "settings": {
-        "eyebrow": "Características y beneficios",
-        "heading": "Lo que contiene, <em>lo que sientes.</em>",
-        "text": "Un extracto concentrado de guanábana en gotas, para sumar a tu rutina diaria.",
-        "head_layout": "split",
-        "left_label": "Lo que contiene",
-        "right_label": "Lo que sientes",
-        "background": "base",
-        "accent": "#7F9A6E",
-        "padding_top": 112,
-        "padding_bottom": 96
-      },
       "blocks": {
         "row_1": {
           "type": "row",
@@ -599,24 +587,22 @@
         "row_1",
         "row_2",
         "row_3"
-      ]
+      ],
+      "settings": {
+        "eyebrow": "Características y beneficios",
+        "heading": "Lo que contiene, <em>lo que sientes.</em>",
+        "text": "Un extracto concentrado de guanábana en gotas, para sumar a tu rutina diaria.",
+        "head_layout": "split",
+        "left_label": "Lo que contiene",
+        "right_label": "Lo que sientes",
+        "background": "base",
+        "accent": "#7F9A6E",
+        "padding_top": 112,
+        "padding_bottom": 96
+      }
     },
     "para_quien": {
       "type": "sommalya-split",
-      "settings": {
-        "image_asset": "sommalya-graviola.jpg",
-        "placeholder_label": "Gotas de Guanábana",
-        "reverse": true,
-        "eyebrow": "Para quién es",
-        "heading": "Para quien prefiere <em>lo herbal.</em>",
-        "body": "<p>Para quien busca complementar su alimentación con un extracto de origen vegetal, en un formato práctico.</p>",
-        "button_label": "",
-        "button_link": "",
-        "background": "soft",
-        "accent": "#7F9A6E",
-        "padding_top": 112,
-        "padding_bottom": 112
-      },
       "blocks": {
         "point_1": {
           "type": "point",
@@ -641,21 +627,24 @@
         "point_1",
         "point_2",
         "point_3"
-      ]
+      ],
+      "settings": {
+        "image_asset": "sommalya-graviola.jpg",
+        "placeholder_label": "Gotas de Guanábana",
+        "reverse": true,
+        "eyebrow": "Para quién es",
+        "heading": "Para quien prefiere <em>lo herbal.</em>",
+        "body": "<p>Para quien busca complementar su alimentación con un extracto de origen vegetal, en un formato práctico.</p>",
+        "button_label": "",
+        "button_link": "",
+        "background": "soft",
+        "accent": "#7F9A6E",
+        "padding_top": 112,
+        "padding_bottom": 112
+      }
     },
     "formula": {
       "type": "sommalya-ingredients",
-      "settings": {
-        "eyebrow": "La fórmula",
-        "heading": "Qué hay <em>dentro.</em>",
-        "text": "Un extracto de guanábana, sin complicaciones.",
-        "head_layout": "split",
-        "note": "1800 mg · 60 ml por frasco. Consulta el empaque para la composición completa.",
-        "background": "base",
-        "accent": "#7F9A6E",
-        "padding_top": 112,
-        "padding_bottom": 96
-      },
       "blocks": {
         "ing_1": {
           "type": "ingredient",
@@ -679,20 +668,21 @@
       "block_order": [
         "ing_1",
         "ing_2"
-      ]
+      ],
+      "settings": {
+        "eyebrow": "La fórmula",
+        "heading": "Qué hay <em>dentro.</em>",
+        "text": "Un extracto de guanábana, sin complicaciones.",
+        "head_layout": "split",
+        "note": "1800 mg · 60 ml por frasco. Consulta el empaque para la composición completa.",
+        "background": "base",
+        "accent": "#7F9A6E",
+        "padding_top": 112,
+        "padding_bottom": 96
+      }
     },
     "uso": {
       "type": "sommalya-steps",
-      "settings": {
-        "eyebrow": "Modo de uso",
-        "heading": "Un hábito <em>sencillo.</em>",
-        "text": "",
-        "head_layout": "left",
-        "background": "sand",
-        "accent": "#7F9A6E",
-        "padding_top": 96,
-        "padding_bottom": 96
-      },
       "blocks": {
         "step_1": {
           "type": "step",
@@ -720,7 +710,17 @@
         "step_1",
         "step_2",
         "step_3"
-      ]
+      ],
+      "settings": {
+        "eyebrow": "Modo de uso",
+        "heading": "Un hábito <em>sencillo.</em>",
+        "text": "",
+        "head_layout": "left",
+        "background": "sand",
+        "accent": "#7F9A6E",
+        "padding_top": 96,
+        "padding_bottom": 96
+      }
     },
     "testimonios": {
       "type": "sommalya-testimonials",
@@ -733,23 +733,10 @@
         "accent": "#7F9A6E",
         "padding_top": 96,
         "padding_bottom": 96
-      },
-      "blocks": {},
-      "block_order": []
+      }
     },
     "preguntas": {
       "type": "sommalya-faq",
-      "settings": {
-        "eyebrow": "Preguntas frecuentes",
-        "heading": "Antes de <em>decidirte.</em>",
-        "text": "",
-        "head_layout": "center",
-        "open_first": true,
-        "background": "base",
-        "accent": "#7F9A6E",
-        "padding_top": 96,
-        "padding_bottom": 112
-      },
       "blocks": {
         "q_1": {
           "type": "question",
@@ -793,7 +780,18 @@
         "q_3",
         "q_4",
         "q_5"
-      ]
+      ],
+      "settings": {
+        "eyebrow": "Preguntas frecuentes",
+        "heading": "Antes de <em>decidirte.</em>",
+        "text": "",
+        "head_layout": "center",
+        "open_first": true,
+        "background": "base",
+        "accent": "#7F9A6E",
+        "padding_top": 96,
+        "padding_bottom": 112
+      }
     },
     "garantia": {
       "type": "sommalya-cta",
