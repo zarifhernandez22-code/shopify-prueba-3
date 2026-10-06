@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -275,7 +284,7 @@
                     "text_r2": {
                       "type": "text",
                       "settings": {
-                        "text": "<ul><li><strong>Jengibre</strong> — 250 mg</li><li><strong>Hinojo</strong> — 200 mg</li><li><strong>Menta piperita</strong> — 100 mg</li><li><strong>Probióticos</strong> — 5 mil millones UFC</li></ul><p>Excipientes: cápsula vegetal (hidroxipropilmetilcelulosa).</p>",
+                        "text": "<ul><li><strong>Myo-Inositol</strong></li><li><strong>D-Chiro Inositol</strong></li><li><strong>Berberina</strong></li><li><strong>Vitamina D3 + K2</strong></li><li><strong>Folato</strong></li><li><strong>Sauzgatillo</strong></li><li><strong>Cromo</strong></li><li><strong>DIM</strong></li><li><strong>Vitamina B12</strong></li><li><strong>Magnesio</strong></li><li><strong>Ashwagandha</strong></li><li><strong>Zinc</strong></li><li><strong>Bioperina</strong></li><li><strong>Melón amargo</strong></li><li><strong>Canela de Ceilán</strong></li></ul><p>90 cápsulas veganas por frasco. Consulta la etiqueta para la composición completa.</p>",
                         "width": "100%",
                         "max_width": "normal",
                         "alignment": "left",
@@ -314,7 +323,7 @@
                     "text_r3": {
                       "type": "text",
                       "settings": {
-                        "text": "<p>Toma 1 cápsula con agua antes de las dos comidas principales.</p>",
+                        "text": "<p>Sigue la dosis indicada en la etiqueta del frasco. Tómalo con agua y alimentos.</p>",
                         "width": "100%",
                         "max_width": "normal",
                         "alignment": "left",
@@ -450,10 +459,10 @@
             "sommalya_summary": {
               "type": "sommalya-summary",
               "settings": {
-                "tagline": "Ligereza después de cada comida.",
-                "benefits": "Ayuda a reducir la pesadez y la hinchazón ocasional\nApoya una digestión cómoda y regular\nCon probióticos para tu flora intestinal",
-                "badges": "Vegano, Sin gluten, Sin colorantes, Cápsula vegetal",
-                "accent": "#8E9A6E"
+                "tagline": "Equilibrio femenino, de forma integral.",
+                "benefits": "Myo-inositol y D-chiro inositol en una sola fórmula\nCon vitamina D3+K2, folato, zinc y magnesio\nEl cromo contribuye al mantenimiento de niveles normales de glucosa en sangre",
+                "badges": "16 en 1, 90 cápsulas veganas, Hecho en EE. UU.",
+                "accent": "#B07A8A"
               },
               "blocks": {}
             }
@@ -486,7 +495,7 @@
       "type": "sommalya-trustbar",
       "settings": {
         "background": "soft",
-        "accent": "#8E9A6E",
+        "accent": "#B07A8A",
         "padding_top": 40,
         "padding_bottom": 40
       },
@@ -510,9 +519,9 @@
         "item_3": {
           "type": "item",
           "settings": {
-            "icon": "leaf",
-            "title": "Origen natural",
-            "text": "Ingredientes trazables, cápsula vegetal"
+            "icon": "globe",
+            "title": "Hecho en EE. UU.",
+            "text": "Fabricación con estándares de calidad"
           }
         },
         "item_4": {
@@ -535,12 +544,12 @@
       "type": "sommalya-pillars",
       "settings": {
         "eyebrow": "Beneficios",
-        "heading": "Sentirte ligero <em>es posible.</em>",
-        "text": "Plantas digestivas de uso tradicional y probióticos, en una sola cápsula.",
+        "heading": "Todo lo que necesitas, <em>en una cápsula.</em>",
+        "text": "Dieciséis ingredientes para acompañar el equilibrio hormonal y metabólico femenino.",
         "head_layout": "center",
         "show_numbers": false,
         "background": "base",
-        "accent": "#8E9A6E",
+        "accent": "#B07A8A",
         "padding_top": 112,
         "padding_bottom": 96
       },
@@ -548,25 +557,25 @@
         "pillar_1": {
           "type": "pillar",
           "settings": {
-            "icon": "leaf",
-            "title": "Menos pesadez",
-            "text": "Jengibre e hinojo, utilizados tradicionalmente para favorecer la digestión."
+            "icon": "heart",
+            "title": "Equilibrio hormonal",
+            "text": "Inositoles, sauzgatillo y DIM, ingredientes de uso habitual en el bienestar femenino."
           }
         },
         "pillar_2": {
           "type": "pillar",
           "settings": {
             "icon": "drop",
-            "title": "Menos hinchazón",
-            "text": "La menta piperita ayuda a aliviar la sensación de gases e hinchazón ocasional."
+            "title": "Metabolismo",
+            "text": "Cromo, berberina, canela de Ceilán y melón amargo para tu bienestar metabólico."
           }
         },
         "pillar_3": {
           "type": "pillar",
           "settings": {
-            "icon": "heart",
-            "title": "Flora equilibrada",
-            "text": "Cultivos probióticos que acompañan el equilibrio de tu microbiota intestinal."
+            "icon": "leaf",
+            "title": "Nutrición completa",
+            "text": "Vitamina D3+K2, folato, B12, magnesio y zinc en la misma fórmula."
           }
         }
       },
@@ -579,15 +588,16 @@
     "para_quien": {
       "type": "sommalya-split",
       "settings": {
-        "placeholder_label": "Digestión",
+        "image_asset": "sommalya-myo-inositol.jpg",
+        "placeholder_label": "Myo-Inositol 16 en 1",
         "reverse": true,
         "eyebrow": "Para quién es",
-        "heading": "Para quien come <em>a deshoras.</em>",
-        "body": "<p>Para ritmos de vida exigentes, comidas fuera de casa y digestiones que se alargan. Digestión es tu aliado después de la comida principal.</p>",
+        "heading": "Para cuidar <em>tu ciclo y tu energía.</em>",
+        "body": "<p>Para mujeres que buscan apoyar su equilibrio hormonal y metabólico con una fórmula completa, sin tomar varios frascos a la vez.</p>",
         "button_label": "",
         "button_link": "",
         "background": "soft",
-        "accent": "#8E9A6E",
+        "accent": "#B07A8A",
         "padding_top": 112,
         "padding_bottom": 112
       },
@@ -595,19 +605,19 @@
         "point_1": {
           "type": "point",
           "settings": {
-            "text": "Sientes pesadez después de comer"
+            "text": "Quieres apoyar tu equilibrio hormonal"
           }
         },
         "point_2": {
           "type": "point",
           "settings": {
-            "text": "Notas hinchazón con frecuencia"
+            "text": "Buscas cuidar tu metabolismo"
           }
         },
         "point_3": {
           "type": "point",
           "settings": {
-            "text": "Quieres cuidar tu flora intestinal"
+            "text": "Prefieres una fórmula completa en un solo producto"
           }
         }
       },
@@ -622,11 +632,11 @@
       "settings": {
         "eyebrow": "La fórmula",
         "heading": "Qué hay <em>dentro.</em>",
-        "text": "Cuatro ingredientes con una razón concreta para estar aquí. Nada más.",
+        "text": "Dieciséis ingredientes que se complementan entre sí.",
         "head_layout": "split",
-        "note": "Dosis por porción diaria (2 cápsulas). 60 cápsulas vegetales por frasco · 30 días.",
+        "note": "90 cápsulas veganas por frasco. Consulta la etiqueta para la composición completa.",
         "background": "base",
-        "accent": "#8E9A6E",
+        "accent": "#B07A8A",
         "padding_top": 112,
         "padding_bottom": 96
       },
@@ -634,37 +644,136 @@
         "ing_1": {
           "type": "ingredient",
           "settings": {
-            "name": "Jengibre",
-            "dose": "250 mg",
-            "origin": "Zingiber officinale · raíz",
-            "text": "Empleado tradicionalmente para favorecer la digestión y aliviar la sensación de náusea."
+            "name": "Myo-Inositol",
+            "dose": "",
+            "origin": "Inositol",
+            "text": "Componente clave de la fórmula para el equilibrio femenino."
           }
         },
         "ing_2": {
           "type": "ingredient",
           "settings": {
-            "name": "Hinojo",
-            "dose": "200 mg",
-            "origin": "Foeniculum vulgare · semilla",
-            "text": "Contribuye a reducir la sensación de gases e hinchazón ocasional."
+            "name": "D-Chiro Inositol",
+            "dose": "",
+            "origin": "Inositol",
+            "text": "Complementa al myo-inositol en una proporción combinada."
           }
         },
         "ing_3": {
           "type": "ingredient",
           "settings": {
-            "name": "Menta piperita",
-            "dose": "100 mg",
-            "origin": "Mentha × piperita · hoja",
-            "text": "Ayuda a la comodidad digestiva después de las comidas."
+            "name": "Berberina",
+            "dose": "",
+            "origin": "Extracto vegetal",
+            "text": "Compuesto vegetal de uso tradicional para el metabolismo."
           }
         },
         "ing_4": {
           "type": "ingredient",
           "settings": {
-            "name": "Probióticos",
-            "dose": "5 mil millones UFC",
-            "origin": "Lactobacillus y Bifidobacterium",
-            "text": "Cultivos vivos que acompañan el equilibrio de la flora intestinal."
+            "name": "Vitamina D3 + K2",
+            "dose": "",
+            "origin": "Vitaminas liposolubles",
+            "text": "La vitamina D contribuye al funcionamiento normal del sistema inmunitario."
+          }
+        },
+        "ing_5": {
+          "type": "ingredient",
+          "settings": {
+            "name": "Folato",
+            "dose": "",
+            "origin": "Vitamina B9",
+            "text": "Contribuye al crecimiento de los tejidos maternos durante el embarazo."
+          }
+        },
+        "ing_6": {
+          "type": "ingredient",
+          "settings": {
+            "name": "Sauzgatillo",
+            "dose": "",
+            "origin": "Chasteberry · fruto",
+            "text": "Planta de uso tradicional para el bienestar femenino."
+          }
+        },
+        "ing_7": {
+          "type": "ingredient",
+          "settings": {
+            "name": "Cromo",
+            "dose": "",
+            "origin": "Mineral",
+            "text": "Contribuye al mantenimiento de niveles normales de glucosa en sangre."
+          }
+        },
+        "ing_8": {
+          "type": "ingredient",
+          "settings": {
+            "name": "DIM",
+            "dose": "",
+            "origin": "Diindolilmetano",
+            "text": "Compuesto presente de forma natural en las verduras crucíferas."
+          }
+        },
+        "ing_9": {
+          "type": "ingredient",
+          "settings": {
+            "name": "Vitamina B12",
+            "dose": "",
+            "origin": "Vitamina del grupo B",
+            "text": "Contribuye a reducir el cansancio y la fatiga."
+          }
+        },
+        "ing_10": {
+          "type": "ingredient",
+          "settings": {
+            "name": "Magnesio",
+            "dose": "",
+            "origin": "Mineral",
+            "text": "Contribuye al equilibrio electrolítico y a la función muscular normal."
+          }
+        },
+        "ing_11": {
+          "type": "ingredient",
+          "settings": {
+            "name": "Ashwagandha",
+            "dose": "",
+            "origin": "Raíz",
+            "text": "Adaptógeno de uso tradicional frente al estrés."
+          }
+        },
+        "ing_12": {
+          "type": "ingredient",
+          "settings": {
+            "name": "Zinc",
+            "dose": "",
+            "origin": "Mineral",
+            "text": "Contribuye a la fertilidad y la reproducción normales."
+          }
+        },
+        "ing_13": {
+          "type": "ingredient",
+          "settings": {
+            "name": "Bioperina",
+            "dose": "",
+            "origin": "Extracto de pimienta negra",
+            "text": "Favorece la absorción de los demás ingredientes."
+          }
+        },
+        "ing_14": {
+          "type": "ingredient",
+          "settings": {
+            "name": "Melón amargo",
+            "dose": "",
+            "origin": "Fruto",
+            "text": "Planta de uso tradicional asociada al metabolismo."
+          }
+        },
+        "ing_15": {
+          "type": "ingredient",
+          "settings": {
+            "name": "Canela de Ceilán",
+            "dose": "",
+            "origin": "Corteza",
+            "text": "Especia de uso tradicional en el bienestar metabólico."
           }
         }
       },
@@ -672,7 +781,18 @@
         "ing_1",
         "ing_2",
         "ing_3",
-        "ing_4"
+        "ing_4",
+        "ing_5",
+        "ing_6",
+        "ing_7",
+        "ing_8",
+        "ing_9",
+        "ing_10",
+        "ing_11",
+        "ing_12",
+        "ing_13",
+        "ing_14",
+        "ing_15"
       ]
     },
     "uso": {
@@ -683,7 +803,7 @@
         "text": "",
         "head_layout": "left",
         "background": "sand",
-        "accent": "#8E9A6E",
+        "accent": "#B07A8A",
         "padding_top": 96,
         "padding_bottom": 96
       },
@@ -691,22 +811,22 @@
         "step_1": {
           "type": "step",
           "settings": {
-            "title": "Antes de comer",
-            "text": "Toma 1 cápsula con agua 15 minutos antes de tus dos comidas principales."
+            "title": "Con alimentos",
+            "text": "Toma las cápsulas indicadas en la etiqueta con agua, junto con una comida."
           }
         },
         "step_2": {
           "type": "step",
           "settings": {
-            "title": "Come con calma",
-            "text": "Mastica despacio y evita acostarte justo después de comer."
+            "title": "Todos los días",
+            "text": "Los inositoles requieren constancia: tómalo a diario a la misma hora."
           }
         },
         "step_3": {
           "type": "step",
           "settings": {
-            "title": "Mantén la rutina",
-            "text": "La flora intestinal responde a la constancia: dale al menos 3 semanas."
+            "title": "Dale tiempo",
+            "text": "Evalúa cómo te sientes después de 2 a 3 meses de uso continuo."
           }
         }
       },
@@ -716,119 +836,46 @@
         "step_3"
       ]
     },
-    "comparativa": {
-      "type": "sommalya-compare",
-      "settings": {
-        "eyebrow": "La diferencia",
-        "heading": "Por qué <em>Sommalya Digestión.</em>",
-        "text": "",
-        "head_layout": "center",
-        "brand_label": "Sommalya",
-        "other_label": "Genéricos",
-        "background": "base",
-        "accent": "#8E9A6E",
-        "padding_top": 112,
-        "padding_bottom": 96
-      },
-      "blocks": {
-        "row_1": {
-          "type": "row",
-          "settings": {
-            "feature": "Probióticos con UFC declaradas",
-            "brand": true,
-            "other": false
-          }
-        },
-        "row_2": {
-          "type": "row",
-          "settings": {
-            "feature": "Ingredientes de origen natural",
-            "brand": true,
-            "other": false
-          }
-        },
-        "row_3": {
-          "type": "row",
-          "settings": {
-            "feature": "Dosis declarada de cada ingrediente",
-            "brand": true,
-            "other": false
-          }
-        },
-        "row_4": {
-          "type": "row",
-          "settings": {
-            "feature": "Cápsula vegetal, sin colorantes",
-            "brand": true,
-            "other": false
-          }
-        },
-        "row_5": {
-          "type": "row",
-          "settings": {
-            "feature": "Lote analizado antes de su venta",
-            "brand": true,
-            "other": false
-          }
-        },
-        "row_6": {
-          "type": "row",
-          "settings": {
-            "feature": "Garantía de 30 días",
-            "brand": true,
-            "other": false
-          }
-        }
-      },
-      "block_order": [
-        "row_1",
-        "row_2",
-        "row_3",
-        "row_4",
-        "row_5",
-        "row_6"
-      ]
-    },
     "preguntas": {
       "type": "sommalya-faq",
       "settings": {
         "eyebrow": "Preguntas frecuentes",
-        "heading": "Sobre <em>Digestión.</em>",
+        "heading": "Sobre <em>Myo-Inositol 16 en 1.</em>",
         "text": "",
         "head_layout": "center",
         "open_first": true,
         "background": "base",
-        "accent": "#8E9A6E",
-        "padding_top": 64,
+        "accent": "#B07A8A",
+        "padding_top": 96,
         "padding_bottom": 112
       },
       "blocks": {
         "q_1": {
           "type": "question",
           "settings": {
-            "question": "¿Necesita refrigeración?",
-            "answer": "<p>No. Las cepas probióticas están seleccionadas para mantenerse estables a temperatura ambiente. Consérvalo en un lugar fresco y seco.</p>"
+            "question": "¿Puedo tomarlo si estoy embarazada o buscando un embarazo?",
+            "answer": "<p>Consulta a tu médico antes de tomarlo si estás embarazada, en lactancia o buscando un embarazo.</p>"
           }
         },
         "q_2": {
           "type": "question",
           "settings": {
-            "question": "¿Puedo tomarlo con el estómago vacío?",
-            "answer": "<p>Sí, aunque recomendamos tomarlo poco antes de las comidas para acompañar la digestión.</p>"
+            "question": "¿Es apto para veganos?",
+            "answer": "<p>Sí. Viene en cápsulas veganas.</p>"
           }
         },
         "q_3": {
           "type": "question",
           "settings": {
-            "question": "¿En cuánto tiempo notaré la diferencia?",
-            "answer": "<p>La sensación de ligereza puede notarse en pocos días; el equilibrio de la flora requiere unas 3 a 4 semanas.</p>"
+            "question": "¿En cuánto tiempo veré resultados?",
+            "answer": "<p>Cada organismo es distinto. Recomendamos evaluar después de 2 a 3 meses de uso constante.</p>"
           }
         },
         "q_4": {
           "type": "question",
           "settings": {
-            "question": "¿Contiene lácteos?",
-            "answer": "<p>No contiene lácteos añadidos ni gluten.</p>"
+            "question": "¿Puedo combinarlo con Cortisol Calm?",
+            "answer": "<p>Sí, y también lo ofrecemos en kit junto con Corti-Soothe. Si tomas medicamentos, consulta a tu médico.</p>"
           }
         }
       },
@@ -843,15 +890,15 @@
       "type": "sommalya-cta",
       "settings": {
         "eyebrow": "Garantía Sommalya",
-        "heading": "Come bien, <em>siéntete mejor.</em>",
+        "heading": "Tu equilibrio, <em>en una cápsula.</em>",
         "text": "Pruébalo durante 30 días. Si no es para ti, te devolvemos tu dinero.",
-        "button_label": "Agregar a mi rutina",
+        "button_label": "Comprar ahora",
         "button_link": "",
-        "button2_label": "Ver toda la colección",
+        "button2_label": "Ver todos los productos",
         "button2_link": "/collections/all",
         "disclaimer": "Este producto no es un medicamento. El consumo de este producto es responsabilidad de quien lo recomienda y de quien lo usa. Consulta a tu médico si estás embarazada, en lactancia o bajo tratamiento.",
         "background": "sand",
-        "accent": "#8E9A6E",
+        "accent": "#B07A8A",
         "padding_top": 112,
         "padding_bottom": 96
       }
@@ -863,7 +910,7 @@
           "type": "text",
           "name": "t:names.header",
           "settings": {
-            "text": "<h3>Complementa tu rutina</h3>",
+            "text": "<h3>Completa tu rutina</h3>",
             "width": "100%",
             "max_width": "normal",
             "alignment": "center",
@@ -1148,7 +1195,6 @@
     "para_quien",
     "formula",
     "uso",
-    "comparativa",
     "preguntas",
     "garantia",
     "recomendados"

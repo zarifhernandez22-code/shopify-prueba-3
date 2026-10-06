@@ -295,8 +295,8 @@
 @media (min-width: 900px) {
   .sm-hero__grid { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
   .sm-hero__content { padding-inline: max(var(--sm-gutter), calc((100vw - var(--sm-max)) / 2 + var(--sm-gutter))) 64px; }
-  .sm-hero--media-left .sm-hero__media { order: -1; }
-  .sm-hero--media-left .sm-hero__content { padding-inline: 64px max(var(--sm-gutter), calc((100vw - var(--sm-max)) / 2 + var(--sm-gutter))); }
+  .sm-hero--media_left .sm-hero__media { order: -1; }
+  .sm-hero--media_left .sm-hero__content { padding-inline: 64px max(var(--sm-gutter), calc((100vw - var(--sm-max)) / 2 + var(--sm-gutter))); }
 }
 
 @media (max-width: 599px) {
@@ -737,4 +737,60 @@
 @keyframes sm-rise {
   from { opacity: 0; transform: translateY(14px); }
   to { opacity: 1; transform: none; }
+}
+
+/* ==========================================================================
+   Imágenes del tema (assets/) y portada en modo estudio
+   ========================================================================== */
+.sm-media__asset { display: block; width: 100%; height: 100%; object-fit: cover; }
+
+.sm-hero__price {
+  margin: 24px 0 0;
+  font-family: var(--font-heading--family);
+  font-size: 26px;
+  font-weight: 300;
+}
+.sm-hero__price s { margin-left: 10px; font-size: 18px; color: var(--sm-muted); }
+
+/* Estudio: fondo gris claro continuo, como un set fotográfico. El producto ocupa
+   la mitad derecha sobre el mismo gris para que la foto se funda con la página. */
+.sm-hero--studio {
+  --sm-studio: #EBEBEB;
+  background: var(--sm-studio);
+}
+.sm-hero--studio .sm-hero__media { background: transparent; }
+.sm-hero--studio .sm-hero__media .sm-media__asset,
+.sm-hero--studio .sm-hero__media img {
+  object-fit: contain;
+  object-position: center bottom;
+}
+.sm-hero--studio .sm-hero__trust { border-top-color: rgb(31 42 36 / 0.14); }
+
+@media (min-width: 900px) {
+  .sm-hero--studio .sm-hero__content { padding-inline: max(var(--sm-gutter), calc((100vw - var(--sm-max)) / 2 + var(--sm-gutter))) 48px; }
+}
+
+/* Tarjetas de producto con foto de catálogo sobre blanco */
+.sm-need__media .sm-media__asset,
+.sm-need__media img { object-fit: contain; background: #fff; padding: 8%; }
+.sm-need__media:has(.sm-media__asset),
+.sm-need__media:has(img) { background: #fff; }
+
+/* Imagen con texto: foto de producto sobre blanco */
+.sm-split__media:has(.sm-media__asset) { background: #fff; }
+.sm-split__media .sm-media__asset { object-fit: contain; padding: 6%; }
+
+/* Logotipo de respaldo en el encabezado */
+.sm-wordmark { display: inline-flex; align-items: center; gap: 12px; color: inherit; }
+.sm-wordmark img { width: 34px; height: 34px; }
+.sm-wordmark span {
+  font-family: var(--font-heading--family);
+  font-size: 22px;
+  font-weight: 300;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+}
+@media (max-width: 749px) {
+  .sm-wordmark img { width: 28px; height: 28px; }
+  .sm-wordmark span { font-size: 17px; letter-spacing: 0.22em; }
 }

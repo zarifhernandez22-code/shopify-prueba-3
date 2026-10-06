@@ -3,11 +3,7 @@
   <div class="sm__wrap">
     <div class="sm-split{% if section.settings.reverse %} sm-split--reverse{% endif %}">
       <div class="sm-media sm-split__media">
-        {%- if section.settings.image != blank -%}
-          {{ section.settings.image | image_url: width: 1400 | image_tag: loading: 'lazy', sizes: '(min-width: 900px) 50vw, 100vw', widths: '600, 900, 1200, 1400' }}
-        {%- else -%}
-          {% render 'sommalya-bottle', label: section.settings.placeholder_label %}
-        {%- endif -%}
+        {% render 'sommalya-media', image: section.settings.image, asset: section.settings.image_asset, label: section.settings.placeholder_label, sizes: '(min-width: 900px) 50vw, 100vw' %}
       </div>
       <div>
         {%- if section.settings.eyebrow != blank -%}<p class="sm-eyebrow">{{ section.settings.eyebrow }}</p>{%- endif -%}
@@ -42,8 +38,14 @@
     },
     {
       "type": "text",
+      "id": "image_asset",
+      "label": "Imagen incluida en el tema",
+      "info": "Nombre de un archivo de assets/."
+    },
+    {
+      "type": "text",
       "id": "placeholder_label",
-      "label": "Etiqueta del frasco de muestra",
+      "label": "Texto alternativo / etiqueta del frasco de muestra",
       "default": "Esencial"
     },
     {

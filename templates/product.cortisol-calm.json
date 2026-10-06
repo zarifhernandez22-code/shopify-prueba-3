@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -275,7 +284,7 @@
                     "text_r2": {
                       "type": "text",
                       "settings": {
-                        "text": "<ul><li><strong>Rhodiola</strong> — 200 mg</li><li><strong>Maca andina</strong> — 500 mg</li><li><strong>Ginseng</strong> — 100 mg</li><li><strong>Vitamina B12</strong> — 25 µg</li></ul><p>Excipientes: cápsula vegetal (hidroxipropilmetilcelulosa).</p>",
+                        "text": "<ul><li><strong>Rhodiola rosea</strong></li><li><strong>Ashwagandha</strong></li><li><strong>L-Teanina</strong></li><li><strong>Magnesio</strong></li><li><strong>Fosfatidilserina</strong></li><li><strong>Magnolia</strong></li><li><strong>Vitamina C</strong></li><li><strong>Vitamina B6</strong></li><li><strong>Vitamina B12</strong></li><li><strong>Pimienta negra</strong></li></ul><p>759 mg por porción · 60 cápsulas por frasco · Fórmula liposomal. Consulta la etiqueta para la composición completa.</p>",
                         "width": "100%",
                         "max_width": "normal",
                         "alignment": "left",
@@ -314,7 +323,7 @@
                     "text_r3": {
                       "type": "text",
                       "settings": {
-                        "text": "<p>Toma 2 cápsulas con agua por la mañana, junto con el desayuno. No se recomienda tomarlo por la tarde o la noche.</p>",
+                        "text": "<p>Sigue la dosis indicada en la etiqueta del frasco. Tómalo con un vaso de agua, de preferencia con alimentos.</p>",
                         "width": "100%",
                         "max_width": "normal",
                         "alignment": "left",
@@ -450,10 +459,10 @@
             "sommalya_summary": {
               "type": "sommalya-summary",
               "settings": {
-                "tagline": "Energía estable, sin altibajos.",
-                "benefits": "La vitamina B12 contribuye a reducir el cansancio y la fatiga\nApoya la concentración durante la jornada\nSin cafeína añadida ni azúcar",
-                "badges": "Vegano, Sin gluten, Sin colorantes, Cápsula vegetal",
-                "accent": "#B8956A"
+                "tagline": "Calma y enfoque, todos los días.",
+                "benefits": "Fórmula diseñada para acompañar el equilibrio natural del cortisol\nRhodiola y ashwagandha, adaptógenos de uso tradicional\nL-teanina y magnesio para favorecer la calma",
+                "badges": "Liposomal, 759 mg por porción, 60 cápsulas, Hecho en EE. UU.",
+                "accent": "#5F7A99"
               },
               "blocks": {}
             }
@@ -486,7 +495,7 @@
       "type": "sommalya-trustbar",
       "settings": {
         "background": "soft",
-        "accent": "#B8956A",
+        "accent": "#5F7A99",
         "padding_top": 40,
         "padding_bottom": 40
       },
@@ -510,9 +519,9 @@
         "item_3": {
           "type": "item",
           "settings": {
-            "icon": "leaf",
-            "title": "Origen natural",
-            "text": "Ingredientes trazables, cápsula vegetal"
+            "icon": "globe",
+            "title": "Hecho en EE. UU.",
+            "text": "Fabricación con estándares de calidad"
           }
         },
         "item_4": {
@@ -535,12 +544,12 @@
       "type": "sommalya-pillars",
       "settings": {
         "eyebrow": "Beneficios",
-        "heading": "Rendir sin <em>depender del café.</em>",
-        "text": "Adaptógenos y vitamina B12 para una energía sostenida, desde la mañana hasta la tarde.",
+        "heading": "Menos tensión, <em>más claridad.</em>",
+        "text": "Diez ingredientes en una fórmula liposomal, pensada para el ritmo de la vida diaria.",
         "head_layout": "center",
         "show_numbers": false,
         "background": "base",
-        "accent": "#B8956A",
+        "accent": "#5F7A99",
         "padding_top": 112,
         "padding_bottom": 96
       },
@@ -548,25 +557,25 @@
         "pillar_1": {
           "type": "pillar",
           "settings": {
-            "icon": "sun",
-            "title": "Energía sostenida",
-            "text": "La vitamina B12 contribuye al metabolismo energético normal y a reducir el cansancio."
+            "icon": "heart",
+            "title": "Calma",
+            "text": "Ashwagandha, L-teanina y magnolia acompañan a tu cuerpo frente al estrés cotidiano."
           }
         },
         "pillar_2": {
           "type": "pillar",
           "settings": {
             "icon": "spark",
-            "title": "Mente enfocada",
-            "text": "La rhodiola, un adaptógeno de uso tradicional, acompaña los días de mayor exigencia."
+            "title": "Enfoque",
+            "text": "Rhodiola y fosfatidilserina para los días de mayor exigencia mental."
           }
         },
         "pillar_3": {
           "type": "pillar",
           "settings": {
-            "icon": "clock",
-            "title": "Sin bajones",
-            "text": "Sin cafeína añadida ni azúcares: sin picos de energía seguidos de caídas."
+            "icon": "moon",
+            "title": "Descanso",
+            "text": "El magnesio y la vitamina B6 contribuyen a la función psicológica normal."
           }
         }
       },
@@ -579,15 +588,16 @@
     "para_quien": {
       "type": "sommalya-split",
       "settings": {
-        "placeholder_label": "Energía",
+        "image_asset": "sommalya-cortisol-calm.jpg",
+        "placeholder_label": "Cortisol Calm",
         "reverse": true,
         "eyebrow": "Para quién es",
-        "heading": "Para días que <em>exigen más.</em>",
-        "body": "<p>Para jornadas largas, etapas de mucho trabajo o estudio y para quien quiere sentirse con energía sin recurrir a otra taza de café.</p>",
+        "heading": "Para días que <em>no dan tregua.</em>",
+        "body": "<p>Para quien vive con agenda llena, pendientes constantes y poco tiempo para desconectar. Cortisol Calm acompaña tus hábitos de descanso y alimentación; no los sustituye.</p>",
         "button_label": "",
         "button_link": "",
         "background": "soft",
-        "accent": "#B8956A",
+        "accent": "#5F7A99",
         "padding_top": 112,
         "padding_bottom": 112
       },
@@ -595,19 +605,19 @@
         "point_1": {
           "type": "point",
           "settings": {
-            "text": "Sientes cansancio a media tarde"
+            "text": "Sientes tensión durante la jornada"
           }
         },
         "point_2": {
           "type": "point",
           "settings": {
-            "text": "Buscas concentrarte sin estimulantes"
+            "text": "Te cuesta desconectar al final del día"
           }
         },
         "point_3": {
           "type": "point",
           "settings": {
-            "text": "Quieres reducir tu consumo de cafeína"
+            "text": "Buscas una opción con adaptógenos naturales"
           }
         }
       },
@@ -622,11 +632,11 @@
       "settings": {
         "eyebrow": "La fórmula",
         "heading": "Qué hay <em>dentro.</em>",
-        "text": "Cuatro ingredientes con una razón concreta para estar aquí. Nada más.",
+        "text": "Diez ingredientes, cada uno con una función concreta.",
         "head_layout": "split",
-        "note": "Dosis por porción diaria (2 cápsulas). 60 cápsulas vegetales por frasco · 30 días.",
+        "note": "759 mg por porción · 60 cápsulas por frasco · Fórmula liposomal. Consulta la etiqueta para la composición completa.",
         "background": "base",
-        "accent": "#B8956A",
+        "accent": "#5F7A99",
         "padding_top": 112,
         "padding_bottom": 96
       },
@@ -634,37 +644,91 @@
         "ing_1": {
           "type": "ingredient",
           "settings": {
-            "name": "Rhodiola",
-            "dose": "200 mg",
-            "origin": "Rhodiola rosea · raíz, 3% rosavinas",
-            "text": "Adaptógeno utilizado tradicionalmente para afrontar periodos de exigencia física y mental."
+            "name": "Rhodiola rosea",
+            "dose": "",
+            "origin": "Raíz · adaptógeno",
+            "text": "Planta adaptógena de uso tradicional para afrontar periodos de exigencia física y mental."
           }
         },
         "ing_2": {
           "type": "ingredient",
           "settings": {
-            "name": "Maca andina",
-            "dose": "500 mg",
-            "origin": "Lepidium meyenii · raíz gelatinizada",
-            "text": "Raíz de los Andes empleada tradicionalmente para la vitalidad."
+            "name": "Ashwagandha",
+            "dose": "",
+            "origin": "KSM-66 · raíz",
+            "text": "Adaptógeno de la tradición ayurvédica, empleado para acompañar al cuerpo frente al estrés."
           }
         },
         "ing_3": {
           "type": "ingredient",
           "settings": {
-            "name": "Ginseng",
-            "dose": "100 mg",
-            "origin": "Panax ginseng · raíz",
-            "text": "Planta de uso tradicional asociada a la vitalidad y el rendimiento."
+            "name": "L-Teanina",
+            "dose": "",
+            "origin": "Aminoácido del té verde",
+            "text": "Asociada a un estado de relajación sin somnolencia."
           }
         },
         "ing_4": {
           "type": "ingredient",
           "settings": {
+            "name": "Magnesio",
+            "dose": "",
+            "origin": "Mezcla de magnesio",
+            "text": "Contribuye al funcionamiento normal del sistema nervioso y a la función psicológica normal."
+          }
+        },
+        "ing_5": {
+          "type": "ingredient",
+          "settings": {
+            "name": "Fosfatidilserina",
+            "dose": "",
+            "origin": "Fosfolípido",
+            "text": "Componente natural de las membranas de las células del cerebro."
+          }
+        },
+        "ing_6": {
+          "type": "ingredient",
+          "settings": {
+            "name": "Magnolia",
+            "dose": "",
+            "origin": "Corteza",
+            "text": "Planta de uso tradicional asociada a la calma."
+          }
+        },
+        "ing_7": {
+          "type": "ingredient",
+          "settings": {
+            "name": "Vitamina C",
+            "dose": "",
+            "origin": "Antioxidante",
+            "text": "Contribuye a reducir el cansancio y la fatiga."
+          }
+        },
+        "ing_8": {
+          "type": "ingredient",
+          "settings": {
+            "name": "Vitamina B6",
+            "dose": "",
+            "origin": "Vitamina del grupo B",
+            "text": "Contribuye a la función psicológica normal."
+          }
+        },
+        "ing_9": {
+          "type": "ingredient",
+          "settings": {
             "name": "Vitamina B12",
-            "dose": "25 µg",
-            "origin": "Metilcobalamina",
-            "text": "Contribuye a reducir el cansancio y la fatiga y al metabolismo energético normal."
+            "dose": "",
+            "origin": "Vitamina del grupo B",
+            "text": "Contribuye al metabolismo energético normal y a reducir el cansancio."
+          }
+        },
+        "ing_10": {
+          "type": "ingredient",
+          "settings": {
+            "name": "Pimienta negra",
+            "dose": "",
+            "origin": "Extracto",
+            "text": "Favorece la absorción del resto de los ingredientes."
           }
         }
       },
@@ -672,7 +736,13 @@
         "ing_1",
         "ing_2",
         "ing_3",
-        "ing_4"
+        "ing_4",
+        "ing_5",
+        "ing_6",
+        "ing_7",
+        "ing_8",
+        "ing_9",
+        "ing_10"
       ]
     },
     "uso": {
@@ -683,7 +753,7 @@
         "text": "",
         "head_layout": "left",
         "background": "sand",
-        "accent": "#B8956A",
+        "accent": "#5F7A99",
         "padding_top": 96,
         "padding_bottom": 96
       },
@@ -691,22 +761,22 @@
         "step_1": {
           "type": "step",
           "settings": {
-            "title": "Por la mañana",
-            "text": "Toma 2 cápsulas con el desayuno, idealmente a la misma hora."
+            "title": "Con agua",
+            "text": "Toma las cápsulas indicadas en la etiqueta con un vaso de agua, de preferencia con alimentos."
           }
         },
         "step_2": {
           "type": "step",
           "settings": {
-            "title": "Hidrátate",
-            "text": "Acompáñalo de agua durante el día: la energía también depende de ella."
+            "title": "Mismo horario",
+            "text": "Elige un momento fijo del día. La regularidad ayuda a crear el hábito."
           }
         },
         "step_3": {
           "type": "step",
           "settings": {
-            "title": "Haz ciclos",
-            "text": "Usa Energía durante 8 semanas y descansa 1 semana para mantener su efecto."
+            "title": "Sé constante",
+            "text": "Los adaptógenos actúan de forma progresiva: dale al menos 4 semanas de uso diario."
           }
         }
       },
@@ -716,119 +786,46 @@
         "step_3"
       ]
     },
-    "comparativa": {
-      "type": "sommalya-compare",
-      "settings": {
-        "eyebrow": "La diferencia",
-        "heading": "Por qué <em>Sommalya Energía.</em>",
-        "text": "",
-        "head_layout": "center",
-        "brand_label": "Sommalya",
-        "other_label": "Genéricos",
-        "background": "base",
-        "accent": "#B8956A",
-        "padding_top": 112,
-        "padding_bottom": 96
-      },
-      "blocks": {
-        "row_1": {
-          "type": "row",
-          "settings": {
-            "feature": "Sin cafeína añadida ni azúcar",
-            "brand": true,
-            "other": false
-          }
-        },
-        "row_2": {
-          "type": "row",
-          "settings": {
-            "feature": "Ingredientes de origen natural",
-            "brand": true,
-            "other": false
-          }
-        },
-        "row_3": {
-          "type": "row",
-          "settings": {
-            "feature": "Dosis declarada de cada ingrediente",
-            "brand": true,
-            "other": false
-          }
-        },
-        "row_4": {
-          "type": "row",
-          "settings": {
-            "feature": "Cápsula vegetal, sin colorantes",
-            "brand": true,
-            "other": false
-          }
-        },
-        "row_5": {
-          "type": "row",
-          "settings": {
-            "feature": "Lote analizado antes de su venta",
-            "brand": true,
-            "other": false
-          }
-        },
-        "row_6": {
-          "type": "row",
-          "settings": {
-            "feature": "Garantía de 30 días",
-            "brand": true,
-            "other": false
-          }
-        }
-      },
-      "block_order": [
-        "row_1",
-        "row_2",
-        "row_3",
-        "row_4",
-        "row_5",
-        "row_6"
-      ]
-    },
     "preguntas": {
       "type": "sommalya-faq",
       "settings": {
         "eyebrow": "Preguntas frecuentes",
-        "heading": "Sobre <em>Energía.</em>",
+        "heading": "Sobre <em>Cortisol Calm.</em>",
         "text": "",
         "head_layout": "center",
         "open_first": true,
         "background": "base",
-        "accent": "#B8956A",
-        "padding_top": 64,
+        "accent": "#5F7A99",
+        "padding_top": 96,
         "padding_bottom": 112
       },
       "blocks": {
         "q_1": {
           "type": "question",
           "settings": {
-            "question": "¿Contiene cafeína?",
-            "answer": "<p>No contiene cafeína añadida. El ginseng y la rhodiola actúan de forma distinta a los estimulantes.</p>"
+            "question": "¿Qué significa que sea liposomal?",
+            "answer": "<p>Los ingredientes se presentan en una fórmula liposomal, una tecnología pensada para favorecer su absorción.</p>"
           }
         },
         "q_2": {
           "type": "question",
           "settings": {
-            "question": "¿Puedo tomarlo junto con café?",
-            "answer": "<p>Sí, aunque muchas personas notan que necesitan menos café con el uso constante.</p>"
+            "question": "¿Me dará sueño durante el día?",
+            "answer": "<p>No contiene sedantes. La L-teanina se asocia a la relajación sin somnolencia.</p>"
           }
         },
         "q_3": {
           "type": "question",
           "settings": {
-            "question": "¿Lo puedo tomar por la noche?",
-            "answer": "<p>No lo recomendamos. Para la noche, te sugerimos nuestra fórmula Descanso.</p>"
+            "question": "¿Cuánto dura un frasco?",
+            "answer": "<p>Cada frasco contiene 60 cápsulas. Su duración depende de la dosis diaria indicada en la etiqueta.</p>"
           }
         },
         "q_4": {
           "type": "question",
           "settings": {
-            "question": "¿Es apto para veganos?",
-            "answer": "<p>Sí. Todos los ingredientes y la cápsula son de origen vegetal o mineral, y la B12 se obtiene por fermentación.</p>"
+            "question": "¿Lo puedo tomar si estoy embarazada o tomo medicamentos?",
+            "answer": "<p>No se recomienda durante el embarazo o la lactancia. Si estás bajo tratamiento, consulta a tu médico antes de tomarlo.</p>"
           }
         }
       },
@@ -843,15 +840,15 @@
       "type": "sommalya-cta",
       "settings": {
         "eyebrow": "Garantía Sommalya",
-        "heading": "Más energía, <em>menos esfuerzo.</em>",
+        "heading": "Recupera <em>tu calma.</em>",
         "text": "Pruébalo durante 30 días. Si no es para ti, te devolvemos tu dinero.",
-        "button_label": "Agregar a mi rutina",
+        "button_label": "Comprar ahora",
         "button_link": "",
-        "button2_label": "Ver toda la colección",
+        "button2_label": "Ver todos los productos",
         "button2_link": "/collections/all",
         "disclaimer": "Este producto no es un medicamento. El consumo de este producto es responsabilidad de quien lo recomienda y de quien lo usa. Consulta a tu médico si estás embarazada, en lactancia o bajo tratamiento.",
         "background": "sand",
-        "accent": "#B8956A",
+        "accent": "#5F7A99",
         "padding_top": 112,
         "padding_bottom": 96
       }
@@ -863,7 +860,7 @@
           "type": "text",
           "name": "t:names.header",
           "settings": {
-            "text": "<h3>Complementa tu rutina</h3>",
+            "text": "<h3>Completa tu rutina</h3>",
             "width": "100%",
             "max_width": "normal",
             "alignment": "center",
@@ -1148,7 +1145,6 @@
     "para_quien",
     "formula",
     "uso",
-    "comparativa",
     "preguntas",
     "garantia",
     "recomendados"

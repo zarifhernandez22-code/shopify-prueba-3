@@ -215,6 +215,21 @@ td svg { width: 18px; height: 18px; vertical-align: middle; }
   .page [data-r="2"] { animation-delay: .1s; } .page [data-r="3"] { animation-delay: .2s; }
 }
 @keyframes rise { from { opacity: .001; transform: translateY(12px); } to { opacity: 1; transform: none; } }
+
+/* Modo estudio y fotos de producto */
+.hero.studio { background: #EBEBEB; }
+.hero.studio .media { background: #EBEBEB; display: grid; place-items: end center; }
+.hero.studio .media img { width: 100%; height: 100%; max-height: 760px; object-fit: contain; object-position: center bottom; }
+.hero .price-tag { margin: 22px 0 0; font-family: var(--serif); font-size: 26px; font-weight: 300; }
+.photo { display: block; width: 100%; height: 100%; object-fit: contain; background: #fff; padding: 8%; }
+.need .m { background: #fff; }
+.split .media { background: #fff; }
+.pdp .gallery .main { background: #fff; }
+.pdp .thumbs > div { background: #fff; padding: 0; overflow: hidden; }
+.pdp .thumbs img { width: 100%; height: 100%; object-fit: contain; padding: 10%; }
+.logo { display: inline-flex; align-items: center; gap: 12px; }
+.logo img { width: 32px; height: 32px; }
+.note-dev { max-width: var(--max); margin: 0 auto; padding: 12px var(--gut); font-size: 12px; color: var(--muted); }
 </style>
 
 <div class="proto" role="toolbar" aria-label="Navegación de la maqueta">
@@ -222,10 +237,10 @@ td svg { width: 18px; height: 18px; vertical-align: middle; }
   <nav id="protoNav"></nav>
 </div>
 
-<div class="announce"><span>Envío gratis en pedidos desde $799</span><span>Garantía de satisfacción de 30 días</span><span>Ingredientes naturales y trazables</span></div>
+<div class="announce"><span>Envío gratis en pedidos desde $799</span><span>Garantía de satisfacción de 30 días</span><span>Hecho en EE. UU.</span></div>
 <header class="header">
   <nav><a data-go="home">Tienda</a><a data-go="home">Nuestra filosofía</a><a data-go="home">Calidad</a></nav>
-  <a class="logo" data-go="home">Sommalya</a>
+  <a class="logo" data-go="home"><img src="img/sommalya-logo.png" alt="">Sommalya</a>
   <div class="tools"><span>Buscar</span><span>Cuenta</span><span>Carrito (<span id="cartCount">0</span>)</span></div>
 </header>
 
@@ -233,8 +248,8 @@ td svg { width: 18px; height: 18px; vertical-align: middle; }
 
 <footer class="footer">
   <div class="cols">
-    <div><div class="big">Sommalya</div><p style="margin-top:16px;font-size:14px;line-height:1.7;color:#b9bfb8;max-width:32ch">Suplementos de origen natural para cuidar lo básico que lo sostiene todo.</p></div>
-    <div><h4>Tienda</h4><ul><li>Descanso</li><li>Digestión</li><li>Energía</li><li>Defensas</li></ul></div>
+    <div><div class="big">Sommalya</div><p style="margin-top:16px;font-size:14px;line-height:1.7;color:#b9bfb8;max-width:32ch">Suplementos con fórmulas claras para cuidar lo básico que lo sostiene todo.</p></div>
+    <div><h4>Tienda</h4><ul><li>Cortisol Calm</li><li>Myo-Inositol 16 en 1</li><li>Kit Inositol &amp; Cortisol</li><li>Graviola en gotas</li></ul></div>
     <div><h4>Ayuda</h4><ul><li>Envíos</li><li>Garantía de 30 días</li><li>Preguntas frecuentes</li><li>Contacto</li></ul></div>
     <div><h4>Bienestar, sin ruido</h4><p style="margin:0;font-size:14px;color:#b9bfb8">Un correo al mes. Nada más.</p>
       <form class="news" id="newsForm"><label for="newsEmail" style="position:absolute;left:-9999px">Correo electrónico</label><input id="newsEmail" type="email" placeholder="Tu correo electrónico" required><button>Suscribirme</button></form>
@@ -244,202 +259,117 @@ td svg { width: 18px; height: 18px; vertical-align: middle; }
 </footer>
 
 <script>
+const P = {"cortisol-calm": {"name": "Cortisol Calm", "accent": "#5F7A99", "img": "img/sommalya-cortisol-calm.jpg", "price": null, "tagline": "Calma y enfoque, todos los días.", "benefits": ["Fórmula diseñada para acompañar el equilibrio natural del cortisol", "Rhodiola y ashwagandha, adaptógenos de uso tradicional", "L-teanina y magnesio para favorecer la calma"], "badges": ["Liposomal", "759 mg por porción", "60 cápsulas", "Hecho en EE. UU."], "bh": "Menos tensión, <em>más claridad.</em>", "bt": "Diez ingredientes en una fórmula liposomal, pensada para el ritmo de la vida diaria.", "pillars": [["heart", "Calma", "Ashwagandha, L-teanina y magnolia acompañan a tu cuerpo frente al estrés cotidiano."], ["spark", "Enfoque", "Rhodiola y fosfatidilserina para los días de mayor exigencia mental."], ["moon", "Descanso", "El magnesio y la vitamina B6 contribuyen a la función psicológica normal."]], "wh": "Para días que <em>no dan tregua.</em>", "wb": "Para quien vive con agenda llena, pendientes constantes y poco tiempo para desconectar. Cortisol Calm acompaña tus hábitos de descanso y alimentación; no los sustituye.", "wp": ["Sientes tensión durante la jornada", "Te cuesta desconectar al final del día", "Buscas una opción con adaptógenos naturales"], "ing": [["Rhodiola rosea", "", "Raíz · adaptógeno", "Planta adaptógena de uso tradicional para afrontar periodos de exigencia física y mental."], ["Ashwagandha", "", "KSM-66 · raíz", "Adaptógeno de la tradición ayurvédica, empleado para acompañar al cuerpo frente al estrés."], ["L-Teanina", "", "Aminoácido del té verde", "Asociada a un estado de relajación sin somnolencia."], ["Magnesio", "", "Mezcla de magnesio", "Contribuye al funcionamiento normal del sistema nervioso y a la función psicológica normal."], ["Fosfatidilserina", "", "Fosfolípido", "Componente natural de las membranas de las células del cerebro."], ["Magnolia", "", "Corteza", "Planta de uso tradicional asociada a la calma."], ["Vitamina C", "", "Antioxidante", "Contribuye a reducir el cansancio y la fatiga."], ["Vitamina B6", "", "Vitamina del grupo B", "Contribuye a la función psicológica normal."], ["Vitamina B12", "", "Vitamina del grupo B", "Contribuye al metabolismo energético normal y a reducir el cansancio."], ["Pimienta negra", "", "Extracto", "Favorece la absorción del resto de los ingredientes."]], "ingText": "Diez ingredientes, cada uno con una función concreta.", "note": "759 mg por porción · 60 cápsulas por frasco · Fórmula liposomal. Consulta la etiqueta para la composición completa.", "dose": "Sigue la dosis indicada en la etiqueta del frasco. Tómalo con un vaso de agua, de preferencia con alimentos.", "steps": [["Con agua", "Toma las cápsulas indicadas en la etiqueta con un vaso de agua, de preferencia con alimentos."], ["Mismo horario", "Elige un momento fijo del día. La regularidad ayuda a crear el hábito."], ["Sé constante", "Los adaptógenos actúan de forma progresiva: dale al menos 4 semanas de uso diario."]], "faq": [["¿Qué significa que sea liposomal?", "Los ingredientes se presentan en una fórmula liposomal, una tecnología pensada para favorecer su absorción."], ["¿Me dará sueño durante el día?", "No contiene sedantes. La L-teanina se asocia a la relajación sin somnolencia."], ["¿Cuánto dura un frasco?", "Cada frasco contiene 60 cápsulas. Su duración depende de la dosis diaria indicada en la etiqueta."], ["¿Lo puedo tomar si estoy embarazada o tomo medicamentos?", "No se recomienda durante el embarazo o la lactancia. Si estás bajo tratamiento, consulta a tu médico antes de tomarlo."]], "ch": "Recupera <em>tu calma.</em>", "warn": ""}, "myo-inositol": {"name": "Myo-Inositol 16 en 1", "accent": "#B07A8A", "img": "img/sommalya-myo-inositol.jpg", "price": null, "tagline": "Equilibrio femenino, de forma integral.", "benefits": ["Myo-inositol y D-chiro inositol en una sola fórmula", "Con vitamina D3+K2, folato, zinc y magnesio", "El cromo contribuye al mantenimiento de niveles normales de glucosa en sangre"], "badges": ["16 en 1", "90 cápsulas veganas", "Hecho en EE. UU."], "bh": "Todo lo que necesitas, <em>en una cápsula.</em>", "bt": "Dieciséis ingredientes para acompañar el equilibrio hormonal y metabólico femenino.", "pillars": [["heart", "Equilibrio hormonal", "Inositoles, sauzgatillo y DIM, ingredientes de uso habitual en el bienestar femenino."], ["drop", "Metabolismo", "Cromo, berberina, canela de Ceilán y melón amargo para tu bienestar metabólico."], ["leaf", "Nutrición completa", "Vitamina D3+K2, folato, B12, magnesio y zinc en la misma fórmula."]], "wh": "Para cuidar <em>tu ciclo y tu energía.</em>", "wb": "Para mujeres que buscan apoyar su equilibrio hormonal y metabólico con una fórmula completa, sin tomar varios frascos a la vez.", "wp": ["Quieres apoyar tu equilibrio hormonal", "Buscas cuidar tu metabolismo", "Prefieres una fórmula completa en un solo producto"], "ing": [["Myo-Inositol", "", "Inositol", "Componente clave de la fórmula para el equilibrio femenino."], ["D-Chiro Inositol", "", "Inositol", "Complementa al myo-inositol en una proporción combinada."], ["Berberina", "", "Extracto vegetal", "Compuesto vegetal de uso tradicional para el metabolismo."], ["Vitamina D3 + K2", "", "Vitaminas liposolubles", "La vitamina D contribuye al funcionamiento normal del sistema inmunitario."], ["Folato", "", "Vitamina B9", "Contribuye al crecimiento de los tejidos maternos durante el embarazo."], ["Sauzgatillo", "", "Chasteberry · fruto", "Planta de uso tradicional para el bienestar femenino."], ["Cromo", "", "Mineral", "Contribuye al mantenimiento de niveles normales de glucosa en sangre."], ["DIM", "", "Diindolilmetano", "Compuesto presente de forma natural en las verduras crucíferas."], ["Vitamina B12", "", "Vitamina del grupo B", "Contribuye a reducir el cansancio y la fatiga."], ["Magnesio", "", "Mineral", "Contribuye al equilibrio electrolítico y a la función muscular normal."], ["Ashwagandha", "", "Raíz", "Adaptógeno de uso tradicional frente al estrés."], ["Zinc", "", "Mineral", "Contribuye a la fertilidad y la reproducción normales."], ["Bioperina", "", "Extracto de pimienta negra", "Favorece la absorción de los demás ingredientes."], ["Melón amargo", "", "Fruto", "Planta de uso tradicional asociada al metabolismo."], ["Canela de Ceilán", "", "Corteza", "Especia de uso tradicional en el bienestar metabólico."]], "ingText": "Dieciséis ingredientes que se complementan entre sí.", "note": "90 cápsulas veganas por frasco. Consulta la etiqueta para la composición completa.", "dose": "Sigue la dosis indicada en la etiqueta del frasco. Tómalo con agua y alimentos.", "steps": [["Con alimentos", "Toma las cápsulas indicadas en la etiqueta con agua, junto con una comida."], ["Todos los días", "Los inositoles requieren constancia: tómalo a diario a la misma hora."], ["Dale tiempo", "Evalúa cómo te sientes después de 2 a 3 meses de uso continuo."]], "faq": [["¿Puedo tomarlo si estoy embarazada o buscando un embarazo?", "Consulta a tu médico antes de tomarlo si estás embarazada, en lactancia o buscando un embarazo."], ["¿Es apto para veganos?", "Sí. Viene en cápsulas veganas."], ["¿En cuánto tiempo veré resultados?", "Cada organismo es distinto. Recomendamos evaluar después de 2 a 3 meses de uso constante."], ["¿Puedo combinarlo con Cortisol Calm?", "Sí, y también lo ofrecemos en kit junto con Corti-Soothe. Si tomas medicamentos, consulta a tu médico."]], "ch": "Tu equilibrio, <em>en una cápsula.</em>", "warn": ""}, "kit-inositol-cortisol": {"name": "Kit Inositol & Cortisol", "accent": "#8A7FA0", "img": "img/sommalya-kit-inositol-cortisol.jpg", "price": 699, "tagline": "Dos fórmulas, un mismo equilibrio.", "benefits": ["Incluye Myo-Inositol 16 en 1 (90 cápsulas) y Corti-Soothe 13 en 1 (60 cápsulas)", "Equilibrio hormonal y manejo del estrés en una sola rutina", "Ambos fabricados en EE. UU."], "badges": ["2 piezas", "16 en 1 + 13 en 1", "Cápsulas veganas", "Hecho en EE. UU."], "bh": "Cuerpo y mente, <em>en sintonía.</em>", "bt": "Un kit pensado para acompañar tu equilibrio hormonal y tu calma al mismo tiempo.", "pillars": [["heart", "Equilibrio femenino", "Myo-Inositol 16 en 1 con inositoles, vitaminas y minerales clave."], ["spark", "Calma y enfoque", "Corti-Soothe 13 en 1 con magnesio, ashwagandha, L-teanina y adaptógenos."], ["clock", "Rutina simple", "Dos frascos y una rutina diaria. Sigue la dosis indicada en cada etiqueta."]], "wh": "Para quien quiere <em>cuidarse completa.</em>", "wb": "El estrés y el equilibrio hormonal suelen ir de la mano. Este kit reúne las dos fórmulas para atenderlos juntos.", "wp": ["Buscas apoyar tu equilibrio hormonal", "Vives con estrés frecuente", "Quieres una rutina sencilla con dos productos complementarios"], "ing": [["Myo-Inositol 16 en 1", "90 cáps.", "Equilibrio femenino", "Myo-inositol, D-chiro inositol, berberina, vitamina D3+K2, folato, sauzgatillo, cromo, DIM, vitamina B12, magnesio, ashwagandha, zinc, bioperina, melón amargo y canela de Ceilán."], ["Corti-Soothe 13 en 1", "60 cáps.", "Calma y enfoque", "Magnesio, ashwagandha, L-teanina, fosfatidilserina, bacopa monnieri, melena de león, GABA, albahaca sagrada, panax ginseng, ginkgo biloba, raíz de valeriana, rhodiola rosea y corteza de magnolia."]], "ingText": "Qué incluye el kit.", "note": "Consulta la etiqueta de cada frasco para la composición completa y la dosis recomendada.", "dose": "Sigue la dosis indicada en la etiqueta de cada frasco. Tómalos con agua y alimentos.", "steps": [["Myo-Inositol", "Tómalo con una comida, según la dosis indicada en su etiqueta."], ["Corti-Soothe", "Tómalo en el momento del día indicado en su etiqueta, con un vaso de agua."], ["Constancia", "Mantén la rutina diaria al menos 2 a 3 meses para evaluar cómo te sientes."]], "faq": [["¿Puedo tomar ambos el mismo día?", "Sí, están pensados para combinarse. Sigue la dosis indicada en la etiqueta de cada uno."], ["¿Cuánto dura el kit?", "Depende de la dosis indicada en cada etiqueta. Myo-Inositol trae 90 cápsulas y Corti-Soothe 60 cápsulas."], ["¿Lo puedo tomar si estoy embarazada o en lactancia?", "No sin indicación médica. Consulta a tu médico antes de tomarlo."], ["¿Puedo comprar los productos por separado?", "Sí. Myo-Inositol 16 en 1 también está disponible de forma individual."]], "ch": "Dos fórmulas, <em>un solo hábito.</em>", "warn": ""}, "graviola": {"name": "Graviola en gotas", "accent": "#7F9A6E", "img": "img/sommalya-graviola.jpg", "price": null, "tagline": "Extracto de guanábana, fácil de tomar.", "benefits": ["Extracto concentrado de hoja y fruto de guanábana", "Formato en gotas, práctico y de absorción rápida", "Sabor fresco"], "badges": ["1800 mg", "60 ml", "Gotas", "Suplemento herbal"], "bh": "Lo herbal, <em>en su forma más simple.</em>", "bt": "Un extracto concentrado de guanábana en gotas, para sumar a tu rutina diaria.", "pillars": [["leaf", "Hoja y fruto", "Complejo de hoja y fruto de guanábana (Annona muricata) en un extracto concentrado."], ["drop", "Gotas", "Dosificación flexible: tómalo directo o diluido en agua."], ["sun", "Sabor fresco", "Un sabor suave y fresco que se integra fácil a tu día."]], "wh": "Para quien prefiere <em>lo herbal.</em>", "wb": "Para quien busca complementar su alimentación con un extracto de origen vegetal, en un formato práctico.", "wp": ["Prefieres los suplementos de origen herbal", "Te resulta más cómodo tomar gotas que cápsulas", "Buscas un formato práctico para llevar"], "ing": [["Hoja de guanábana", "", "Annona muricata · hoja", "Extracto concentrado de la hoja de guanábana."], ["Fruto de guanábana", "", "Annona muricata · fruto", "Complejo del fruto que completa el perfil del extracto."]], "ingText": "Un extracto de guanábana, sin complicaciones.", "note": "1800 mg · 60 ml por frasco. Consulta el empaque para la composición completa.", "dose": "Agita antes de usar. Sigue la dosis indicada en el empaque; puedes tomarlo directo o diluido en agua.", "steps": [["Agita", "Agita el frasco antes de cada uso."], ["Dosifica", "Usa el gotero para tomar la cantidad indicada en el empaque."], ["Directo o en agua", "Tómalo directo bajo la lengua o diluido en un vaso de agua."]], "faq": [["¿Cómo se toma?", "Agita el frasco y toma la cantidad indicada en el empaque, directo o diluido en agua."], ["¿Lo puedo tomar si estoy embarazada?", "No. No se recomienda durante el embarazo ni la lactancia."], ["¿Lo puedo tomar por tiempo prolongado?", "Recomendamos no usarlo por periodos prolongados sin supervisión médica."], ["¿Lo puedo tomar si tomo medicamentos?", "Consulta a tu médico antes de tomarlo, sobre todo si tomas medicamentos para la presión arterial o la glucosa."]], "ch": "Lo natural, <em>simple.</em>", "warn": " No se recomienda su uso prolongado sin supervisión médica."}};
+const HOME_FAQ = [["¿Para quién es Cortisol Calm?", "Para adultos que buscan acompañar su equilibrio frente al estrés diario con ingredientes como rhodiola, ashwagandha, L-teanina y magnesio."], ["¿Cuánto tarda en llegar mi pedido?", "Preparamos los pedidos en 24 horas hábiles. La entrega estándar tarda de 2 a 5 días hábiles, según tu ubicación."], ["¿Cómo funciona la garantía de 30 días?", "Si el producto no cumple tus expectativas, escríbenos dentro de los 30 días posteriores a la entrega y te reembolsamos el importe."], ["¿Puedo tomarlos si tomo medicamentos?", "Consulta a tu médico antes de iniciar cualquier suplemento si estás bajo tratamiento, embarazada o en periodo de lactancia."]];
+const CARDS = {"myo-inositol": ["Equilibrio femenino", "Inositoles, vitaminas D3+K2, folato y minerales en 90 cápsulas veganas."], "kit-inositol-cortisol": ["Kit · 2 piezas", "Myo-Inositol 16 en 1 y Corti-Soothe 13 en 1 para tu equilibrio y tu calma."], "graviola": ["Herbal", "Extracto concentrado de hoja y fruto de guanábana. 1800 mg, 60 ml."], "cortisol-calm": ["Producto estrella", "Rhodiola, ashwagandha, L-teanina y magnesio en fórmula liposomal."]};
 const I = {
   leaf:'<path d="M5 19c0-8 5-13 14-14 0 9-5 14-13 14"/><path d="M5 19 13 11"/>',
   moon:'<path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5Z"/>',
   sun:'<circle cx="12" cy="12" r="4"/><path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.3 5.3l1.4 1.4M17.3 17.3l1.4 1.4M5.3 18.7l1.4-1.4M17.3 6.7l1.4-1.4"/>',
   shield:'<path d="M12 3 5 6v5c0 4.5 3 8.5 7 10 4-1.5 7-5.5 7-10V6l-7-3Z"/><path d="m9 12 2 2 4-4"/>',
   drop:'<path d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11Z"/><path d="M9.5 15a2.5 2.5 0 0 0 2.5 2.5"/>',
-  lab:'<path d="M9 3h6M10 3v6l-5 9a2 2 0 0 0 1.8 3h10.4a2 2 0 0 0 1.8-3l-5-9V3"/><path d="M7.5 15h9"/>',
   heart:'<path d="M12 20s-7.5-4.6-7.5-10A4.3 4.3 0 0 1 12 7.4 4.3 4.3 0 0 1 19.5 10c0 5.4-7.5 10-7.5 10Z"/>',
-  check:'<path d="m5 12.5 4.5 4.5L19 7.5"/>', x:'<path d="M7 7l10 10M17 7 7 17"/>',
+  check:'<path d="m5 12.5 4.5 4.5L19 7.5"/>',
   truck:'<path d="M3 6h11v10H3zM14 9h4l3 3v4h-7"/><circle cx="7" cy="17.5" r="1.8"/><circle cx="17" cy="17.5" r="1.8"/>',
   ret:'<path d="M4 9h11a5 5 0 0 1 0 10H8"/><path d="m8 5-4 4 4 4"/>',
+  globe:'<circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3Z"/>',
   spark:'<path d="M12 3c.8 4.6 2.4 6.2 7 7-4.6.8-6.2 2.4-7 7-.8-4.6-2.4-6.2-7-7 4.6-.8 6.2-2.4 7-7Z"/>',
   clock:'<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>', arrow:'<path d="M4 12h16M14 6l6 6-6 6"/>'
 };
-const ic = n => `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${I[n]}</svg>`;
-const star = '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 3 2.6 5.6 6.1.7-4.5 4.2 1.2 6L12 16.6 6.6 19.5l1.2-6L3.3 9.3l6.1-.7L12 3Z"/></svg>';
-const bottle = (label='', accent='var(--sage)') => `<div class="ph" style="--accent:${accent}"><svg viewBox="0 0 200 300" role="img" aria-label="Frasco Sommalya ${label}"><rect x="62" y="8" width="76" height="40" rx="6" fill="#2a332e"/><rect x="58" y="44" width="84" height="10" rx="3" fill="#3a443e"/><path d="M40 78c0-14 10-24 24-24h72c14 0 24 10 24 24v190c0 13-10 22-22 22H62c-12 0-22-9-22-22V78Z" fill="#fbfaf7" stroke="rgba(0,0,0,.08)"/><rect x="40" y="120" width="120" height="130" fill="${accent}" opacity=".16"/><text x="100" y="152" text-anchor="middle" font-family="Georgia,serif" font-size="15" letter-spacing="3" fill="#1f2a24">SOMMALYA</text><line x1="80" y1="164" x2="120" y2="164" stroke="#1f2a24" stroke-opacity=".35"/><text x="100" y="190" text-anchor="middle" font-family="Georgia,serif" font-style="italic" font-size="17" fill="#1f2a24">${label}</text><text x="100" y="232" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="6.5" letter-spacing="1.2" fill="#1f2a24" fill-opacity=".6">SUPLEMENTO NATURAL · 60 CÁPS.</text></svg></div>`;
-
-const TRUST = [['truck','Envío gratis','En pedidos desde $799'],['ret','Garantía de 30 días','Si no es para ti, te devolvemos tu dinero'],['leaf','Origen natural','Ingredientes trazables, cápsula vegetal'],['shield','Pago seguro','Datos cifrados de extremo a extremo']];
+const ic = n => `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${I[n] || I.leaf}</svg>`;
+const TRUST = [['truck','Envío gratis','En pedidos desde $799'],['ret','Garantía de 30 días','Si no es para ti, te devolvemos tu dinero'],['globe','Hecho en EE. UU.','Fabricación con estándares de calidad'],['shield','Pago seguro','Datos cifrados de extremo a extremo']];
 const DISC = 'Este producto no es un medicamento. El consumo de este producto es responsabilidad de quien lo recomienda y de quien lo usa. Consulta a tu médico si estás embarazada, en lactancia o bajo tratamiento.';
-const BASE_CMP = [['Ingredientes de origen natural',1,0],['Dosis declarada de cada ingrediente',1,0],['Cápsula vegetal, sin colorantes',1,0],['Lote analizado antes de su venta',1,0],['Garantía de 30 días',1,0]];
-
-const P = {
- descanso: { name:'Descanso', accent:'#7C8BA1', price:449, tagline:'Noches tranquilas, mañanas claras.', card:'Magnesio, valeriana y pasiflora para conciliar el sueño y despertar con claridad.', cta:'Dormir mejor',
-  benefits:['Favorece conciliar el sueño de forma natural','Contribuye a un descanso más profundo y reparador','Sin melatonina sintética: apto para uso diario'],
-  bh:'Dormir bien es <em>la base de todo.</em>', bt:'Una fórmula botánica que acompaña el ritmo natural de tu cuerpo hacia el descanso.',
-  pillars:[['moon','Concilia el sueño','Valeriana y pasiflora, plantas usadas tradicionalmente para ayudar a conciliar el sueño.'],['drop','Relaja el cuerpo','El magnesio contribuye al funcionamiento normal del sistema nervioso y de los músculos.'],['sun','Despierta con claridad','Sin melatonina sintética ni sedantes: descansa sin sensación de pesadez al despertar.']],
-  wh:'Para mentes que <em>no se apagan.</em>', wb:'Para quien da vueltas en la cama, se despierta a mitad de la noche o siente que su descanso no es reparador. Descanso acompaña una rutina nocturna tranquila; no la sustituye.',
-  wp:['Te cuesta desconectar al final del día','Te despiertas varias veces durante la noche','Buscas una alternativa de origen vegetal'],
-  ing:[['Magnesio bisglicinato','200 mg','Mineral · forma quelada','Forma de alta absorción y suave con el estómago. Contribuye al funcionamiento normal del sistema nervioso.'],['Valeriana','300 mg','Valeriana officinalis · raíz','Planta empleada tradicionalmente para favorecer la relajación y el sueño.'],['Pasiflora','150 mg','Passiflora incarnata · parte aérea','Utilizada tradicionalmente para ayudar a calmar la mente antes de dormir.'],['Melisa','100 mg','Melissa officinalis · hoja','Planta de la familia de la menta, tradicionalmente asociada a la calma.']],
-  dose:'Toma 2 cápsulas con agua entre 30 y 60 minutos antes de dormir.',
-  steps:[['Toma 2 cápsulas','Con un vaso de agua, entre 30 y 60 minutos antes de acostarte.'],['Prepara tu ritual','Baja la luz y deja las pantallas. Tu cuerpo entiende la señal.'],['Sé constante','Los mejores resultados aparecen con el uso diario durante 2 a 4 semanas.']],
-  cmp:['Sin melatonina sintética',1,0],
-  faq:[['¿Me sentiré somnoliento al día siguiente?','No contiene melatonina sintética ni sedantes. Está pensado para acompañar tu descanso sin sensación de pesadez por la mañana.'],['¿Puedo tomarlo todos los días?','Sí. Está formulado para uso diario. Recomendamos ciclos de 3 meses y una pausa de 2 semanas.'],['¿Cuándo notaré resultados?','Algunas personas notan cambios desde la primera semana; lo habitual es percibirlos con 2 a 4 semanas de uso constante.'],['¿Puedo combinarlo con otras fórmulas Sommalya?','Sí. Descanso se complementa bien con Digestión o Defensas. Evita tomar Energía por la noche.']],
-  ch:'Tu mejor noche <em>empieza hoy.</em>' },
- digestion: { name:'Digestión', accent:'#8E9A6E', price:429, tagline:'Ligereza después de cada comida.', card:'Jengibre, hinojo y probióticos para sentirte ligero después de cada comida.', cta:'Digerir mejor',
-  benefits:['Ayuda a reducir la pesadez y la hinchazón ocasional','Apoya una digestión cómoda y regular','Con probióticos para tu flora intestinal'],
-  bh:'Sentirte ligero <em>es posible.</em>', bt:'Plantas digestivas de uso tradicional y probióticos, en una sola cápsula.',
-  pillars:[['leaf','Menos pesadez','Jengibre e hinojo, utilizados tradicionalmente para favorecer la digestión.'],['drop','Menos hinchazón','La menta piperita ayuda a aliviar la sensación de gases e hinchazón ocasional.'],['heart','Flora equilibrada','Cultivos probióticos que acompañan el equilibrio de tu microbiota intestinal.']],
-  wh:'Para quien come <em>a deshoras.</em>', wb:'Para ritmos de vida exigentes, comidas fuera de casa y digestiones que se alargan. Digestión es tu aliado después de la comida principal.',
-  wp:['Sientes pesadez después de comer','Notas hinchazón con frecuencia','Quieres cuidar tu flora intestinal'],
-  ing:[['Jengibre','250 mg','Zingiber officinale · raíz','Empleado tradicionalmente para favorecer la digestión y aliviar la sensación de náusea.'],['Hinojo','200 mg','Foeniculum vulgare · semilla','Contribuye a reducir la sensación de gases e hinchazón ocasional.'],['Menta piperita','100 mg','Mentha × piperita · hoja','Ayuda a la comodidad digestiva después de las comidas.'],['Probióticos','5 mil millones UFC','Lactobacillus y Bifidobacterium','Cultivos vivos que acompañan el equilibrio de la flora intestinal.']],
-  dose:'Toma 1 cápsula con agua antes de las dos comidas principales.',
-  steps:[['Antes de comer','Toma 1 cápsula con agua 15 minutos antes de tus dos comidas principales.'],['Come con calma','Mastica despacio y evita acostarte justo después de comer.'],['Mantén la rutina','La flora intestinal responde a la constancia: dale al menos 3 semanas.']],
-  cmp:['Probióticos con UFC declaradas',1,0],
-  faq:[['¿Necesita refrigeración?','No. Las cepas están seleccionadas para mantenerse estables a temperatura ambiente. Consérvalo en un lugar fresco y seco.'],['¿Puedo tomarlo con el estómago vacío?','Sí, aunque recomendamos tomarlo poco antes de las comidas para acompañar la digestión.'],['¿En cuánto tiempo notaré la diferencia?','La sensación de ligereza puede notarse en pocos días; el equilibrio de la flora requiere unas 3 a 4 semanas.'],['¿Contiene lácteos?','No contiene lácteos añadidos ni gluten.']],
-  ch:'Come bien, <em>siéntete mejor.</em>' },
- energia: { name:'Energía', accent:'#B8956A', price:469, tagline:'Energía estable, sin altibajos.', card:'Rhodiola, maca y vitamina B12 para una energía estable, sin altibajos.', cta:'Rendir mejor',
-  benefits:['La vitamina B12 contribuye a reducir el cansancio y la fatiga','Apoya la concentración durante la jornada','Sin cafeína añadida ni azúcar'],
-  bh:'Rendir sin <em>depender del café.</em>', bt:'Adaptógenos y vitamina B12 para una energía sostenida, desde la mañana hasta la tarde.',
-  pillars:[['sun','Energía sostenida','La vitamina B12 contribuye al metabolismo energético normal y a reducir el cansancio.'],['spark','Mente enfocada','La rhodiola, un adaptógeno de uso tradicional, acompaña los días de mayor exigencia.'],['clock','Sin bajones','Sin cafeína añadida ni azúcares: sin picos de energía seguidos de caídas.']],
-  wh:'Para días que <em>exigen más.</em>', wb:'Para jornadas largas, etapas de mucho trabajo o estudio y para quien quiere sentirse con energía sin recurrir a otra taza de café.',
-  wp:['Sientes cansancio a media tarde','Buscas concentrarte sin estimulantes','Quieres reducir tu consumo de cafeína'],
-  ing:[['Rhodiola','200 mg','Rhodiola rosea · raíz, 3% rosavinas','Adaptógeno utilizado tradicionalmente para afrontar periodos de exigencia física y mental.'],['Maca andina','500 mg','Lepidium meyenii · raíz gelatinizada','Raíz de los Andes empleada tradicionalmente para la vitalidad.'],['Ginseng','100 mg','Panax ginseng · raíz','Planta de uso tradicional asociada a la vitalidad y el rendimiento.'],['Vitamina B12','25 µg','Metilcobalamina','Contribuye a reducir el cansancio y la fatiga y al metabolismo energético normal.']],
-  dose:'Toma 2 cápsulas con agua por la mañana, junto con el desayuno. No se recomienda por la tarde o la noche.',
-  steps:[['Por la mañana','Toma 2 cápsulas con el desayuno, idealmente a la misma hora.'],['Hidrátate','Acompáñalo de agua durante el día: la energía también depende de ella.'],['Haz ciclos','Usa Energía durante 8 semanas y descansa 1 semana para mantener su efecto.']],
-  cmp:['Sin cafeína añadida ni azúcar',1,0],
-  faq:[['¿Contiene cafeína?','No contiene cafeína añadida. El ginseng y la rhodiola actúan de forma distinta a los estimulantes.'],['¿Puedo tomarlo junto con café?','Sí, aunque muchas personas notan que necesitan menos café con el uso constante.'],['¿Lo puedo tomar por la noche?','No lo recomendamos. Para la noche, te sugerimos nuestra fórmula Descanso.'],['¿Es apto para veganos?','Sí. Todos los ingredientes y la cápsula son de origen vegetal o mineral, y la B12 se obtiene por fermentación.']],
-  ch:'Más energía, <em>menos esfuerzo.</em>' },
- defensas: { name:'Defensas', accent:'#A87D6E', price:449, tagline:'Tu primera línea de cuidado.', card:'Vitamina C de acerola, zinc y saúco para acompañar tu sistema inmunitario.', cta:'Protegerte',
-  benefits:['La vitamina C y el zinc contribuyen al funcionamiento normal del sistema inmunitario','Con saúco negro y equinácea','Ideal en cambios de estación'],
-  bh:'Cuídate antes <em>de necesitarlo.</em>', bt:'Vitamina C natural, zinc y plantas de tradición para acompañar tus defensas todo el año.',
-  pillars:[['shield','Defensas activas','La vitamina C y el zinc contribuyen al funcionamiento normal del sistema inmunitario.'],['leaf','Vitamina C natural','Obtenida de la acerola, una de las frutas con mayor concentración de vitamina C.'],['sun','Todo el año','Especialmente útil en cambios de estación, viajes y periodos de mayor exposición.']],
-  wh:'Para cuidarte <em>todo el año.</em>', wb:'Para quien se expone a cambios de clima, viaja con frecuencia o convive con niños en edad escolar y quiere apoyar sus defensas de forma natural.',
-  wp:['Cambios de estación y clima frío','Viajes, oficinas y espacios concurridos','Etapas de mayor desgaste físico'],
-  ing:[['Acerola','500 mg','Malpighia emarginata · fruto (25% vit. C)','Aporta 125 mg de vitamina C natural, que contribuye a la función normal del sistema inmunitario.'],['Zinc','10 mg','Zinc bisglicinato','Contribuye al funcionamiento normal del sistema inmunitario y a la protección de las células.'],['Saúco negro','200 mg','Sambucus nigra · fruto','Baya utilizada tradicionalmente durante los meses fríos.'],['Equinácea','150 mg','Echinacea purpurea · parte aérea','Planta de uso tradicional para acompañar las defensas del organismo.']],
-  dose:'Toma 2 cápsulas con agua al día, preferentemente con el desayuno.',
-  steps:[['Con el desayuno','Toma 2 cápsulas al día junto con tu primera comida.'],['Refuerza tu base','Duerme bien, hidrátate y come variado: el suplemento suma, no sustituye.'],['Anticípate','Empieza unas semanas antes del cambio de estación y mantenlo de 2 a 3 meses.']],
-  cmp:['Vitamina C de origen natural (acerola)',1,0],
-  faq:[['¿Puedo tomarlo todo el año?','Sí. Puedes tomarlo de forma continua o en ciclos de 2 a 3 meses, especialmente en los cambios de estación.'],['¿Lo pueden tomar los niños?','Esta fórmula está pensada para adultos. Consulta a tu pediatra para menores de 12 años.'],['¿Por qué vitamina C de acerola?','La acerola aporta vitamina C de origen natural junto con otros compuestos propios de la fruta.'],['¿Puedo combinarlo con Descanso o Digestión?','Sí. Las fórmulas Sommalya están pensadas para complementarse entre sí.']],
-  ch:'Tu bienestar, <em>bien protegido.</em>' }
-};
-const money = n => '$' + n.toLocaleString('es-MX') + ' MXN';
+const money = n => n == null ? 'Precio por confirmar' : '$' + n.toLocaleString('es-MX') + ' MXN';
+const photo = (p) => `<img class="photo" src="${p.img}" alt="${p.name}">`;
 
 const head = (eb, h, t, cls='center') => `<header class="head ${cls}"><div><p class="eyebrow">${eb}</p><h2>${h}</h2></div>${t ? `<p class="lead">${t}</p>` : ''}</header>`;
-const trustbar = (bg='soft') => `<section class="sm ${bg}" style="padding-block:40px"><div class="wrap trustbar">${TRUST.map(([i,t,s]) => `<div class="i"><span class="icon">${ic(i)}</span><div><strong>${t}</strong><span>${s}</span></div></div>`).join('')}</div></section>`;
+const trustbar = () => `<section class="sm soft" style="padding-block:40px"><div class="wrap trustbar">${TRUST.map(([i,t,s]) => `<div class="i"><span class="icon">${ic(i)}</span><div><strong>${t}</strong><span>${s}</span></div></div>`).join('')}</div></section>`;
 const pillars = list => `<div class="pillars">${list.map(([i,t,s]) => `<article class="pillar"><span class="icon">${ic(i)}</span><h3>${t}</h3><p>${s}</p></article>`).join('')}</div>`;
 const steps = list => `<ol class="steps">${list.map(([t,s]) => `<li><h3>${t}</h3><p>${s}</p></li>`).join('')}</ol>`;
-const compare = (rows, other='Genéricos') => `<div class="tablewrap"><table><thead><tr><th scope="col"><span style="position:absolute;left:-9999px">Característica</span></th><th scope="col" class="brand">Sommalya</th><th scope="col">${other}</th></tr></thead><tbody>${rows.map(([f,a,b]) => `<tr><td>${f}</td><td class="${a?'brand':'no'}">${ic(a?'check':'x')}<span style="position:absolute;left:-9999px">${a?'Sí':'No'}</span></td><td class="${b?'brand':'no'}">${ic(b?'check':'x')}<span style="position:absolute;left:-9999px">${b?'Sí':'No'}</span></td></tr>`).join('')}</tbody></table></div>`;
 const faq = list => `<div class="faq">${list.map(([q,a],k) => `<details${k===0?' open':''}><summary>${q}</summary><p>${a}</p></details>`).join('')}</div>`;
-const cta = (eb, h, t, label, go) => `<section class="sm sandbg cta center"><div class="wrap narrow"><p class="eyebrow">${eb}</p><h2>${h}</h2><p class="lead">${t}</p><div class="actions"><a class="btn" ${go}>${label} ${ic('arrow')}</a></div><p class="disclaimer">${DISC}</p></div></section>`;
+const ingredients = (p, withDose=true) => `<div class="ingredients">${p.ing.map(([n,d,o,t]) => `<article class="ing"><div class="top"><h3>${n}</h3>${withDose && d ? `<span class="dose">${d}</span>` : ''}</div><span class="orig">${o}</span><p>${t}</p></article>`).join('')}</div><p class="note">${p.note}</p>`;
+const card = k => { const p = P[k], [tag, txt] = CARDS[k]; return `<button class="need" data-go="${k}" style="--accent:${p.accent}"><div class="m">${photo(p)}<span class="tag">${tag}</span></div><div class="b"><h3>${p.name}</h3><p>${txt}</p></div><div class="f"><span>Conocer</span><b>${money(p.price)}</b></div></button>`; };
+const cta = (h, label, attr) => `<section class="sm sandbg cta center"><div class="wrap narrow"><p class="eyebrow">Garantía Sommalya</p><h2>${h}</h2><p class="lead">Pruébalo durante 30 días. Si no es para ti, te devolvemos tu dinero.</p><div class="actions"><a class="btn" ${attr}>${label} ${ic('arrow')}</a></div><p class="disclaimer">${DISC}</p></div></section>`;
 
 function home() {
-  return `
-  <section class="sm hero">
+  const c = P['cortisol-calm'];
+  return `<div style="--accent:${c.accent}">
+  <section class="sm hero studio">
     <div class="content">
-      <p class="eyebrow" data-r>Suplementos de origen natural</p>
-      <h1 data-r="2">Lo esencial, <em>bien hecho.</em></h1>
-      <p class="lead" data-r="3">Fórmulas naturales para cuidar lo básico que lo sostiene todo: dormir bien, digerir mejor, tener energía y defenderte. Sin rellenos. Sin promesas vacías.</p>
-      <div class="actions" data-r="3"><a class="btn" data-scroll="coleccion">Descubrir la colección ${ic('arrow')}</a><a class="btn ghost" data-scroll="filosofia">Nuestra filosofía</a></div>
-      <ul class="trust3"><li><strong>100%</strong><span>Ingredientes de origen natural</span></li><li><strong>0</strong><span>Colorantes ni rellenos artificiales</span></li><li><strong>30 días</strong><span>Garantía de satisfacción</span></li></ul>
+      <p class="eyebrow" data-r>Producto estrella</p>
+      <h1 data-r="2">Cortisol <em>Calm.</em></h1>
+      <p class="lead" data-r="3">Rhodiola, ashwagandha, L-teanina y magnesio en una fórmula liposomal para acompañar tu equilibrio frente al estrés de cada día.</p>
+      <p class="price-tag" data-r="3">${money(c.price)}</p>
+      <div class="actions" data-r="3"><a class="btn" data-go="cortisol-calm">Comprar Cortisol Calm ${ic('arrow')}</a><a class="btn ghost" data-scroll="formula">Ver la fórmula</a></div>
+      <ul class="trust3"><li><strong>759 mg</strong><span>Por porción</span></li><li><strong>10</strong><span>Ingredientes clave</span></li><li><strong>60</strong><span>Cápsulas por frasco</span></li></ul>
     </div>
-    <div class="media">${bottle('Esencial')}</div>
+    <div class="media"><img src="${c.img}" alt="Cortisol Calm"></div>
   </section>
   ${trustbar()}
-  <section class="sm" id="coleccion" style="padding-block:112px"><div class="wrap">
-    ${head('La colección','¿Qué necesitas <em>cuidar hoy?</em>','Cuatro fórmulas para cuatro funciones vitales. Elige por lo que buscas, no por la etiqueta.','split')}
-    <div class="needs">${Object.entries(P).map(([k,p]) => `<button class="need" data-go="${k}" style="--accent:${p.accent}"><div class="m">${bottle(p.name,p.accent)}<span class="tag">${p.name}</span></div><div class="b"><h3>${p.name}</h3><p>${p.card}</p></div><div class="f"><span>${p.cta}</span><b>${money(p.price)}</b></div></button>`).join('')}</div>
-  </div></section>
-  <section class="sm" id="filosofia" style="padding-block:64px 112px"><div class="wrap">
-    ${head('Nuestros principios','Simple. Natural. <em>Honesto.</em>','Creemos que el bienestar empieza por lo básico. Por eso cada fórmula Sommalya nace con pocos ingredientes, bien elegidos y en dosis que tienen sentido.')}
-    ${pillars([['leaf','Origen natural','Extractos botánicos y minerales seleccionados por su pureza, con origen documentado en cada lote.'],['lab','Dosis con sentido','Cantidades basadas en la evidencia disponible y declaradas con total transparencia en la etiqueta.'],['shield','Calidad verificada','Analizamos cada lote para confirmar identidad, pureza y ausencia de contaminantes.'],['heart','Tu satisfacción primero','Si no es para ti, te devolvemos tu dinero durante los primeros 30 días. Sin complicaciones.']])}
-  </div></section>
-  <section class="sm soft" style="padding-block:112px"><div class="wrap split">
-    <div class="media">${bottle('Origen')}</div>
-    <div><p class="eyebrow">Nuestra historia</p><h2>Nacimos para simplificar <em>lo vital.</em></h2>
-      <div class="body" style="margin-top:24px"><p>Sommalya surge de una idea sencilla: el bienestar no debería ser complicado. Dormir, digerir, tener energía y defenderse son funciones básicas del día a día, y merecen fórmulas serias, claras y naturales.</p><p>Por eso trabajamos con menos ingredientes y más criterio. Lo que no aporta, no entra en el frasco.</p></div>
-      <ul class="list">${['Fórmulas cortas: solo lo que aporta','Etiquetas transparentes, con cada dosis declarada','Cápsulas vegetales, sin colorantes ni saborizantes','Producción en lotes pequeños y controlados'].map(t => `<li>${ic('check')}<span>${t}</span></li>`).join('')}</ul>
-      <div class="actions"><a class="btn ghost">Conoce Sommalya</a></div></div>
+  <section class="sm" style="padding-block:96px"><div class="wrap">${head('Por qué Cortisol Calm', c.bh, c.bt)}${pillars(c.pillars)}</div></section>
+  <section class="sm soft" id="formula" style="padding-block:112px"><div class="wrap">${head('La fórmula','Diez ingredientes, <em>una sola cápsula.</em>','Cada ingrediente tiene una función concreta dentro de la fórmula.','split')}${ingredients(c,false)}</div></section>
+  <section class="sm" style="padding-block:112px 96px"><div class="wrap">${head('Modo de uso','Un hábito <em>sencillo.</em>','','left')}${steps(c.steps)}</div></section>
+  </div>
+  <section class="sm soft" style="padding-block:112px"><div class="wrap">
+    ${head('Completa tu rutina','También en <em>Sommalya.</em>','Fórmulas seleccionadas para acompañar distintas necesidades de tu bienestar.','split')}
+    <div class="needs">${['myo-inositol','kit-inositol-cortisol','graviola'].map(card).join('')}</div>
   </div></section>
   <section class="sm" style="padding-block:112px 96px"><div class="wrap">
-    ${head('Cómo trabajamos','De la planta al frasco, <em>paso a paso.</em>','','left')}
-    ${steps([['Seleccionamos','Elegimos cada ingrediente por su forma más biodisponible y por la trazabilidad de su origen.'],['Formulamos','Diseñamos fórmulas cortas, con dosis respaldadas por la literatura y sin excipientes innecesarios.'],['Analizamos','Cada lote se verifica antes de envasarse: identidad, pureza, metales pesados y microbiología.'],['Te acompañamos','Guía de uso clara, atención personalizada y garantía de satisfacción de 30 días.']])}
+    ${head('Sommalya','Simple. Natural. <em>Honesto.</em>','Seleccionamos suplementos con fórmulas claras y etiquetas transparentes, para cuidar lo básico que lo sostiene todo.')}
+    ${pillars([['leaf','Fórmulas claras','Ingredientes declarados en cada etiqueta, sin letras pequeñas.'],['globe','Hecho en EE. UU.','Productos fabricados en Estados Unidos.'],['heart','Tu satisfacción primero','Si no es para ti, te devolvemos tu dinero durante los primeros 30 días.']])}
   </div></section>
-  <section class="sm ink" style="padding-block:112px"><div class="wrap">
-    ${head('Compromiso de calidad','La seriedad también <em>se nota.</em>','No vendemos promesas: vendemos fórmulas cuidadas. Así lo medimos.','split')}
-    <div class="stats"><div><strong>100%</strong><span>Lotes analizados antes de su venta</span></div><div><strong>0</strong><span>Colorantes, saborizantes o rellenos artificiales</span></div><div><strong>4</strong><span>Ingredientes clave por fórmula, en promedio</span></div><div><strong>30 días</strong><span>Garantía de satisfacción</span></div></div>
-  </div></section>
-  <section class="sm" style="padding-block:112px 96px"><div class="wrap narrow">
-    ${head('La diferencia','Menos ruido, <em>más criterio.</em>','')}
-    ${compare([['Ingredientes de origen natural',1,0],['Dosis de cada ingrediente declarada',1,0],['Cápsula vegetal',1,0],['Sin colorantes, saborizantes ni rellenos',1,0],['Análisis de cada lote',1,0],['Garantía de satisfacción de 30 días',1,0]], 'Suplementos genéricos')}
-  </div></section>
-  <section class="sm soft" style="padding-block:96px"><div class="wrap">
-    ${head('Opiniones','Lo que dicen <em>quienes ya lo usan.</em>','')}
-    <div class="reviews-slot"><strong style="color:var(--ink);font-weight:500">Espacio para reseñas verificadas</strong>Se llenará con reseñas reales de clientes (por ejemplo con Judge.me o la app de reseñas de Shopify).</div>
-  </div></section>
-  <section class="sm" style="padding-block:96px 112px"><div class="wrap narrow">
-    ${head('Preguntas frecuentes','Resolvemos <em>tus dudas.</em>','')}
-    ${faq([['¿Cómo sé qué producto es para mí?','Elige por la necesidad que quieres cuidar: descanso, digestión, energía o defensas. Cada fórmula está diseñada para una función concreta y pueden combinarse entre sí.'],['¿Los ingredientes son realmente naturales?','Sí. Usamos extractos botánicos, minerales y vitaminas de origen natural, en cápsula vegetal y sin colorantes, saborizantes ni rellenos artificiales.'],['¿Cuánto tarda en llegar mi pedido?','Preparamos los pedidos en 24 horas hábiles. La entrega estándar tarda de 2 a 5 días hábiles, según tu ubicación.'],['¿Cómo funciona la garantía de 30 días?','Si el producto no cumple tus expectativas, escríbenos dentro de los 30 días posteriores a la entrega y te reembolsamos el importe, incluso si el frasco está abierto.'],['¿Puedo tomarlos si tomo medicamentos?','Te recomendamos consultar a tu médico antes de iniciar cualquier suplemento si estás bajo tratamiento, embarazada o en periodo de lactancia.']])}
-  </div></section>
-  ${cta('Garantía Sommalya','Pruébalo 30 días. <em>Sin riesgo.</em>','Si no notas la diferencia, te devolvemos tu dinero. Así de seguros estamos de la calidad de cada fórmula.','Elegir mi fórmula','data-scroll="coleccion"')}`;
+  <section class="sm" style="padding-block:64px 112px"><div class="wrap narrow">${head('Preguntas frecuentes','Resolvemos <em>tus dudas.</em>','')}${faq(HOME_FAQ)}</div></section>
+  ${cta('Pruébalo 30 días. <em>Sin riesgo.</em>','Comprar Cortisol Calm','data-go="cortisol-calm"')}`;
 }
 
 function product(k) {
   const p = P[k];
-  const sub = Math.round(p.price * 0.85);
-  const ingList = `<ul>${p.ing.map(([n,d]) => `<li><strong>${n}</strong> — ${d}</li>`).join('')}</ul><p style="margin:8px 0 0">Excipientes: cápsula vegetal (hidroxipropilmetilcelulosa).</p>`;
-  const others = Object.entries(P).filter(([x]) => x !== k);
+  const others = Object.keys(P).filter(x => x !== k);
   return `<div style="--accent:${p.accent}">
   <section class="pdp">
-    <div class="gallery"><div class="main">${bottle(p.name,p.accent)}</div><div class="thumbs"><div>Frasco y etiqueta</div><div>Textura de la cápsula</div><div>Ritual de uso</div></div></div>
+    <div class="gallery"><div class="main">${photo(p)}</div><div class="thumbs">${others.map(o => `<div><img src="${P[o].img}" alt=""></div>`).join('')}</div></div>
     <div class="buy">
-      <span class="crumbs">Inicio / Colección / ${p.name}</span>
-      <div style="display:grid;gap:12px"><h1 style="font-size:clamp(40px,5vw,64px)" data-r>Sommalya ${p.name}</h1>
+      <span class="crumbs">Inicio / Productos / ${p.name}</span>
+      <div style="display:grid;gap:12px"><h1 style="font-size:clamp(38px,4.6vw,60px)" data-r>${p.name}</h1>
       <p class="tagline" data-r="2">${p.tagline}</p></div>
-      <div class="rating"><span class="stars">${star.repeat(5)}</span><span>Reseñas verificadas · se muestran al conectar la app de reseñas</span></div>
+      <p class="price" style="margin:0">${money(p.price)}</p>
       <ul class="list" style="margin:0">${p.benefits.map(b => `<li>${ic('check')}<span>${b}</span></li>`).join('')}</ul>
-      <fieldset class="opts" style="border:0;padding:0;margin:0"><legend style="font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-bottom:10px">Elige cómo comprar</legend>
-        <label class="o"><input type="radio" name="plan-${k}" value="sub" checked><span class="t">Suscripción mensual<small>${money(sub)} cada 30 días · cancela cuando quieras</small></span><span class="save">Ahorra 15%</span></label>
-        <label class="o"><input type="radio" name="plan-${k}" value="one"><span class="t">Compra única<small>${money(p.price)} · 60 cápsulas, 30 días</small></span><span></span></label>
-      </fieldset>
       <div class="qtyrow"><div class="qty"><button type="button" data-q="-1" aria-label="Quitar uno">–</button><output id="qty">1</output><button type="button" data-q="1" aria-label="Agregar uno">+</button></div>
-      <button class="btn" id="addBtn" type="button">Agregar al carrito · <span id="btnPrice">${money(sub)}</span></button></div>
+      <button class="btn" id="addBtn" type="button">Agregar al carrito</button></div>
       <p class="status" id="status" role="status"></p>
-      <ul class="badges"><li>Vegano</li><li>Sin gluten</li><li>Sin colorantes</li><li>Cápsula vegetal</li></ul>
+      <ul class="badges">${p.badges.map(b => `<li>${b}</li>`).join('')}</ul>
       <div class="acc">
-        <details open><summary>Descripción</summary><div class="in">${p.bt} 60 cápsulas vegetales por frasco, para 30 días de uso.</div></details>
-        <details><summary>Ingredientes</summary><div class="in">${ingList}</div></details>
+        <details open><summary>Descripción</summary><div class="in">${p.bt}</div></details>
+        <details><summary>Ingredientes</summary><div class="in"><ul>${p.ing.map(([n]) => `<li>${n}</li>`).join('')}</ul><p style="margin:8px 0 0">${p.note}</p></div></details>
         <details><summary>Modo de uso</summary><div class="in">${p.dose}</div></details>
-        <details><summary>Advertencias</summary><div class="in">${DISC} No exceder la dosis diaria recomendada. Mantener fuera del alcance de los niños.</div></details>
+        <details><summary>Advertencias</summary><div class="in">${DISC} No exceder la dosis diaria recomendada. Mantener fuera del alcance de los niños.${p.warn}</div></details>
         <details><summary>Envíos y garantía</summary><div class="in">Envío gratis en pedidos desde $799. Entrega de 2 a 5 días hábiles. Garantía de satisfacción de 30 días.</div></details>
       </div>
     </div>
   </section>
   ${trustbar()}
-  <section class="sm" style="padding-block:112px 96px"><div class="wrap">${head('Beneficios',p.bh,p.bt)}${pillars(p.pillars)}</div></section>
+  <section class="sm" style="padding-block:112px 96px"><div class="wrap">${head('Beneficios', p.bh, p.bt)}${pillars(p.pillars)}</div></section>
   <section class="sm soft" style="padding-block:112px"><div class="wrap split rev">
-    <div class="media">${bottle(p.name,p.accent)}</div>
+    <div class="media">${photo(p)}</div>
     <div><p class="eyebrow">Para quién es</p><h2>${p.wh}</h2><div class="body" style="margin-top:24px"><p>${p.wb}</p></div>
     <ul class="list">${p.wp.map(t => `<li>${ic('check')}<span>${t}</span></li>`).join('')}</ul></div>
   </div></section>
-  <section class="sm" style="padding-block:112px 96px"><div class="wrap">
-    ${head('La fórmula','Qué hay <em>dentro.</em>','Cuatro ingredientes con una razón concreta para estar aquí. Nada más.','split')}
-    <div class="ingredients">${p.ing.map(([n,d,o,t]) => `<article class="ing"><div class="top"><h3>${n}</h3><span class="dose">${d}</span></div><span class="orig">${o}</span><p>${t}</p></article>`).join('')}</div>
-    <p class="note">Dosis por porción diaria. 60 cápsulas vegetales por frasco · 30 días.</p>
-  </div></section>
+  <section class="sm" style="padding-block:112px 96px"><div class="wrap">${head('La fórmula','Qué hay <em>dentro.</em>', p.ingText, 'split')}${ingredients(p)}</div></section>
   <section class="sm sandbg"><div class="wrap">${head('Modo de uso','Un hábito <em>sencillo.</em>','','left')}${steps(p.steps)}</div></section>
-  <section class="sm" style="padding-block:112px 96px"><div class="wrap narrow">${head('La diferencia',`Por qué <em>Sommalya ${p.name}.</em>`,'')}${compare([p.cmp, ...BASE_CMP])}</div></section>
-  <section class="sm" style="padding-block:64px 112px"><div class="wrap narrow">${head('Preguntas frecuentes',`Sobre <em>${p.name}.</em>`,'')}${faq(p.faq)}</div></section>
-  ${cta('Garantía Sommalya', p.ch, 'Pruébalo durante 30 días. Si no es para ti, te devolvemos tu dinero.', 'Agregar a mi rutina', 'data-top="1"')}
-  <section class="sm" style="padding-block:96px"><div class="wrap">
-    ${head('Complementa tu rutina','Fórmulas que <em>se llevan bien.</em>','')}
-    <div class="needs">${others.map(([x,o]) => `<button class="need" data-go="${x}" style="--accent:${o.accent}"><div class="m">${bottle(o.name,o.accent)}<span class="tag">${o.name}</span></div><div class="b"><h3>${o.name}</h3><p>${o.card}</p></div><div class="f"><span>${o.cta}</span><b>${money(o.price)}</b></div></button>`).join('')}</div>
-  </div></section></div>`;
+  <section class="sm" style="padding-block:96px 112px"><div class="wrap narrow">${head('Preguntas frecuentes',`Sobre <em>${p.name}.</em>`,'')}${faq(p.faq)}</div></section>
+  ${cta(p.ch, 'Comprar ahora', 'data-top="1"')}
+  <section class="sm" style="padding-block:96px"><div class="wrap">${head('Completa tu rutina','También en <em>Sommalya.</em>','')}<div class="needs">${others.map(card).join('')}</div></div></section>
+  </div>`;
 }
 
 const pages = [['home','Página principal'], ...Object.entries(P).map(([k,p]) => [k, 'Landing · ' + p.name])];
 const nav = document.getElementById('protoNav');
 nav.innerHTML = pages.map(([k,l]) => `<button type="button" data-go="${k}" aria-pressed="false">${l}</button>`).join('');
-let cart = 0, qty = 1, current = 'home';
+let cart = 0, qty = 1;
 
 function render(k) {
   if (!pages.some(([x]) => x === k)) k = 'home';
-  current = k;
-  const page = document.getElementById('page');
-  page.innerHTML = k === 'home' ? home() : product(k);
+  document.getElementById('page').innerHTML = k === 'home' ? home() : product(k);
   nav.querySelectorAll('button').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.go === k)));
   qty = 1;
   try { history.replaceState(null, '', '#' + k); } catch (e) {}
@@ -448,15 +378,11 @@ function render(k) {
 }
 
 function wireProduct(k) {
-  const p = P[k];
-  const out = document.getElementById('qty'), price = document.getElementById('btnPrice'), status = document.getElementById('status');
-  const unit = () => document.querySelector(`input[name="plan-${k}"]:checked`).value === 'sub' ? Math.round(p.price * .85) : p.price;
-  const refresh = () => { out.textContent = qty; price.textContent = money(unit() * qty); };
-  document.querySelectorAll('[data-q]').forEach(b => b.addEventListener('click', () => { qty = Math.min(9, Math.max(1, qty + Number(b.dataset.q))); refresh(); }));
-  document.querySelectorAll(`input[name="plan-${k}"]`).forEach(r => r.addEventListener('change', refresh));
+  const out = document.getElementById('qty'), status = document.getElementById('status');
+  document.querySelectorAll('[data-q]').forEach(b => b.addEventListener('click', () => { qty = Math.min(9, Math.max(1, qty + Number(b.dataset.q))); out.textContent = qty; }));
   document.getElementById('addBtn').addEventListener('click', () => {
     cart += qty; document.getElementById('cartCount').textContent = cart;
-    status.textContent = `Agregado: ${qty} × Sommalya ${p.name}. (Simulación de la maqueta)`;
+    status.textContent = `Agregado: ${qty} × ${P[k].name}. (Simulación de la maqueta)`;
   });
 }
 

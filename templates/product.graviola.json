@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -275,7 +284,7 @@
                     "text_r2": {
                       "type": "text",
                       "settings": {
-                        "text": "<ul><li><strong>Acerola</strong> — 500 mg</li><li><strong>Zinc</strong> — 10 mg</li><li><strong>Saúco negro</strong> — 200 mg</li><li><strong>Equinácea</strong> — 150 mg</li></ul><p>Excipientes: cápsula vegetal (hidroxipropilmetilcelulosa).</p>",
+                        "text": "<ul><li><strong>Hoja de guanábana</strong></li><li><strong>Fruto de guanábana</strong></li></ul><p>1800 mg · 60 ml por frasco. Consulta el empaque para la composición completa.</p>",
                         "width": "100%",
                         "max_width": "normal",
                         "alignment": "left",
@@ -314,7 +323,7 @@
                     "text_r3": {
                       "type": "text",
                       "settings": {
-                        "text": "<p>Toma 2 cápsulas con agua al día, preferentemente con el desayuno.</p>",
+                        "text": "<p>Agita antes de usar. Sigue la dosis indicada en el empaque; puedes tomarlo directo o diluido en agua.</p>",
                         "width": "100%",
                         "max_width": "normal",
                         "alignment": "left",
@@ -353,7 +362,7 @@
                     "text_r4": {
                       "type": "text",
                       "settings": {
-                        "text": "<p>Este producto no es un medicamento. El consumo de este producto es responsabilidad de quien lo recomienda y de quien lo usa. Consulta a tu médico si estás embarazada, en lactancia o bajo tratamiento. No exceder la dosis diaria recomendada. Mantener fuera del alcance de los niños. Conservar en un lugar fresco y seco.</p>",
+                        "text": "<p>Este producto no es un medicamento. El consumo de este producto es responsabilidad de quien lo recomienda y de quien lo usa. Consulta a tu médico si estás embarazada, en lactancia o bajo tratamiento. No exceder la dosis diaria recomendada. Mantener fuera del alcance de los niños. Conservar en un lugar fresco y seco. No se recomienda su uso prolongado sin supervisión médica.</p>",
                         "width": "100%",
                         "max_width": "normal",
                         "alignment": "left",
@@ -450,10 +459,10 @@
             "sommalya_summary": {
               "type": "sommalya-summary",
               "settings": {
-                "tagline": "Tu primera línea de cuidado.",
-                "benefits": "La vitamina C y el zinc contribuyen al funcionamiento normal del sistema inmunitario\nCon saúco negro y equinácea\nIdeal en cambios de estación",
-                "badges": "Vegano, Sin gluten, Sin colorantes, Cápsula vegetal",
-                "accent": "#A87D6E"
+                "tagline": "Extracto de guanábana, fácil de tomar.",
+                "benefits": "Extracto concentrado de hoja y fruto de guanábana\nFormato en gotas, práctico y de absorción rápida\nSabor fresco",
+                "badges": "1800 mg, 60 ml, Gotas, Suplemento herbal",
+                "accent": "#7F9A6E"
               },
               "blocks": {}
             }
@@ -486,7 +495,7 @@
       "type": "sommalya-trustbar",
       "settings": {
         "background": "soft",
-        "accent": "#A87D6E",
+        "accent": "#7F9A6E",
         "padding_top": 40,
         "padding_bottom": 40
       },
@@ -510,9 +519,9 @@
         "item_3": {
           "type": "item",
           "settings": {
-            "icon": "leaf",
-            "title": "Origen natural",
-            "text": "Ingredientes trazables, cápsula vegetal"
+            "icon": "globe",
+            "title": "Hecho en EE. UU.",
+            "text": "Fabricación con estándares de calidad"
           }
         },
         "item_4": {
@@ -535,12 +544,12 @@
       "type": "sommalya-pillars",
       "settings": {
         "eyebrow": "Beneficios",
-        "heading": "Cuídate antes <em>de necesitarlo.</em>",
-        "text": "Vitamina C natural, zinc y plantas de tradición para acompañar tus defensas todo el año.",
+        "heading": "Lo herbal, <em>en su forma más simple.</em>",
+        "text": "Un extracto concentrado de guanábana en gotas, para sumar a tu rutina diaria.",
         "head_layout": "center",
         "show_numbers": false,
         "background": "base",
-        "accent": "#A87D6E",
+        "accent": "#7F9A6E",
         "padding_top": 112,
         "padding_bottom": 96
       },
@@ -548,25 +557,25 @@
         "pillar_1": {
           "type": "pillar",
           "settings": {
-            "icon": "shield",
-            "title": "Defensas activas",
-            "text": "La vitamina C y el zinc contribuyen al funcionamiento normal del sistema inmunitario."
+            "icon": "leaf",
+            "title": "Hoja y fruto",
+            "text": "Complejo de hoja y fruto de guanábana (Annona muricata) en un extracto concentrado."
           }
         },
         "pillar_2": {
           "type": "pillar",
           "settings": {
-            "icon": "leaf",
-            "title": "Vitamina C natural",
-            "text": "Obtenida de la acerola, una de las frutas con mayor concentración de vitamina C."
+            "icon": "drop",
+            "title": "Gotas",
+            "text": "Dosificación flexible: tómalo directo o diluido en agua."
           }
         },
         "pillar_3": {
           "type": "pillar",
           "settings": {
             "icon": "sun",
-            "title": "Todo el año",
-            "text": "Especialmente útil en cambios de estación, viajes y periodos de mayor exposición."
+            "title": "Sabor fresco",
+            "text": "Un sabor suave y fresco que se integra fácil a tu día."
           }
         }
       },
@@ -579,15 +588,16 @@
     "para_quien": {
       "type": "sommalya-split",
       "settings": {
-        "placeholder_label": "Defensas",
+        "image_asset": "sommalya-graviola.jpg",
+        "placeholder_label": "Graviola en gotas",
         "reverse": true,
         "eyebrow": "Para quién es",
-        "heading": "Para cuidarte <em>todo el año.</em>",
-        "body": "<p>Para quien se expone a cambios de clima, viaja con frecuencia o convive con niños en edad escolar y quiere apoyar sus defensas de forma natural.</p>",
+        "heading": "Para quien prefiere <em>lo herbal.</em>",
+        "body": "<p>Para quien busca complementar su alimentación con un extracto de origen vegetal, en un formato práctico.</p>",
         "button_label": "",
         "button_link": "",
         "background": "soft",
-        "accent": "#A87D6E",
+        "accent": "#7F9A6E",
         "padding_top": 112,
         "padding_bottom": 112
       },
@@ -595,19 +605,19 @@
         "point_1": {
           "type": "point",
           "settings": {
-            "text": "Cambios de estación y clima frío"
+            "text": "Prefieres los suplementos de origen herbal"
           }
         },
         "point_2": {
           "type": "point",
           "settings": {
-            "text": "Viajes, oficinas y espacios concurridos"
+            "text": "Te resulta más cómodo tomar gotas que cápsulas"
           }
         },
         "point_3": {
           "type": "point",
           "settings": {
-            "text": "Etapas de mayor desgaste físico"
+            "text": "Buscas un formato práctico para llevar"
           }
         }
       },
@@ -622,11 +632,11 @@
       "settings": {
         "eyebrow": "La fórmula",
         "heading": "Qué hay <em>dentro.</em>",
-        "text": "Cuatro ingredientes con una razón concreta para estar aquí. Nada más.",
+        "text": "Un extracto de guanábana, sin complicaciones.",
         "head_layout": "split",
-        "note": "Dosis por porción diaria (2 cápsulas). 60 cápsulas vegetales por frasco · 30 días.",
+        "note": "1800 mg · 60 ml por frasco. Consulta el empaque para la composición completa.",
         "background": "base",
-        "accent": "#A87D6E",
+        "accent": "#7F9A6E",
         "padding_top": 112,
         "padding_bottom": 96
       },
@@ -634,45 +644,25 @@
         "ing_1": {
           "type": "ingredient",
           "settings": {
-            "name": "Acerola",
-            "dose": "500 mg",
-            "origin": "Malpighia emarginata · fruto (25% vit. C)",
-            "text": "Aporta 125 mg de vitamina C natural, que contribuye a la función normal del sistema inmunitario."
+            "name": "Hoja de guanábana",
+            "dose": "",
+            "origin": "Annona muricata · hoja",
+            "text": "Extracto concentrado de la hoja de guanábana."
           }
         },
         "ing_2": {
           "type": "ingredient",
           "settings": {
-            "name": "Zinc",
-            "dose": "10 mg",
-            "origin": "Zinc bisglicinato",
-            "text": "Contribuye al funcionamiento normal del sistema inmunitario y a la protección de las células."
-          }
-        },
-        "ing_3": {
-          "type": "ingredient",
-          "settings": {
-            "name": "Saúco negro",
-            "dose": "200 mg",
-            "origin": "Sambucus nigra · fruto",
-            "text": "Baya utilizada tradicionalmente durante los meses fríos."
-          }
-        },
-        "ing_4": {
-          "type": "ingredient",
-          "settings": {
-            "name": "Equinácea",
-            "dose": "150 mg",
-            "origin": "Echinacea purpurea · parte aérea",
-            "text": "Planta de uso tradicional para acompañar las defensas del organismo."
+            "name": "Fruto de guanábana",
+            "dose": "",
+            "origin": "Annona muricata · fruto",
+            "text": "Complejo del fruto que completa el perfil del extracto."
           }
         }
       },
       "block_order": [
         "ing_1",
-        "ing_2",
-        "ing_3",
-        "ing_4"
+        "ing_2"
       ]
     },
     "uso": {
@@ -683,7 +673,7 @@
         "text": "",
         "head_layout": "left",
         "background": "sand",
-        "accent": "#A87D6E",
+        "accent": "#7F9A6E",
         "padding_top": 96,
         "padding_bottom": 96
       },
@@ -691,22 +681,22 @@
         "step_1": {
           "type": "step",
           "settings": {
-            "title": "Con el desayuno",
-            "text": "Toma 2 cápsulas al día junto con tu primera comida."
+            "title": "Agita",
+            "text": "Agita el frasco antes de cada uso."
           }
         },
         "step_2": {
           "type": "step",
           "settings": {
-            "title": "Refuerza tu base",
-            "text": "Duerme bien, hidrátate y come variado: el suplemento suma, no sustituye."
+            "title": "Dosifica",
+            "text": "Usa el gotero para tomar la cantidad indicada en el empaque."
           }
         },
         "step_3": {
           "type": "step",
           "settings": {
-            "title": "Anticípate",
-            "text": "Empieza unas semanas antes del cambio de estación y mantenlo durante 2 a 3 meses."
+            "title": "Directo o en agua",
+            "text": "Tómalo directo bajo la lengua o diluido en un vaso de agua."
           }
         }
       },
@@ -716,119 +706,46 @@
         "step_3"
       ]
     },
-    "comparativa": {
-      "type": "sommalya-compare",
-      "settings": {
-        "eyebrow": "La diferencia",
-        "heading": "Por qué <em>Sommalya Defensas.</em>",
-        "text": "",
-        "head_layout": "center",
-        "brand_label": "Sommalya",
-        "other_label": "Genéricos",
-        "background": "base",
-        "accent": "#A87D6E",
-        "padding_top": 112,
-        "padding_bottom": 96
-      },
-      "blocks": {
-        "row_1": {
-          "type": "row",
-          "settings": {
-            "feature": "Vitamina C de origen natural (acerola)",
-            "brand": true,
-            "other": false
-          }
-        },
-        "row_2": {
-          "type": "row",
-          "settings": {
-            "feature": "Ingredientes de origen natural",
-            "brand": true,
-            "other": false
-          }
-        },
-        "row_3": {
-          "type": "row",
-          "settings": {
-            "feature": "Dosis declarada de cada ingrediente",
-            "brand": true,
-            "other": false
-          }
-        },
-        "row_4": {
-          "type": "row",
-          "settings": {
-            "feature": "Cápsula vegetal, sin colorantes",
-            "brand": true,
-            "other": false
-          }
-        },
-        "row_5": {
-          "type": "row",
-          "settings": {
-            "feature": "Lote analizado antes de su venta",
-            "brand": true,
-            "other": false
-          }
-        },
-        "row_6": {
-          "type": "row",
-          "settings": {
-            "feature": "Garantía de 30 días",
-            "brand": true,
-            "other": false
-          }
-        }
-      },
-      "block_order": [
-        "row_1",
-        "row_2",
-        "row_3",
-        "row_4",
-        "row_5",
-        "row_6"
-      ]
-    },
     "preguntas": {
       "type": "sommalya-faq",
       "settings": {
         "eyebrow": "Preguntas frecuentes",
-        "heading": "Sobre <em>Defensas.</em>",
+        "heading": "Sobre <em>Graviola en gotas.</em>",
         "text": "",
         "head_layout": "center",
         "open_first": true,
         "background": "base",
-        "accent": "#A87D6E",
-        "padding_top": 64,
+        "accent": "#7F9A6E",
+        "padding_top": 96,
         "padding_bottom": 112
       },
       "blocks": {
         "q_1": {
           "type": "question",
           "settings": {
-            "question": "¿Puedo tomarlo todo el año?",
-            "answer": "<p>Sí. Puedes tomarlo de forma continua o en ciclos de 2 a 3 meses, especialmente en los cambios de estación.</p>"
+            "question": "¿Cómo se toma?",
+            "answer": "<p>Agita el frasco y toma la cantidad indicada en el empaque, directo o diluido en agua.</p>"
           }
         },
         "q_2": {
           "type": "question",
           "settings": {
-            "question": "¿Lo pueden tomar los niños?",
-            "answer": "<p>Esta fórmula está pensada para adultos. Consulta a tu pediatra para menores de 12 años.</p>"
+            "question": "¿Lo puedo tomar si estoy embarazada?",
+            "answer": "<p>No. No se recomienda durante el embarazo ni la lactancia.</p>"
           }
         },
         "q_3": {
           "type": "question",
           "settings": {
-            "question": "¿Por qué vitamina C de acerola y no ácido ascórbico?",
-            "answer": "<p>La acerola aporta vitamina C de origen natural junto con otros compuestos propios de la fruta.</p>"
+            "question": "¿Lo puedo tomar por tiempo prolongado?",
+            "answer": "<p>Recomendamos no usarlo por periodos prolongados sin supervisión médica.</p>"
           }
         },
         "q_4": {
           "type": "question",
           "settings": {
-            "question": "¿Puedo combinarlo con Descanso o Digestión?",
-            "answer": "<p>Sí. Las fórmulas Sommalya están pensadas para complementarse entre sí.</p>"
+            "question": "¿Lo puedo tomar si tomo medicamentos?",
+            "answer": "<p>Consulta a tu médico antes de tomarlo, sobre todo si tomas medicamentos para la presión arterial o la glucosa.</p>"
           }
         }
       },
@@ -843,15 +760,15 @@
       "type": "sommalya-cta",
       "settings": {
         "eyebrow": "Garantía Sommalya",
-        "heading": "Tu bienestar, <em>bien protegido.</em>",
+        "heading": "Lo natural, <em>simple.</em>",
         "text": "Pruébalo durante 30 días. Si no es para ti, te devolvemos tu dinero.",
-        "button_label": "Agregar a mi rutina",
+        "button_label": "Comprar ahora",
         "button_link": "",
-        "button2_label": "Ver toda la colección",
+        "button2_label": "Ver todos los productos",
         "button2_link": "/collections/all",
         "disclaimer": "Este producto no es un medicamento. El consumo de este producto es responsabilidad de quien lo recomienda y de quien lo usa. Consulta a tu médico si estás embarazada, en lactancia o bajo tratamiento.",
         "background": "sand",
-        "accent": "#A87D6E",
+        "accent": "#7F9A6E",
         "padding_top": 112,
         "padding_bottom": 96
       }
@@ -863,7 +780,7 @@
           "type": "text",
           "name": "t:names.header",
           "settings": {
-            "text": "<h3>Complementa tu rutina</h3>",
+            "text": "<h3>Completa tu rutina</h3>",
             "width": "100%",
             "max_width": "normal",
             "alignment": "center",
@@ -1148,7 +1065,6 @@
     "para_quien",
     "formula",
     "uso",
-    "comparativa",
     "preguntas",
     "garantia",
     "recomendados"

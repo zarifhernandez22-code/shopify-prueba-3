@@ -1,0 +1,24 @@
+{% doc %}
+  Imagen de una sección Sommalya: usa la imagen subida en el editor, si no la
+  imagen incluida en el tema (assets/) y, si no hay ninguna, el frasco ilustrado.
+
+  @param {object} [image] - imagen del selector de imágenes
+  @param {string} [asset] - nombre de un archivo en assets/
+  @param {string} [label] - texto alternativo y etiqueta del frasco
+  @param {string} [accent] - color del frasco ilustrado
+  @param {string} [sizes] - atributo sizes
+  @param {boolean} [eager] - carga prioritaria
+{% enddoc %}
+{%- liquid
+  assign loading = 'lazy'
+  if eager
+    assign loading = 'eager'
+  endif
+-%}
+{%- if image != blank -%}
+  {{ image | image_url: width: 1800 | image_tag: loading: loading, sizes: sizes, widths: '500, 800, 1200, 1800', alt: image.alt | default: label }}
+{%- elsif asset != blank -%}
+  <img src="{{ asset | asset_url }}" alt="{{ label | escape }}" loading="{{ loading }}" width="1200" height="1200" class="sm-media__asset">
+{%- else -%}
+  {% render 'sommalya-bottle', label: label, accent: accent %}
+{%- endif -%}

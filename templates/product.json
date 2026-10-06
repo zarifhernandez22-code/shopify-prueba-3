@@ -284,7 +284,7 @@
                     "text_r2": {
                       "type": "text",
                       "settings": {
-                        "text": "<p>Consulta la etiqueta del producto para conocer la dosis diaria recomendada.</p>",
+                        "text": "<p>Sigue la dosis indicada en la etiqueta del producto.</p>",
                         "width": "100%",
                         "max_width": "normal",
                         "alignment": "left",
@@ -468,9 +468,9 @@
         "item_3": {
           "type": "item",
           "settings": {
-            "icon": "leaf",
-            "title": "Origen natural",
-            "text": "Ingredientes trazables, cápsula vegetal"
+            "icon": "globe",
+            "title": "Hecho en EE. UU.",
+            "text": "Fabricación con estándares de calidad"
           }
         },
         "item_4": {
@@ -494,11 +494,11 @@
       "settings": {
         "eyebrow": "Garantía Sommalya",
         "heading": "Pruébalo 30 días. <em>Sin riesgo.</em>",
-        "text": "Si no notas la diferencia, te devolvemos tu dinero.",
-        "button_label": "Ver toda la colección",
-        "button_link": "/collections/all",
-        "button2_label": "",
-        "button2_link": "",
+        "text": "Si no es para ti, te devolvemos tu dinero.",
+        "button_label": "Comprar ahora",
+        "button_link": "",
+        "button2_label": "Ver todos los productos",
+        "button2_link": "/collections/all",
         "disclaimer": "Este producto no es un medicamento. El consumo de este producto es responsabilidad de quien lo recomienda y de quien lo usa. Consulta a tu médico si estás embarazada, en lactancia o bajo tratamiento.",
         "background": "sand",
         "accent": "",
@@ -513,7 +513,7 @@
           "type": "text",
           "name": "t:names.header",
           "settings": {
-            "text": "<h3>Complementa tu rutina</h3>",
+            "text": "<h3>Completa tu rutina</h3>",
             "width": "100%",
             "max_width": "normal",
             "alignment": "center",

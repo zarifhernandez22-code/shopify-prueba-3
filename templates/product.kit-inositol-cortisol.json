@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -275,7 +284,7 @@
                     "text_r2": {
                       "type": "text",
                       "settings": {
-                        "text": "<ul><li><strong>Magnesio bisglicinato</strong> — 200 mg</li><li><strong>Valeriana</strong> — 300 mg</li><li><strong>Pasiflora</strong> — 150 mg</li><li><strong>Melisa</strong> — 100 mg</li></ul><p>Excipientes: cápsula vegetal (hidroxipropilmetilcelulosa).</p>",
+                        "text": "<ul><li><strong>Myo-Inositol 16 en 1</strong></li><li><strong>Corti-Soothe 13 en 1</strong></li></ul><p>Consulta la etiqueta de cada frasco para la composición completa y la dosis recomendada.</p>",
                         "width": "100%",
                         "max_width": "normal",
                         "alignment": "left",
@@ -314,7 +323,7 @@
                     "text_r3": {
                       "type": "text",
                       "settings": {
-                        "text": "<p>Toma 2 cápsulas con agua entre 30 y 60 minutos antes de dormir.</p>",
+                        "text": "<p>Sigue la dosis indicada en la etiqueta de cada frasco. Tómalos con agua y alimentos.</p>",
                         "width": "100%",
                         "max_width": "normal",
                         "alignment": "left",
@@ -450,10 +459,10 @@
             "sommalya_summary": {
               "type": "sommalya-summary",
               "settings": {
-                "tagline": "Noches tranquilas, mañanas claras.",
-                "benefits": "Favorece conciliar el sueño de forma natural\nContribuye a un descanso más profundo y reparador\nSin melatonina sintética: apto para uso diario",
-                "badges": "Vegano, Sin gluten, Sin colorantes, Cápsula vegetal",
-                "accent": "#7C8BA1"
+                "tagline": "Dos fórmulas, un mismo equilibrio.",
+                "benefits": "Incluye Myo-Inositol 16 en 1 (90 cápsulas) y Corti-Soothe 13 en 1 (60 cápsulas)\nEquilibrio hormonal y manejo del estrés en una sola rutina\nAmbos fabricados en EE. UU.",
+                "badges": "2 piezas, 16 en 1 + 13 en 1, Cápsulas veganas, Hecho en EE. UU.",
+                "accent": "#8A7FA0"
               },
               "blocks": {}
             }
@@ -486,7 +495,7 @@
       "type": "sommalya-trustbar",
       "settings": {
         "background": "soft",
-        "accent": "#7C8BA1",
+        "accent": "#8A7FA0",
         "padding_top": 40,
         "padding_bottom": 40
       },
@@ -510,9 +519,9 @@
         "item_3": {
           "type": "item",
           "settings": {
-            "icon": "leaf",
-            "title": "Origen natural",
-            "text": "Ingredientes trazables, cápsula vegetal"
+            "icon": "globe",
+            "title": "Hecho en EE. UU.",
+            "text": "Fabricación con estándares de calidad"
           }
         },
         "item_4": {
@@ -535,12 +544,12 @@
       "type": "sommalya-pillars",
       "settings": {
         "eyebrow": "Beneficios",
-        "heading": "Dormir bien es <em>la base de todo.</em>",
-        "text": "Una fórmula botánica que acompaña el ritmo natural de tu cuerpo hacia el descanso.",
+        "heading": "Cuerpo y mente, <em>en sintonía.</em>",
+        "text": "Un kit pensado para acompañar tu equilibrio hormonal y tu calma al mismo tiempo.",
         "head_layout": "center",
         "show_numbers": false,
         "background": "base",
-        "accent": "#7C8BA1",
+        "accent": "#8A7FA0",
         "padding_top": 112,
         "padding_bottom": 96
       },
@@ -548,25 +557,25 @@
         "pillar_1": {
           "type": "pillar",
           "settings": {
-            "icon": "moon",
-            "title": "Concilia el sueño",
-            "text": "Valeriana y pasiflora, plantas usadas tradicionalmente para ayudar a conciliar el sueño."
+            "icon": "heart",
+            "title": "Equilibrio femenino",
+            "text": "Myo-Inositol 16 en 1 con inositoles, vitaminas y minerales clave."
           }
         },
         "pillar_2": {
           "type": "pillar",
           "settings": {
-            "icon": "drop",
-            "title": "Relaja el cuerpo",
-            "text": "El magnesio contribuye al funcionamiento normal del sistema nervioso y de los músculos."
+            "icon": "spark",
+            "title": "Calma y enfoque",
+            "text": "Corti-Soothe 13 en 1 con magnesio, ashwagandha, L-teanina y adaptógenos."
           }
         },
         "pillar_3": {
           "type": "pillar",
           "settings": {
-            "icon": "sun",
-            "title": "Despierta con claridad",
-            "text": "Sin melatonina sintética ni sedantes: te ayuda a descansar sin sensación de pesadez al despertar."
+            "icon": "clock",
+            "title": "Rutina simple",
+            "text": "Dos frascos y una rutina diaria. Sigue la dosis indicada en cada etiqueta."
           }
         }
       },
@@ -579,15 +588,16 @@
     "para_quien": {
       "type": "sommalya-split",
       "settings": {
-        "placeholder_label": "Descanso",
+        "image_asset": "sommalya-kit-inositol-cortisol.jpg",
+        "placeholder_label": "Kit Inositol & Cortisol",
         "reverse": true,
         "eyebrow": "Para quién es",
-        "heading": "Para mentes que <em>no se apagan.</em>",
-        "body": "<p>Para quien da vueltas en la cama, se despierta a mitad de la noche o siente que su descanso no es reparador. Descanso acompaña una rutina nocturna tranquila; no la sustituye.</p>",
+        "heading": "Para quien quiere <em>cuidarse completa.</em>",
+        "body": "<p>El estrés y el equilibrio hormonal suelen ir de la mano. Este kit reúne las dos fórmulas para atenderlos juntos.</p>",
         "button_label": "",
         "button_link": "",
         "background": "soft",
-        "accent": "#7C8BA1",
+        "accent": "#8A7FA0",
         "padding_top": 112,
         "padding_bottom": 112
       },
@@ -595,19 +605,19 @@
         "point_1": {
           "type": "point",
           "settings": {
-            "text": "Te cuesta desconectar al final del día"
+            "text": "Buscas apoyar tu equilibrio hormonal"
           }
         },
         "point_2": {
           "type": "point",
           "settings": {
-            "text": "Te despiertas varias veces durante la noche"
+            "text": "Vives con estrés frecuente"
           }
         },
         "point_3": {
           "type": "point",
           "settings": {
-            "text": "Buscas una alternativa de origen vegetal"
+            "text": "Quieres una rutina sencilla con dos productos complementarios"
           }
         }
       },
@@ -622,11 +632,11 @@
       "settings": {
         "eyebrow": "La fórmula",
         "heading": "Qué hay <em>dentro.</em>",
-        "text": "Cuatro ingredientes con una razón concreta para estar aquí. Nada más.",
+        "text": "Qué incluye el kit.",
         "head_layout": "split",
-        "note": "Dosis por porción diaria (2 cápsulas). 60 cápsulas vegetales por frasco · 30 días.",
+        "note": "Consulta la etiqueta de cada frasco para la composición completa y la dosis recomendada.",
         "background": "base",
-        "accent": "#7C8BA1",
+        "accent": "#8A7FA0",
         "padding_top": 112,
         "padding_bottom": 96
       },
@@ -634,45 +644,25 @@
         "ing_1": {
           "type": "ingredient",
           "settings": {
-            "name": "Magnesio bisglicinato",
-            "dose": "200 mg",
-            "origin": "Mineral · forma quelada",
-            "text": "Forma de alta absorción y suave con el estómago. Contribuye al funcionamiento normal del sistema nervioso."
+            "name": "Myo-Inositol 16 en 1",
+            "dose": "90 cáps.",
+            "origin": "Equilibrio femenino",
+            "text": "Myo-inositol, D-chiro inositol, berberina, vitamina D3+K2, folato, sauzgatillo, cromo, DIM, vitamina B12, magnesio, ashwagandha, zinc, bioperina, melón amargo y canela de Ceilán."
           }
         },
         "ing_2": {
           "type": "ingredient",
           "settings": {
-            "name": "Valeriana",
-            "dose": "300 mg",
-            "origin": "Valeriana officinalis · raíz",
-            "text": "Planta empleada tradicionalmente para favorecer la relajación y el sueño."
-          }
-        },
-        "ing_3": {
-          "type": "ingredient",
-          "settings": {
-            "name": "Pasiflora",
-            "dose": "150 mg",
-            "origin": "Passiflora incarnata · parte aérea",
-            "text": "Utilizada tradicionalmente para ayudar a calmar la mente antes de dormir."
-          }
-        },
-        "ing_4": {
-          "type": "ingredient",
-          "settings": {
-            "name": "Melisa",
-            "dose": "100 mg",
-            "origin": "Melissa officinalis · hoja",
-            "text": "Planta de la familia de la menta, tradicionalmente asociada a la calma."
+            "name": "Corti-Soothe 13 en 1",
+            "dose": "60 cáps.",
+            "origin": "Calma y enfoque",
+            "text": "Magnesio, ashwagandha, L-teanina, fosfatidilserina, bacopa monnieri, melena de león, GABA, albahaca sagrada, panax ginseng, ginkgo biloba, raíz de valeriana, rhodiola rosea y corteza de magnolia."
           }
         }
       },
       "block_order": [
         "ing_1",
-        "ing_2",
-        "ing_3",
-        "ing_4"
+        "ing_2"
       ]
     },
     "uso": {
@@ -683,7 +673,7 @@
         "text": "",
         "head_layout": "left",
         "background": "sand",
-        "accent": "#7C8BA1",
+        "accent": "#8A7FA0",
         "padding_top": 96,
         "padding_bottom": 96
       },
@@ -691,22 +681,22 @@
         "step_1": {
           "type": "step",
           "settings": {
-            "title": "Toma 2 cápsulas",
-            "text": "Con un vaso de agua, entre 30 y 60 minutos antes de acostarte."
+            "title": "Myo-Inositol",
+            "text": "Tómalo con una comida, según la dosis indicada en su etiqueta."
           }
         },
         "step_2": {
           "type": "step",
           "settings": {
-            "title": "Prepara tu ritual",
-            "text": "Baja la luz y deja las pantallas. Tu cuerpo entiende la señal."
+            "title": "Corti-Soothe",
+            "text": "Tómalo en el momento del día indicado en su etiqueta, con un vaso de agua."
           }
         },
         "step_3": {
           "type": "step",
           "settings": {
-            "title": "Sé constante",
-            "text": "Los mejores resultados aparecen con el uso diario durante 2 a 4 semanas."
+            "title": "Constancia",
+            "text": "Mantén la rutina diaria al menos 2 a 3 meses para evaluar cómo te sientes."
           }
         }
       },
@@ -716,119 +706,46 @@
         "step_3"
       ]
     },
-    "comparativa": {
-      "type": "sommalya-compare",
-      "settings": {
-        "eyebrow": "La diferencia",
-        "heading": "Por qué <em>Sommalya Descanso.</em>",
-        "text": "",
-        "head_layout": "center",
-        "brand_label": "Sommalya",
-        "other_label": "Genéricos",
-        "background": "base",
-        "accent": "#7C8BA1",
-        "padding_top": 112,
-        "padding_bottom": 96
-      },
-      "blocks": {
-        "row_1": {
-          "type": "row",
-          "settings": {
-            "feature": "Sin melatonina sintética",
-            "brand": true,
-            "other": false
-          }
-        },
-        "row_2": {
-          "type": "row",
-          "settings": {
-            "feature": "Ingredientes de origen natural",
-            "brand": true,
-            "other": false
-          }
-        },
-        "row_3": {
-          "type": "row",
-          "settings": {
-            "feature": "Dosis declarada de cada ingrediente",
-            "brand": true,
-            "other": false
-          }
-        },
-        "row_4": {
-          "type": "row",
-          "settings": {
-            "feature": "Cápsula vegetal, sin colorantes",
-            "brand": true,
-            "other": false
-          }
-        },
-        "row_5": {
-          "type": "row",
-          "settings": {
-            "feature": "Lote analizado antes de su venta",
-            "brand": true,
-            "other": false
-          }
-        },
-        "row_6": {
-          "type": "row",
-          "settings": {
-            "feature": "Garantía de 30 días",
-            "brand": true,
-            "other": false
-          }
-        }
-      },
-      "block_order": [
-        "row_1",
-        "row_2",
-        "row_3",
-        "row_4",
-        "row_5",
-        "row_6"
-      ]
-    },
     "preguntas": {
       "type": "sommalya-faq",
       "settings": {
         "eyebrow": "Preguntas frecuentes",
-        "heading": "Sobre <em>Descanso.</em>",
+        "heading": "Sobre <em>Kit Inositol & Cortisol.</em>",
         "text": "",
         "head_layout": "center",
         "open_first": true,
         "background": "base",
-        "accent": "#7C8BA1",
-        "padding_top": 64,
+        "accent": "#8A7FA0",
+        "padding_top": 96,
         "padding_bottom": 112
       },
       "blocks": {
         "q_1": {
           "type": "question",
           "settings": {
-            "question": "¿Me sentiré somnoliento al día siguiente?",
-            "answer": "<p>No contiene melatonina sintética ni sedantes. Está pensado para acompañar tu descanso sin sensación de pesadez por la mañana.</p>"
+            "question": "¿Puedo tomar ambos el mismo día?",
+            "answer": "<p>Sí, están pensados para combinarse. Sigue la dosis indicada en la etiqueta de cada uno.</p>"
           }
         },
         "q_2": {
           "type": "question",
           "settings": {
-            "question": "¿Puedo tomarlo todos los días?",
-            "answer": "<p>Sí. Está formulado para uso diario. Recomendamos ciclos de 3 meses y una pausa de 2 semanas.</p>"
+            "question": "¿Cuánto dura el kit?",
+            "answer": "<p>Depende de la dosis indicada en cada etiqueta. Myo-Inositol trae 90 cápsulas y Corti-Soothe 60 cápsulas.</p>"
           }
         },
         "q_3": {
           "type": "question",
           "settings": {
-            "question": "¿Cuándo notaré resultados?",
-            "answer": "<p>Algunas personas notan cambios desde la primera semana; lo habitual es percibirlos con 2 a 4 semanas de uso constante.</p>"
+            "question": "¿Lo puedo tomar si estoy embarazada o en lactancia?",
+            "answer": "<p>No sin indicación médica. Consulta a tu médico antes de tomarlo.</p>"
           }
         },
         "q_4": {
           "type": "question",
           "settings": {
-            "question": "¿Puedo combinarlo con otras fórmulas Sommalya?",
-            "answer": "<p>Sí. Descanso se complementa bien con Digestión o Defensas. Evita tomar Energía por la noche.</p>"
+            "question": "¿Puedo comprar los productos por separado?",
+            "answer": "<p>Sí. Myo-Inositol 16 en 1 también está disponible de forma individual.</p>"
           }
         }
       },
@@ -843,15 +760,15 @@
       "type": "sommalya-cta",
       "settings": {
         "eyebrow": "Garantía Sommalya",
-        "heading": "Tu mejor noche <em>empieza hoy.</em>",
+        "heading": "Dos fórmulas, <em>un solo hábito.</em>",
         "text": "Pruébalo durante 30 días. Si no es para ti, te devolvemos tu dinero.",
-        "button_label": "Agregar a mi rutina",
+        "button_label": "Comprar ahora",
         "button_link": "",
-        "button2_label": "Ver toda la colección",
+        "button2_label": "Ver todos los productos",
         "button2_link": "/collections/all",
         "disclaimer": "Este producto no es un medicamento. El consumo de este producto es responsabilidad de quien lo recomienda y de quien lo usa. Consulta a tu médico si estás embarazada, en lactancia o bajo tratamiento.",
         "background": "sand",
-        "accent": "#7C8BA1",
+        "accent": "#8A7FA0",
         "padding_top": 112,
         "padding_bottom": 96
       }
@@ -863,7 +780,7 @@
           "type": "text",
           "name": "t:names.header",
           "settings": {
-            "text": "<h3>Complementa tu rutina</h3>",
+            "text": "<h3>Completa tu rutina</h3>",
             "width": "100%",
             "max_width": "normal",
             "alignment": "center",
@@ -1148,7 +1065,6 @@
     "para_quien",
     "formula",
     "uso",
-    "comparativa",
     "preguntas",
     "garantia",
     "recomendados"

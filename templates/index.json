@@ -1,17 +1,27 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "portada": {
       "type": "sommalya-hero",
       "settings": {
-        "eyebrow": "Suplementos de origen natural",
-        "heading": "Lo esencial, <em>bien hecho.</em>",
-        "text": "Fórmulas naturales para cuidar lo básico que lo sostiene todo: dormir bien, digerir mejor, tener energía y defenderte. Sin rellenos. Sin promesas vacías.",
-        "button_label": "Descubrir la colección",
-        "button_link": "/collections/all",
-        "button2_label": "Nuestra filosofía",
-        "button2_link": "/pages/nosotros",
-        "placeholder_label": "Esencial",
-        "layout": "media_right",
+        "eyebrow": "Producto estrella",
+        "heading": "Cortisol <em>Calm.</em>",
+        "text": "Rhodiola, ashwagandha, L-teanina y magnesio en una fórmula liposomal para acompañar tu equilibrio frente al estrés de cada día.",
+        "button_label": "Comprar Cortisol Calm",
+        "button_link": "/products/cortisol-calm",
+        "button2_label": "Ver la fórmula",
+        "button2_link": "/products/cortisol-calm",
+        "image_asset": "sommalya-cortisol-calm.jpg",
+        "placeholder_label": "Cortisol Calm de Sommalya",
+        "layout": "studio",
         "background": "base",
         "accent": "",
         "padding_top": 0,
@@ -21,22 +31,22 @@
         "stat_1": {
           "type": "stat",
           "settings": {
-            "value": "100%",
-            "label": "Ingredientes de origen natural"
+            "value": "759 mg",
+            "label": "Por porción"
           }
         },
         "stat_2": {
           "type": "stat",
           "settings": {
-            "value": "0",
-            "label": "Colorantes ni rellenos artificiales"
+            "value": "10",
+            "label": "Ingredientes clave"
           }
         },
         "stat_3": {
           "type": "stat",
           "settings": {
-            "value": "30 días",
-            "label": "Garantía de satisfacción"
+            "value": "60",
+            "label": "Cápsulas por frasco"
           }
         }
       },
@@ -49,7 +59,7 @@
     "confianza": {
       "type": "sommalya-trustbar",
       "settings": {
-        "background": "soft",
+        "background": "base",
         "accent": "",
         "padding_top": 40,
         "padding_bottom": 40
@@ -74,9 +84,9 @@
         "item_3": {
           "type": "item",
           "settings": {
-            "icon": "leaf",
-            "title": "Origen natural",
-            "text": "Ingredientes trazables, cápsula vegetal"
+            "icon": "globe",
+            "title": "Hecho en EE. UU.",
+            "text": "Fabricación con estándares de calidad"
           }
         },
         "item_4": {
@@ -95,14 +105,218 @@
         "item_4"
       ]
     },
+    "beneficios": {
+      "type": "sommalya-pillars",
+      "settings": {
+        "eyebrow": "Por qué Cortisol Calm",
+        "heading": "Menos tensión, <em>más claridad.</em>",
+        "text": "Diez ingredientes en una fórmula liposomal, pensada para el ritmo de la vida diaria.",
+        "head_layout": "center",
+        "show_numbers": false,
+        "background": "base",
+        "accent": "#5F7A99",
+        "padding_top": 96,
+        "padding_bottom": 96
+      },
+      "blocks": {
+        "pillar_1": {
+          "type": "pillar",
+          "settings": {
+            "icon": "heart",
+            "title": "Calma",
+            "text": "Ashwagandha, L-teanina y magnolia acompañan a tu cuerpo frente al estrés cotidiano."
+          }
+        },
+        "pillar_2": {
+          "type": "pillar",
+          "settings": {
+            "icon": "spark",
+            "title": "Enfoque",
+            "text": "Rhodiola y fosfatidilserina para los días de mayor exigencia mental."
+          }
+        },
+        "pillar_3": {
+          "type": "pillar",
+          "settings": {
+            "icon": "moon",
+            "title": "Descanso",
+            "text": "El magnesio y la vitamina B6 contribuyen a la función psicológica normal."
+          }
+        }
+      },
+      "block_order": [
+        "pillar_1",
+        "pillar_2",
+        "pillar_3"
+      ]
+    },
+    "formula": {
+      "type": "sommalya-ingredients",
+      "settings": {
+        "eyebrow": "La fórmula",
+        "heading": "Diez ingredientes, <em>una sola cápsula.</em>",
+        "text": "Cada ingrediente tiene una función concreta dentro de la fórmula.",
+        "head_layout": "split",
+        "note": "759 mg por porción · 60 cápsulas por frasco · Fórmula liposomal. Consulta la etiqueta para la composición completa.",
+        "background": "soft",
+        "accent": "#5F7A99",
+        "padding_top": 112,
+        "padding_bottom": 112
+      },
+      "blocks": {
+        "ing_1": {
+          "type": "ingredient",
+          "settings": {
+            "name": "Rhodiola rosea",
+            "dose": "",
+            "origin": "Raíz · adaptógeno",
+            "text": "Planta adaptógena de uso tradicional para afrontar periodos de exigencia física y mental."
+          }
+        },
+        "ing_2": {
+          "type": "ingredient",
+          "settings": {
+            "name": "Ashwagandha",
+            "dose": "",
+            "origin": "KSM-66 · raíz",
+            "text": "Adaptógeno de la tradición ayurvédica, empleado para acompañar al cuerpo frente al estrés."
+          }
+        },
+        "ing_3": {
+          "type": "ingredient",
+          "settings": {
+            "name": "L-Teanina",
+            "dose": "",
+            "origin": "Aminoácido del té verde",
+            "text": "Asociada a un estado de relajación sin somnolencia."
+          }
+        },
+        "ing_4": {
+          "type": "ingredient",
+          "settings": {
+            "name": "Magnesio",
+            "dose": "",
+            "origin": "Mezcla de magnesio",
+            "text": "Contribuye al funcionamiento normal del sistema nervioso y a la función psicológica normal."
+          }
+        },
+        "ing_5": {
+          "type": "ingredient",
+          "settings": {
+            "name": "Fosfatidilserina",
+            "dose": "",
+            "origin": "Fosfolípido",
+            "text": "Componente natural de las membranas de las células del cerebro."
+          }
+        },
+        "ing_6": {
+          "type": "ingredient",
+          "settings": {
+            "name": "Magnolia",
+            "dose": "",
+            "origin": "Corteza",
+            "text": "Planta de uso tradicional asociada a la calma."
+          }
+        },
+        "ing_7": {
+          "type": "ingredient",
+          "settings": {
+            "name": "Vitamina C",
+            "dose": "",
+            "origin": "Antioxidante",
+            "text": "Contribuye a reducir el cansancio y la fatiga."
+          }
+        },
+        "ing_8": {
+          "type": "ingredient",
+          "settings": {
+            "name": "Vitamina B6",
+            "dose": "",
+            "origin": "Vitamina del grupo B",
+            "text": "Contribuye a la función psicológica normal."
+          }
+        },
+        "ing_9": {
+          "type": "ingredient",
+          "settings": {
+            "name": "Vitamina B12",
+            "dose": "",
+            "origin": "Vitamina del grupo B",
+            "text": "Contribuye al metabolismo energético normal y a reducir el cansancio."
+          }
+        },
+        "ing_10": {
+          "type": "ingredient",
+          "settings": {
+            "name": "Pimienta negra",
+            "dose": "",
+            "origin": "Extracto",
+            "text": "Favorece la absorción del resto de los ingredientes."
+          }
+        }
+      },
+      "block_order": [
+        "ing_1",
+        "ing_2",
+        "ing_3",
+        "ing_4",
+        "ing_5",
+        "ing_6",
+        "ing_7",
+        "ing_8",
+        "ing_9",
+        "ing_10"
+      ]
+    },
+    "uso": {
+      "type": "sommalya-steps",
+      "settings": {
+        "eyebrow": "Modo de uso",
+        "heading": "Un hábito <em>sencillo.</em>",
+        "text": "",
+        "head_layout": "left",
+        "background": "base",
+        "accent": "#5F7A99",
+        "padding_top": 112,
+        "padding_bottom": 96
+      },
+      "blocks": {
+        "step_1": {
+          "type": "step",
+          "settings": {
+            "title": "Con agua",
+            "text": "Toma las cápsulas indicadas en la etiqueta con un vaso de agua, de preferencia con alimentos."
+          }
+        },
+        "step_2": {
+          "type": "step",
+          "settings": {
+            "title": "Mismo horario",
+            "text": "Elige un momento fijo del día. La regularidad ayuda a crear el hábito."
+          }
+        },
+        "step_3": {
+          "type": "step",
+          "settings": {
+            "title": "Sé constante",
+            "text": "Los adaptógenos actúan de forma progresiva: dale al menos 4 semanas de uso diario."
+          }
+        }
+      },
+      "block_order": [
+        "step_1",
+        "step_2",
+        "step_3"
+      ]
+    },
     "coleccion": {
       "type": "sommalya-needs",
       "settings": {
-        "eyebrow": "La colección",
-        "heading": "¿Qué necesitas <em>cuidar hoy?</em>",
-        "text": "Cuatro fórmulas para cuatro funciones vitales. Elige por lo que buscas, no por la etiqueta.",
+        "eyebrow": "Completa tu rutina",
+        "heading": "También en <em>Sommalya.</em>",
+        "text": "Fórmulas seleccionadas para acompañar distintas necesidades de tu bienestar.",
         "head_layout": "split",
-        "background": "base",
+        "background": "soft",
         "accent": "",
         "padding_top": 112,
         "padding_bottom": 112
@@ -111,328 +325,90 @@
         "need_1": {
           "type": "need",
           "settings": {
-            "tag": "Descanso",
-            "title": "Descanso",
-            "text": "Magnesio, valeriana y pasiflora para conciliar el sueño y despertar con claridad.",
-            "cta": "Dormir mejor",
-            "accent": "#7C8BA1",
-            "link": "/products/descanso"
+            "tag": "Equilibrio femenino",
+            "title": "Myo-Inositol 16 en 1",
+            "text": "Inositoles, vitaminas D3+K2, folato y minerales en 90 cápsulas veganas.",
+            "cta": "Conocer",
+            "accent": "#B07A8A",
+            "link": "/products/myo-inositol",
+            "image_asset": "sommalya-myo-inositol.jpg"
           }
         },
         "need_2": {
           "type": "need",
           "settings": {
-            "tag": "Digestión",
-            "title": "Digestión",
-            "text": "Jengibre, hinojo y probióticos para sentirte ligero después de cada comida.",
-            "cta": "Digerir mejor",
-            "accent": "#8E9A6E",
-            "link": "/products/digestion"
+            "tag": "Kit · 2 piezas",
+            "title": "Kit Inositol & Cortisol",
+            "text": "Myo-Inositol 16 en 1 y Corti-Soothe 13 en 1 para tu equilibrio y tu calma.",
+            "cta": "Conocer",
+            "accent": "#8A7FA0",
+            "product": "kit-inositol-cortisol-paquete-2-pcs",
+            "link": "/products/kit-inositol-cortisol-paquete-2-pcs",
+            "image_asset": "sommalya-kit-inositol-cortisol.jpg"
           }
         },
         "need_3": {
           "type": "need",
           "settings": {
-            "tag": "Energía",
-            "title": "Energía",
-            "text": "Rhodiola, maca y vitamina B12 para una energía estable, sin altibajos.",
-            "cta": "Rendir mejor",
-            "accent": "#B8956A",
-            "link": "/products/energia"
-          }
-        },
-        "need_4": {
-          "type": "need",
-          "settings": {
-            "tag": "Defensas",
-            "title": "Defensas",
-            "text": "Vitamina C de acerola, zinc y saúco para acompañar tu sistema inmunitario.",
-            "cta": "Protegerte",
-            "accent": "#A87D6E",
-            "link": "/products/defensas"
+            "tag": "Herbal",
+            "title": "Graviola en gotas",
+            "text": "Extracto concentrado de hoja y fruto de guanábana. 1800 mg, 60 ml.",
+            "cta": "Conocer",
+            "accent": "#7F9A6E",
+            "link": "/products/graviola",
+            "image_asset": "sommalya-graviola.jpg"
           }
         }
       },
       "block_order": [
         "need_1",
         "need_2",
-        "need_3",
-        "need_4"
+        "need_3"
       ]
     },
     "filosofia": {
       "type": "sommalya-pillars",
       "settings": {
-        "eyebrow": "Nuestros principios",
+        "eyebrow": "Sommalya",
         "heading": "Simple. Natural. <em>Honesto.</em>",
-        "text": "Creemos que el bienestar empieza por lo básico. Por eso cada fórmula Sommalya nace con pocos ingredientes, bien elegidos y en dosis que tienen sentido.",
+        "text": "Seleccionamos suplementos con fórmulas claras y etiquetas transparentes, para cuidar lo básico que lo sostiene todo.",
         "head_layout": "center",
-        "show_numbers": true,
+        "show_numbers": false,
         "background": "base",
         "accent": "",
-        "padding_top": 64,
-        "padding_bottom": 112
+        "padding_top": 112,
+        "padding_bottom": 96
       },
       "blocks": {
         "pillar_1": {
           "type": "pillar",
           "settings": {
             "icon": "leaf",
-            "title": "Origen natural",
-            "text": "Extractos botánicos y minerales seleccionados por su pureza, con origen documentado en cada lote."
+            "title": "Fórmulas claras",
+            "text": "Ingredientes declarados en cada etiqueta, sin letras pequeñas."
           }
         },
         "pillar_2": {
           "type": "pillar",
           "settings": {
-            "icon": "lab",
-            "title": "Dosis con sentido",
-            "text": "Cantidades basadas en la evidencia disponible y declaradas con total transparencia en la etiqueta."
+            "icon": "globe",
+            "title": "Hecho en EE. UU.",
+            "text": "Productos fabricados en Estados Unidos."
           }
         },
         "pillar_3": {
           "type": "pillar",
           "settings": {
-            "icon": "shield",
-            "title": "Calidad verificada",
-            "text": "Analizamos cada lote para confirmar identidad, pureza y ausencia de contaminantes."
-          }
-        },
-        "pillar_4": {
-          "type": "pillar",
-          "settings": {
             "icon": "heart",
             "title": "Tu satisfacción primero",
-            "text": "Si no es para ti, te devolvemos tu dinero durante los primeros 30 días. Sin complicaciones."
+            "text": "Si no es para ti, te devolvemos tu dinero durante los primeros 30 días."
           }
         }
       },
       "block_order": [
         "pillar_1",
         "pillar_2",
-        "pillar_3",
-        "pillar_4"
-      ]
-    },
-    "historia": {
-      "type": "sommalya-split",
-      "settings": {
-        "placeholder_label": "Origen",
-        "reverse": false,
-        "eyebrow": "Nuestra historia",
-        "heading": "Nacimos para simplificar <em>lo vital.</em>",
-        "body": "<p>Sommalya surge de una idea sencilla: el bienestar no debería ser complicado. Dormir, digerir, tener energía y defenderse son funciones básicas del día a día, y merecen fórmulas serias, claras y naturales.</p><p>Por eso trabajamos con menos ingredientes y más criterio. Lo que no aporta, no entra en el frasco.</p>",
-        "button_label": "Conoce Sommalya",
-        "button_link": "/pages/nosotros",
-        "background": "soft",
-        "accent": "",
-        "padding_top": 112,
-        "padding_bottom": 112
-      },
-      "blocks": {
-        "point_1": {
-          "type": "point",
-          "settings": {
-            "text": "Fórmulas cortas: solo lo que aporta"
-          }
-        },
-        "point_2": {
-          "type": "point",
-          "settings": {
-            "text": "Etiquetas transparentes, con cada dosis declarada"
-          }
-        },
-        "point_3": {
-          "type": "point",
-          "settings": {
-            "text": "Cápsulas vegetales, sin colorantes ni saborizantes"
-          }
-        },
-        "point_4": {
-          "type": "point",
-          "settings": {
-            "text": "Producción en lotes pequeños y controlados"
-          }
-        }
-      },
-      "block_order": [
-        "point_1",
-        "point_2",
-        "point_3",
-        "point_4"
-      ]
-    },
-    "proceso": {
-      "type": "sommalya-steps",
-      "settings": {
-        "eyebrow": "Cómo trabajamos",
-        "heading": "De la planta al frasco, <em>paso a paso.</em>",
-        "text": "",
-        "head_layout": "left",
-        "background": "base",
-        "accent": "",
-        "padding_top": 112,
-        "padding_bottom": 96
-      },
-      "blocks": {
-        "step_1": {
-          "type": "step",
-          "settings": {
-            "title": "Seleccionamos",
-            "text": "Elegimos cada ingrediente por su forma más biodisponible y por la trazabilidad de su origen."
-          }
-        },
-        "step_2": {
-          "type": "step",
-          "settings": {
-            "title": "Formulamos",
-            "text": "Diseñamos fórmulas cortas, con dosis respaldadas por la literatura y sin excipientes innecesarios."
-          }
-        },
-        "step_3": {
-          "type": "step",
-          "settings": {
-            "title": "Analizamos",
-            "text": "Cada lote se verifica antes de envasarse: identidad, pureza, metales pesados y microbiología."
-          }
-        },
-        "step_4": {
-          "type": "step",
-          "settings": {
-            "title": "Te acompañamos",
-            "text": "Guía de uso clara, atención personalizada y garantía de satisfacción de 30 días."
-          }
-        }
-      },
-      "block_order": [
-        "step_1",
-        "step_2",
-        "step_3",
-        "step_4"
-      ]
-    },
-    "calidad": {
-      "type": "sommalya-quality",
-      "settings": {
-        "eyebrow": "Compromiso de calidad",
-        "heading": "La seriedad también <em>se nota.</em>",
-        "text": "No vendemos promesas: vendemos fórmulas cuidadas. Así lo medimos.",
-        "head_layout": "split",
-        "button_label": "",
-        "button_link": "",
-        "background": "ink",
-        "accent": "",
-        "padding_top": 112,
-        "padding_bottom": 112
-      },
-      "blocks": {
-        "stat_1": {
-          "type": "stat",
-          "settings": {
-            "value": "100%",
-            "label": "Lotes analizados antes de su venta"
-          }
-        },
-        "stat_2": {
-          "type": "stat",
-          "settings": {
-            "value": "0",
-            "label": "Colorantes, saborizantes o rellenos artificiales"
-          }
-        },
-        "stat_3": {
-          "type": "stat",
-          "settings": {
-            "value": "4",
-            "label": "Ingredientes clave por fórmula, en promedio"
-          }
-        },
-        "stat_4": {
-          "type": "stat",
-          "settings": {
-            "value": "30 días",
-            "label": "Garantía de satisfacción"
-          }
-        }
-      },
-      "block_order": [
-        "stat_1",
-        "stat_2",
-        "stat_3",
-        "stat_4"
-      ]
-    },
-    "comparativa": {
-      "type": "sommalya-compare",
-      "settings": {
-        "eyebrow": "La diferencia",
-        "heading": "Menos ruido, <em>más criterio.</em>",
-        "text": "",
-        "head_layout": "center",
-        "brand_label": "Sommalya",
-        "other_label": "Suplementos genéricos",
-        "background": "base",
-        "accent": "",
-        "padding_top": 112,
-        "padding_bottom": 96
-      },
-      "blocks": {
-        "row_1": {
-          "type": "row",
-          "settings": {
-            "feature": "Ingredientes de origen natural",
-            "brand": true,
-            "other": false
-          }
-        },
-        "row_2": {
-          "type": "row",
-          "settings": {
-            "feature": "Dosis de cada ingrediente declarada",
-            "brand": true,
-            "other": false
-          }
-        },
-        "row_3": {
-          "type": "row",
-          "settings": {
-            "feature": "Cápsula vegetal",
-            "brand": true,
-            "other": false
-          }
-        },
-        "row_4": {
-          "type": "row",
-          "settings": {
-            "feature": "Sin colorantes, saborizantes ni rellenos",
-            "brand": true,
-            "other": false
-          }
-        },
-        "row_5": {
-          "type": "row",
-          "settings": {
-            "feature": "Análisis de cada lote",
-            "brand": true,
-            "other": false
-          }
-        },
-        "row_6": {
-          "type": "row",
-          "settings": {
-            "feature": "Garantía de satisfacción de 30 días",
-            "brand": true,
-            "other": false
-          }
-        }
-      },
-      "block_order": [
-        "row_1",
-        "row_2",
-        "row_3",
-        "row_4",
-        "row_5",
-        "row_6"
+        "pillar_3"
       ]
     },
     "preguntas": {
@@ -445,43 +421,36 @@
         "open_first": true,
         "background": "base",
         "accent": "",
-        "padding_top": 96,
+        "padding_top": 64,
         "padding_bottom": 112
       },
       "blocks": {
         "q_1": {
           "type": "question",
           "settings": {
-            "question": "¿Cómo sé qué producto es para mí?",
-            "answer": "<p>Elige por la necesidad que quieres cuidar: descanso, digestión, energía o defensas. Cada fórmula está diseñada para una función concreta y pueden combinarse entre sí.</p>"
+            "question": "¿Para quién es Cortisol Calm?",
+            "answer": "<p>Para adultos que buscan acompañar su equilibrio frente al estrés diario con ingredientes como rhodiola, ashwagandha, L-teanina y magnesio.</p>"
           }
         },
         "q_2": {
-          "type": "question",
-          "settings": {
-            "question": "¿Los ingredientes son realmente naturales?",
-            "answer": "<p>Sí. Usamos extractos botánicos, minerales y vitaminas de origen natural, en cápsula vegetal y sin colorantes, saborizantes ni rellenos artificiales.</p>"
-          }
-        },
-        "q_3": {
           "type": "question",
           "settings": {
             "question": "¿Cuánto tarda en llegar mi pedido?",
             "answer": "<p>Preparamos los pedidos en 24 horas hábiles. La entrega estándar tarda de 2 a 5 días hábiles, según tu ubicación.</p>"
           }
         },
-        "q_4": {
+        "q_3": {
           "type": "question",
           "settings": {
             "question": "¿Cómo funciona la garantía de 30 días?",
-            "answer": "<p>Si el producto no cumple tus expectativas, escríbenos dentro de los 30 días posteriores a la entrega y te reembolsamos el importe, incluso si el frasco está abierto.</p>"
+            "answer": "<p>Si el producto no cumple tus expectativas, escríbenos dentro de los 30 días posteriores a la entrega y te reembolsamos el importe.</p>"
           }
         },
-        "q_5": {
+        "q_4": {
           "type": "question",
           "settings": {
             "question": "¿Puedo tomarlos si tomo medicamentos?",
-            "answer": "<p>Te recomendamos consultar a tu médico antes de iniciar cualquier suplemento si estás bajo tratamiento, embarazada o en periodo de lactancia.</p>"
+            "answer": "<p>Consulta a tu médico antes de iniciar cualquier suplemento si estás bajo tratamiento, embarazada o en periodo de lactancia.</p>"
           }
         }
       },
@@ -489,8 +458,7 @@
         "q_1",
         "q_2",
         "q_3",
-        "q_4",
-        "q_5"
+        "q_4"
       ]
     },
     "garantia": {
@@ -498,15 +466,15 @@
       "settings": {
         "eyebrow": "Garantía Sommalya",
         "heading": "Pruébalo 30 días. <em>Sin riesgo.</em>",
-        "text": "Si no notas la diferencia, te devolvemos tu dinero. Así de seguros estamos de la calidad de cada fórmula.",
-        "button_label": "Elegir mi fórmula",
-        "button_link": "/collections/all",
-        "button2_label": "",
-        "button2_link": "",
+        "text": "Si no es para ti, te devolvemos tu dinero.",
+        "button_label": "Comprar Cortisol Calm",
+        "button_link": "/products/cortisol-calm",
+        "button2_label": "Ver todos los productos",
+        "button2_link": "/collections/all",
         "disclaimer": "Este producto no es un medicamento. El consumo de este producto es responsabilidad de quien lo recomienda y de quien lo usa. Consulta a tu médico si estás embarazada, en lactancia o bajo tratamiento.",
         "background": "sand",
         "accent": "",
-        "padding_top": 120,
+        "padding_top": 112,
         "padding_bottom": 96
       }
     }
@@ -514,12 +482,11 @@
   "order": [
     "portada",
     "confianza",
+    "beneficios",
+    "formula",
+    "uso",
     "coleccion",
     "filosofia",
-    "historia",
-    "proceso",
-    "calidad",
-    "comparativa",
     "preguntas",
     "garantia"
   ]

@@ -20,12 +20,10 @@
         -%}
         <a class="sm-need" href="{{ url }}" style="--sm-need-accent: {{ accent }};" {{ block.shopify_attributes }}>
           <div class="sm-media sm-need__media">
-            {%- if block.settings.image != blank -%}
-              {{ block.settings.image | image_url: width: 900 | image_tag: loading: 'lazy', sizes: '(min-width: 900px) 25vw, 90vw', alt: title }}
-            {%- elsif p.featured_image != blank -%}
-              {{ p.featured_image | image_url: width: 900 | image_tag: loading: 'lazy', sizes: '(min-width: 900px) 25vw, 90vw', alt: title }}
+            {%- if block.settings.image == blank and block.settings.image_asset == blank and p.featured_image != blank -%}
+              {{ p.featured_image | image_url: width: 900 | image_tag: loading: 'lazy', sizes: '(min-width: 900px) 30vw, 90vw', alt: title }}
             {%- else -%}
-              {% render 'sommalya-bottle', label: title, accent: accent %}
+              {% render 'sommalya-media', image: block.settings.image, asset: block.settings.image_asset, label: title, accent: accent, sizes: '(min-width: 900px) 30vw, 90vw' %}
             {%- endif -%}
             {%- if block.settings.tag != blank -%}<span class="sm-need__tag">{{ block.settings.tag }}</span>{%- endif -%}
           </div>
@@ -171,6 +169,12 @@
           "id": "image",
           "label": "Imagen",
           "info": "Opcional. Por defecto usa la imagen del producto."
+        },
+        {
+          "type": "text",
+          "id": "image_asset",
+          "label": "Imagen incluida en el tema",
+          "info": "Nombre de un archivo de assets/. Ej.: sommalya-graviola.jpg"
         },
         {
           "type": "url",
