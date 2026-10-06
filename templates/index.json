@@ -58,7 +58,26 @@
         "stat_1",
         "stat_2",
         "stat_3"
-      ]
+      ],
+      "settings": {
+        "eyebrow": "Cortisol Calm · Producto estrella",
+        "heading": "Calma y enfoque, <em>todos los días.</em>",
+        "text": "Para adultos que viven con estrés diario: una fórmula liposomal con rhodiola, ashwagandha, L-teanina y magnesio que acompaña a tu cuerpo a recuperar la calma sin perder energía.",
+        "button_label": "Comprar Cortisol Calm",
+        "button_link": "/products/suplemento-cortisol-calm-megneta-60cp",
+        "button2_label": "Ver cómo funciona",
+        "button2_link": "/products/suplemento-cortisol-calm-megneta-60cp",
+        "image_asset": "sommalya-cortisol-calm.jpg",
+        "placeholder_label": "Cortisol Calm de Sommalya",
+        "layout": "studio",
+        "product": "suplemento-cortisol-calm-megneta-60cp",
+        "proof": "Hecho en EE. UU. · Garantía de 30 días · Envío gratis desde $799",
+        "sticky_bar": true,
+        "background": "base",
+        "accent": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
     },
     "cinta": {
       "type": "sommalya-marquee",
@@ -74,12 +93,6 @@
     },
     "confianza": {
       "type": "sommalya-trustbar",
-      "settings": {
-        "background": "soft",
-        "accent": "",
-        "padding_top": 40,
-        "padding_bottom": 40
-      },
       "blocks": {
         "item_1": {
           "type": "item",
@@ -119,22 +132,16 @@
         "item_2",
         "item_3",
         "item_4"
-      ]
+      ],
+      "settings": {
+        "background": "soft",
+        "accent": "",
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
     },
     "beneficios": {
       "type": "sommalya-features",
-      "settings": {
-        "eyebrow": "Características y beneficios",
-        "heading": "Lo que contiene, <em>lo que sientes.</em>",
-        "text": "Cada ingrediente técnico se traduce en una ventaja que notas en tu día.",
-        "head_layout": "split",
-        "left_label": "Lo que contiene",
-        "right_label": "Lo que sientes",
-        "background": "base",
-        "accent": "#5F7A99",
-        "padding_top": 112,
-        "padding_bottom": 96
-      },
       "blocks": {
         "row_1": {
           "type": "row",
@@ -188,7 +195,19 @@
         "row_3",
         "row_4",
         "row_5"
-      ]
+      ],
+      "settings": {
+        "eyebrow": "Características y beneficios",
+        "heading": "Lo que contiene, <em>lo que sientes.</em>",
+        "text": "Cada ingrediente técnico se traduce en una ventaja que notas en tu día.",
+        "head_layout": "split",
+        "left_label": "Lo que contiene",
+        "right_label": "Lo que sientes",
+        "background": "base",
+        "accent": "#5F7A99",
+        "padding_top": 112,
+        "padding_bottom": 96
+      }
     },
     "manifiesto": {
       "type": "sommalya-statement",
@@ -206,17 +225,6 @@
     },
     "formula": {
       "type": "sommalya-ingredients",
-      "settings": {
-        "eyebrow": "La fórmula",
-        "heading": "Diez ingredientes, <em>una sola cápsula.</em>",
-        "text": "Cada ingrediente tiene una función concreta dentro de la fórmula.",
-        "head_layout": "split",
-        "note": "759 mg por porción · 60 cápsulas por frasco · Fórmula liposomal. Consulta la etiqueta para la composición completa.",
-        "background": "base",
-        "accent": "#5F7A99",
-        "padding_top": 112,
-        "padding_bottom": 96
-      },
       "blocks": {
         "ing_1": {
           "type": "ingredient",
@@ -320,20 +328,21 @@
         "ing_8",
         "ing_9",
         "ing_10"
-      ]
+      ],
+      "settings": {
+        "eyebrow": "La fórmula",
+        "heading": "Diez ingredientes, <em>una sola cápsula.</em>",
+        "text": "Cada ingrediente tiene una función concreta dentro de la fórmula.",
+        "head_layout": "split",
+        "note": "759 mg por porción · 60 cápsulas por frasco · Fórmula liposomal. Consulta la etiqueta para la composición completa.",
+        "background": "base",
+        "accent": "#5F7A99",
+        "padding_top": 112,
+        "padding_bottom": 96
+      }
     },
     "uso": {
       "type": "sommalya-steps",
-      "settings": {
-        "eyebrow": "Modo de uso",
-        "heading": "Un hábito <em>sencillo.</em>",
-        "text": "",
-        "head_layout": "left",
-        "background": "sand",
-        "accent": "#5F7A99",
-        "padding_top": 96,
-        "padding_bottom": 96
-      },
       "blocks": {
         "step_1": {
           "type": "step",
@@ -361,7 +370,17 @@
         "step_1",
         "step_2",
         "step_3"
-      ]
+      ],
+      "settings": {
+        "eyebrow": "Modo de uso",
+        "heading": "Un hábito <em>sencillo.</em>",
+        "text": "",
+        "head_layout": "left",
+        "background": "sand",
+        "accent": "#5F7A99",
+        "padding_top": 96,
+        "padding_bottom": 96
+      }
     },
     "testimonios": {
       "type": "sommalya-testimonials",
@@ -374,12 +393,42 @@
         "accent": "#5F7A99",
         "padding_top": 96,
         "padding_bottom": 96
-      },
-      "blocks": {},
-      "block_order": []
+      }
     },
     "coleccion": {
       "type": "sommalya-needs",
+      "blocks": {
+        "need_1": {
+          "type": "need",
+          "settings": {
+            "product": "kit-inositol-cortisol-paquete-2-pcs",
+            "tag": "Kit · 2 piezas",
+            "title": "Kit Inositol & Cortisol",
+            "text": "Myo-Inositol 16 en 1 y Corti-Soothe 13 en 1 para tu equilibrio y tu calma.",
+            "cta": "Conocer",
+            "accent": "#8A7FA0",
+            "image_asset": "sommalya-kit-inositol-cortisol.jpg",
+            "link": "/products/kit-inositol-cortisol-paquete-2-pcs"
+          }
+        },
+        "need_2": {
+          "type": "need",
+          "settings": {
+            "product": "gotas-de-guanabana-organico-digestion",
+            "tag": "Herbal",
+            "title": "Gotas de Guanábana",
+            "text": "Extracto concentrado de hoja y fruto de guanábana. 1800 mg, 60 ml.",
+            "cta": "Conocer",
+            "accent": "#7F9A6E",
+            "image_asset": "sommalya-graviola.jpg",
+            "link": "/products/gotas-de-guanabana-organico-digestion"
+          }
+        }
+      },
+      "block_order": [
+        "need_1",
+        "need_2"
+      ],
       "settings": {
         "eyebrow": "Completa tu rutina",
         "heading": "También en <em>Sommalya.</em>",
@@ -389,53 +438,10 @@
         "accent": "",
         "padding_top": 112,
         "padding_bottom": 112
-      },
-      "blocks": {
-        "need_1": {
-          "type": "need",
-          "settings": {
-            "tag": "Kit · 2 piezas",
-            "title": "Kit Inositol & Cortisol",
-            "text": "Myo-Inositol 16 en 1 y Corti-Soothe 13 en 1 para tu equilibrio y tu calma.",
-            "cta": "Conocer",
-            "accent": "#8A7FA0",
-            "product": "kit-inositol-cortisol-paquete-2-pcs",
-            "link": "/products/kit-inositol-cortisol-paquete-2-pcs",
-            "image_asset": "sommalya-kit-inositol-cortisol.jpg"
-          }
-        },
-        "need_2": {
-          "type": "need",
-          "settings": {
-            "tag": "Herbal",
-            "title": "Gotas de Guanábana",
-            "text": "Extracto concentrado de hoja y fruto de guanábana. 1800 mg, 60 ml.",
-            "cta": "Conocer",
-            "accent": "#7F9A6E",
-            "product": "gotas-de-guanabana-organico-digestion",
-            "link": "/products/gotas-de-guanabana-organico-digestion",
-            "image_asset": "sommalya-graviola.jpg"
-          }
-        }
-      },
-      "block_order": [
-        "need_1",
-        "need_2"
-      ]
+      }
     },
     "preguntas": {
       "type": "sommalya-faq",
-      "settings": {
-        "eyebrow": "Preguntas frecuentes",
-        "heading": "Antes de <em>decidirte.</em>",
-        "text": "",
-        "head_layout": "center",
-        "open_first": true,
-        "background": "soft",
-        "accent": "",
-        "padding_top": 112,
-        "padding_bottom": 112
-      },
       "blocks": {
         "q_1": {
           "type": "question",
@@ -487,7 +493,18 @@
         "q_4",
         "q_5",
         "q_6"
-      ]
+      ],
+      "settings": {
+        "eyebrow": "Preguntas frecuentes",
+        "heading": "Antes de <em>decidirte.</em>",
+        "text": "",
+        "head_layout": "center",
+        "open_first": true,
+        "background": "soft",
+        "accent": "",
+        "padding_top": 112,
+        "padding_bottom": 112
+      }
     },
     "garantia": {
       "type": "sommalya-cta",
