@@ -28,7 +28,8 @@
         "background": "base",
         "accent": "",
         "padding_top": 0,
-        "padding_bottom": 0
+        "padding_bottom": 0,
+        "text_animation": "words"
       },
       "blocks": {
         "stat_1": {

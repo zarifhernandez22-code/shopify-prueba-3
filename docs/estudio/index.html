@@ -1,0 +1,490 @@
+<title>Estudio de Movimiento Sommalya</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;1,6..72,300&family=Red+Hat+Text:wght@400;500&family=Red+Hat+Mono:wght@400&display=swap">
+<style>
+/* Layout: mesa de trabajo. Controles a la izquierda, escaparate de la tienda a la derecha
+   y, debajo, la receta exacta para Shopify. El escaparate conserva siempre la paleta de la
+   marca; la interfaz de la herramienta sigue el tema del visitante. */
+:root {
+  /* Interfaz de la herramienta */
+  --ui-bg: #F3F1EC;
+  --ui-panel: #FFFFFF;
+  --ui-ink: #1F2A24;
+  --ui-muted: #5F6862;
+  --ui-line: #DDD8CE;
+  --ui-accent: #6B7B67;
+  --ui-focus: #5F7A99;
+  /* Marca Sommalya (escaparate) */
+  --br-bg: #F8F6F1;
+  --br-ink: #1F2A24;
+  --br-sage: #6B7B67;
+  --br-sand: #E9E4DA;
+  --br-soft: #F1EDE5;
+  --serif: 'Newsreader', 'Iowan Old Style', Georgia, serif;
+  --sans: 'Red Hat Text', 'Helvetica Neue', Arial, sans-serif;
+  --mono: 'Red Hat Mono', ui-monospace, Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --ui-bg: #141917; --ui-panel: #1C2320; --ui-ink: #ECEAE4; --ui-muted: #A3ABA5; --ui-line: #2F3833; --ui-accent: #9DB098; --ui-focus: #9CB3D1; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --ui-bg: #141917; --ui-panel: #1C2320; --ui-ink: #ECEAE4; --ui-muted: #A3ABA5; --ui-line: #2F3833; --ui-accent: #9DB098; --ui-focus: #9CB3D1; color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--ui-bg); color: var(--ui-ink); font-family: var(--sans); font-size: 14px; -webkit-font-smoothing: antialiased; }
+:focus-visible { outline: 2px solid var(--ui-focus); outline-offset: 2px; }
+.app { max-width: 1320px; margin: 0 auto; padding: 28px clamp(16px, 3vw, 32px) 64px; display: grid; gap: 24px; }
+
+.top { display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: 12px 24px; }
+.brand { display: flex; align-items: center; gap: 14px; }
+.brand img { width: 40px; height: 40px; }
+.brand h1 { margin: 0; font-family: var(--serif); font-weight: 300; font-size: clamp(24px, 3vw, 34px); letter-spacing: -0.01em; }
+.brand h1 em { color: var(--ui-accent); }
+.brand p { margin: 2px 0 0; color: var(--ui-muted); font-size: 13px; }
+.presets { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+.presets span { font-size: 11px; letter-spacing: .16em; text-transform: uppercase; color: var(--ui-muted); margin-right: 4px; }
+.chip { padding: 7px 12px; border: 1px solid var(--ui-line); border-radius: 999px; background: var(--ui-panel); color: var(--ui-ink); font: inherit; font-size: 12px; cursor: pointer; }
+.chip[aria-pressed="true"] { background: var(--ui-ink); color: var(--ui-bg); border-color: var(--ui-ink); }
+
+.work { display: grid; gap: 24px; grid-template-columns: minmax(0, 1fr); }
+@media (min-width: 980px) { .work { grid-template-columns: 340px minmax(0, 1fr); align-items: start; } }
+
+.panel { background: var(--ui-panel); border: 1px solid var(--ui-line); padding: 20px; display: grid; gap: 22px; }
+@media (min-width: 980px) { .panel { position: sticky; top: calc(16px + env(safe-area-inset-top, 0px)); } }
+.panel h2 { margin: 0 0 4px; font-size: 11px; font-weight: 500; letter-spacing: .2em; text-transform: uppercase; color: var(--ui-muted); }
+.group { display: grid; gap: 12px; }
+.group + .group { padding-top: 22px; border-top: 1px solid var(--ui-line); }
+label.f { display: grid; gap: 6px; font-size: 12px; color: var(--ui-muted); }
+label.f small { font-size: 11px; }
+input[type="text"], textarea, select {
+  width: 100%; padding: 10px 12px; border: 1px solid var(--ui-line); border-radius: 0; background: transparent; color: var(--ui-ink); font: inherit; font-size: 14px;
+}
+textarea { resize: vertical; min-height: 64px; line-height: 1.45; }
+input[type="range"] { width: 100%; accent-color: var(--ui-accent); }
+.row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.swatches { display: flex; gap: 8px; flex-wrap: wrap; }
+.sw { width: 30px; height: 30px; border-radius: 50%; border: 2px solid transparent; cursor: pointer; padding: 0; outline-offset: 2px; }
+.sw[aria-pressed="true"] { border-color: var(--ui-ink); }
+.btnrow { display: flex; gap: 8px; flex-wrap: wrap; }
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 40px; padding: 0 16px; border: 1px solid var(--ui-ink); background: var(--ui-ink); color: var(--ui-bg); font: inherit; font-size: 12px; font-weight: 500; letter-spacing: .12em; text-transform: uppercase; cursor: pointer; }
+.btn.ghost { background: transparent; color: var(--ui-ink); }
+
+/* ---------- Escaparate (paleta fija de la marca) ---------- */
+.stage { border: 1px solid var(--ui-line); background: var(--br-bg); color: var(--br-ink); overflow: hidden; min-width: 0; }
+.stage-bar { display: flex; align-items: center; gap: 6px; padding: 10px 14px; background: #E7E4DE; color: #5F6862; font-size: 11px; }
+.stage-bar i { width: 9px; height: 9px; border-radius: 50%; background: #CFCAC0; display: inline-block; }
+.stage-bar span { margin-left: 10px; font-family: var(--mono); }
+.s-announce { padding: 9px 16px; background: var(--br-ink); color: var(--br-bg); text-align: center; font-size: 10px; letter-spacing: .18em; text-transform: uppercase; }
+.s-head { display: flex; justify-content: space-between; align-items: center; padding: 14px 24px; border-bottom: 1px solid rgb(31 42 36 / .1); font-size: 12px; }
+.s-logo { display: inline-flex; align-items: center; gap: 10px; font-family: var(--serif); font-size: 18px; letter-spacing: .3em; text-transform: uppercase; }
+.s-logo img { width: 24px; height: 24px; }
+.s-hero { padding: clamp(36px, 6vw, 72px) clamp(20px, 5vw, 56px) clamp(28px, 4vw, 48px); display: grid; gap: 18px; }
+.s-eyebrow { margin: 0; display: inline-flex; align-items: center; gap: 10px; font-size: 10.5px; font-weight: 500; letter-spacing: .22em; text-transform: uppercase; color: #5d655f; }
+.s-eyebrow::before { content: ''; width: 26px; height: 1px; background: currentColor; opacity: .6; }
+.s-title { margin: 0; font-family: var(--serif); font-weight: 300; letter-spacing: -.015em; line-height: 1.04; text-wrap: balance; }
+.s-title.h1 { font-size: clamp(38px, 5.6vw, 76px); }
+.s-title.h2 { font-size: clamp(30px, 4vw, 52px); }
+.s-title em { font-style: italic; color: var(--accent, var(--br-sage)); }
+.s-lead { margin: 0; max-width: 52ch; color: #5d655f; font-size: 15px; line-height: 1.65; }
+
+/* Animaciones idénticas a assets/sommalya.js + sommalya.css */
+.s-title .word { display: inline-block; white-space: nowrap; }
+.a-words .word { overflow: hidden; vertical-align: top; padding-bottom: .1em; margin-bottom: -.1em; }
+.a-words .word > span { display: inline-block; transform: translateY(108%); transition: transform .95s cubic-bezier(.2,.75,.15,1) calc(var(--w) * var(--stagger)); }
+.a-words.in .word > span { transform: none; }
+.a-fade .word > span { display: inline-block; opacity: 0; filter: blur(10px); transform: translateY(.25em); transition: opacity .9s ease calc(var(--w) * var(--stagger)), filter .9s ease calc(var(--w) * var(--stagger)), transform .9s ease calc(var(--w) * var(--stagger)); }
+.a-fade.in .word > span { opacity: 1; filter: none; transform: none; }
+.a-type .ch { opacity: 0; transition: opacity .05s linear calc(var(--c) * var(--stagger) * .6); }
+.a-type.in .ch { opacity: 1; }
+.a-type::after { content: ''; display: inline-block; width: 2px; height: .85em; margin-left: .08em; vertical-align: -.05em; background: var(--accent, var(--br-sage)); animation: caret 1s steps(1) infinite; }
+@keyframes caret { 50% { opacity: 0; } }
+.a-light .word { opacity: .16; transition: opacity .35s ease; }
+.a-light .word.lit { opacity: 1; }
+
+.s-marquee { overflow: hidden; border-block: 1px solid rgb(31 42 36 / .12); padding-block: 26px; }
+.s-marquee.base { background: var(--br-bg); } .s-marquee.soft { background: var(--br-soft); } .s-marquee.sand { background: var(--br-sand); }
+.s-marquee.ink { background: var(--br-ink); color: var(--br-bg); border-color: transparent; }
+.s-track { display: flex; width: max-content; animation: mq var(--speed, 45s) linear infinite; }
+.s-marquee:hover .s-track { animation-play-state: paused; }
+.s-group { display: flex; align-items: center; flex: none; }
+.s-item { display: inline-flex; align-items: center; gap: clamp(18px, 3vw, 40px); padding-right: clamp(18px, 3vw, 40px); font-family: var(--serif); font-size: clamp(24px, 3.2vw, 42px); font-weight: 300; white-space: nowrap; }
+.s-item:nth-child(even) { font-style: italic; color: var(--accent, var(--br-sage)); }
+.s-marquee.ink .s-item:nth-child(even) { color: color-mix(in srgb, var(--accent, var(--br-sage)) 55%, var(--br-bg)); }
+.s-item svg { width: 15px; height: 15px; color: var(--accent, var(--br-sage)); opacity: .75; }
+@keyframes mq { to { transform: translateX(-50%); } }
+.s-foot { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1px; background: rgb(31 42 36 / .1); }
+.s-foot div { background: var(--br-bg); padding: 18px 20px; font-size: 12px; color: #5d655f; }
+.s-foot strong { display: block; color: var(--br-ink); font-weight: 500; font-size: 13px; margin-bottom: 2px; }
+.stage-note { margin: 0; padding: 10px 16px; border-top: 1px solid rgb(31 42 36 / .1); font-size: 12px; color: #5d655f; background: var(--br-soft); }
+
+@media (prefers-reduced-motion: reduce) {
+  .s-track { animation: none; }
+  .a-words .word > span, .a-fade .word > span { transform: none; opacity: 1; filter: none; }
+  .a-type .ch { opacity: 1; }
+}
+
+/* ---------- Receta para Shopify ---------- */
+.recipe { background: var(--ui-panel); border: 1px solid var(--ui-line); }
+.recipe header { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 10px; padding: 16px 20px; border-bottom: 1px solid var(--ui-line); }
+.recipe header h2 { margin: 0; font-family: var(--serif); font-weight: 300; font-size: 22px; }
+.recipe .cols { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+.recipe .card { padding: 18px 20px; display: grid; gap: 10px; align-content: start; min-width: 0; }
+.recipe .card + .card { border-left: 1px solid var(--ui-line); }
+@media (max-width: 640px) { .recipe .card + .card { border-left: 0; border-top: 1px solid var(--ui-line); } }
+.recipe h3 { margin: 0; font-size: 13px; font-weight: 500; }
+.recipe .where { margin: 0; font-size: 12px; color: var(--ui-muted); line-height: 1.5; }
+.kv { display: grid; grid-template-columns: minmax(110px, auto) minmax(0, 1fr) auto; gap: 8px 12px; align-items: center; margin: 0; }
+.kv dt { font-size: 12px; color: var(--ui-muted); }
+.kv dd { margin: 0; font-family: var(--mono); font-size: 12.5px; overflow-wrap: anywhere; }
+.copy { padding: 5px 9px; border: 1px solid var(--ui-line); background: transparent; color: var(--ui-ink); font: inherit; font-size: 11px; cursor: pointer; }
+.copy.ok { border-color: var(--ui-accent); color: var(--ui-accent); }
+.tip { margin: 0; padding: 12px 20px; border-top: 1px solid var(--ui-line); font-size: 12px; color: var(--ui-muted); line-height: 1.55; }
+.tip strong { color: var(--ui-ink); font-weight: 500; }
+.toast { position: fixed; left: 50%; bottom: calc(18px + env(safe-area-inset-bottom, 0px)); transform: translate(-50%, 160%); padding: 10px 16px; background: var(--ui-ink); color: var(--ui-bg); font-size: 13px; transition: transform .35s ease, opacity .35s ease; z-index: 10; opacity: 0; pointer-events: none; }
+.toast.on { transform: translate(-50%, 0); opacity: 1; }
+</style>
+
+<div class="app">
+  <header class="top">
+    <div class="brand">
+      <img src="img/sommalya-logo.png" alt="">
+      <div>
+        <h1>Estudio de <em>movimiento</em></h1>
+        <p>Diseña títulos animados y cintas de ingredientes, y copia los valores a Shopify.</p>
+      </div>
+    </div>
+    <div class="presets" role="group" aria-label="Plantillas">
+      <span>Partir de</span>
+      <button class="chip" type="button" data-preset="catalogo">Catálogo</button>
+      <button class="chip" type="button" data-preset="cortisol">Cortisol Calm</button>
+      <button class="chip" type="button" data-preset="kit">Kit Inositol &amp; Cortisol</button>
+      <button class="chip" type="button" data-preset="guanabana">Gotas de Guanábana</button>
+    </div>
+  </header>
+
+  <div class="work">
+    <form class="panel" id="controls" autocomplete="off">
+      <div class="group">
+        <h2>Texto animado</h2>
+        <label class="f">Antetítulo
+          <input type="text" id="eyebrow">
+        </label>
+        <label class="f">Título <small>Escribe *así* la palabra que va en cursiva y color de acento.</small>
+          <textarea id="title" rows="2"></textarea>
+        </label>
+        <label class="f">Texto de apoyo
+          <textarea id="lead" rows="2"></textarea>
+        </label>
+        <div class="row2">
+          <label class="f">Animación
+            <select id="anim">
+              <option value="words">Revelado por palabras</option>
+              <option value="fade">Aparición suave</option>
+              <option value="type">Escritura</option>
+              <option value="light">Iluminación al hacer scroll</option>
+              <option value="none">Sin animación</option>
+            </select>
+          </label>
+          <label class="f">Tamaño
+            <select id="size">
+              <option value="h1">Título principal</option>
+              <option value="h2">Título de sección</option>
+            </select>
+          </label>
+        </div>
+        <label class="f">Ritmo entre palabras <small id="staggerOut">55 ms</small>
+          <input type="range" id="stagger" min="20" max="140" step="5" value="55">
+        </label>
+        <div class="btnrow"><button class="btn" type="button" id="replay">Repetir animación</button></div>
+      </div>
+
+      <div class="group">
+        <h2>Cinta de ingredientes</h2>
+        <label class="f">Elementos <small>Separados por coma</small>
+          <textarea id="items" rows="3"></textarea>
+        </label>
+        <div class="row2">
+          <label class="f">Separador
+            <select id="icon">
+              <option value="spark">Destello</option>
+              <option value="leaf">Hoja</option>
+              <option value="drop">Gota</option>
+              <option value="check">Palomita</option>
+              <option value="star">Estrella</option>
+            </select>
+          </label>
+          <label class="f">Fondo
+            <select id="bg">
+              <option value="base">Marfil (base)</option>
+              <option value="soft">Lino suave</option>
+              <option value="sand">Arena</option>
+              <option value="ink">Oscuro</option>
+            </select>
+          </label>
+        </div>
+        <label class="f">Duración de una vuelta <small id="speedOut">45 s</small>
+          <input type="range" id="speed" min="10" max="90" step="5" value="45">
+        </label>
+        <div class="f">Color de acento
+          <div class="swatches" id="swatches" role="group" aria-label="Color de acento"></div>
+        </div>
+      </div>
+    </form>
+
+    <div style="display:grid;gap:24px;min-width:0">
+      <section class="stage" aria-label="Vista previa de la tienda">
+        <div class="stage-bar"><i></i><i></i><i></i><span id="url">sommalya.mx/collections/all</span></div>
+        <div class="s-announce">Envío gratis en pedidos desde $799 · Garantía de 30 días</div>
+        <div class="s-head"><span>Catálogo</span><span class="s-logo"><img src="img/sommalya-logo.png" alt="">Sommalya</span><span>Carrito (0)</span></div>
+        <div class="s-hero" id="hero">
+          <p class="s-eyebrow" id="pEyebrow"></p>
+          <h2 class="s-title h1" id="pTitle"></h2>
+          <p class="s-lead" id="pLead"></p>
+        </div>
+        <div class="s-marquee base" id="pMarquee" aria-label="Cinta de ingredientes"></div>
+        <div class="s-foot">
+          <div><strong>Cortisol Calm</strong>$799 MXN</div>
+          <div><strong>Kit Inositol &amp; Cortisol</strong>$699 MXN</div>
+          <div><strong>Gotas de Guanábana</strong>$499 MXN</div>
+        </div>
+        <p class="stage-note" id="stageNote">Vista previa con la paleta de la marca. Pasa el cursor sobre la cinta para pausarla.</p>
+      </section>
+
+      <section class="recipe" aria-labelledby="recipeTitle">
+        <header>
+          <h2 id="recipeTitle">Receta para Shopify</h2>
+          <button class="btn ghost" type="button" id="copyAll">Copiar todo</button>
+        </header>
+        <div class="cols">
+          <div class="card">
+            <h3 id="rTitleSection">Sommalya · Catálogo</h3>
+            <p class="where" id="rTitleWhere">Tienda online → Personalizar → plantilla Colecciones → sección «Sommalya · Catálogo».</p>
+            <dl class="kv" id="kvTitle"></dl>
+          </div>
+          <div class="card">
+            <h3>Sommalya · Cinta</h3>
+            <p class="where">En la misma plantilla, sección «Sommalya · Cinta». Para agregar otra: Agregar sección → Sommalya · Cinta.</p>
+            <dl class="kv" id="kvMarquee"></dl>
+          </div>
+        </div>
+        <p class="tip"><strong>Cursiva en Shopify:</strong> en el campo Título, selecciona la palabra marcada con asteriscos y pulsa el botón <em>I</em> del editor. Los asteriscos no se escriben.</p>
+      </section>
+    </div>
+  </div>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+const ICONS = {
+  spark: '<path d="M12 3c.8 4.6 2.4 6.2 7 7-4.6.8-6.2 2.4-7 7-.8-4.6-2.4-6.2-7-7 4.6-.8 6.2-2.4 7-7Z"/>',
+  leaf: '<path d="M5 19c0-8 5-13 14-14 0 9-5 14-13 14"/><path d="M5 19 13 11"/>',
+  drop: '<path d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11Z"/>',
+  check: '<path d="m5 12.5 4.5 4.5L19 7.5"/>',
+  star: '<path d="m12 3 2.6 5.6 6.1.7-4.5 4.2 1.2 6L12 16.6 6.6 19.5l1.2-6L3.3 9.3l6.1-.7L12 3Z"/>'
+};
+const ACCENTS = [
+  { name: 'Salvia (marca)', hex: '#6B7B67' },
+  { name: 'Cortisol Calm', hex: '#5F7A99' },
+  { name: 'Kit Inositol & Cortisol', hex: '#8A7FA0' },
+  { name: 'Gotas de Guanábana', hex: '#7F9A6E' }
+];
+const LABELS = {
+  anim: { words: 'Revelado por palabras', fade: 'Aparición suave', type: 'Escritura', light: 'Iluminación al hacer scroll', none: 'Sin animación' },
+  icon: { spark: 'Spark', leaf: 'Leaf', drop: 'Drop', check: 'Check', star: 'Star' },
+  bg: { base: 'Marfil (base)', soft: 'Lino suave', sand: 'Arena', ink: 'Oscuro' }
+};
+const PRESETS = {
+  catalogo: { eyebrow: 'Catálogo Sommalya', title: 'Lo esencial, *en un solo lugar.*', lead: 'Fórmulas claras para cuidar lo básico que lo sostiene todo. Elige por lo que necesitas hoy.', anim: 'words', size: 'h1', stagger: 55,
+    items: 'Rhodiola, Ashwagandha, L-Teanina, Magnesio, Fosfatidilserina, Magnolia, Vitamina B6, Vitamina B12', icon: 'spark', bg: 'base', speed: 45, accent: '#5F7A99',
+    section: 'Sommalya · Catálogo', where: 'Tienda online → Personalizar → plantilla Colecciones → sección «Sommalya · Catálogo».', url: 'sommalya.mx/collections/all' },
+  cortisol: { eyebrow: 'Cortisol Calm · Producto estrella', title: 'Calma y enfoque, *todos los días.*', lead: 'Para adultos que viven con estrés diario: una fórmula liposomal con rhodiola, ashwagandha, L-teanina y magnesio.', anim: 'words', size: 'h1', stagger: 55,
+    items: 'Rhodiola, Ashwagandha, L-Teanina, Magnesio, Fosfatidilserina, Magnolia, Vitamina B6, Vitamina B12', icon: 'spark', bg: 'base', speed: 45, accent: '#5F7A99',
+    section: 'Sommalya · Portada', where: 'Tienda online → Personalizar → Página principal → sección «Sommalya · Portada».', url: 'sommalya.mx' },
+  kit: { eyebrow: 'Kit Inositol & Cortisol', title: 'Cuerpo y mente, *en sintonía.*', lead: 'Myo-Inositol 16 en 1 y Corti-Soothe 13 en 1 para acompañar tu equilibrio y tu calma.', anim: 'fade', size: 'h2', stagger: 70,
+    items: 'Myo-Inositol, D-Chiro Inositol, Ashwagandha, L-Teanina, Magnesio, Rhodiola, Bacopa, Melena de león', icon: 'leaf', bg: 'soft', speed: 50, accent: '#8A7FA0',
+    section: 'Sommalya · Beneficios', where: 'Personalizar → plantilla de producto product.kit-inositol-cortisol → sección «Sommalya · Beneficios» (los títulos de sección usan Revelado por palabras de forma automática).', url: 'sommalya.mx/products/kit-inositol-cortisol-paquete-2-pcs' },
+  guanabana: { eyebrow: 'Gotas de Guanábana', title: 'Lo herbal, *en su forma más simple.*', lead: 'Extracto concentrado de hoja y fruto de guanábana, en gotas.', anim: 'type', size: 'h2', stagger: 45,
+    items: 'Guanábana, Hoja, Fruto, 1800 mg, 60 ml, Sabor fresco, Gotas, Herbal', icon: 'drop', bg: 'sand', speed: 40, accent: '#7F9A6E',
+    section: 'Sommalya · Manifiesto', where: 'Personalizar → plantilla de producto product.graviola → sección «Sommalya · Manifiesto» o «Sommalya · Catálogo».', url: 'sommalya.mx/products/gotas-de-guanabana-organico-digestion' }
+};
+
+const $ = (id) => document.getElementById(id);
+const state = {};
+const fields = ['eyebrow', 'title', 'lead', 'anim', 'size', 'stagger', 'items', 'icon', 'bg', 'speed'];
+const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+let lightTimer = null;
+let currentPreset = 'catalogo';
+
+function esc(s) { return s.replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c])); }
+function plainTitle() { return state.title.replace(/\*/g, ''); }
+function italicWords() { const m = state.title.match(/\*([^*]+)\*/g); return m ? m.map((x) => x.slice(1, -1)).join(' · ') : 'Ninguna'; }
+
+function buildTitle() {
+  const el = $('pTitle');
+  el.className = `s-title ${state.size}`;
+  el.style.setProperty('--stagger', `${state.stagger}ms`);
+  let w = 0, c = 0;
+  const parts = state.title.split(/(\*[^*]+\*)/).filter(Boolean);
+  const html = parts.map((part) => {
+    const italic = /^\*.*\*$/.test(part);
+    const text = italic ? part.slice(1, -1) : part;
+    const words = text.split(/(\s+)/).map((t) => {
+      if (!t) return '';
+      if (/^\s+$/.test(t)) return ' ';
+      const inner = state.anim === 'type'
+        ? Array.from(t).map((ch) => `<span class="ch" style="--c:${c++}">${esc(ch)}</span>`).join('') + ((c++), '')
+        : esc(t);
+      return `<span class="word" style="--w:${w++}"><span>${inner}</span></span>`;
+    }).join('');
+    return italic ? `<em>${words}</em>` : words;
+  }).join('');
+  el.innerHTML = html;
+  el.setAttribute('aria-label', plainTitle());
+  play();
+}
+
+function play() {
+  const el = $('pTitle');
+  clearInterval(lightTimer);
+  el.classList.remove('a-words', 'a-fade', 'a-type', 'a-light', 'in');
+  if (state.anim === 'none' || reduce) return;
+  void el.offsetWidth;
+  el.classList.add(`a-${state.anim}`);
+  if (state.anim === 'light') {
+    const words = el.querySelectorAll('.word');
+    let i = 0;
+    words.forEach((x) => x.classList.remove('lit'));
+    lightTimer = setInterval(() => { if (i >= words.length) { clearInterval(lightTimer); return; } words[i++].classList.add('lit'); }, Math.max(90, state.stagger * 3));
+    $('stageNote').textContent = 'En la tienda, cada palabra se ilumina al avanzar con el scroll. Aquí se simula automáticamente.';
+  } else {
+    requestAnimationFrame(() => requestAnimationFrame(() => el.classList.add('in')));
+    $('stageNote').textContent = 'Vista previa con la paleta de la marca. Pasa el cursor sobre la cinta para pausarla.';
+  }
+}
+
+function buildMarquee() {
+  const items = state.items.split(',').map((s) => s.trim()).filter(Boolean);
+  const icon = `<svg viewBox="0 0 24 24" fill="${state.icon === 'star' ? 'currentColor' : 'none'}" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${ICONS[state.icon]}</svg>`;
+  const one = items.map((t) => `<span class="s-item">${esc(t)}${icon}</span>`).join('');
+  const m = $('pMarquee');
+  m.className = `s-marquee ${state.bg}`;
+  m.innerHTML = items.length ? `<div class="s-track" style="--speed:${state.speed}s"><div class="s-group">${one}${one}</div><div class="s-group" aria-hidden="true">${one}${one}</div></div>` : '';
+}
+
+function applyAccent() { $('hero').closest('.stage').style.setProperty('--accent', state.accent); }
+
+function kvRow(label, value) {
+  return `<dt>${label}</dt><dd>${esc(String(value))}</dd><button class="copy" type="button" data-copy="${esc(String(value))}">Copiar</button>`;
+}
+function buildRecipe() {
+  const p = PRESETS[currentPreset];
+  $('rTitleSection').textContent = p ? p.section : 'Sommalya · Catálogo';
+  $('rTitleWhere').textContent = p ? p.where : '';
+  $('kvTitle').innerHTML = [
+    kvRow('Antetítulo', state.eyebrow),
+    kvRow('Título', plainTitle()),
+    kvRow('En cursiva', italicWords()),
+    kvRow('Texto', state.lead),
+    kvRow('Animación del título', LABELS.anim[state.anim])
+  ].join('');
+  const accentName = (ACCENTS.find((a) => a.hex === state.accent) || {}).name || state.accent;
+  $('kvMarquee').innerHTML = [
+    kvRow('Elementos', state.items),
+    kvRow('Separador', LABELS.icon[state.icon]),
+    kvRow('Duración de una vuelta', `${state.speed} s`),
+    kvRow('Fondo', LABELS.bg[state.bg]),
+    kvRow('Color de acento', state.accent),
+  ].join('') + `<dt></dt><dd style="font-family:var(--sans);color:var(--ui-muted)">${esc(accentName)}</dd><span></span>`;
+}
+
+function render(which) {
+  $('staggerOut').textContent = `${state.stagger} ms`;
+  $('speedOut').textContent = `${state.speed} s`;
+  $('pEyebrow').textContent = state.eyebrow;
+  $('pLead').textContent = state.lead;
+  if (which !== 'marquee') buildTitle();
+  if (which !== 'title') buildMarquee();
+  applyAccent();
+  buildRecipe();
+  save();
+}
+
+function load(p) {
+  fields.forEach((f) => { state[f] = p[f]; $(f).value = p[f]; });
+  state.stagger = Number(p.stagger); state.speed = Number(p.speed); state.accent = p.accent;
+  document.querySelectorAll('.sw').forEach((s) => s.setAttribute('aria-pressed', String(s.dataset.hex === state.accent)));
+  if (p.url) $('url').textContent = p.url;
+  render();
+}
+
+function save() { try { localStorage.setItem('sommalya-estudio', JSON.stringify({ ...state, preset: currentPreset })); } catch (e) {} }
+function restore() { try { return JSON.parse(localStorage.getItem('sommalya-estudio') || 'null'); } catch (e) { return null; } }
+
+let toastTimer;
+function toast(msg) { const t = $('toast'); t.textContent = msg; t.classList.add('on'); clearTimeout(toastTimer); toastTimer = setTimeout(() => t.classList.remove('on'), 1800); }
+function copyText(text, btn) {
+  const done = () => { if (btn) { btn.classList.add('ok'); btn.textContent = 'Copiado'; setTimeout(() => { btn.classList.remove('ok'); btn.textContent = btn.dataset.label || 'Copiar'; }, 1400); } toast('Copiado'); };
+  try {
+    navigator.clipboard.writeText(text).then(done, () => fallback(text, done));
+  } catch (e) { fallback(text, done); }
+}
+function fallback(text, done) {
+  const ta = document.createElement('textarea'); ta.value = text; ta.style.position = 'fixed'; ta.style.opacity = '0'; document.body.appendChild(ta); ta.select();
+  try { document.execCommand('copy'); done(); } catch (e) { toast('Selecciona el texto y cópialo manualmente'); }
+  ta.remove();
+}
+
+/* ---------- Eventos ---------- */
+ACCENTS.forEach((a) => {
+  const b = document.createElement('button');
+  b.type = 'button'; b.className = 'sw'; b.style.background = a.hex; b.dataset.hex = a.hex; b.title = a.name; b.setAttribute('aria-label', a.name); b.setAttribute('aria-pressed', 'false');
+  b.addEventListener('click', () => { state.accent = a.hex; document.querySelectorAll('.sw').forEach((s) => s.setAttribute('aria-pressed', String(s === b))); render('none'); });
+  $('swatches').appendChild(b);
+});
+fields.forEach((f) => $(f).addEventListener('input', () => {
+  state[f] = (f === 'stagger' || f === 'speed') ? Number($(f).value) : $(f).value;
+  const marqueeFields = ['items', 'icon', 'bg', 'speed'];
+  render(marqueeFields.includes(f) ? 'marquee' : 'title');
+}));
+$('replay').addEventListener('click', play);
+$('controls').addEventListener('submit', (e) => e.preventDefault());
+document.querySelectorAll('[data-preset]').forEach((b) => b.addEventListener('click', () => {
+  currentPreset = b.dataset.preset;
+  document.querySelectorAll('[data-preset]').forEach((x) => x.setAttribute('aria-pressed', String(x === b)));
+  load(PRESETS[currentPreset]);
+}));
+document.addEventListener('click', (e) => {
+  const c = e.target.closest('.copy'); if (c) { c.dataset.label = 'Copiar'; copyText(c.dataset.copy, c); }
+});
+$('copyAll').addEventListener('click', (e) => {
+  const p = PRESETS[currentPreset];
+  const text = [
+    `${p.section}`,
+    `  Antetítulo: ${state.eyebrow}`,
+    `  Título: ${plainTitle()}  (cursiva en: ${italicWords()})`,
+    `  Texto: ${state.lead}`,
+    `  Animación del título: ${LABELS.anim[state.anim]}`,
+    '',
+    'Sommalya · Cinta',
+    `  Elementos: ${state.items}`,
+    `  Separador: ${LABELS.icon[state.icon]}`,
+    `  Duración de una vuelta: ${state.speed} s`,
+    `  Fondo: ${LABELS.bg[state.bg]}`,
+    `  Color de acento: ${state.accent}`
+  ].join('\n');
+  e.currentTarget.dataset.label = 'Copiar todo';
+  copyText(text, e.currentTarget);
+});
+
+const saved = restore();
+if (saved && PRESETS[saved.preset]) {
+  currentPreset = saved.preset;
+  load({ ...PRESETS[saved.preset], ...saved });
+} else {
+  load(PRESETS.catalogo);
+}
+document.querySelectorAll('[data-preset]').forEach((x) => x.setAttribute('aria-pressed', String(x.dataset.preset === currentPreset)));
+</script>

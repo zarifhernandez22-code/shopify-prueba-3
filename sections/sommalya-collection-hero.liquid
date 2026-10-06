@@ -1,0 +1,182 @@
+
+{%- liquid
+  assign heading = section.settings.heading
+  if heading == blank
+    assign heading = collection.title | default: 'Catálogo'
+  endif
+  assign intro = section.settings.text
+  if intro == blank and collection.description != blank
+    assign intro = collection.description | strip_html | truncatewords: 30
+  endif
+  assign count = collection.products_count | default: collection.all_products_count | default: 0
+-%}
+<section {% render 'sommalya-section-attrs', settings: section.settings, extra: 'sm-cat' %}>
+  <div class="sm__wrap">
+    <div class="sm-cat__inner">
+      <div>
+        {%- if section.settings.eyebrow != blank -%}<p class="sm-eyebrow">{{ section.settings.eyebrow }}</p>{%- endif -%}
+        <h1 class="sm-h1"{% if section.settings.text_animation != 'none' %} data-sm-text="{{ section.settings.text_animation }}"{% endif %}>{{ heading }}</h1>
+        {%- if intro != blank -%}<p class="sm-lead">{{ intro }}</p>{%- endif -%}
+        {%- if section.blocks.size > 0 -%}
+          <ul class="sm-cat__chips">
+            {%- for block in section.blocks -%}
+              <li {{ block.shopify_attributes }}><a href="{{ block.settings.link | default: routes.all_products_collection_url }}"{% if block.settings.link == request.path %} aria-current="page"{% endif %}>{{ block.settings.label }}</a></li>
+            {%- endfor -%}
+          </ul>
+        {%- endif -%}
+      </div>
+      {%- if section.settings.show_count -%}
+        <div class="sm-cat__meta">
+          <p class="sm-cat__count"><span data-sm-count>{{ count }}</span><small>{{ section.settings.count_label }}</small></p>
+        </div>
+      {%- endif -%}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Sommalya · Catálogo",
+  "tag": "div",
+  "class": "sommalya-collection-hero",
+  "max_blocks": 8,
+  "settings": [
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Antetítulo",
+      "default": "Catálogo Sommalya"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "label": "Título",
+      "info": "Vacío: usa el nombre de la colección. Usa cursiva para resaltar con el color de acento."
+    },
+    {
+      "type": "textarea",
+      "id": "text",
+      "label": "Texto",
+      "info": "Vacío: usa la descripción de la colección."
+    },
+    {
+      "type": "select",
+      "id": "text_animation",
+      "label": "Animación del título",
+      "options": [
+        {
+          "value": "words",
+          "label": "Revelado por palabras"
+        },
+        {
+          "value": "fade",
+          "label": "Aparición suave"
+        },
+        {
+          "value": "type",
+          "label": "Escritura"
+        },
+        {
+          "value": "light",
+          "label": "Iluminación al hacer scroll"
+        },
+        {
+          "value": "none",
+          "label": "Sin animación"
+        }
+      ],
+      "default": "words"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_count",
+      "label": "Mostrar número de productos",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "count_label",
+      "label": "Texto bajo el número",
+      "default": "Fórmulas disponibles"
+    },
+    {
+      "type": "header",
+      "content": "Apariencia"
+    },
+    {
+      "type": "select",
+      "id": "background",
+      "label": "Fondo",
+      "options": [
+        {
+          "value": "base",
+          "label": "Marfil (base)"
+        },
+        {
+          "value": "soft",
+          "label": "Lino suave"
+        },
+        {
+          "value": "sand",
+          "label": "Arena"
+        },
+        {
+          "value": "ink",
+          "label": "Oscuro"
+        }
+      ],
+      "default": "base"
+    },
+    {
+      "type": "color",
+      "id": "accent",
+      "label": "Color de acento",
+      "info": "Opcional. Por defecto usa el verde salvia de la paleta."
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Espaciado superior",
+      "min": 0,
+      "max": 160,
+      "step": 8,
+      "unit": "px",
+      "default": 96
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Espaciado inferior",
+      "min": 0,
+      "max": 160,
+      "step": 8,
+      "unit": "px",
+      "default": 64
+    }
+  ],
+  "blocks": [
+    {
+      "type": "chip",
+      "name": "Enlace rápido",
+      "settings": [
+        {
+          "type": "text",
+          "id": "label",
+          "label": "Texto",
+          "default": "Todos"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Enlace"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Sommalya · Catálogo"
+    }
+  ]
+}
+{% endschema %}

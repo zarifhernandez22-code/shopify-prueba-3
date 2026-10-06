@@ -48,6 +48,65 @@
       targets.forEach((el) => io.observe(el));
     }
 
+    /* 1b. Animaciones de texto: data-sm-text="words | fade | type | light".
+           Los títulos .sm-h2 sin atributo usan "words" (revelado por palabras). */
+    document.querySelectorAll('.sm .sm-h2:not([data-sm-text])').forEach((el) => el.setAttribute('data-sm-text', 'words'));
+    const textEls = document.querySelectorAll('[data-sm-text]');
+    const splitText = (el, mode) => {
+      let w = 0;
+      let c = 0;
+      const walk = (node) => {
+        Array.from(node.childNodes).forEach((child) => {
+          if (child.nodeType === Node.TEXT_NODE) {
+            const frag = document.createDocumentFragment();
+            child.textContent.split(/(\s+)/).forEach((part) => {
+              if (!part) return;
+              if (/^\s+$/.test(part)) { frag.appendChild(document.createTextNode(' ')); return; }
+              const outer = document.createElement('span');
+              outer.className = 'sm-word';
+              outer.style.setProperty('--w', w++);
+              const inner = document.createElement('span');
+              if (mode === 'type') {
+                Array.from(part).forEach((ch) => {
+                  const s = document.createElement('span');
+                  s.className = 'sm-ch';
+                  s.style.setProperty('--c', c++);
+                  s.textContent = ch;
+                  inner.appendChild(s);
+                });
+                c++;
+              } else {
+                inner.textContent = part;
+              }
+              outer.appendChild(inner);
+              frag.appendChild(outer);
+            });
+            child.replaceWith(frag);
+          } else if (child.nodeType === Node.ELEMENT_NODE && child.tagName !== 'BR') {
+            walk(child);
+          }
+        });
+      };
+      walk(el);
+      el.style.setProperty('--sm-words', w);
+      el.style.setProperty('--sm-chars', c);
+    };
+    textEls.forEach((el) => {
+      const mode = el.getAttribute('data-sm-text') || 'words';
+      if (!el.textContent.trim()) return;
+      el.setAttribute('aria-label', el.textContent.trim().replace(/\s+/g, ' '));
+      splitText(el, mode);
+      el.classList.add('sm-text', `sm-text--${mode}`);
+    });
+    if ('IntersectionObserver' in window) {
+      const tio = new IntersectionObserver((entries) => entries.forEach((e) => {
+        if (e.isIntersecting) { e.target.classList.add('is-text-in'); tio.unobserve(e.target); }
+      }), { threshold: 0.2 });
+      textEls.forEach((el) => { if (!el.classList.contains('sm-text--light')) tio.observe(el); });
+    } else {
+      textEls.forEach((el) => el.classList.add('is-text-in'));
+    }
+
     /* 2. Contadores: "759 mg" cuenta desde 0 al entrar en pantalla */
     const counters = document.querySelectorAll('[data-sm-count]');
     const runCounter = (el) => {
@@ -75,7 +134,7 @@
 
     /* 3. Scroll: frase que se ilumina palabra por palabra, parallax del
           frasco, línea de progreso de los pasos y barra de compra fija */
-    const statements = document.querySelectorAll('.sm-statement__text');
+    const statements = document.querySelectorAll('.sm-statement__text, .sm-text--light');
     const heroImgs = document.querySelectorAll('.sm-hero--studio .sm-hero__media img');
     const steps = document.querySelectorAll('.sm-steps');
     const bars = document.querySelectorAll('.sm-stickybar');
@@ -89,7 +148,7 @@
       statements.forEach((el) => {
         const r = el.getBoundingClientRect();
         const p = Math.min(1, Math.max(0, (vh * 0.85 - r.top) / (r.height + vh * 0.35)));
-        const words = el.querySelectorAll('.w');
+        const words = el.querySelectorAll('.w, .sm-word');
         const lit = Math.round(p * words.length);
         words.forEach((w, i) => w.classList.toggle('is-lit', i < lit));
       });

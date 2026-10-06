@@ -3,7 +3,7 @@
   <div class="sm-hero__grid sm-hero--{{ section.settings.layout }}">
     <div class="sm-hero__content">
       {%- if section.settings.eyebrow != blank -%}<p class="sm-eyebrow" data-sm-reveal>{{ section.settings.eyebrow }}</p>{%- endif -%}
-      <h1 class="sm-h1" data-sm-reveal="2">{{ section.settings.heading }}</h1>
+      <h1 class="sm-h1"{% if section.settings.text_animation == 'none' %} data-sm-reveal="2"{% else %} data-sm-text="{{ section.settings.text_animation }}"{% endif %}>{{ section.settings.heading }}</h1>
       {%- if section.settings.text != blank -%}<p class="sm-lead" data-sm-reveal="3">{{ section.settings.text | newline_to_br }}</p>{%- endif -%}
       {%- assign hero_product = section.settings.product -%}
       {%- if hero_product != blank -%}
@@ -81,6 +81,34 @@
       "id": "heading",
       "label": "Título",
       "default": "Lo esencial, <em>bien hecho.</em>"
+    },
+    {
+      "type": "select",
+      "id": "text_animation",
+      "label": "Animación del título",
+      "options": [
+        {
+          "value": "words",
+          "label": "Revelado por palabras"
+        },
+        {
+          "value": "fade",
+          "label": "Aparición suave"
+        },
+        {
+          "value": "type",
+          "label": "Escritura"
+        },
+        {
+          "value": "light",
+          "label": "Iluminación al hacer scroll"
+        },
+        {
+          "value": "none",
+          "label": "Sin animación"
+        }
+      ],
+      "default": "words"
     },
     {
       "type": "textarea",

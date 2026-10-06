@@ -46,6 +46,17 @@ Al bajar aparece una barra de compra fija con Cortisol Calm.
 
 **Movimiento**: `assets/sommalya.js` controla la aparición escalonada, los contadores, el parallax y la inclinación del frasco, la frase que se ilumina y la barra fija. Si el visitante activó "reducir movimiento", todo se muestra estático.
 
+**Catálogo (`templates/collection.json`)**
+1. **Encabezado animado** («Sommalya · Catálogo»). El título se revela palabra por palabra. Incluye el número de productos con contador y enlaces rápidos a cada producto.
+2. **Cinta** con los ingredientes de Cortisol Calm.
+3. **Cuadrícula de productos** de Shopify, con filtros.
+4. **Manifiesto** de Cortisol Calm.
+5. **Barra de confianza** y **garantía**.
+
+**Animaciones de texto**: los títulos de sección se revelan palabra por palabra de forma automática. En la portada y en el catálogo puedes elegir entre cinco opciones en *Animación del título*: revelado por palabras, aparición suave, escritura, iluminación al hacer scroll o sin animación.
+
+**Estudio de movimiento**: es un artifact con vista previa para probar títulos y cintas. Te da los valores exactos que debes copiar en el editor de Shopify. Su código está en `docs/estudio/`.
+
 **Landings de producto**
 
 | Producto | Plantilla | Handle que usan los enlaces |
