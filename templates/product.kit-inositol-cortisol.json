@@ -744,8 +744,8 @@
         "q_4": {
           "type": "question",
           "settings": {
-            "question": "¿Puedo comprar los productos por separado?",
-            "answer": "<p>Sí. Myo-Inositol 16 en 1 también está disponible de forma individual.</p>"
+            "question": "¿Puedo combinarlo con Cortisol Calm?",
+            "answer": "<p>Sí. Si tomas medicamentos, consulta a tu médico antes de combinar suplementos.</p>"
           }
         }
       },

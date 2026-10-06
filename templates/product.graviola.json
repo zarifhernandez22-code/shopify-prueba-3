@@ -589,7 +589,7 @@
       "type": "sommalya-split",
       "settings": {
         "image_asset": "sommalya-graviola.jpg",
-        "placeholder_label": "Graviola en gotas",
+        "placeholder_label": "Gotas de Guanábana",
         "reverse": true,
         "eyebrow": "Para quién es",
         "heading": "Para quien prefiere <em>lo herbal.</em>",
@@ -710,7 +710,7 @@
       "type": "sommalya-faq",
       "settings": {
         "eyebrow": "Preguntas frecuentes",
-        "heading": "Sobre <em>Graviola en gotas.</em>",
+        "heading": "Sobre <em>Gotas de Guanábana.</em>",
         "text": "",
         "head_layout": "center",
         "open_first": true,

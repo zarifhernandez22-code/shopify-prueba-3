@@ -28,7 +28,7 @@ La paleta se guarda en *Configuración del tema → Colores*, y las secciones So
 3. Por qué Cortisol Calm: calma, enfoque y descanso.
 4. La fórmula: sus 10 ingredientes.
 5. Modo de uso.
-6. Completa tu rutina: Myo-Inositol, el kit y Graviola.
+6. Completa tu rutina: el Kit y las Gotas de Guanábana.
 7. Principios de Sommalya.
 8. Preguntas frecuentes.
 9. Garantía y aviso legal.
@@ -37,10 +37,9 @@ La paleta se guarda en *Configuración del tema → Colores*, y las secciones So
 
 | Producto | Plantilla | Handle que usan los enlaces |
 | --- | --- | --- |
-| Cortisol Calm | `product.cortisol-calm` | `cortisol-calm` |
-| Myo-Inositol 16 en 1 | `product.myo-inositol` | `myo-inositol` |
+| Cortisol Calm | `product.cortisol-calm` | `suplemento-cortisol-calm-megneta-60cp` |
 | Kit Inositol & Cortisol | `product.kit-inositol-cortisol` | `kit-inositol-cortisol-paquete-2-pcs` (ya existe) |
-| Graviola en gotas | `product.graviola` | `graviola` |
+| Gotas de Guanábana | `product.graviola` | `gotas-de-guanabana-organico-digestion` |
 
 Cada landing tiene:
 1. Ficha de compra con resumen, insignias y acordeones.
@@ -59,9 +58,8 @@ Las fotos de producto están en `assets/` y las secciones las usan mediante el c
 
 ## Puesta en marcha en Shopify
 
-1. Crea los productos que faltan con estos handles: `cortisol-calm`, `myo-inositol` y `graviola`. Sube sus fotos a cada producto.
-2. En cada producto, en *Plantilla del tema*, elige la que le corresponde. Al Kit asígnale `product.kit-inositol-cortisol`.
-3. Limpia la descripción del Kit: hoy incluye el enlace al grupo de WhatsApp del proveedor, y la landing la muestra en la pestaña *Descripción*.
+1. En cada producto, en *Plantilla del tema*, elige la que le corresponde. Al Kit asígnale `product.kit-inositol-cortisol`.
+2. Limpia la descripción de los 3 productos: hoy incluyen el enlace al grupo de WhatsApp del proveedor, y la landing la muestra en la pestaña *Descripción*.
 
 ## Antes de publicar: validar
 
