@@ -491,6 +491,18 @@
         "padding-block-end": 0
       }
     },
+    "cinta": {
+      "type": "sommalya-marquee",
+      "settings": {
+        "items": "Rhodiola rosea, Ashwagandha, L-Teanina, Magnesio, Fosfatidilserina, Magnolia, Vitamina C, Vitamina B6",
+        "icon": "spark",
+        "speed": 45,
+        "background": "base",
+        "accent": "#5F7A99",
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
     "confianza": {
       "type": "sommalya-trustbar",
       "settings": {
@@ -541,48 +553,72 @@
       ]
     },
     "beneficios": {
-      "type": "sommalya-pillars",
+      "type": "sommalya-features",
       "settings": {
-        "eyebrow": "Beneficios",
-        "heading": "Menos tensión, <em>más claridad.</em>",
+        "eyebrow": "Características y beneficios",
+        "heading": "Lo que contiene, <em>lo que sientes.</em>",
         "text": "Diez ingredientes en una fórmula liposomal, pensada para el ritmo de la vida diaria.",
-        "head_layout": "center",
-        "show_numbers": false,
+        "head_layout": "split",
+        "left_label": "Lo que contiene",
+        "right_label": "Lo que sientes",
         "background": "base",
         "accent": "#5F7A99",
         "padding_top": 112,
         "padding_bottom": 96
       },
       "blocks": {
-        "pillar_1": {
-          "type": "pillar",
-          "settings": {
-            "icon": "heart",
-            "title": "Calma",
-            "text": "Ashwagandha, L-teanina y magnolia acompañan a tu cuerpo frente al estrés cotidiano."
-          }
-        },
-        "pillar_2": {
-          "type": "pillar",
+        "row_1": {
+          "type": "row",
           "settings": {
             "icon": "spark",
-            "title": "Enfoque",
-            "text": "Rhodiola y fosfatidilserina para los días de mayor exigencia mental."
+            "feature": "Rhodiola + Ashwagandha KSM-66",
+            "spec": "Adaptógenos",
+            "benefit": "Afrontas los días exigentes con más serenidad."
           }
         },
-        "pillar_3": {
-          "type": "pillar",
+        "row_2": {
+          "type": "row",
+          "settings": {
+            "icon": "heart",
+            "feature": "L-Teanina",
+            "spec": "Aminoácido del té verde",
+            "benefit": "Calma sin somnolencia: sigues enfocado y productivo."
+          }
+        },
+        "row_3": {
+          "type": "row",
           "settings": {
             "icon": "moon",
-            "title": "Descanso",
-            "text": "El magnesio y la vitamina B6 contribuyen a la función psicológica normal."
+            "feature": "Magnesio + Vitamina B6",
+            "spec": "Función psicológica normal",
+            "benefit": "Tu sistema nervioso tiene el apoyo que necesita para desconectar al final del día."
+          }
+        },
+        "row_4": {
+          "type": "row",
+          "settings": {
+            "icon": "drop",
+            "feature": "Fórmula liposomal + pimienta negra",
+            "spec": "Absorción",
+            "benefit": "Aprovechas mejor cada cápsula."
+          }
+        },
+        "row_5": {
+          "type": "row",
+          "settings": {
+            "icon": "check",
+            "feature": "10 ingredientes · 759 mg",
+            "spec": "Todo en uno",
+            "benefit": "Un solo frasco en lugar de varios."
           }
         }
       },
       "block_order": [
-        "pillar_1",
-        "pillar_2",
-        "pillar_3"
+        "row_1",
+        "row_2",
+        "row_3",
+        "row_4",
+        "row_5"
       ]
     },
     "para_quien": {
@@ -786,11 +822,26 @@
         "step_3"
       ]
     },
+    "testimonios": {
+      "type": "sommalya-testimonials",
+      "settings": {
+        "eyebrow": "Opiniones",
+        "heading": "Lo que dicen <em>quienes ya lo usan.</em>",
+        "text": "",
+        "head_layout": "center",
+        "background": "soft",
+        "accent": "#5F7A99",
+        "padding_top": 96,
+        "padding_bottom": 96
+      },
+      "blocks": {},
+      "block_order": []
+    },
     "preguntas": {
       "type": "sommalya-faq",
       "settings": {
         "eyebrow": "Preguntas frecuentes",
-        "heading": "Sobre <em>Cortisol Calm.</em>",
+        "heading": "Antes de <em>decidirte.</em>",
         "text": "",
         "head_layout": "center",
         "open_first": true,
@@ -803,25 +854,32 @@
         "q_1": {
           "type": "question",
           "settings": {
+            "question": "¿Y si no me funciona?",
+            "answer": "<p>Tienes 30 días de garantía de satisfacción. Si no es para ti, te devolvemos tu dinero.</p>"
+          }
+        },
+        "q_2": {
+          "type": "question",
+          "settings": {
             "question": "¿Qué significa que sea liposomal?",
             "answer": "<p>Los ingredientes se presentan en una fórmula liposomal, una tecnología pensada para favorecer su absorción.</p>"
           }
         },
-        "q_2": {
+        "q_3": {
           "type": "question",
           "settings": {
             "question": "¿Me dará sueño durante el día?",
             "answer": "<p>No contiene sedantes. La L-teanina se asocia a la relajación sin somnolencia.</p>"
           }
         },
-        "q_3": {
+        "q_4": {
           "type": "question",
           "settings": {
             "question": "¿Cuánto dura un frasco?",
             "answer": "<p>Cada frasco contiene 60 cápsulas. Su duración depende de la dosis diaria indicada en la etiqueta.</p>"
           }
         },
-        "q_4": {
+        "q_5": {
           "type": "question",
           "settings": {
             "question": "¿Lo puedo tomar si estoy embarazada o tomo medicamentos?",
@@ -833,7 +891,8 @@
         "q_1",
         "q_2",
         "q_3",
-        "q_4"
+        "q_4",
+        "q_5"
       ]
     },
     "garantia": {
@@ -1140,11 +1199,13 @@
   },
   "order": [
     "main",
+    "cinta",
     "confianza",
     "beneficios",
     "para_quien",
     "formula",
     "uso",
+    "testimonios",
     "preguntas",
     "garantia",
     "recomendados"

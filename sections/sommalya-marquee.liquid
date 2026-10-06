@@ -1,0 +1,164 @@
+
+{%- assign items = section.settings.items | split: ',' -%}
+<div {% render 'sommalya-section-attrs', settings: section.settings, extra: 'sm-marquee' %} role="region" aria-label="{{ section.settings.items | escape }}">
+  <div class="sm-marquee__track" style="--sm-speed: {{ section.settings.speed }}s;">
+    {%- for n in (1..2) -%}
+      <div class="sm-marquee__group"{% if n == 2 %} aria-hidden="true"{% endif %}>
+        {%- for rep in (1..2) -%}
+          {%- for item in items -%}
+            <span class="sm-marquee__item">{{ item | strip }}{% render 'sommalya-icon', name: section.settings.icon %}</span>
+          {%- endfor -%}
+        {%- endfor -%}
+      </div>
+    {%- endfor -%}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Sommalya · Cinta",
+  "tag": "div",
+  "class": "sommalya-marquee",
+  "settings": [
+    {
+      "type": "textarea",
+      "id": "items",
+      "label": "Elementos (separados por coma)",
+      "default": "Rhodiola, Ashwagandha, L-Teanina, Magnesio, Fosfatidilserina, Magnolia"
+    },
+    {
+      "type": "select",
+      "id": "icon",
+      "label": "Separador",
+      "options": [
+        {
+          "value": "leaf",
+          "label": "Leaf"
+        },
+        {
+          "value": "moon",
+          "label": "Moon"
+        },
+        {
+          "value": "sun",
+          "label": "Sun"
+        },
+        {
+          "value": "shield",
+          "label": "Shield"
+        },
+        {
+          "value": "drop",
+          "label": "Drop"
+        },
+        {
+          "value": "lab",
+          "label": "Lab"
+        },
+        {
+          "value": "heart",
+          "label": "Heart"
+        },
+        {
+          "value": "check",
+          "label": "Check"
+        },
+        {
+          "value": "star",
+          "label": "Star"
+        },
+        {
+          "value": "globe",
+          "label": "Globe"
+        },
+        {
+          "value": "truck",
+          "label": "Truck"
+        },
+        {
+          "value": "return",
+          "label": "Return"
+        },
+        {
+          "value": "spark",
+          "label": "Spark"
+        },
+        {
+          "value": "clock",
+          "label": "Clock"
+        }
+      ],
+      "default": "spark"
+    },
+    {
+      "type": "range",
+      "id": "speed",
+      "label": "Duración de una vuelta",
+      "min": 10,
+      "max": 90,
+      "step": 5,
+      "unit": "s",
+      "default": 40
+    },
+    {
+      "type": "header",
+      "content": "Apariencia"
+    },
+    {
+      "type": "select",
+      "id": "background",
+      "label": "Fondo",
+      "options": [
+        {
+          "value": "base",
+          "label": "Marfil (base)"
+        },
+        {
+          "value": "soft",
+          "label": "Lino suave"
+        },
+        {
+          "value": "sand",
+          "label": "Arena"
+        },
+        {
+          "value": "ink",
+          "label": "Oscuro"
+        }
+      ],
+      "default": "base"
+    },
+    {
+      "type": "color",
+      "id": "accent",
+      "label": "Color de acento",
+      "info": "Opcional. Por defecto usa el verde salvia de la paleta."
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Espaciado superior",
+      "min": 0,
+      "max": 160,
+      "step": 8,
+      "unit": "px",
+      "default": 28
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Espaciado inferior",
+      "min": 0,
+      "max": 160,
+      "step": 8,
+      "unit": "px",
+      "default": 28
+    }
+  ],
+  "presets": [
+    {
+      "name": "Sommalya · Cinta"
+    }
+  ]
+}
+{% endschema %}

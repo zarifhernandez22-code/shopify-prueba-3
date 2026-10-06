@@ -794,3 +794,254 @@
   .sm-wordmark img { width: 28px; height: 28px; }
   .sm-wordmark span { font-size: 17px; letter-spacing: 0.22em; }
 }
+
+/* ==========================================================================
+   Movimiento (assets/sommalya.js). Sin JS o con "reducir movimiento" todo se
+   muestra estático.
+   ========================================================================== */
+.sm-js .sm-anim {
+  opacity: 0;
+  transform: translateY(28px);
+  transition:
+    opacity 0.9s cubic-bezier(0.2, 0.7, 0.2, 1) calc(var(--sm-i, 0) * 90ms),
+    transform 0.9s cubic-bezier(0.2, 0.7, 0.2, 1) calc(var(--sm-i, 0) * 90ms);
+}
+.sm-js .sm-anim.is-in { opacity: 1; transform: none; }
+
+/* Botones: la flecha avanza y un brillo cruza el botón */
+.sm-btn { position: relative; overflow: hidden; }
+.sm-btn svg { transition: transform 0.35s cubic-bezier(0.2, 0.7, 0.2, 1); }
+.sm-btn:hover svg { transform: translateX(4px); }
+.sm-btn::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(110deg, transparent 30%, rgb(255 255 255 / 0.18) 50%, transparent 70%);
+  transform: translateX(-120%);
+  transition: transform 0.8s ease;
+  pointer-events: none;
+}
+.sm-btn:hover::after { transform: translateX(120%); }
+
+/* Portada de estudio: el frasco flota, sigue al cursor y tiene sombra de piso */
+.sm-hero--studio .sm-hero__media { perspective: 1200px; position: relative; overflow: hidden; }
+.sm-hero--studio .sm-hero__media img {
+  transform: translateY(var(--sm-par, 0px)) rotateX(var(--sm-rx, 0deg)) rotateY(var(--sm-ry, 0deg));
+  transition: transform 0.5s cubic-bezier(0.2, 0.7, 0.2, 1);
+  will-change: transform;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .sm-hero--studio .sm-hero__media { animation: sm-studio-in 1.4s cubic-bezier(0.2, 0.7, 0.2, 1) both; }
+}
+@keyframes sm-studio-in {
+  from { opacity: 0; clip-path: inset(8% 8% 8% 8%); }
+  to { opacity: 1; clip-path: inset(0); }
+}
+
+/* Ingredientes y tarjetas: elevación al pasar el cursor */
+.sm-ingredient { position: relative; transition: background 0.4s ease; }
+.sm-ingredient::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 2px;
+  width: 0;
+  background: var(--sm-accent);
+  transition: width 0.6s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+.sm-ingredient:hover::before { width: 100%; }
+.sm-ingredient:hover { background: var(--sm-bg); }
+.sm-need { box-shadow: 0 0 0 rgb(0 0 0 / 0); transition: border-color 0.3s ease, transform 0.4s cubic-bezier(0.2, 0.7, 0.2, 1), box-shadow 0.4s ease; }
+.sm-need:hover { box-shadow: 0 24px 48px -28px rgb(31 42 36 / 0.35); }
+.sm-need__media img,
+.sm-need__media .sm-media__asset { transition: transform 0.8s cubic-bezier(0.2, 0.7, 0.2, 1); }
+.sm-need:hover .sm-need__media img,
+.sm-need:hover .sm-need__media .sm-media__asset { transform: scale(1.05); }
+
+/* Pasos: línea de progreso que se llena con el scroll */
+.sm-steps { position: relative; }
+.sm-steps::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 1px;
+  width: calc(var(--sm-progress, 0) * 100%);
+  background: var(--sm-accent);
+  z-index: 1;
+}
+
+/* ==========================================================================
+   Cinta de ingredientes en movimiento
+   ========================================================================== */
+.sm-marquee { padding-block: var(--sm-pt, 28px) var(--sm-pb, 28px); overflow: hidden; border-block: 1px solid var(--sm-line); }
+.sm-marquee__track {
+  display: flex;
+  width: max-content;
+  animation: sm-marquee var(--sm-speed, 40s) linear infinite;
+}
+.sm-marquee:hover .sm-marquee__track { animation-play-state: paused; }
+.sm-marquee__group { display: flex; align-items: center; flex: none; }
+.sm-marquee__item {
+  display: inline-flex;
+  align-items: center;
+  gap: clamp(20px, 3vw, 44px);
+  padding-right: clamp(20px, 3vw, 44px);
+  font-family: var(--font-heading--family);
+  font-size: clamp(26px, 3.4vw, 46px);
+  font-weight: 300;
+  white-space: nowrap;
+}
+.sm-marquee__item:nth-child(even) { font-style: italic; color: var(--sm-accent); }
+.sm-marquee__item svg { width: 16px; height: 16px; color: var(--sm-accent); opacity: 0.7; }
+@keyframes sm-marquee { to { transform: translateX(-50%); } }
+@media (prefers-reduced-motion: reduce) {
+  .sm-marquee__track { animation: none; flex-wrap: wrap; width: auto; }
+  .sm-marquee__group[aria-hidden='true'] { display: none; }
+}
+
+/* ==========================================================================
+   Frase manifiesto que se ilumina con el scroll
+   ========================================================================== */
+.sm-statement__text {
+  margin: 0;
+  max-width: 22ch;
+  font-family: var(--font-heading--family);
+  font-size: clamp(34px, 5.4vw, 76px);
+  font-weight: 300;
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+}
+.sm-statement--center .sm-statement__text { margin-inline: auto; text-align: center; }
+.sm-statement__text .w { transition: opacity 0.35s ease, color 0.35s ease; }
+.sm-js .sm-statement__text .w { opacity: 0.16; }
+.sm-js .sm-statement__text .w.is-lit { opacity: 1; }
+.sm-statement__text em { color: var(--sm-accent); }
+.sm-statement__by { margin: 32px 0 0; font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--sm-muted); }
+.sm-statement--center .sm-statement__by { text-align: center; }
+
+/* ==========================================================================
+   Barra de compra fija (portada)
+   ========================================================================== */
+.sm-stickybar {
+  position: fixed;
+  left: 50%;
+  bottom: calc(16px + env(safe-area-inset-bottom, 0px));
+  z-index: 40;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: min(560px, calc(100% - 32px));
+  padding: 10px 10px 10px 12px;
+  background: color-mix(in srgb, var(--sm-bg) 88%, transparent);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid var(--sm-line);
+  box-shadow: 0 18px 40px -20px rgb(31 42 36 / 0.45);
+  color: var(--sm-ink);
+  font-family: var(--font-body--family);
+  transform: translate(-50%, 140%);
+  opacity: 0;
+  transition: transform 0.5s cubic-bezier(0.2, 0.7, 0.2, 1), opacity 0.4s ease;
+}
+.sm-stickybar.is-visible { transform: translate(-50%, 0); opacity: 1; }
+.sm-stickybar img { width: 48px; height: 48px; object-fit: cover; background: #EBEBEB; }
+.sm-stickybar__info { flex: 1; min-width: 0; display: grid; gap: 2px; }
+.sm-stickybar__info strong { font-size: 14px; font-weight: 500; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.sm-stickybar__info span { font-size: 13px; color: var(--sm-muted); }
+.sm-stickybar form { margin: 0; }
+.sm-stickybar .sm-btn { min-height: 46px; padding: 0 20px; }
+@media (max-width: 480px) {
+  .sm-stickybar img { display: none; }
+  .sm-stickybar .sm-btn { padding: 0 14px; letter-spacing: 0.1em; }
+}
+
+/* ==========================================================================
+   Prueba social en la portada
+   ========================================================================== */
+.sm-hero__proof {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 14px;
+  margin-top: 18px;
+  font-size: 13px;
+  color: var(--sm-muted);
+}
+.sm-hero__proof strong { color: var(--sm-ink); font-weight: 500; }
+.sm-hero__stars { display: inline-flex; gap: 2px; color: var(--sm-accent); }
+.sm-hero__stars svg { width: 14px; height: 14px; }
+
+/* ==========================================================================
+   Características → beneficios
+   ========================================================================== */
+.sm-fb { border-top: 1px solid var(--sm-line); }
+.sm-fb__labels,
+.sm-fb__row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 64px minmax(0, 1.25fr);
+  gap: 24px;
+  align-items: center;
+}
+.sm-fb__labels {
+  padding: 18px 0;
+  border-bottom: 1px solid var(--sm-line);
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--sm-muted);
+}
+.sm-fb__labels span:last-child { grid-column: 3; }
+.sm-fb__row {
+  padding: 28px 0;
+  border-bottom: 1px solid var(--sm-line);
+  transition: background 0.4s ease, padding 0.4s ease;
+}
+.sm-fb__row:hover { background: color-mix(in srgb, var(--sm-accent) 6%, transparent); }
+.sm-fb__feature { display: flex; align-items: center; gap: 16px; }
+.sm-fb__feature strong { display: block; font-size: 15px; font-weight: 500; }
+.sm-fb__feature span:not(.sm-icon) {
+  display: block;
+  margin-top: 4px;
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--sm-muted);
+}
+.sm-fb__arrow { position: relative; height: 1px; background: var(--sm-line); }
+.sm-fb__arrow::before {
+  content: '';
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 0;
+  background: var(--sm-accent);
+  transition: width 0.8s cubic-bezier(0.2, 0.7, 0.2, 1) 0.2s;
+}
+.sm-fb__arrow::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: -3px;
+  width: 7px;
+  height: 7px;
+  border-top: 1px solid var(--sm-accent);
+  border-right: 1px solid var(--sm-accent);
+  transform: rotate(45deg);
+}
+.sm-fb__row.is-in .sm-fb__arrow::before,
+.sm-fb__row:hover .sm-fb__arrow::before { width: 100%; }
+html:not(.sm-js) .sm-fb__arrow::before { width: 100%; }
+.sm-fb__benefit {
+  margin: 0;
+  font-family: var(--font-heading--family);
+  font-size: clamp(20px, 2vw, 27px);
+  font-weight: 300;
+  line-height: 1.3;
+  text-wrap: pretty;
+}
+@media (max-width: 749px) {
+  .sm-fb__labels { display: none; }
+  .sm-fb__row { grid-template-columns: 1fr; gap: 14px; padding: 24px 0; }
+  .sm-fb__arrow { width: 48px; }
+}

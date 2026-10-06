@@ -491,6 +491,18 @@
         "padding-block-end": 0
       }
     },
+    "cinta": {
+      "type": "sommalya-marquee",
+      "settings": {
+        "items": "Myo-Inositol, D-Chiro Inositol, Ashwagandha, L-Teanina, Magnesio, Rhodiola, Bacopa, Melena de león",
+        "icon": "spark",
+        "speed": 45,
+        "background": "base",
+        "accent": "#8A7FA0",
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
     "confianza": {
       "type": "sommalya-trustbar",
       "settings": {
@@ -541,48 +553,62 @@
       ]
     },
     "beneficios": {
-      "type": "sommalya-pillars",
+      "type": "sommalya-features",
       "settings": {
-        "eyebrow": "Beneficios",
-        "heading": "Cuerpo y mente, <em>en sintonía.</em>",
+        "eyebrow": "Características y beneficios",
+        "heading": "Lo que contiene, <em>lo que sientes.</em>",
         "text": "Un kit pensado para acompañar tu equilibrio hormonal y tu calma al mismo tiempo.",
-        "head_layout": "center",
-        "show_numbers": false,
+        "head_layout": "split",
+        "left_label": "Lo que contiene",
+        "right_label": "Lo que sientes",
         "background": "base",
         "accent": "#8A7FA0",
         "padding_top": 112,
         "padding_bottom": 96
       },
       "blocks": {
-        "pillar_1": {
-          "type": "pillar",
+        "row_1": {
+          "type": "row",
           "settings": {
             "icon": "heart",
-            "title": "Equilibrio femenino",
-            "text": "Myo-Inositol 16 en 1 con inositoles, vitaminas y minerales clave."
+            "feature": "Myo-Inositol + D-Chiro Inositol",
+            "spec": "Fórmula 16 en 1",
+            "benefit": "Apoyas tu equilibrio hormonal día a día."
           }
         },
-        "pillar_2": {
-          "type": "pillar",
+        "row_2": {
+          "type": "row",
           "settings": {
             "icon": "spark",
-            "title": "Calma y enfoque",
-            "text": "Corti-Soothe 13 en 1 con magnesio, ashwagandha, L-teanina y adaptógenos."
+            "feature": "Magnesio, ashwagandha y L-teanina",
+            "spec": "Corti-Soothe 13 en 1",
+            "benefit": "Manejas mejor el estrés cotidiano."
           }
         },
-        "pillar_3": {
-          "type": "pillar",
+        "row_3": {
+          "type": "row",
           "settings": {
-            "icon": "clock",
-            "title": "Rutina simple",
-            "text": "Dos frascos y una rutina diaria. Sigue la dosis indicada en cada etiqueta."
+            "icon": "drop",
+            "feature": "Cromo, berberina y canela de Ceilán",
+            "spec": "Metabolismo",
+            "benefit": "Cuidas tu metabolismo. El cromo contribuye a mantener niveles normales de glucosa."
+          }
+        },
+        "row_4": {
+          "type": "row",
+          "settings": {
+            "icon": "check",
+            "feature": "Dos frascos complementarios",
+            "spec": "Kit de 2 piezas",
+            "benefit": "Una rutina completa, sin pensar qué combinar."
           }
         }
       },
       "block_order": [
-        "pillar_1",
-        "pillar_2",
-        "pillar_3"
+        "row_1",
+        "row_2",
+        "row_3",
+        "row_4"
       ]
     },
     "para_quien": {
@@ -706,11 +732,26 @@
         "step_3"
       ]
     },
+    "testimonios": {
+      "type": "sommalya-testimonials",
+      "settings": {
+        "eyebrow": "Opiniones",
+        "heading": "Lo que dicen <em>quienes ya lo usan.</em>",
+        "text": "",
+        "head_layout": "center",
+        "background": "soft",
+        "accent": "#8A7FA0",
+        "padding_top": 96,
+        "padding_bottom": 96
+      },
+      "blocks": {},
+      "block_order": []
+    },
     "preguntas": {
       "type": "sommalya-faq",
       "settings": {
         "eyebrow": "Preguntas frecuentes",
-        "heading": "Sobre <em>Kit Inositol & Cortisol.</em>",
+        "heading": "Antes de <em>decidirte.</em>",
         "text": "",
         "head_layout": "center",
         "open_first": true,
@@ -723,25 +764,32 @@
         "q_1": {
           "type": "question",
           "settings": {
+            "question": "¿Y si no me funciona?",
+            "answer": "<p>Tienes 30 días de garantía de satisfacción. Si no es para ti, te devolvemos tu dinero.</p>"
+          }
+        },
+        "q_2": {
+          "type": "question",
+          "settings": {
             "question": "¿Puedo tomar ambos el mismo día?",
             "answer": "<p>Sí, están pensados para combinarse. Sigue la dosis indicada en la etiqueta de cada uno.</p>"
           }
         },
-        "q_2": {
+        "q_3": {
           "type": "question",
           "settings": {
             "question": "¿Cuánto dura el kit?",
             "answer": "<p>Depende de la dosis indicada en cada etiqueta. Myo-Inositol trae 90 cápsulas y Corti-Soothe 60 cápsulas.</p>"
           }
         },
-        "q_3": {
+        "q_4": {
           "type": "question",
           "settings": {
             "question": "¿Lo puedo tomar si estoy embarazada o en lactancia?",
             "answer": "<p>No sin indicación médica. Consulta a tu médico antes de tomarlo.</p>"
           }
         },
-        "q_4": {
+        "q_5": {
           "type": "question",
           "settings": {
             "question": "¿Puedo combinarlo con Cortisol Calm?",
@@ -753,7 +801,8 @@
         "q_1",
         "q_2",
         "q_3",
-        "q_4"
+        "q_4",
+        "q_5"
       ]
     },
     "garantia": {
@@ -1060,11 +1109,13 @@
   },
   "order": [
     "main",
+    "cinta",
     "confianza",
     "beneficios",
     "para_quien",
     "formula",
     "uso",
+    "testimonios",
     "preguntas",
     "garantia",
     "recomendados"

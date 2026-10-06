@@ -13,7 +13,7 @@
     {%- if section.blocks.size > 0 -%}
       <div class="sm-stats">
         {%- for block in section.blocks -%}
-          <div class="sm-stat" {{ block.shopify_attributes }}><strong>{{ block.settings.value }}</strong><span>{{ block.settings.label }}</span></div>
+          <div class="sm-stat" {{ block.shopify_attributes }}><strong data-sm-count>{{ block.settings.value }}</strong><span>{{ block.settings.label }}</span></div>
         {%- endfor -%}
       </div>
     {%- endif -%}

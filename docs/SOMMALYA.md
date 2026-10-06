@@ -22,16 +22,29 @@ La paleta se guarda en *Configuración del tema → Colores*, y las secciones So
 
 **Encabezado:** barra de avisos y logotipo de la hoja (`assets/sommalya-logo.png`). El logotipo se muestra mientras no subas uno propio en *Configuración del tema → Logotipo*, y también se usa como favicon.
 
-**Página principal (`templates/index.json`): Cortisol Calm como producto estrella, con estética de estudio**
-1. Portada de estudio: fondo gris claro continuo, foto de Cortisol Calm, precio y tres datos (759 mg, 10 ingredientes, 60 cápsulas).
-2. Barra de confianza.
-3. Por qué Cortisol Calm: calma, enfoque y descanso.
-4. La fórmula: sus 10 ingredientes.
-5. Modo de uso.
-6. Completa tu rutina: el Kit y las Gotas de Guanábana.
-7. Principios de Sommalya.
-8. Preguntas frecuentes.
-9. Garantía y aviso legal.
+**Página principal (`templates/index.json`)**
+
+Sigue la estructura de una landing que convierte:
+1. **Portada de estudio**. Tiene:
+   - Un título de valor: "Calma y enfoque, todos los días".
+   - Un subtítulo que explica cómo funciona y para quién es.
+   - La foto del producto.
+   - Una línea de confianza. La calificación aparece sola si instalas una app de reseñas.
+   - El botón de compra y contadores animados.
+2. **Cinta de ingredientes** en movimiento.
+3. **Barra de confianza**: envío, garantía, hecho en EE. UU. y pago seguro.
+4. **Características y beneficios**: "lo que contiene" frente a "lo que sientes", como el ejemplo de Tesla.
+5. **Manifiesto**: una frase que se ilumina palabra por palabra al hacer scroll.
+6. **La fórmula** y el **modo de uso**, con una línea de progreso.
+7. **Testimonios**: se muestran solos en cuanto agregues reseñas reales.
+8. **Completa tu rutina**: el Kit y las Gotas de Guanábana.
+9. **Preguntas frecuentes** que responden objeciones.
+10. **Llamada a la acción final** con garantía.
+11. **Pie de página** con boletín.
+
+Al bajar aparece una barra de compra fija con Cortisol Calm.
+
+**Movimiento**: `assets/sommalya.js` controla la aparición escalonada, los contadores, el parallax y la inclinación del frasco, la frase que se ilumina y la barra fija. Si el visitante activó "reducir movimiento", todo se muestra estático.
 
 **Landings de producto**
 
@@ -43,14 +56,16 @@ La paleta se guarda en *Configuración del tema → Colores*, y las secciones So
 
 Cada landing tiene:
 1. Ficha de compra con resumen, insignias y acordeones.
-2. Barra de confianza.
-3. Beneficios.
-4. Para quién es.
-5. La fórmula.
-6. Modo de uso.
-7. Preguntas frecuentes.
-8. Garantía.
-9. Productos recomendados.
+2. Cinta de ingredientes.
+3. Barra de confianza.
+4. Características y beneficios.
+5. Para quién es.
+6. La fórmula.
+7. Modo de uso.
+8. Testimonios.
+9. Preguntas frecuentes con objeciones.
+10. Garantía.
+11. Productos recomendados.
 
 No hay opción de suscripción.
 

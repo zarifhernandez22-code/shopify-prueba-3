@@ -9,6 +9,19 @@
       {%- if hero_product != blank -%}
         <p class="sm-hero__price" data-sm-reveal="3">{{ hero_product.price | money }}{% if hero_product.compare_at_price > hero_product.price %} <s>{{ hero_product.compare_at_price | money }}</s>{% endif %}</p>
       {%- endif -%}
+      {%- assign rating = hero_product.metafields.reviews.rating.value -%}
+      {%- assign rating_count = hero_product.metafields.reviews.rating_count.value -%}
+      {%- if rating != blank or section.settings.proof != blank -%}
+        <div class="sm-hero__proof" data-sm-reveal="3">
+          {%- if rating != blank -%}
+            <span class="sm-hero__stars" aria-label="{{ rating.rating | round: 1 }} de {{ rating.scale_max }}">
+              {%- for i in (1..5) -%}{% render 'sommalya-icon', name: 'star' %}{%- endfor -%}
+            </span>
+            <span><strong>{{ rating.rating | round: 1 }}</strong>{% if rating_count %} · {{ rating_count }} reseñas{% endif %}</span>
+          {%- endif -%}
+          {%- if section.settings.proof != blank -%}<span>{{ section.settings.proof }}</span>{%- endif -%}
+        </div>
+      {%- endif -%}
       {%- if section.settings.button_label != blank or section.settings.button2_label != blank -%}
         <div class="sm-actions" data-sm-reveal="3">
           {%- if section.settings.button_label != blank -%}
@@ -22,7 +35,7 @@
       {%- if section.blocks.size > 0 -%}
         <ul class="sm-hero__trust">
           {%- for block in section.blocks -%}
-            <li {{ block.shopify_attributes }}><strong>{{ block.settings.value }}</strong><span>{{ block.settings.label }}</span></li>
+            <li {{ block.shopify_attributes }}><strong data-sm-count>{{ block.settings.value }}</strong><span>{{ block.settings.label }}</span></li>
           {%- endfor -%}
         </ul>
       {%- endif -%}
@@ -32,6 +45,23 @@
     </div>
   </div>
 </div>
+{%- if section.settings.sticky_bar and hero_product != blank -%}
+  {%- assign sticky_variant = hero_product.selected_or_first_available_variant -%}
+  <div class="sm sm-stickybar" style="--sm-pt: 10px; --sm-pb: 10px;" aria-label="Compra rápida">
+    {%- if section.settings.image_asset != blank -%}
+      <img src="{{ section.settings.image_asset | asset_url }}" alt="" width="48" height="48" loading="lazy">
+    {%- elsif hero_product.featured_image != blank -%}
+      {{ hero_product.featured_image | image_url: width: 96 | image_tag: width: 48, height: 48, alt: '' }}
+    {%- endif -%}
+    <div class="sm-stickybar__info"><strong>{{ hero_product.title }}</strong><span>{{ hero_product.price | money }}</span></div>
+    {%- form 'product', hero_product -%}
+      <input type="hidden" name="id" value="{{ sticky_variant.id }}">
+      <button class="sm-btn" type="submit"{% unless sticky_variant.available %} disabled{% endunless %}>
+        {%- if sticky_variant.available -%}Agregar al carrito{%- else -%}Agotado{%- endif -%}
+      </button>
+    {%- endform -%}
+  </div>
+{%- endif -%}
 
 {% schema %}
 {
@@ -127,6 +157,20 @@
       "id": "product",
       "label": "Producto destacado",
       "info": "Opcional. Muestra su precio y enlaza el botón principal a él."
+    },
+    {
+      "type": "text",
+      "id": "proof",
+      "label": "Línea de confianza",
+      "info": "Si el producto tiene calificación de una app de reseñas, se muestra automáticamente junto a este texto.",
+      "default": "Hecho en EE. UU. · Garantía de 30 días"
+    },
+    {
+      "type": "checkbox",
+      "id": "sticky_bar",
+      "label": "Barra de compra fija al bajar",
+      "info": "Requiere un producto destacado.",
+      "default": true
     },
     {
       "type": "header",

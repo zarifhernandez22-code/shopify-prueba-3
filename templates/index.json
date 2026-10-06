@@ -12,13 +12,15 @@
     "portada": {
       "type": "sommalya-hero",
       "settings": {
-        "eyebrow": "Producto estrella",
-        "heading": "Cortisol <em>Calm.</em>",
-        "text": "Rhodiola, ashwagandha, L-teanina y magnesio en una fórmula liposomal para acompañar tu equilibrio frente al estrés de cada día.",
+        "eyebrow": "Cortisol Calm · Producto estrella",
+        "heading": "Calma y enfoque, <em>todos los días.</em>",
+        "text": "Para adultos que viven con estrés diario: una fórmula liposomal con rhodiola, ashwagandha, L-teanina y magnesio que acompaña a tu cuerpo a recuperar la calma sin perder energía.",
         "button_label": "Comprar Cortisol Calm",
         "button_link": "/products/suplemento-cortisol-calm-megneta-60cp",
-        "button2_label": "Ver la fórmula",
+        "button2_label": "Ver cómo funciona",
         "button2_link": "/products/suplemento-cortisol-calm-megneta-60cp",
+        "proof": "Hecho en EE. UU. · Garantía de 30 días · Envío gratis desde $799",
+        "sticky_bar": true,
         "image_asset": "sommalya-cortisol-calm.jpg",
         "placeholder_label": "Cortisol Calm de Sommalya",
         "layout": "studio",
@@ -40,14 +42,14 @@
           "type": "stat",
           "settings": {
             "value": "10",
-            "label": "Ingredientes clave"
+            "label": "Ingredientes en 1 cápsula"
           }
         },
         "stat_3": {
           "type": "stat",
           "settings": {
-            "value": "60",
-            "label": "Cápsulas por frasco"
+            "value": "30 días",
+            "label": "De garantía"
           }
         }
       },
@@ -57,10 +59,22 @@
         "stat_3"
       ]
     },
+    "cinta": {
+      "type": "sommalya-marquee",
+      "settings": {
+        "items": "Rhodiola, Ashwagandha, L-Teanina, Magnesio, Fosfatidilserina, Magnolia, Vitamina B6, Vitamina B12",
+        "icon": "spark",
+        "speed": 45,
+        "background": "base",
+        "accent": "#5F7A99",
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
     "confianza": {
       "type": "sommalya-trustbar",
       "settings": {
-        "background": "base",
+        "background": "soft",
         "accent": "",
         "padding_top": 40,
         "padding_bottom": 40
@@ -107,49 +121,87 @@
       ]
     },
     "beneficios": {
-      "type": "sommalya-pillars",
+      "type": "sommalya-features",
       "settings": {
-        "eyebrow": "Por qué Cortisol Calm",
-        "heading": "Menos tensión, <em>más claridad.</em>",
-        "text": "Diez ingredientes en una fórmula liposomal, pensada para el ritmo de la vida diaria.",
-        "head_layout": "center",
-        "show_numbers": false,
+        "eyebrow": "Características y beneficios",
+        "heading": "Lo que contiene, <em>lo que sientes.</em>",
+        "text": "Cada ingrediente técnico se traduce en una ventaja que notas en tu día.",
+        "head_layout": "split",
+        "left_label": "Lo que contiene",
+        "right_label": "Lo que sientes",
         "background": "base",
         "accent": "#5F7A99",
-        "padding_top": 96,
+        "padding_top": 112,
         "padding_bottom": 96
       },
       "blocks": {
-        "pillar_1": {
-          "type": "pillar",
-          "settings": {
-            "icon": "heart",
-            "title": "Calma",
-            "text": "Ashwagandha, L-teanina y magnolia acompañan a tu cuerpo frente al estrés cotidiano."
-          }
-        },
-        "pillar_2": {
-          "type": "pillar",
+        "row_1": {
+          "type": "row",
           "settings": {
             "icon": "spark",
-            "title": "Enfoque",
-            "text": "Rhodiola y fosfatidilserina para los días de mayor exigencia mental."
+            "feature": "Rhodiola + Ashwagandha KSM-66",
+            "spec": "Adaptógenos",
+            "benefit": "Afrontas los días exigentes con más serenidad."
           }
         },
-        "pillar_3": {
-          "type": "pillar",
+        "row_2": {
+          "type": "row",
+          "settings": {
+            "icon": "heart",
+            "feature": "L-Teanina",
+            "spec": "Aminoácido del té verde",
+            "benefit": "Calma sin somnolencia: sigues enfocado y productivo."
+          }
+        },
+        "row_3": {
+          "type": "row",
           "settings": {
             "icon": "moon",
-            "title": "Descanso",
-            "text": "El magnesio y la vitamina B6 contribuyen a la función psicológica normal."
+            "feature": "Magnesio + Vitamina B6",
+            "spec": "Función psicológica normal",
+            "benefit": "Tu sistema nervioso tiene el apoyo que necesita para desconectar al final del día."
+          }
+        },
+        "row_4": {
+          "type": "row",
+          "settings": {
+            "icon": "drop",
+            "feature": "Fórmula liposomal + pimienta negra",
+            "spec": "Absorción",
+            "benefit": "Aprovechas mejor cada cápsula."
+          }
+        },
+        "row_5": {
+          "type": "row",
+          "settings": {
+            "icon": "check",
+            "feature": "10 ingredientes · 759 mg",
+            "spec": "Todo en uno",
+            "benefit": "Un solo frasco en lugar de varios."
           }
         }
       },
       "block_order": [
-        "pillar_1",
-        "pillar_2",
-        "pillar_3"
+        "row_1",
+        "row_2",
+        "row_3",
+        "row_4",
+        "row_5"
       ]
+    },
+    "manifiesto": {
+      "type": "sommalya-statement",
+      "settings": {
+        "eyebrow": "Por qué existe Cortisol Calm",
+        "text": "El estrés de cada día no se va solo. Dale a tu cuerpo lo que necesita para encontrar calma, claridad y descanso.",
+        "highlight": "calma,",
+        "byline": "Sommalya · Lo esencial, bien hecho",
+        "align": "center",
+        "background": "soft",
+        "accent": "#5F7A99",
+        "padding_top": 128,
+        "padding_bottom": 128
+      }
     },
     "formula": {
       "type": "sommalya-ingredients",
@@ -159,10 +211,10 @@
         "text": "Cada ingrediente tiene una función concreta dentro de la fórmula.",
         "head_layout": "split",
         "note": "759 mg por porción · 60 cápsulas por frasco · Fórmula liposomal. Consulta la etiqueta para la composición completa.",
-        "background": "soft",
+        "background": "base",
         "accent": "#5F7A99",
         "padding_top": 112,
-        "padding_bottom": 112
+        "padding_bottom": 96
       },
       "blocks": {
         "ing_1": {
@@ -276,9 +328,9 @@
         "heading": "Un hábito <em>sencillo.</em>",
         "text": "",
         "head_layout": "left",
-        "background": "base",
+        "background": "sand",
         "accent": "#5F7A99",
-        "padding_top": 112,
+        "padding_top": 96,
         "padding_bottom": 96
       },
       "blocks": {
@@ -310,6 +362,21 @@
         "step_3"
       ]
     },
+    "testimonios": {
+      "type": "sommalya-testimonials",
+      "settings": {
+        "eyebrow": "Opiniones",
+        "heading": "Lo que dicen <em>quienes ya lo usan.</em>",
+        "text": "",
+        "head_layout": "center",
+        "background": "soft",
+        "accent": "#5F7A99",
+        "padding_top": 96,
+        "padding_bottom": 96
+      },
+      "blocks": {},
+      "block_order": []
+    },
     "coleccion": {
       "type": "sommalya-needs",
       "settings": {
@@ -317,7 +384,7 @@
         "heading": "También en <em>Sommalya.</em>",
         "text": "Dos opciones más para acompañar tu bienestar.",
         "head_layout": "split",
-        "background": "soft",
+        "background": "base",
         "accent": "",
         "padding_top": 112,
         "padding_bottom": 112
@@ -355,91 +422,60 @@
         "need_2"
       ]
     },
-    "filosofia": {
-      "type": "sommalya-pillars",
-      "settings": {
-        "eyebrow": "Sommalya",
-        "heading": "Simple. Natural. <em>Honesto.</em>",
-        "text": "Seleccionamos suplementos con fórmulas claras y etiquetas transparentes, para cuidar lo básico que lo sostiene todo.",
-        "head_layout": "center",
-        "show_numbers": false,
-        "background": "base",
-        "accent": "",
-        "padding_top": 112,
-        "padding_bottom": 96
-      },
-      "blocks": {
-        "pillar_1": {
-          "type": "pillar",
-          "settings": {
-            "icon": "leaf",
-            "title": "Fórmulas claras",
-            "text": "Ingredientes declarados en cada etiqueta, sin letras pequeñas."
-          }
-        },
-        "pillar_2": {
-          "type": "pillar",
-          "settings": {
-            "icon": "globe",
-            "title": "Hecho en EE. UU.",
-            "text": "Productos fabricados en Estados Unidos."
-          }
-        },
-        "pillar_3": {
-          "type": "pillar",
-          "settings": {
-            "icon": "heart",
-            "title": "Tu satisfacción primero",
-            "text": "Si no es para ti, te devolvemos tu dinero durante los primeros 30 días."
-          }
-        }
-      },
-      "block_order": [
-        "pillar_1",
-        "pillar_2",
-        "pillar_3"
-      ]
-    },
     "preguntas": {
       "type": "sommalya-faq",
       "settings": {
         "eyebrow": "Preguntas frecuentes",
-        "heading": "Resolvemos <em>tus dudas.</em>",
+        "heading": "Antes de <em>decidirte.</em>",
         "text": "",
         "head_layout": "center",
         "open_first": true,
-        "background": "base",
+        "background": "soft",
         "accent": "",
-        "padding_top": 64,
+        "padding_top": 112,
         "padding_bottom": 112
       },
       "blocks": {
         "q_1": {
           "type": "question",
           "settings": {
-            "question": "¿Para quién es Cortisol Calm?",
-            "answer": "<p>Para adultos que buscan acompañar su equilibrio frente al estrés diario con ingredientes como rhodiola, ashwagandha, L-teanina y magnesio.</p>"
+            "question": "¿Y si no me funciona?",
+            "answer": "<p>Tienes 30 días de garantía de satisfacción. Si Cortisol Calm no es para ti, escríbenos y te devolvemos tu dinero.</p>"
           }
         },
         "q_2": {
           "type": "question",
           "settings": {
-            "question": "¿Cuánto tarda en llegar mi pedido?",
-            "answer": "<p>Preparamos los pedidos en 24 horas hábiles. La entrega estándar tarda de 2 a 5 días hábiles, según tu ubicación.</p>"
+            "question": "¿Cuándo voy a notar la diferencia?",
+            "answer": "<p>Los adaptógenos actúan de forma progresiva. Lo habitual es notar cambios con 2 a 4 semanas de uso constante.</p>"
           }
         },
         "q_3": {
           "type": "question",
           "settings": {
-            "question": "¿Cómo funciona la garantía de 30 días?",
-            "answer": "<p>Si el producto no cumple tus expectativas, escríbenos dentro de los 30 días posteriores a la entrega y te reembolsamos el importe.</p>"
+            "question": "¿Me va a dar sueño durante el día?",
+            "answer": "<p>No contiene sedantes. La L-teanina se asocia a la relajación sin somnolencia, para que sigas enfocado.</p>"
           }
         },
         "q_4": {
           "type": "question",
           "settings": {
-            "question": "¿Puedo tomarlos si tomo medicamentos?",
-            "answer": "<p>Consulta a tu médico antes de iniciar cualquier suplemento si estás bajo tratamiento, embarazada o en periodo de lactancia.</p>"
+            "question": "¿Lo puedo tomar si tomo medicamentos?",
+            "answer": "<p>Consulta a tu médico antes de tomarlo si estás bajo tratamiento. No se recomienda durante el embarazo o la lactancia.</p>"
+          }
+        },
+        "q_5": {
+          "type": "question",
+          "settings": {
+            "question": "¿Qué significa que sea liposomal?",
+            "answer": "<p>Los ingredientes se presentan en una fórmula liposomal, una tecnología pensada para favorecer su absorción.</p>"
+          }
+        },
+        "q_6": {
+          "type": "question",
+          "settings": {
+            "question": "¿Cuánto tarda en llegar mi pedido?",
+            "answer": "<p>Preparamos los pedidos en 24 horas hábiles. La entrega estándar tarda de 2 a 5 días hábiles, según tu ubicación.</p>"
           }
         }
       },
@@ -447,15 +483,17 @@
         "q_1",
         "q_2",
         "q_3",
-        "q_4"
+        "q_4",
+        "q_5",
+        "q_6"
       ]
     },
     "garantia": {
       "type": "sommalya-cta",
       "settings": {
         "eyebrow": "Garantía Sommalya",
-        "heading": "Pruébalo 30 días. <em>Sin riesgo.</em>",
-        "text": "Si no es para ti, te devolvemos tu dinero.",
+        "heading": "Empieza hoy. <em>Pruébalo 30 días.</em>",
+        "text": "Si no es para ti, te devolvemos tu dinero. Así de seguros estamos de Cortisol Calm.",
         "button_label": "Comprar Cortisol Calm",
         "button_link": "/products/suplemento-cortisol-calm-megneta-60cp",
         "button2_label": "Ver todos los productos",
@@ -463,19 +501,21 @@
         "disclaimer": "Este producto no es un medicamento. El consumo de este producto es responsabilidad de quien lo recomienda y de quien lo usa. Consulta a tu médico si estás embarazada, en lactancia o bajo tratamiento.",
         "background": "sand",
         "accent": "",
-        "padding_top": 112,
+        "padding_top": 128,
         "padding_bottom": 96
       }
     }
   },
   "order": [
     "portada",
+    "cinta",
     "confianza",
     "beneficios",
+    "manifiesto",
     "formula",
     "uso",
+    "testimonios",
     "coleccion",
-    "filosofia",
     "preguntas",
     "garantia"
   ]
