@@ -499,8 +499,8 @@
         "speed": 45,
         "background": "base",
         "accent": "#5F7A99",
-        "padding_top": 28,
-        "padding_bottom": 28
+        "padding_top": 32,
+        "padding_bottom": 32
       }
     },
     "confianza": {
