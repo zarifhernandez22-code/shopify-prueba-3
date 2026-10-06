@@ -1,0 +1,7 @@
+{% doc %}
+  Devuelve los atributos comunes de una sección Sommalya (fondo, espaciado y acento).
+
+  @param {object} settings - section.settings
+  @param {string} [extra] - clases adicionales
+{% enddoc %}
+class="sm sm--{{ settings.background | default: 'base' }} {{ extra }}" style="--sm-pt: {{ settings.padding_top | default: 96 }}px; --sm-pb: {{ settings.padding_bottom | default: 96 }}px;{% if settings.accent != blank %} --sm-accent: {{ settings.accent }};{% endif %}"

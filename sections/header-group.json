@@ -71,9 +71,42 @@
         "enable_transparent_header_product": true,
         "enable_transparent_header_collection": false
       }
+    },
+    "sommalya_avisos": {
+      "type": "sommalya-announcement",
+      "settings": {},
+      "blocks": {
+        "msg_1": {
+          "type": "message",
+          "settings": {
+            "text": "Envío gratis en pedidos desde $799",
+            "link": ""
+          }
+        },
+        "msg_2": {
+          "type": "message",
+          "settings": {
+            "text": "Garantía de satisfacción de 30 días",
+            "link": ""
+          }
+        },
+        "msg_3": {
+          "type": "message",
+          "settings": {
+            "text": "Ingredientes naturales y trazables",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "msg_1",
+        "msg_2",
+        "msg_3"
+      ]
     }
   },
   "order": [
+    "sommalya_avisos",
     "header_section"
   ]
 }

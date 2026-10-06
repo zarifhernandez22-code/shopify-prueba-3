@@ -1,0 +1,221 @@
+
+<section {% render 'sommalya-section-attrs', settings: section.settings %}>
+  <div class="sm__wrap sm__wrap--narrow">
+    {%- if section.settings.eyebrow != blank or section.settings.heading != blank or section.settings.text != blank -%}
+      <header class="sm-head sm-head--{{ section.settings.head_layout | default: 'center' }}">
+        <div>
+          {%- if section.settings.eyebrow != blank -%}<p class="sm-eyebrow{% if section.settings.head_layout == 'center' %} sm-eyebrow--plain{% endif %}">{{ section.settings.eyebrow }}</p>{%- endif -%}
+          {%- if section.settings.heading != blank -%}<h2 class="sm-h2">{{ section.settings.heading }}</h2>{%- endif -%}
+        </div>
+        {%- if section.settings.text != blank -%}<p class="sm-lead">{{ section.settings.text | newline_to_br }}</p>{%- endif -%}
+      </header>
+    {%- endif -%}
+    <table class="sm-compare">
+      <thead>
+        <tr><th scope="col"><span class="visually-hidden">Característica</span></th><th scope="col" class="is-brand">{{ section.settings.brand_label }}</th><th scope="col">{{ section.settings.other_label }}</th></tr>
+      </thead>
+      <tbody>
+        {%- for block in section.blocks -%}
+          <tr {{ block.shopify_attributes }}>
+            <td>{{ block.settings.feature }}</td>
+            <td class="is-brand">{%- if block.settings.brand -%}<span class="yes">{% render 'sommalya-icon', name: 'check' %}<span class="visually-hidden">Sí</span></span>{%- else -%}<span class="no">{% render 'sommalya-icon', name: 'x' %}<span class="visually-hidden">No</span></span>{%- endif -%}</td>
+            <td>{%- if block.settings.other -%}<span class="yes">{% render 'sommalya-icon', name: 'check' %}<span class="visually-hidden">Sí</span></span>{%- else -%}<span class="no">{% render 'sommalya-icon', name: 'x' %}<span class="visually-hidden">No</span></span>{%- endif -%}</td>
+          </tr>
+        {%- endfor -%}
+      </tbody>
+    </table>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Sommalya · Comparativa",
+  "tag": "div",
+  "class": "sommalya-compare",
+  "max_blocks": 10,
+  "settings": [
+    {
+      "type": "header",
+      "content": "Encabezado"
+    },
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Antetítulo",
+      "default": "La diferencia"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "label": "Título",
+      "info": "Usa cursiva para resaltar una palabra con el color de acento.",
+      "default": "Menos ruido, <em>más criterio.</em>"
+    },
+    {
+      "type": "textarea",
+      "id": "text",
+      "label": "Texto",
+      "default": ""
+    },
+    {
+      "type": "select",
+      "id": "head_layout",
+      "label": "Disposición del encabezado",
+      "options": [
+        {
+          "value": "center",
+          "label": "Centrado"
+        },
+        {
+          "value": "split",
+          "label": "Dividido"
+        },
+        {
+          "value": "left",
+          "label": "Izquierda"
+        }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "text",
+      "id": "brand_label",
+      "label": "Columna marca",
+      "default": "Sommalya"
+    },
+    {
+      "type": "text",
+      "id": "other_label",
+      "label": "Columna comparada",
+      "default": "Genéricos"
+    },
+    {
+      "type": "header",
+      "content": "Apariencia"
+    },
+    {
+      "type": "select",
+      "id": "background",
+      "label": "Fondo",
+      "options": [
+        {
+          "value": "base",
+          "label": "Marfil (base)"
+        },
+        {
+          "value": "soft",
+          "label": "Lino suave"
+        },
+        {
+          "value": "sand",
+          "label": "Arena"
+        },
+        {
+          "value": "ink",
+          "label": "Oscuro"
+        }
+      ],
+      "default": "base"
+    },
+    {
+      "type": "color",
+      "id": "accent",
+      "label": "Color de acento",
+      "info": "Opcional. Por defecto usa el verde salvia de la paleta."
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Espaciado superior",
+      "min": 0,
+      "max": 160,
+      "step": 8,
+      "unit": "px",
+      "default": 96
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Espaciado inferior",
+      "min": 0,
+      "max": 160,
+      "step": 8,
+      "unit": "px",
+      "default": 96
+    }
+  ],
+  "blocks": [
+    {
+      "type": "row",
+      "name": "Fila",
+      "settings": [
+        {
+          "type": "text",
+          "id": "feature",
+          "label": "Característica",
+          "default": "Ingredientes de origen natural"
+        },
+        {
+          "type": "checkbox",
+          "id": "brand",
+          "label": "Sommalya lo cumple",
+          "default": true
+        },
+        {
+          "type": "checkbox",
+          "id": "other",
+          "label": "El comparado lo cumple",
+          "default": false
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Sommalya · Comparativa",
+      "blocks": [
+        {
+          "type": "row",
+          "settings": {
+            "feature": "Ingredientes de origen natural",
+            "brand": true,
+            "other": false
+          }
+        },
+        {
+          "type": "row",
+          "settings": {
+            "feature": "Dosis declaradas en la etiqueta",
+            "brand": true,
+            "other": false
+          }
+        },
+        {
+          "type": "row",
+          "settings": {
+            "feature": "Cápsula vegetal",
+            "brand": true,
+            "other": false
+          }
+        },
+        {
+          "type": "row",
+          "settings": {
+            "feature": "Sin colorantes ni rellenos",
+            "brand": true,
+            "other": false
+          }
+        },
+        {
+          "type": "row",
+          "settings": {
+            "feature": "Garantía de satisfacción",
+            "brand": true,
+            "other": false
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

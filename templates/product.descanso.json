@@ -110,7 +110,7 @@
                 "case": "none",
                 "text_color": "",
                 "padding-block-start": 0,
-                "padding-block-end": 50,
+                "padding-block-end": 24,
                 "padding-inline-start": 0,
                 "padding-inline-end": 0
               },
@@ -275,7 +275,7 @@
                 "row_2": {
                   "type": "_accordion-row",
                   "settings": {
-                    "heading": "Modo de uso",
+                    "heading": "Ingredientes",
                     "open_by_default": false,
                     "icon": "none",
                     "width": 20
@@ -284,7 +284,7 @@
                     "text_r2": {
                       "type": "text",
                       "settings": {
-                        "text": "<p>Consulta la etiqueta del producto para conocer la dosis diaria recomendada.</p>",
+                        "text": "<ul><li><strong>Magnesio bisglicinato</strong> — 200 mg</li><li><strong>Valeriana</strong> — 300 mg</li><li><strong>Pasiflora</strong> — 150 mg</li><li><strong>Melisa</strong> — 100 mg</li></ul><p>Excipientes: cápsula vegetal (hidroxipropilmetilcelulosa).</p>",
                         "width": "100%",
                         "max_width": "normal",
                         "alignment": "left",
@@ -314,7 +314,7 @@
                 "row_3": {
                   "type": "_accordion-row",
                   "settings": {
-                    "heading": "Advertencias",
+                    "heading": "Modo de uso",
                     "open_by_default": false,
                     "icon": "none",
                     "width": 20
@@ -323,7 +323,7 @@
                     "text_r3": {
                       "type": "text",
                       "settings": {
-                        "text": "<p>Este producto no es un medicamento. El consumo de este producto es responsabilidad de quien lo recomienda y de quien lo usa. Consulta a tu médico si estás embarazada, en lactancia o bajo tratamiento.</p>",
+                        "text": "<p>Toma 2 cápsulas con agua entre 30 y 60 minutos antes de dormir.</p>",
                         "width": "100%",
                         "max_width": "normal",
                         "alignment": "left",
@@ -353,7 +353,7 @@
                 "row_4": {
                   "type": "_accordion-row",
                   "settings": {
-                    "heading": "Envíos y garantía",
+                    "heading": "Advertencias",
                     "open_by_default": false,
                     "icon": "none",
                     "width": 20
@@ -362,7 +362,7 @@
                     "text_r4": {
                       "type": "text",
                       "settings": {
-                        "text": "<p>Envío gratis en pedidos desde $799. Entrega de 2 a 5 días hábiles. Garantía de satisfacción de 30 días.</p>",
+                        "text": "<p>Este producto no es un medicamento. El consumo de este producto es responsabilidad de quien lo recomienda y de quien lo usa. Consulta a tu médico si estás embarazada, en lactancia o bajo tratamiento. No exceder la dosis diaria recomendada. Mantener fuera del alcance de los niños. Conservar en un lugar fresco y seco.</p>",
                         "width": "100%",
                         "max_width": "normal",
                         "alignment": "left",
@@ -388,13 +388,53 @@
                   "block_order": [
                     "text_r4"
                   ]
+                },
+                "row_5": {
+                  "type": "_accordion-row",
+                  "settings": {
+                    "heading": "Envíos y garantía",
+                    "open_by_default": false,
+                    "icon": "none",
+                    "width": 20
+                  },
+                  "blocks": {
+                    "text_r5": {
+                      "type": "text",
+                      "settings": {
+                        "text": "<p>Envío gratis en pedidos desde $799. Entrega de 2 a 5 días hábiles. Garantía de satisfacción de 30 días: si no es para ti, te devolvemos tu dinero.</p>",
+                        "width": "100%",
+                        "max_width": "normal",
+                        "alignment": "left",
+                        "type_preset": "rte",
+                        "font": "var(--font-body--family)",
+                        "font_size": "1rem",
+                        "line_height": "normal",
+                        "letter_spacing": "normal",
+                        "case": "none",
+                        "wrap": "pretty",
+                        "text_color": "",
+                        "background": false,
+                        "background_color": "#00000026",
+                        "corner_radius": 0,
+                        "padding-block-start": 12,
+                        "padding-block-end": 0,
+                        "padding-inline-start": 0,
+                        "padding-inline-end": 0
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "text_r5"
+                  ]
                 }
               },
               "block_order": [
                 "row_1",
                 "row_2",
                 "row_3",
-                "row_4"
+                "row_4",
+                "row_5"
               ]
             },
             "disclosures_hFEnPD": {
@@ -415,11 +455,22 @@
                 "padding-inline-end": 0
               },
               "blocks": {}
+            },
+            "sommalya_summary": {
+              "type": "sommalya-summary",
+              "settings": {
+                "tagline": "Noches tranquilas, mañanas claras.",
+                "benefits": "Favorece conciliar el sueño de forma natural\nContribuye a un descanso más profundo y reparador\nSin melatonina sintética: apto para uso diario",
+                "badges": "Vegano, Sin gluten, Sin colorantes, Cápsula vegetal",
+                "accent": "#7C8BA1"
+              },
+              "blocks": {}
             }
           },
           "block_order": [
             "text_9WaLn7",
             "price_a7krng",
+            "sommalya_summary",
             "divider_HrJgFt",
             "variant_picker_R3rGDr",
             "buy_buttons_eYQEYi",
@@ -444,7 +495,7 @@
       "type": "sommalya-trustbar",
       "settings": {
         "background": "soft",
-        "accent": "",
+        "accent": "#7C8BA1",
         "padding_top": 40,
         "padding_bottom": 40
       },
@@ -489,19 +540,327 @@
         "item_4"
       ]
     },
+    "beneficios": {
+      "type": "sommalya-pillars",
+      "settings": {
+        "eyebrow": "Beneficios",
+        "heading": "Dormir bien es <em>la base de todo.</em>",
+        "text": "Una fórmula botánica que acompaña el ritmo natural de tu cuerpo hacia el descanso.",
+        "head_layout": "center",
+        "show_numbers": false,
+        "background": "base",
+        "accent": "#7C8BA1",
+        "padding_top": 112,
+        "padding_bottom": 96
+      },
+      "blocks": {
+        "pillar_1": {
+          "type": "pillar",
+          "settings": {
+            "icon": "moon",
+            "title": "Concilia el sueño",
+            "text": "Valeriana y pasiflora, plantas usadas tradicionalmente para ayudar a conciliar el sueño."
+          }
+        },
+        "pillar_2": {
+          "type": "pillar",
+          "settings": {
+            "icon": "drop",
+            "title": "Relaja el cuerpo",
+            "text": "El magnesio contribuye al funcionamiento normal del sistema nervioso y de los músculos."
+          }
+        },
+        "pillar_3": {
+          "type": "pillar",
+          "settings": {
+            "icon": "sun",
+            "title": "Despierta con claridad",
+            "text": "Sin melatonina sintética ni sedantes: te ayuda a descansar sin sensación de pesadez al despertar."
+          }
+        }
+      },
+      "block_order": [
+        "pillar_1",
+        "pillar_2",
+        "pillar_3"
+      ]
+    },
+    "para_quien": {
+      "type": "sommalya-split",
+      "settings": {
+        "placeholder_label": "Descanso",
+        "reverse": true,
+        "eyebrow": "Para quién es",
+        "heading": "Para mentes que <em>no se apagan.</em>",
+        "body": "<p>Para quien da vueltas en la cama, se despierta a mitad de la noche o siente que su descanso no es reparador. Descanso acompaña una rutina nocturna tranquila; no la sustituye.</p>",
+        "button_label": "",
+        "button_link": "",
+        "background": "soft",
+        "accent": "#7C8BA1",
+        "padding_top": 112,
+        "padding_bottom": 112
+      },
+      "blocks": {
+        "point_1": {
+          "type": "point",
+          "settings": {
+            "text": "Te cuesta desconectar al final del día"
+          }
+        },
+        "point_2": {
+          "type": "point",
+          "settings": {
+            "text": "Te despiertas varias veces durante la noche"
+          }
+        },
+        "point_3": {
+          "type": "point",
+          "settings": {
+            "text": "Buscas una alternativa de origen vegetal"
+          }
+        }
+      },
+      "block_order": [
+        "point_1",
+        "point_2",
+        "point_3"
+      ]
+    },
+    "formula": {
+      "type": "sommalya-ingredients",
+      "settings": {
+        "eyebrow": "La fórmula",
+        "heading": "Qué hay <em>dentro.</em>",
+        "text": "Cuatro ingredientes con una razón concreta para estar aquí. Nada más.",
+        "head_layout": "split",
+        "note": "Dosis por porción diaria (2 cápsulas). 60 cápsulas vegetales por frasco · 30 días.",
+        "background": "base",
+        "accent": "#7C8BA1",
+        "padding_top": 112,
+        "padding_bottom": 96
+      },
+      "blocks": {
+        "ing_1": {
+          "type": "ingredient",
+          "settings": {
+            "name": "Magnesio bisglicinato",
+            "dose": "200 mg",
+            "origin": "Mineral · forma quelada",
+            "text": "Forma de alta absorción y suave con el estómago. Contribuye al funcionamiento normal del sistema nervioso."
+          }
+        },
+        "ing_2": {
+          "type": "ingredient",
+          "settings": {
+            "name": "Valeriana",
+            "dose": "300 mg",
+            "origin": "Valeriana officinalis · raíz",
+            "text": "Planta empleada tradicionalmente para favorecer la relajación y el sueño."
+          }
+        },
+        "ing_3": {
+          "type": "ingredient",
+          "settings": {
+            "name": "Pasiflora",
+            "dose": "150 mg",
+            "origin": "Passiflora incarnata · parte aérea",
+            "text": "Utilizada tradicionalmente para ayudar a calmar la mente antes de dormir."
+          }
+        },
+        "ing_4": {
+          "type": "ingredient",
+          "settings": {
+            "name": "Melisa",
+            "dose": "100 mg",
+            "origin": "Melissa officinalis · hoja",
+            "text": "Planta de la familia de la menta, tradicionalmente asociada a la calma."
+          }
+        }
+      },
+      "block_order": [
+        "ing_1",
+        "ing_2",
+        "ing_3",
+        "ing_4"
+      ]
+    },
+    "uso": {
+      "type": "sommalya-steps",
+      "settings": {
+        "eyebrow": "Modo de uso",
+        "heading": "Un hábito <em>sencillo.</em>",
+        "text": "",
+        "head_layout": "left",
+        "background": "sand",
+        "accent": "#7C8BA1",
+        "padding_top": 96,
+        "padding_bottom": 96
+      },
+      "blocks": {
+        "step_1": {
+          "type": "step",
+          "settings": {
+            "title": "Toma 2 cápsulas",
+            "text": "Con un vaso de agua, entre 30 y 60 minutos antes de acostarte."
+          }
+        },
+        "step_2": {
+          "type": "step",
+          "settings": {
+            "title": "Prepara tu ritual",
+            "text": "Baja la luz y deja las pantallas. Tu cuerpo entiende la señal."
+          }
+        },
+        "step_3": {
+          "type": "step",
+          "settings": {
+            "title": "Sé constante",
+            "text": "Los mejores resultados aparecen con el uso diario durante 2 a 4 semanas."
+          }
+        }
+      },
+      "block_order": [
+        "step_1",
+        "step_2",
+        "step_3"
+      ]
+    },
+    "comparativa": {
+      "type": "sommalya-compare",
+      "settings": {
+        "eyebrow": "La diferencia",
+        "heading": "Por qué <em>Sommalya Descanso.</em>",
+        "text": "",
+        "head_layout": "center",
+        "brand_label": "Sommalya",
+        "other_label": "Genéricos",
+        "background": "base",
+        "accent": "#7C8BA1",
+        "padding_top": 112,
+        "padding_bottom": 96
+      },
+      "blocks": {
+        "row_1": {
+          "type": "row",
+          "settings": {
+            "feature": "Sin melatonina sintética",
+            "brand": true,
+            "other": false
+          }
+        },
+        "row_2": {
+          "type": "row",
+          "settings": {
+            "feature": "Ingredientes de origen natural",
+            "brand": true,
+            "other": false
+          }
+        },
+        "row_3": {
+          "type": "row",
+          "settings": {
+            "feature": "Dosis declarada de cada ingrediente",
+            "brand": true,
+            "other": false
+          }
+        },
+        "row_4": {
+          "type": "row",
+          "settings": {
+            "feature": "Cápsula vegetal, sin colorantes",
+            "brand": true,
+            "other": false
+          }
+        },
+        "row_5": {
+          "type": "row",
+          "settings": {
+            "feature": "Lote analizado antes de su venta",
+            "brand": true,
+            "other": false
+          }
+        },
+        "row_6": {
+          "type": "row",
+          "settings": {
+            "feature": "Garantía de 30 días",
+            "brand": true,
+            "other": false
+          }
+        }
+      },
+      "block_order": [
+        "row_1",
+        "row_2",
+        "row_3",
+        "row_4",
+        "row_5",
+        "row_6"
+      ]
+    },
+    "preguntas": {
+      "type": "sommalya-faq",
+      "settings": {
+        "eyebrow": "Preguntas frecuentes",
+        "heading": "Sobre <em>Descanso.</em>",
+        "text": "",
+        "head_layout": "center",
+        "open_first": true,
+        "background": "base",
+        "accent": "#7C8BA1",
+        "padding_top": 64,
+        "padding_bottom": 112
+      },
+      "blocks": {
+        "q_1": {
+          "type": "question",
+          "settings": {
+            "question": "¿Me sentiré somnoliento al día siguiente?",
+            "answer": "<p>No contiene melatonina sintética ni sedantes. Está pensado para acompañar tu descanso sin sensación de pesadez por la mañana.</p>"
+          }
+        },
+        "q_2": {
+          "type": "question",
+          "settings": {
+            "question": "¿Puedo tomarlo todos los días?",
+            "answer": "<p>Sí. Está formulado para uso diario. Recomendamos ciclos de 3 meses y una pausa de 2 semanas.</p>"
+          }
+        },
+        "q_3": {
+          "type": "question",
+          "settings": {
+            "question": "¿Cuándo notaré resultados?",
+            "answer": "<p>Algunas personas notan cambios desde la primera semana; lo habitual es percibirlos con 2 a 4 semanas de uso constante.</p>"
+          }
+        },
+        "q_4": {
+          "type": "question",
+          "settings": {
+            "question": "¿Puedo combinarlo con otras fórmulas Sommalya?",
+            "answer": "<p>Sí. Descanso se complementa bien con Digestión o Defensas. Evita tomar Energía por la noche.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "q_1",
+        "q_2",
+        "q_3",
+        "q_4"
+      ]
+    },
     "garantia": {
       "type": "sommalya-cta",
       "settings": {
         "eyebrow": "Garantía Sommalya",
-        "heading": "Pruébalo 30 días. <em>Sin riesgo.</em>",
-        "text": "Si no notas la diferencia, te devolvemos tu dinero.",
-        "button_label": "Ver toda la colección",
-        "button_link": "/collections/all",
-        "button2_label": "",
-        "button2_link": "",
+        "heading": "Tu mejor noche <em>empieza hoy.</em>",
+        "text": "Pruébalo durante 30 días. Si no es para ti, te devolvemos tu dinero.",
+        "button_label": "Agregar a mi rutina",
+        "button_link": "",
+        "button2_label": "Ver toda la colección",
+        "button2_link": "/collections/all",
         "disclaimer": "Este producto no es un medicamento. El consumo de este producto es responsabilidad de quien lo recomienda y de quien lo usa. Consulta a tu médico si estás embarazada, en lactancia o bajo tratamiento.",
         "background": "sand",
-        "accent": "",
+        "accent": "#7C8BA1",
         "padding_top": 112,
         "padding_bottom": 96
       }
@@ -794,6 +1153,12 @@
   "order": [
     "main",
     "confianza",
+    "beneficios",
+    "para_quien",
+    "formula",
+    "uso",
+    "comparativa",
+    "preguntas",
     "garantia",
     "recomendados"
   ]

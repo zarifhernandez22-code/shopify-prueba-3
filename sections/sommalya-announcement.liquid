@@ -1,0 +1,63 @@
+
+<div class="sm-announce" role="region" aria-label="Avisos">
+  <ul class="sm-announce__list">
+    {%- for block in section.blocks -%}
+      <li {{ block.shopify_attributes }}>
+        {%- if block.settings.link != blank -%}<a href="{{ block.settings.link }}">{{ block.settings.text }}</a>{%- else -%}{{ block.settings.text }}{%- endif -%}
+      </li>
+    {%- endfor -%}
+  </ul>
+</div>
+
+{% schema %}
+{
+  "name": "Sommalya · Avisos",
+  "tag": "aside",
+  "class": "sommalya-announcement",
+  "max_blocks": 4,
+  "blocks": [
+    {
+      "type": "message",
+      "name": "Aviso",
+      "settings": [
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Texto",
+          "default": "Envío gratis en pedidos desde $799"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Enlace"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Sommalya · Avisos",
+      "blocks": [
+        {
+          "type": "message",
+          "settings": {
+            "text": "Envío gratis en pedidos desde $799"
+          }
+        },
+        {
+          "type": "message",
+          "settings": {
+            "text": "Garantía de satisfacción de 30 días"
+          }
+        },
+        {
+          "type": "message",
+          "settings": {
+            "text": "Ingredientes naturales y trazables"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

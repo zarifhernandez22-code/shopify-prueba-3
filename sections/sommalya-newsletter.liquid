@@ -1,0 +1,133 @@
+
+<section {% render 'sommalya-section-attrs', settings: section.settings %}>
+  <div class="sm__wrap">
+    <div class="sm-news">
+      <div>
+        {%- if section.settings.eyebrow != blank -%}<p class="sm-eyebrow">{{ section.settings.eyebrow }}</p>{%- endif -%}
+        <h2 class="sm-h2">{{ section.settings.heading }}</h2>
+        {%- if section.settings.text != blank -%}<p class="sm-lead">{{ section.settings.text }}</p>{%- endif -%}
+      </div>
+      <div>
+        {%- assign form_id = 'SommalyaNewsletter-' | append: section.id -%}
+        {%- form 'customer', id: form_id -%}
+          <input type="hidden" name="contact[tags]" value="newsletter">
+          <div class="sm-news__form">
+            <label class="visually-hidden" for="SmEmail-{{ section.id }}">Correo electrónico</label>
+            <input id="SmEmail-{{ section.id }}" type="email" name="contact[email]" required autocomplete="email" placeholder="{{ section.settings.placeholder }}">
+            <button type="submit">{{ section.settings.button_label }}</button>
+          </div>
+          {%- if form.posted_successfully? -%}
+            <p class="sm-news__msg" role="status">{{ section.settings.success }}</p>
+          {%- elsif form.errors -%}
+            <p class="sm-news__msg" role="alert">{{ form.errors.translated_fields.email | capitalize }} {{ form.errors.messages.email }}</p>
+          {%- endif -%}
+        {%- endform -%}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Sommalya · Boletín",
+  "tag": "div",
+  "class": "sommalya-newsletter",
+  "settings": [
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Antetítulo",
+      "default": "Boletín"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "label": "Título",
+      "default": "Bienestar, <em>sin ruido.</em>"
+    },
+    {
+      "type": "textarea",
+      "id": "text",
+      "label": "Texto",
+      "default": "Una vez al mes: hábitos simples, ciencia explicada con claridad y acceso anticipado a lanzamientos. Nada más."
+    },
+    {
+      "type": "text",
+      "id": "placeholder",
+      "label": "Marcador",
+      "default": "Tu correo electrónico"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Botón",
+      "default": "Suscribirme"
+    },
+    {
+      "type": "text",
+      "id": "success",
+      "label": "Mensaje de éxito",
+      "default": "Gracias. Ya formas parte de Sommalya."
+    },
+    {
+      "type": "header",
+      "content": "Apariencia"
+    },
+    {
+      "type": "select",
+      "id": "background",
+      "label": "Fondo",
+      "options": [
+        {
+          "value": "base",
+          "label": "Marfil (base)"
+        },
+        {
+          "value": "soft",
+          "label": "Lino suave"
+        },
+        {
+          "value": "sand",
+          "label": "Arena"
+        },
+        {
+          "value": "ink",
+          "label": "Oscuro"
+        }
+      ],
+      "default": "ink"
+    },
+    {
+      "type": "color",
+      "id": "accent",
+      "label": "Color de acento",
+      "info": "Opcional. Por defecto usa el verde salvia de la paleta."
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Espaciado superior",
+      "min": 0,
+      "max": 160,
+      "step": 8,
+      "unit": "px",
+      "default": 96
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Espaciado inferior",
+      "min": 0,
+      "max": 160,
+      "step": 8,
+      "unit": "px",
+      "default": 96
+    }
+  ],
+  "presets": [
+    {
+      "name": "Sommalya · Boletín"
+    }
+  ]
+}
+{% endschema %}

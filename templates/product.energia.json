@@ -110,7 +110,7 @@
                 "case": "none",
                 "text_color": "",
                 "padding-block-start": 0,
-                "padding-block-end": 50,
+                "padding-block-end": 24,
                 "padding-inline-start": 0,
                 "padding-inline-end": 0
               },
@@ -275,7 +275,7 @@
                 "row_2": {
                   "type": "_accordion-row",
                   "settings": {
-                    "heading": "Modo de uso",
+                    "heading": "Ingredientes",
                     "open_by_default": false,
                     "icon": "none",
                     "width": 20
@@ -284,7 +284,7 @@
                     "text_r2": {
                       "type": "text",
                       "settings": {
-                        "text": "<p>Consulta la etiqueta del producto para conocer la dosis diaria recomendada.</p>",
+                        "text": "<ul><li><strong>Rhodiola</strong> — 200 mg</li><li><strong>Maca andina</strong> — 500 mg</li><li><strong>Ginseng</strong> — 100 mg</li><li><strong>Vitamina B12</strong> — 25 µg</li></ul><p>Excipientes: cápsula vegetal (hidroxipropilmetilcelulosa).</p>",
                         "width": "100%",
                         "max_width": "normal",
                         "alignment": "left",
@@ -314,7 +314,7 @@
                 "row_3": {
                   "type": "_accordion-row",
                   "settings": {
-                    "heading": "Advertencias",
+                    "heading": "Modo de uso",
                     "open_by_default": false,
                     "icon": "none",
                     "width": 20
@@ -323,7 +323,7 @@
                     "text_r3": {
                       "type": "text",
                       "settings": {
-                        "text": "<p>Este producto no es un medicamento. El consumo de este producto es responsabilidad de quien lo recomienda y de quien lo usa. Consulta a tu médico si estás embarazada, en lactancia o bajo tratamiento.</p>",
+                        "text": "<p>Toma 2 cápsulas con agua por la mañana, junto con el desayuno. No se recomienda tomarlo por la tarde o la noche.</p>",
                         "width": "100%",
                         "max_width": "normal",
                         "alignment": "left",
@@ -353,7 +353,7 @@
                 "row_4": {
                   "type": "_accordion-row",
                   "settings": {
-                    "heading": "Envíos y garantía",
+                    "heading": "Advertencias",
                     "open_by_default": false,
                     "icon": "none",
                     "width": 20
@@ -362,7 +362,7 @@
                     "text_r4": {
                       "type": "text",
                       "settings": {
-                        "text": "<p>Envío gratis en pedidos desde $799. Entrega de 2 a 5 días hábiles. Garantía de satisfacción de 30 días.</p>",
+                        "text": "<p>Este producto no es un medicamento. El consumo de este producto es responsabilidad de quien lo recomienda y de quien lo usa. Consulta a tu médico si estás embarazada, en lactancia o bajo tratamiento. No exceder la dosis diaria recomendada. Mantener fuera del alcance de los niños. Conservar en un lugar fresco y seco.</p>",
                         "width": "100%",
                         "max_width": "normal",
                         "alignment": "left",
@@ -388,13 +388,53 @@
                   "block_order": [
                     "text_r4"
                   ]
+                },
+                "row_5": {
+                  "type": "_accordion-row",
+                  "settings": {
+                    "heading": "Envíos y garantía",
+                    "open_by_default": false,
+                    "icon": "none",
+                    "width": 20
+                  },
+                  "blocks": {
+                    "text_r5": {
+                      "type": "text",
+                      "settings": {
+                        "text": "<p>Envío gratis en pedidos desde $799. Entrega de 2 a 5 días hábiles. Garantía de satisfacción de 30 días: si no es para ti, te devolvemos tu dinero.</p>",
+                        "width": "100%",
+                        "max_width": "normal",
+                        "alignment": "left",
+                        "type_preset": "rte",
+                        "font": "var(--font-body--family)",
+                        "font_size": "1rem",
+                        "line_height": "normal",
+                        "letter_spacing": "normal",
+                        "case": "none",
+                        "wrap": "pretty",
+                        "text_color": "",
+                        "background": false,
+                        "background_color": "#00000026",
+                        "corner_radius": 0,
+                        "padding-block-start": 12,
+                        "padding-block-end": 0,
+                        "padding-inline-start": 0,
+                        "padding-inline-end": 0
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "text_r5"
+                  ]
                 }
               },
               "block_order": [
                 "row_1",
                 "row_2",
                 "row_3",
-                "row_4"
+                "row_4",
+                "row_5"
               ]
             },
             "disclosures_hFEnPD": {
@@ -415,11 +455,22 @@
                 "padding-inline-end": 0
               },
               "blocks": {}
+            },
+            "sommalya_summary": {
+              "type": "sommalya-summary",
+              "settings": {
+                "tagline": "Energía estable, sin altibajos.",
+                "benefits": "La vitamina B12 contribuye a reducir el cansancio y la fatiga\nApoya la concentración durante la jornada\nSin cafeína añadida ni azúcar",
+                "badges": "Vegano, Sin gluten, Sin colorantes, Cápsula vegetal",
+                "accent": "#B8956A"
+              },
+              "blocks": {}
             }
           },
           "block_order": [
             "text_9WaLn7",
             "price_a7krng",
+            "sommalya_summary",
             "divider_HrJgFt",
             "variant_picker_R3rGDr",
             "buy_buttons_eYQEYi",
@@ -444,7 +495,7 @@
       "type": "sommalya-trustbar",
       "settings": {
         "background": "soft",
-        "accent": "",
+        "accent": "#B8956A",
         "padding_top": 40,
         "padding_bottom": 40
       },
@@ -489,19 +540,327 @@
         "item_4"
       ]
     },
+    "beneficios": {
+      "type": "sommalya-pillars",
+      "settings": {
+        "eyebrow": "Beneficios",
+        "heading": "Rendir sin <em>depender del café.</em>",
+        "text": "Adaptógenos y vitamina B12 para una energía sostenida, desde la mañana hasta la tarde.",
+        "head_layout": "center",
+        "show_numbers": false,
+        "background": "base",
+        "accent": "#B8956A",
+        "padding_top": 112,
+        "padding_bottom": 96
+      },
+      "blocks": {
+        "pillar_1": {
+          "type": "pillar",
+          "settings": {
+            "icon": "sun",
+            "title": "Energía sostenida",
+            "text": "La vitamina B12 contribuye al metabolismo energético normal y a reducir el cansancio."
+          }
+        },
+        "pillar_2": {
+          "type": "pillar",
+          "settings": {
+            "icon": "spark",
+            "title": "Mente enfocada",
+            "text": "La rhodiola, un adaptógeno de uso tradicional, acompaña los días de mayor exigencia."
+          }
+        },
+        "pillar_3": {
+          "type": "pillar",
+          "settings": {
+            "icon": "clock",
+            "title": "Sin bajones",
+            "text": "Sin cafeína añadida ni azúcares: sin picos de energía seguidos de caídas."
+          }
+        }
+      },
+      "block_order": [
+        "pillar_1",
+        "pillar_2",
+        "pillar_3"
+      ]
+    },
+    "para_quien": {
+      "type": "sommalya-split",
+      "settings": {
+        "placeholder_label": "Energía",
+        "reverse": true,
+        "eyebrow": "Para quién es",
+        "heading": "Para días que <em>exigen más.</em>",
+        "body": "<p>Para jornadas largas, etapas de mucho trabajo o estudio y para quien quiere sentirse con energía sin recurrir a otra taza de café.</p>",
+        "button_label": "",
+        "button_link": "",
+        "background": "soft",
+        "accent": "#B8956A",
+        "padding_top": 112,
+        "padding_bottom": 112
+      },
+      "blocks": {
+        "point_1": {
+          "type": "point",
+          "settings": {
+            "text": "Sientes cansancio a media tarde"
+          }
+        },
+        "point_2": {
+          "type": "point",
+          "settings": {
+            "text": "Buscas concentrarte sin estimulantes"
+          }
+        },
+        "point_3": {
+          "type": "point",
+          "settings": {
+            "text": "Quieres reducir tu consumo de cafeína"
+          }
+        }
+      },
+      "block_order": [
+        "point_1",
+        "point_2",
+        "point_3"
+      ]
+    },
+    "formula": {
+      "type": "sommalya-ingredients",
+      "settings": {
+        "eyebrow": "La fórmula",
+        "heading": "Qué hay <em>dentro.</em>",
+        "text": "Cuatro ingredientes con una razón concreta para estar aquí. Nada más.",
+        "head_layout": "split",
+        "note": "Dosis por porción diaria (2 cápsulas). 60 cápsulas vegetales por frasco · 30 días.",
+        "background": "base",
+        "accent": "#B8956A",
+        "padding_top": 112,
+        "padding_bottom": 96
+      },
+      "blocks": {
+        "ing_1": {
+          "type": "ingredient",
+          "settings": {
+            "name": "Rhodiola",
+            "dose": "200 mg",
+            "origin": "Rhodiola rosea · raíz, 3% rosavinas",
+            "text": "Adaptógeno utilizado tradicionalmente para afrontar periodos de exigencia física y mental."
+          }
+        },
+        "ing_2": {
+          "type": "ingredient",
+          "settings": {
+            "name": "Maca andina",
+            "dose": "500 mg",
+            "origin": "Lepidium meyenii · raíz gelatinizada",
+            "text": "Raíz de los Andes empleada tradicionalmente para la vitalidad."
+          }
+        },
+        "ing_3": {
+          "type": "ingredient",
+          "settings": {
+            "name": "Ginseng",
+            "dose": "100 mg",
+            "origin": "Panax ginseng · raíz",
+            "text": "Planta de uso tradicional asociada a la vitalidad y el rendimiento."
+          }
+        },
+        "ing_4": {
+          "type": "ingredient",
+          "settings": {
+            "name": "Vitamina B12",
+            "dose": "25 µg",
+            "origin": "Metilcobalamina",
+            "text": "Contribuye a reducir el cansancio y la fatiga y al metabolismo energético normal."
+          }
+        }
+      },
+      "block_order": [
+        "ing_1",
+        "ing_2",
+        "ing_3",
+        "ing_4"
+      ]
+    },
+    "uso": {
+      "type": "sommalya-steps",
+      "settings": {
+        "eyebrow": "Modo de uso",
+        "heading": "Un hábito <em>sencillo.</em>",
+        "text": "",
+        "head_layout": "left",
+        "background": "sand",
+        "accent": "#B8956A",
+        "padding_top": 96,
+        "padding_bottom": 96
+      },
+      "blocks": {
+        "step_1": {
+          "type": "step",
+          "settings": {
+            "title": "Por la mañana",
+            "text": "Toma 2 cápsulas con el desayuno, idealmente a la misma hora."
+          }
+        },
+        "step_2": {
+          "type": "step",
+          "settings": {
+            "title": "Hidrátate",
+            "text": "Acompáñalo de agua durante el día: la energía también depende de ella."
+          }
+        },
+        "step_3": {
+          "type": "step",
+          "settings": {
+            "title": "Haz ciclos",
+            "text": "Usa Energía durante 8 semanas y descansa 1 semana para mantener su efecto."
+          }
+        }
+      },
+      "block_order": [
+        "step_1",
+        "step_2",
+        "step_3"
+      ]
+    },
+    "comparativa": {
+      "type": "sommalya-compare",
+      "settings": {
+        "eyebrow": "La diferencia",
+        "heading": "Por qué <em>Sommalya Energía.</em>",
+        "text": "",
+        "head_layout": "center",
+        "brand_label": "Sommalya",
+        "other_label": "Genéricos",
+        "background": "base",
+        "accent": "#B8956A",
+        "padding_top": 112,
+        "padding_bottom": 96
+      },
+      "blocks": {
+        "row_1": {
+          "type": "row",
+          "settings": {
+            "feature": "Sin cafeína añadida ni azúcar",
+            "brand": true,
+            "other": false
+          }
+        },
+        "row_2": {
+          "type": "row",
+          "settings": {
+            "feature": "Ingredientes de origen natural",
+            "brand": true,
+            "other": false
+          }
+        },
+        "row_3": {
+          "type": "row",
+          "settings": {
+            "feature": "Dosis declarada de cada ingrediente",
+            "brand": true,
+            "other": false
+          }
+        },
+        "row_4": {
+          "type": "row",
+          "settings": {
+            "feature": "Cápsula vegetal, sin colorantes",
+            "brand": true,
+            "other": false
+          }
+        },
+        "row_5": {
+          "type": "row",
+          "settings": {
+            "feature": "Lote analizado antes de su venta",
+            "brand": true,
+            "other": false
+          }
+        },
+        "row_6": {
+          "type": "row",
+          "settings": {
+            "feature": "Garantía de 30 días",
+            "brand": true,
+            "other": false
+          }
+        }
+      },
+      "block_order": [
+        "row_1",
+        "row_2",
+        "row_3",
+        "row_4",
+        "row_5",
+        "row_6"
+      ]
+    },
+    "preguntas": {
+      "type": "sommalya-faq",
+      "settings": {
+        "eyebrow": "Preguntas frecuentes",
+        "heading": "Sobre <em>Energía.</em>",
+        "text": "",
+        "head_layout": "center",
+        "open_first": true,
+        "background": "base",
+        "accent": "#B8956A",
+        "padding_top": 64,
+        "padding_bottom": 112
+      },
+      "blocks": {
+        "q_1": {
+          "type": "question",
+          "settings": {
+            "question": "¿Contiene cafeína?",
+            "answer": "<p>No contiene cafeína añadida. El ginseng y la rhodiola actúan de forma distinta a los estimulantes.</p>"
+          }
+        },
+        "q_2": {
+          "type": "question",
+          "settings": {
+            "question": "¿Puedo tomarlo junto con café?",
+            "answer": "<p>Sí, aunque muchas personas notan que necesitan menos café con el uso constante.</p>"
+          }
+        },
+        "q_3": {
+          "type": "question",
+          "settings": {
+            "question": "¿Lo puedo tomar por la noche?",
+            "answer": "<p>No lo recomendamos. Para la noche, te sugerimos nuestra fórmula Descanso.</p>"
+          }
+        },
+        "q_4": {
+          "type": "question",
+          "settings": {
+            "question": "¿Es apto para veganos?",
+            "answer": "<p>Sí. Todos los ingredientes y la cápsula son de origen vegetal o mineral, y la B12 se obtiene por fermentación.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "q_1",
+        "q_2",
+        "q_3",
+        "q_4"
+      ]
+    },
     "garantia": {
       "type": "sommalya-cta",
       "settings": {
         "eyebrow": "Garantía Sommalya",
-        "heading": "Pruébalo 30 días. <em>Sin riesgo.</em>",
-        "text": "Si no notas la diferencia, te devolvemos tu dinero.",
-        "button_label": "Ver toda la colección",
-        "button_link": "/collections/all",
-        "button2_label": "",
-        "button2_link": "",
+        "heading": "Más energía, <em>menos esfuerzo.</em>",
+        "text": "Pruébalo durante 30 días. Si no es para ti, te devolvemos tu dinero.",
+        "button_label": "Agregar a mi rutina",
+        "button_link": "",
+        "button2_label": "Ver toda la colección",
+        "button2_link": "/collections/all",
         "disclaimer": "Este producto no es un medicamento. El consumo de este producto es responsabilidad de quien lo recomienda y de quien lo usa. Consulta a tu médico si estás embarazada, en lactancia o bajo tratamiento.",
         "background": "sand",
-        "accent": "",
+        "accent": "#B8956A",
         "padding_top": 112,
         "padding_bottom": 96
       }
@@ -794,6 +1153,12 @@
   "order": [
     "main",
     "confianza",
+    "beneficios",
+    "para_quien",
+    "formula",
+    "uso",
+    "comparativa",
+    "preguntas",
     "garantia",
     "recomendados"
   ]

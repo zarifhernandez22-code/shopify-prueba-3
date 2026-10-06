@@ -1,0 +1,219 @@
+
+<div {% render 'sommalya-section-attrs', settings: section.settings, extra: 'sm-hero' %}>
+  <div class="sm-hero__grid{% if section.settings.layout == 'media_left' %} sm-hero--media-left{% endif %}">
+    <div class="sm-hero__content">
+      {%- if section.settings.eyebrow != blank -%}<p class="sm-eyebrow" data-sm-reveal>{{ section.settings.eyebrow }}</p>{%- endif -%}
+      <h1 class="sm-h1" data-sm-reveal="2">{{ section.settings.heading }}</h1>
+      {%- if section.settings.text != blank -%}<p class="sm-lead" data-sm-reveal="3">{{ section.settings.text | newline_to_br }}</p>{%- endif -%}
+      {%- if section.settings.button_label != blank or section.settings.button2_label != blank -%}
+        <div class="sm-actions" data-sm-reveal="3">
+          {%- if section.settings.button_label != blank -%}
+            <a class="sm-btn" href="{{ section.settings.button_link | default: routes.all_products_collection_url }}">{{ section.settings.button_label }} {% render 'sommalya-icon', name: 'arrow' %}</a>
+          {%- endif -%}
+          {%- if section.settings.button2_label != blank -%}
+            <a class="sm-btn sm-btn--ghost" href="{{ section.settings.button2_link | default: '#' }}">{{ section.settings.button2_label }}</a>
+          {%- endif -%}
+        </div>
+      {%- endif -%}
+      {%- if section.blocks.size > 0 -%}
+        <ul class="sm-hero__trust">
+          {%- for block in section.blocks -%}
+            <li {{ block.shopify_attributes }}><strong>{{ block.settings.value }}</strong><span>{{ block.settings.label }}</span></li>
+          {%- endfor -%}
+        </ul>
+      {%- endif -%}
+    </div>
+    <div class="sm-media sm-hero__media">
+      {%- if section.settings.image != blank -%}
+        {{ section.settings.image | image_url: width: 2000 | image_tag: loading: 'eager', fetchpriority: 'high', sizes: '(min-width: 900px) 50vw, 100vw', widths: '600, 900, 1200, 1600, 2000', alt: section.settings.image.alt | default: section.settings.placeholder_label }}
+      {%- else -%}
+        {% render 'sommalya-bottle', label: section.settings.placeholder_label %}
+      {%- endif -%}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Sommalya · Portada",
+  "tag": "section",
+  "class": "sommalya-hero",
+  "max_blocks": 3,
+  "settings": [
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Antetítulo",
+      "default": "Suplementos naturales"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "label": "Título",
+      "default": "Lo esencial, <em>bien hecho.</em>"
+    },
+    {
+      "type": "textarea",
+      "id": "text",
+      "label": "Texto",
+      "default": "Fórmulas de origen natural para cuidar lo básico que lo sostiene todo: dormir bien, digerir mejor, tener energía y defenderte. Sin rellenos, sin promesas vacías."
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Botón principal",
+      "default": "Descubrir la colección"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Enlace del botón principal"
+    },
+    {
+      "type": "text",
+      "id": "button2_label",
+      "label": "Botón secundario",
+      "default": "Nuestra filosofía"
+    },
+    {
+      "type": "url",
+      "id": "button2_link",
+      "label": "Enlace del botón secundario"
+    },
+    {
+      "type": "header",
+      "content": "Imagen"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Imagen",
+      "info": "Recomendado: fotografía vertical, luz natural, 1600×2000 px."
+    },
+    {
+      "type": "text",
+      "id": "placeholder_label",
+      "label": "Etiqueta del frasco de muestra",
+      "default": "Esencial"
+    },
+    {
+      "type": "select",
+      "id": "layout",
+      "label": "Disposición",
+      "options": [
+        {
+          "value": "media_right",
+          "label": "Imagen a la derecha"
+        },
+        {
+          "value": "media_left",
+          "label": "Imagen a la izquierda"
+        }
+      ],
+      "default": "media_right"
+    },
+    {
+      "type": "header",
+      "content": "Apariencia"
+    },
+    {
+      "type": "select",
+      "id": "background",
+      "label": "Fondo",
+      "options": [
+        {
+          "value": "base",
+          "label": "Marfil (base)"
+        },
+        {
+          "value": "soft",
+          "label": "Lino suave"
+        },
+        {
+          "value": "sand",
+          "label": "Arena"
+        },
+        {
+          "value": "ink",
+          "label": "Oscuro"
+        }
+      ],
+      "default": "base"
+    },
+    {
+      "type": "color",
+      "id": "accent",
+      "label": "Color de acento",
+      "info": "Opcional. Por defecto usa el verde salvia de la paleta."
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Espaciado superior",
+      "min": 0,
+      "max": 160,
+      "step": 8,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Espaciado inferior",
+      "min": 0,
+      "max": 160,
+      "step": 8,
+      "unit": "px",
+      "default": 0
+    }
+  ],
+  "blocks": [
+    {
+      "type": "stat",
+      "name": "Dato de confianza",
+      "settings": [
+        {
+          "type": "text",
+          "id": "value",
+          "label": "Cifra",
+          "default": "100%"
+        },
+        {
+          "type": "text",
+          "id": "label",
+          "label": "Descripción",
+          "default": "Ingredientes de origen natural"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Sommalya · Portada",
+      "blocks": [
+        {
+          "type": "stat",
+          "settings": {
+            "value": "100%",
+            "label": "Ingredientes de origen natural"
+          }
+        },
+        {
+          "type": "stat",
+          "settings": {
+            "value": "0",
+            "label": "Colorantes ni rellenos artificiales"
+          }
+        },
+        {
+          "type": "stat",
+          "settings": {
+            "value": "30 días",
+            "label": "Garantía de satisfacción"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

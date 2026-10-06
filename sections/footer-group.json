@@ -190,7 +190,7 @@
                   "type": "text",
                   "name": "t:names.heading",
                   "settings": {
-                    "text": "<h3>Sign up for our newsletter</h3>",
+                    "text": "<h3>Bienestar, sin ruido. Suscríbete a nuestro boletín.</h3>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",

@@ -110,7 +110,7 @@
                 "case": "none",
                 "text_color": "",
                 "padding-block-start": 0,
-                "padding-block-end": 50,
+                "padding-block-end": 24,
                 "padding-inline-start": 0,
                 "padding-inline-end": 0
               },
@@ -275,7 +275,7 @@
                 "row_2": {
                   "type": "_accordion-row",
                   "settings": {
-                    "heading": "Modo de uso",
+                    "heading": "Ingredientes",
                     "open_by_default": false,
                     "icon": "none",
                     "width": 20
@@ -284,7 +284,7 @@
                     "text_r2": {
                       "type": "text",
                       "settings": {
-                        "text": "<p>Consulta la etiqueta del producto para conocer la dosis diaria recomendada.</p>",
+                        "text": "<ul><li><strong>Jengibre</strong> — 250 mg</li><li><strong>Hinojo</strong> — 200 mg</li><li><strong>Menta piperita</strong> — 100 mg</li><li><strong>Probióticos</strong> — 5 mil millones UFC</li></ul><p>Excipientes: cápsula vegetal (hidroxipropilmetilcelulosa).</p>",
                         "width": "100%",
                         "max_width": "normal",
                         "alignment": "left",
@@ -314,7 +314,7 @@
                 "row_3": {
                   "type": "_accordion-row",
                   "settings": {
-                    "heading": "Advertencias",
+                    "heading": "Modo de uso",
                     "open_by_default": false,
                     "icon": "none",
                     "width": 20
@@ -323,7 +323,7 @@
                     "text_r3": {
                       "type": "text",
                       "settings": {
-                        "text": "<p>Este producto no es un medicamento. El consumo de este producto es responsabilidad de quien lo recomienda y de quien lo usa. Consulta a tu médico si estás embarazada, en lactancia o bajo tratamiento.</p>",
+                        "text": "<p>Toma 1 cápsula con agua antes de las dos comidas principales.</p>",
                         "width": "100%",
                         "max_width": "normal",
                         "alignment": "left",
@@ -353,7 +353,7 @@
                 "row_4": {
                   "type": "_accordion-row",
                   "settings": {
-                    "heading": "Envíos y garantía",
+                    "heading": "Advertencias",
                     "open_by_default": false,
                     "icon": "none",
                     "width": 20
@@ -362,7 +362,7 @@
                     "text_r4": {
                       "type": "text",
                       "settings": {
-                        "text": "<p>Envío gratis en pedidos desde $799. Entrega de 2 a 5 días hábiles. Garantía de satisfacción de 30 días.</p>",
+                        "text": "<p>Este producto no es un medicamento. El consumo de este producto es responsabilidad de quien lo recomienda y de quien lo usa. Consulta a tu médico si estás embarazada, en lactancia o bajo tratamiento. No exceder la dosis diaria recomendada. Mantener fuera del alcance de los niños. Conservar en un lugar fresco y seco.</p>",
                         "width": "100%",
                         "max_width": "normal",
                         "alignment": "left",
@@ -388,13 +388,53 @@
                   "block_order": [
                     "text_r4"
                   ]
+                },
+                "row_5": {
+                  "type": "_accordion-row",
+                  "settings": {
+                    "heading": "Envíos y garantía",
+                    "open_by_default": false,
+                    "icon": "none",
+                    "width": 20
+                  },
+                  "blocks": {
+                    "text_r5": {
+                      "type": "text",
+                      "settings": {
+                        "text": "<p>Envío gratis en pedidos desde $799. Entrega de 2 a 5 días hábiles. Garantía de satisfacción de 30 días: si no es para ti, te devolvemos tu dinero.</p>",
+                        "width": "100%",
+                        "max_width": "normal",
+                        "alignment": "left",
+                        "type_preset": "rte",
+                        "font": "var(--font-body--family)",
+                        "font_size": "1rem",
+                        "line_height": "normal",
+                        "letter_spacing": "normal",
+                        "case": "none",
+                        "wrap": "pretty",
+                        "text_color": "",
+                        "background": false,
+                        "background_color": "#00000026",
+                        "corner_radius": 0,
+                        "padding-block-start": 12,
+                        "padding-block-end": 0,
+                        "padding-inline-start": 0,
+                        "padding-inline-end": 0
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "text_r5"
+                  ]
                 }
               },
               "block_order": [
                 "row_1",
                 "row_2",
                 "row_3",
-                "row_4"
+                "row_4",
+                "row_5"
               ]
             },
             "disclosures_hFEnPD": {
@@ -415,11 +455,22 @@
                 "padding-inline-end": 0
               },
               "blocks": {}
+            },
+            "sommalya_summary": {
+              "type": "sommalya-summary",
+              "settings": {
+                "tagline": "Ligereza después de cada comida.",
+                "benefits": "Ayuda a reducir la pesadez y la hinchazón ocasional\nApoya una digestión cómoda y regular\nCon probióticos para tu flora intestinal",
+                "badges": "Vegano, Sin gluten, Sin colorantes, Cápsula vegetal",
+                "accent": "#8E9A6E"
+              },
+              "blocks": {}
             }
           },
           "block_order": [
             "text_9WaLn7",
             "price_a7krng",
+            "sommalya_summary",
             "divider_HrJgFt",
             "variant_picker_R3rGDr",
             "buy_buttons_eYQEYi",
@@ -444,7 +495,7 @@
       "type": "sommalya-trustbar",
       "settings": {
         "background": "soft",
-        "accent": "",
+        "accent": "#8E9A6E",
         "padding_top": 40,
         "padding_bottom": 40
       },
@@ -489,19 +540,327 @@
         "item_4"
       ]
     },
+    "beneficios": {
+      "type": "sommalya-pillars",
+      "settings": {
+        "eyebrow": "Beneficios",
+        "heading": "Sentirte ligero <em>es posible.</em>",
+        "text": "Plantas digestivas de uso tradicional y probióticos, en una sola cápsula.",
+        "head_layout": "center",
+        "show_numbers": false,
+        "background": "base",
+        "accent": "#8E9A6E",
+        "padding_top": 112,
+        "padding_bottom": 96
+      },
+      "blocks": {
+        "pillar_1": {
+          "type": "pillar",
+          "settings": {
+            "icon": "leaf",
+            "title": "Menos pesadez",
+            "text": "Jengibre e hinojo, utilizados tradicionalmente para favorecer la digestión."
+          }
+        },
+        "pillar_2": {
+          "type": "pillar",
+          "settings": {
+            "icon": "drop",
+            "title": "Menos hinchazón",
+            "text": "La menta piperita ayuda a aliviar la sensación de gases e hinchazón ocasional."
+          }
+        },
+        "pillar_3": {
+          "type": "pillar",
+          "settings": {
+            "icon": "heart",
+            "title": "Flora equilibrada",
+            "text": "Cultivos probióticos que acompañan el equilibrio de tu microbiota intestinal."
+          }
+        }
+      },
+      "block_order": [
+        "pillar_1",
+        "pillar_2",
+        "pillar_3"
+      ]
+    },
+    "para_quien": {
+      "type": "sommalya-split",
+      "settings": {
+        "placeholder_label": "Digestión",
+        "reverse": true,
+        "eyebrow": "Para quién es",
+        "heading": "Para quien come <em>a deshoras.</em>",
+        "body": "<p>Para ritmos de vida exigentes, comidas fuera de casa y digestiones que se alargan. Digestión es tu aliado después de la comida principal.</p>",
+        "button_label": "",
+        "button_link": "",
+        "background": "soft",
+        "accent": "#8E9A6E",
+        "padding_top": 112,
+        "padding_bottom": 112
+      },
+      "blocks": {
+        "point_1": {
+          "type": "point",
+          "settings": {
+            "text": "Sientes pesadez después de comer"
+          }
+        },
+        "point_2": {
+          "type": "point",
+          "settings": {
+            "text": "Notas hinchazón con frecuencia"
+          }
+        },
+        "point_3": {
+          "type": "point",
+          "settings": {
+            "text": "Quieres cuidar tu flora intestinal"
+          }
+        }
+      },
+      "block_order": [
+        "point_1",
+        "point_2",
+        "point_3"
+      ]
+    },
+    "formula": {
+      "type": "sommalya-ingredients",
+      "settings": {
+        "eyebrow": "La fórmula",
+        "heading": "Qué hay <em>dentro.</em>",
+        "text": "Cuatro ingredientes con una razón concreta para estar aquí. Nada más.",
+        "head_layout": "split",
+        "note": "Dosis por porción diaria (2 cápsulas). 60 cápsulas vegetales por frasco · 30 días.",
+        "background": "base",
+        "accent": "#8E9A6E",
+        "padding_top": 112,
+        "padding_bottom": 96
+      },
+      "blocks": {
+        "ing_1": {
+          "type": "ingredient",
+          "settings": {
+            "name": "Jengibre",
+            "dose": "250 mg",
+            "origin": "Zingiber officinale · raíz",
+            "text": "Empleado tradicionalmente para favorecer la digestión y aliviar la sensación de náusea."
+          }
+        },
+        "ing_2": {
+          "type": "ingredient",
+          "settings": {
+            "name": "Hinojo",
+            "dose": "200 mg",
+            "origin": "Foeniculum vulgare · semilla",
+            "text": "Contribuye a reducir la sensación de gases e hinchazón ocasional."
+          }
+        },
+        "ing_3": {
+          "type": "ingredient",
+          "settings": {
+            "name": "Menta piperita",
+            "dose": "100 mg",
+            "origin": "Mentha × piperita · hoja",
+            "text": "Ayuda a la comodidad digestiva después de las comidas."
+          }
+        },
+        "ing_4": {
+          "type": "ingredient",
+          "settings": {
+            "name": "Probióticos",
+            "dose": "5 mil millones UFC",
+            "origin": "Lactobacillus y Bifidobacterium",
+            "text": "Cultivos vivos que acompañan el equilibrio de la flora intestinal."
+          }
+        }
+      },
+      "block_order": [
+        "ing_1",
+        "ing_2",
+        "ing_3",
+        "ing_4"
+      ]
+    },
+    "uso": {
+      "type": "sommalya-steps",
+      "settings": {
+        "eyebrow": "Modo de uso",
+        "heading": "Un hábito <em>sencillo.</em>",
+        "text": "",
+        "head_layout": "left",
+        "background": "sand",
+        "accent": "#8E9A6E",
+        "padding_top": 96,
+        "padding_bottom": 96
+      },
+      "blocks": {
+        "step_1": {
+          "type": "step",
+          "settings": {
+            "title": "Antes de comer",
+            "text": "Toma 1 cápsula con agua 15 minutos antes de tus dos comidas principales."
+          }
+        },
+        "step_2": {
+          "type": "step",
+          "settings": {
+            "title": "Come con calma",
+            "text": "Mastica despacio y evita acostarte justo después de comer."
+          }
+        },
+        "step_3": {
+          "type": "step",
+          "settings": {
+            "title": "Mantén la rutina",
+            "text": "La flora intestinal responde a la constancia: dale al menos 3 semanas."
+          }
+        }
+      },
+      "block_order": [
+        "step_1",
+        "step_2",
+        "step_3"
+      ]
+    },
+    "comparativa": {
+      "type": "sommalya-compare",
+      "settings": {
+        "eyebrow": "La diferencia",
+        "heading": "Por qué <em>Sommalya Digestión.</em>",
+        "text": "",
+        "head_layout": "center",
+        "brand_label": "Sommalya",
+        "other_label": "Genéricos",
+        "background": "base",
+        "accent": "#8E9A6E",
+        "padding_top": 112,
+        "padding_bottom": 96
+      },
+      "blocks": {
+        "row_1": {
+          "type": "row",
+          "settings": {
+            "feature": "Probióticos con UFC declaradas",
+            "brand": true,
+            "other": false
+          }
+        },
+        "row_2": {
+          "type": "row",
+          "settings": {
+            "feature": "Ingredientes de origen natural",
+            "brand": true,
+            "other": false
+          }
+        },
+        "row_3": {
+          "type": "row",
+          "settings": {
+            "feature": "Dosis declarada de cada ingrediente",
+            "brand": true,
+            "other": false
+          }
+        },
+        "row_4": {
+          "type": "row",
+          "settings": {
+            "feature": "Cápsula vegetal, sin colorantes",
+            "brand": true,
+            "other": false
+          }
+        },
+        "row_5": {
+          "type": "row",
+          "settings": {
+            "feature": "Lote analizado antes de su venta",
+            "brand": true,
+            "other": false
+          }
+        },
+        "row_6": {
+          "type": "row",
+          "settings": {
+            "feature": "Garantía de 30 días",
+            "brand": true,
+            "other": false
+          }
+        }
+      },
+      "block_order": [
+        "row_1",
+        "row_2",
+        "row_3",
+        "row_4",
+        "row_5",
+        "row_6"
+      ]
+    },
+    "preguntas": {
+      "type": "sommalya-faq",
+      "settings": {
+        "eyebrow": "Preguntas frecuentes",
+        "heading": "Sobre <em>Digestión.</em>",
+        "text": "",
+        "head_layout": "center",
+        "open_first": true,
+        "background": "base",
+        "accent": "#8E9A6E",
+        "padding_top": 64,
+        "padding_bottom": 112
+      },
+      "blocks": {
+        "q_1": {
+          "type": "question",
+          "settings": {
+            "question": "¿Necesita refrigeración?",
+            "answer": "<p>No. Las cepas probióticas están seleccionadas para mantenerse estables a temperatura ambiente. Consérvalo en un lugar fresco y seco.</p>"
+          }
+        },
+        "q_2": {
+          "type": "question",
+          "settings": {
+            "question": "¿Puedo tomarlo con el estómago vacío?",
+            "answer": "<p>Sí, aunque recomendamos tomarlo poco antes de las comidas para acompañar la digestión.</p>"
+          }
+        },
+        "q_3": {
+          "type": "question",
+          "settings": {
+            "question": "¿En cuánto tiempo notaré la diferencia?",
+            "answer": "<p>La sensación de ligereza puede notarse en pocos días; el equilibrio de la flora requiere unas 3 a 4 semanas.</p>"
+          }
+        },
+        "q_4": {
+          "type": "question",
+          "settings": {
+            "question": "¿Contiene lácteos?",
+            "answer": "<p>No contiene lácteos añadidos ni gluten.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "q_1",
+        "q_2",
+        "q_3",
+        "q_4"
+      ]
+    },
     "garantia": {
       "type": "sommalya-cta",
       "settings": {
         "eyebrow": "Garantía Sommalya",
-        "heading": "Pruébalo 30 días. <em>Sin riesgo.</em>",
-        "text": "Si no notas la diferencia, te devolvemos tu dinero.",
-        "button_label": "Ver toda la colección",
-        "button_link": "/collections/all",
-        "button2_label": "",
-        "button2_link": "",
+        "heading": "Come bien, <em>siéntete mejor.</em>",
+        "text": "Pruébalo durante 30 días. Si no es para ti, te devolvemos tu dinero.",
+        "button_label": "Agregar a mi rutina",
+        "button_link": "",
+        "button2_label": "Ver toda la colección",
+        "button2_link": "/collections/all",
         "disclaimer": "Este producto no es un medicamento. El consumo de este producto es responsabilidad de quien lo recomienda y de quien lo usa. Consulta a tu médico si estás embarazada, en lactancia o bajo tratamiento.",
         "background": "sand",
-        "accent": "",
+        "accent": "#8E9A6E",
         "padding_top": 112,
         "padding_bottom": 96
       }
@@ -794,6 +1153,12 @@
   "order": [
     "main",
     "confianza",
+    "beneficios",
+    "para_quien",
+    "formula",
+    "uso",
+    "comparativa",
+    "preguntas",
     "garantia",
     "recomendados"
   ]
