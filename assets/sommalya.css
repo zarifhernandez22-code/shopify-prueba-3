@@ -771,14 +771,15 @@
 }
 
 /* Tarjetas de producto con foto de catálogo sobre blanco */
-.sm-need__media .sm-media__asset,
 .sm-need__media img { object-fit: contain; background: #fff; padding: 8%; }
-.sm-need__media:has(.sm-media__asset),
 .sm-need__media:has(img) { background: #fff; }
+/* Fotos de estudio Sommalya (assets/): ya traen su fondo, se muestran a sangre */
+.sm-need__media .sm-media__asset { object-fit: cover; padding: 0; background: #EBEBEB; }
+.sm-need__media:has(.sm-media__asset) { background: #EBEBEB; }
 
 /* Imagen con texto: foto de producto sobre blanco */
-.sm-split__media:has(.sm-media__asset) { background: #fff; }
-.sm-split__media .sm-media__asset { object-fit: contain; padding: 6%; }
+.sm-split__media:has(.sm-media__asset) { background: #EBEBEB; }
+.sm-split__media .sm-media__asset { object-fit: cover; }
 
 /* Logotipo de respaldo en el encabezado */
 .sm-wordmark { display: inline-flex; align-items: center; gap: 12px; color: inherit; }

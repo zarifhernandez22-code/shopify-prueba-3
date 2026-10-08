@@ -284,7 +284,7 @@
                     "text_r2": {
                       "type": "text",
                       "settings": {
-                        "text": "<ul><li><strong>Rhodiola rosea</strong></li><li><strong>Ashwagandha</strong></li><li><strong>L-Teanina</strong></li><li><strong>Magnesio</strong></li><li><strong>Fosfatidilserina</strong></li><li><strong>Magnolia</strong></li><li><strong>Vitamina C</strong></li><li><strong>Vitamina B6</strong></li><li><strong>Vitamina B12</strong></li><li><strong>Pimienta negra</strong></li></ul><p>759 mg por porción · 60 cápsulas por frasco · Fórmula liposomal. Consulta la etiqueta para la composición completa.</p>",
+                        "text": "<ul><li><strong>Rhodiola rosea</strong></li><li><strong>Ashwagandha</strong></li><li><strong>L-Teanina</strong></li><li><strong>Magnesio</strong></li><li><strong>Fosfatidilserina</strong></li><li><strong>Magnolia</strong></li><li><strong>Vitamina C</strong></li><li><strong>Vitamina B6</strong></li><li><strong>Vitamina B12</strong></li><li><strong>Pimienta negra</strong></li></ul><p>759 mg por porción · 1 cápsula al día · 60 cápsulas por frasco (60 días) · Fórmula liposomal.</p>",
                         "width": "100%",
                         "max_width": "normal",
                         "alignment": "left",
@@ -323,7 +323,7 @@
                     "text_r3": {
                       "type": "text",
                       "settings": {
-                        "text": "<p>Sigue la dosis indicada en la etiqueta del frasco. Tómalo con un vaso de agua, de preferencia con alimentos.</p>",
+                        "text": "<p>Toma 1 cápsula al día con un vaso de agua, de preferencia con alimentos. Un frasco rinde 60 días.</p>",
                         "width": "100%",
                         "max_width": "normal",
                         "alignment": "left",
@@ -461,7 +461,7 @@
               "settings": {
                 "tagline": "Calma y enfoque, todos los días.",
                 "benefits": "Fórmula diseñada para acompañar el equilibrio natural del cortisol\nRhodiola y ashwagandha, adaptógenos de uso tradicional\nL-teanina y magnesio para favorecer la calma",
-                "badges": "Liposomal, 759 mg por porción, 60 cápsulas, Hecho en EE. UU.",
+                "badges": "Liposomal, 759 mg, 1 cápsula al día, 60 días, Hecho en EE. UU.",
                 "accent": "#5F7A99"
               },
               "blocks": {}
@@ -670,7 +670,7 @@
         "heading": "Qué hay <em>dentro.</em>",
         "text": "Diez ingredientes, cada uno con una función concreta.",
         "head_layout": "split",
-        "note": "759 mg por porción · 60 cápsulas por frasco · Fórmula liposomal. Consulta la etiqueta para la composición completa.",
+        "note": "759 mg por porción · 1 cápsula al día · 60 cápsulas por frasco (60 días) · Fórmula liposomal.",
         "background": "base",
         "accent": "#5F7A99",
         "padding_top": 112,
@@ -797,8 +797,8 @@
         "step_1": {
           "type": "step",
           "settings": {
-            "title": "Con agua",
-            "text": "Toma las cápsulas indicadas en la etiqueta con un vaso de agua, de preferencia con alimentos."
+            "title": "1 cápsula al día",
+            "text": "Con un vaso de agua, de preferencia junto con una comida."
           }
         },
         "step_2": {
@@ -876,7 +876,7 @@
           "type": "question",
           "settings": {
             "question": "¿Cuánto dura un frasco?",
-            "answer": "<p>Cada frasco contiene 60 cápsulas. Su duración depende de la dosis diaria indicada en la etiqueta.</p>"
+            "answer": "<p>Cada frasco contiene 60 cápsulas. Con 1 cápsula al día, te dura 60 días.</p>"
           }
         },
         "q_5": {

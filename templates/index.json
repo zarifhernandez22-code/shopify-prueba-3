@@ -42,15 +42,15 @@
         "stat_2": {
           "type": "stat",
           "settings": {
-            "value": "10",
-            "label": "Ingredientes en 1 cápsula"
+            "value": "1",
+            "label": "Cápsula al día"
           }
         },
         "stat_3": {
           "type": "stat",
           "settings": {
-            "value": "30 días",
-            "label": "De garantía"
+            "value": "60 días",
+            "label": "Por frasco"
           }
         }
       },
@@ -211,7 +211,7 @@
         "heading": "Diez ingredientes, <em>una sola cápsula.</em>",
         "text": "Cada ingrediente tiene una función concreta dentro de la fórmula.",
         "head_layout": "split",
-        "note": "759 mg por porción · 60 cápsulas por frasco · Fórmula liposomal. Consulta la etiqueta para la composición completa.",
+        "note": "759 mg por porción · 1 cápsula al día · 60 cápsulas por frasco (60 días) · Fórmula liposomal.",
         "background": "base",
         "accent": "#5F7A99",
         "padding_top": 112,
@@ -338,8 +338,8 @@
         "step_1": {
           "type": "step",
           "settings": {
-            "title": "Con agua",
-            "text": "Toma las cápsulas indicadas en la etiqueta con un vaso de agua, de preferencia con alimentos."
+            "title": "1 cápsula al día",
+            "text": "Con un vaso de agua, de preferencia junto con una comida."
           }
         },
         "step_2": {
