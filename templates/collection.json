@@ -6,79 +6,70 @@
  * or related systems. Please exercise caution as any changes
  * made to this file may be overwritten.
  * ------------------------------------------------------------
- */{
+ */
+{
   "sections": {
-    "section": {
-      "type": "section",
+    "encabezado": {
+      "type": "sommalya-collection-hero",
+      "settings": {
+        "eyebrow": "Catálogo Sommalya",
+        "heading": "Lo esencial, <em>en un solo lugar.</em>",
+        "text": "Fórmulas claras para cuidar lo básico que lo sostiene todo. Elige por lo que necesitas hoy.",
+        "text_animation": "words",
+        "show_count": true,
+        "count_label": "Fórmulas disponibles",
+        "background": "base",
+        "accent": "#5F7A99",
+        "padding_top": 96,
+        "padding_bottom": 56
+      },
       "blocks": {
-        "text_tqQTNE": {
-          "type": "text",
-          "name": "t:names.title",
+        "chip_1": {
+          "type": "chip",
           "settings": {
-            "text": "<h1>{{ closest.collection.title }}</h1>",
-            "width": "100%",
-            "max_width": "normal",
-            "alignment": "left",
-            "type_preset": "h2",
-            "font": "var(--font-body--family)",
-            "line_height": "normal",
-            "letter_spacing": "normal",
-            "case": "none",
-            "wrap": "pretty",
-            "background": false,
-            "background_color": "#00000026",
-            "corner_radius": 0,
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {}
+            "label": "Todos",
+            "link": "/collections/all"
+          }
         },
-        "divider_agfR7J": {
-          "type": "_divider",
-          "name": "t:names.divider",
+        "chip_2": {
+          "type": "chip",
           "settings": {
-            "thickness": 1,
-            "divider_color": "{{ settings.color_palette.color2 }}",
-            "corner_radius": "square",
-            "width_percent": 100,
-            "padding-block-start": 0,
-            "padding-block-end": 11
-          },
-          "blocks": {}
+            "label": "Cortisol Calm",
+            "link": "/products/suplemento-cortisol-calm-megneta-60cp"
+          }
+        },
+        "chip_3": {
+          "type": "chip",
+          "settings": {
+            "label": "Kit Inositol & Cortisol",
+            "link": "/products/kit-inositol-cortisol-paquete-2-pcs"
+          }
+        },
+        "chip_4": {
+          "type": "chip",
+          "settings": {
+            "label": "Gotas de Guanábana",
+            "link": "/products/gotas-de-guanabana-organico-digestion"
+          }
         }
       },
       "block_order": [
-        "text_tqQTNE",
-        "divider_agfR7J"
-      ],
-      "name": "t:names.heading",
+        "chip_1",
+        "chip_2",
+        "chip_3",
+        "chip_4"
+      ]
+    },
+    "cinta": {
+      "type": "sommalya-marquee",
       "settings": {
-        "content_direction": "column",
-        "vertical_on_mobile": true,
-        "horizontal_alignment": "center",
-        "vertical_alignment": "center",
-        "align_baseline": false,
-        "horizontal_alignment_flex_direction_column": "flex-start",
-        "vertical_alignment_flex_direction_column": "center",
-        "gap": 84,
-        "section_width": "page-width",
-        "section_height_custom": 50,
-        "background_media": "none",
-        "background_color": "{{ settings.color_palette.background }}",
-        "video_position": "cover",
-        "background_image_position": "cover",
-        "border": "none",
-        "border_width": 1,
-        "border_opacity": 100,
-        "border_radius": 0,
-        "toggle_overlay": false,
-        "overlay_color": "#00000026",
-        "overlay_style": "solid",
-        "gradient_direction": "to top",
-        "padding-block-start": 36,
-        "padding-block-end": 0
+        "items": "Rhodiola, Ashwagandha, L-Teanina, Magnesio, Fosfatidilserina, Magnolia, Vitamina B6, Vitamina B12",
+        "icon": "spark",
+        "speed": 45,
+        "background": "base",
+        "accent": "#5F7A99",
+        "padding_top": 32,
+        "padding_bottom": 32
       }
     },
     "main": {
@@ -338,10 +329,94 @@
         "padding-block-start": 0,
         "padding-block-end": 66
       }
+    },
+    "manifiesto": {
+      "type": "sommalya-statement",
+      "settings": {
+        "eyebrow": "Producto estrella",
+        "text": "Cortisol Calm: diez ingredientes para recuperar la calma, incluso en los días más exigentes.",
+        "highlight": "calma,",
+        "byline": "Sommalya · Lo esencial, bien hecho",
+        "align": "center",
+        "background": "soft",
+        "accent": "#5F7A99",
+        "padding_top": 128,
+        "padding_bottom": 128
+      }
+    },
+    "confianza": {
+      "type": "sommalya-trustbar",
+      "settings": {
+        "background": "base",
+        "accent": "",
+        "padding_top": 48,
+        "padding_bottom": 48
+      },
+      "blocks": {
+        "item_1": {
+          "type": "item",
+          "settings": {
+            "icon": "truck",
+            "title": "Envío gratis",
+            "text": "En tu primer pedido"
+          }
+        },
+        "item_2": {
+          "type": "item",
+          "settings": {
+            "icon": "heart",
+            "title": "Atención personalizada",
+            "text": "Te orientamos antes y después de tu compra"
+          }
+        },
+        "item_3": {
+          "type": "item",
+          "settings": {
+            "icon": "globe",
+            "title": "Hecho en EE. UU.",
+            "text": "Fabricación con estándares de calidad"
+          }
+        },
+        "item_4": {
+          "type": "item",
+          "settings": {
+            "icon": "shield",
+            "title": "Pago seguro",
+            "text": "Datos cifrados de extremo a extremo"
+          }
+        }
+      },
+      "block_order": [
+        "item_1",
+        "item_2",
+        "item_3",
+        "item_4"
+      ]
+    },
+    "garantia": {
+      "type": "sommalya-cta",
+      "settings": {
+        "eyebrow": "Sommalya",
+        "heading": "Lo esencial, <em>bien hecho.</em>",
+        "text": "Fórmulas claras, hechas en EE. UU., con envío gratis en tu primer pedido.",
+        "button_label": "Comprar Cortisol Calm",
+        "button_link": "/products/suplemento-cortisol-calm-megneta-60cp",
+        "button2_label": "",
+        "button2_link": "",
+        "disclaimer": "Este producto no es un medicamento. El consumo de este producto es responsabilidad de quien lo recomienda y de quien lo usa. Consulta a tu médico si estás embarazada, en lactancia o bajo tratamiento.",
+        "background": "sand",
+        "accent": "",
+        "padding_top": 112,
+        "padding_bottom": 96
+      }
     }
   },
   "order": [
-    "section",
-    "main"
+    "encabezado",
+    "cinta",
+    "main",
+    "manifiesto",
+    "confianza",
+    "garantia"
   ]
 }

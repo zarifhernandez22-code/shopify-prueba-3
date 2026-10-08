@@ -1,0 +1,129 @@
+
+{%- assign words = section.settings.text | split: ' ' -%}
+<section {% render 'sommalya-section-attrs', settings: section.settings, extra: 'sm-statement' %}>
+  <div class="sm__wrap{% if section.settings.align == 'center' %} sm-statement--center{% endif %}">
+    {%- if section.settings.eyebrow != blank -%}<p class="sm-eyebrow{% if section.settings.align == 'center' %} sm-eyebrow--plain{% endif %}"{% if section.settings.align == 'center' %} style="display: flex; justify-content: center;"{% endif %}>{{ section.settings.eyebrow }}</p>{%- endif -%}
+    <p class="sm-statement__text">
+      {%- for word in words -%}
+        {%- if section.settings.highlight != blank and word contains section.settings.highlight -%}
+          <span class="w"><em>{{ word }}</em></span>
+        {%- else -%}
+          <span class="w">{{ word }}</span>
+        {%- endif -%}
+        {%- unless forloop.last %} {% endunless -%}
+      {%- endfor -%}
+    </p>
+    {%- if section.settings.byline != blank -%}<p class="sm-statement__by">{{ section.settings.byline }}</p>{%- endif -%}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Sommalya · Manifiesto",
+  "tag": "div",
+  "class": "sommalya-statement",
+  "settings": [
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Antetítulo",
+      "default": "Nuestra filosofía"
+    },
+    {
+      "type": "textarea",
+      "id": "text",
+      "label": "Frase",
+      "info": "Se ilumina palabra por palabra al hacer scroll.",
+      "default": "El bienestar no debería ser complicado. Cuidamos lo básico que lo sostiene todo."
+    },
+    {
+      "type": "text",
+      "id": "highlight",
+      "label": "Palabra resaltada",
+      "info": "Se muestra en cursiva y color de acento.",
+      "default": "básico"
+    },
+    {
+      "type": "text",
+      "id": "byline",
+      "label": "Firma",
+      "default": "Sommalya"
+    },
+    {
+      "type": "select",
+      "id": "align",
+      "label": "Alineación",
+      "options": [
+        {
+          "value": "center",
+          "label": "Centrada"
+        },
+        {
+          "value": "left",
+          "label": "Izquierda"
+        }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "header",
+      "content": "Apariencia"
+    },
+    {
+      "type": "select",
+      "id": "background",
+      "label": "Fondo",
+      "options": [
+        {
+          "value": "base",
+          "label": "Marfil (base)"
+        },
+        {
+          "value": "soft",
+          "label": "Lino suave"
+        },
+        {
+          "value": "sand",
+          "label": "Arena"
+        },
+        {
+          "value": "ink",
+          "label": "Oscuro"
+        }
+      ],
+      "default": "base"
+    },
+    {
+      "type": "color",
+      "id": "accent",
+      "label": "Color de acento",
+      "info": "Opcional. Por defecto usa el verde salvia de la paleta."
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Espaciado superior",
+      "min": 0,
+      "max": 160,
+      "step": 8,
+      "unit": "px",
+      "default": 128
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Espaciado inferior",
+      "min": 0,
+      "max": 160,
+      "step": 8,
+      "unit": "px",
+      "default": 128
+    }
+  ],
+  "presets": [
+    {
+      "name": "Sommalya · Manifiesto"
+    }
+  ]
+}
+{% endschema %}

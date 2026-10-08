@@ -1,0 +1,261 @@
+
+<section {% render 'sommalya-section-attrs', settings: section.settings %}>
+  <div class="sm__wrap">
+    {%- if section.settings.eyebrow != blank or section.settings.heading != blank or section.settings.text != blank -%}
+      <header class="sm-head sm-head--{{ section.settings.head_layout | default: 'center' }}">
+        <div>
+          {%- if section.settings.eyebrow != blank -%}<p class="sm-eyebrow{% if section.settings.head_layout == 'center' %} sm-eyebrow--plain{% endif %}">{{ section.settings.eyebrow }}</p>{%- endif -%}
+          {%- if section.settings.heading != blank -%}<h2 class="sm-h2">{{ section.settings.heading }}</h2>{%- endif -%}
+        </div>
+        {%- if section.settings.text != blank -%}<p class="sm-lead">{{ section.settings.text | newline_to_br }}</p>{%- endif -%}
+      </header>
+    {%- endif -%}
+    <div class="sm-pillars">
+      {%- for block in section.blocks -%}
+        <article class="sm-pillar" {{ block.shopify_attributes }}>
+          {%- if section.settings.show_numbers -%}<span class="sm-pillar__num">{{ forloop.index | prepend: '0' | slice: -2, 2 }}</span>{%- endif -%}
+          <span class="sm-icon">{% render 'sommalya-icon', name: block.settings.icon %}</span>
+          <h3 class="sm-h3">{{ block.settings.title }}</h3>
+          <p>{{ block.settings.text }}</p>
+        </article>
+      {%- endfor -%}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Sommalya · Pilares",
+  "tag": "div",
+  "class": "sommalya-pillars",
+  "max_blocks": 6,
+  "settings": [
+    {
+      "type": "header",
+      "content": "Encabezado"
+    },
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Antetítulo",
+      "default": "Nuestros principios"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "label": "Título",
+      "info": "Usa cursiva para resaltar una palabra con el color de acento.",
+      "default": "Simple. Natural. <em>Honesto.</em>"
+    },
+    {
+      "type": "textarea",
+      "id": "text",
+      "label": "Texto",
+      "default": "Creemos que el bienestar empieza por lo básico. Por eso cada fórmula Sommalya se diseña con pocos ingredientes, bien elegidos y en dosis que tienen sentido."
+    },
+    {
+      "type": "select",
+      "id": "head_layout",
+      "label": "Disposición del encabezado",
+      "options": [
+        {
+          "value": "center",
+          "label": "Centrado"
+        },
+        {
+          "value": "split",
+          "label": "Dividido"
+        },
+        {
+          "value": "left",
+          "label": "Izquierda"
+        }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_numbers",
+      "label": "Mostrar numeración",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "Apariencia"
+    },
+    {
+      "type": "select",
+      "id": "background",
+      "label": "Fondo",
+      "options": [
+        {
+          "value": "base",
+          "label": "Marfil (base)"
+        },
+        {
+          "value": "soft",
+          "label": "Lino suave"
+        },
+        {
+          "value": "sand",
+          "label": "Arena"
+        },
+        {
+          "value": "ink",
+          "label": "Oscuro"
+        }
+      ],
+      "default": "base"
+    },
+    {
+      "type": "color",
+      "id": "accent",
+      "label": "Color de acento",
+      "info": "Opcional. Por defecto usa el verde salvia de la paleta."
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Espaciado superior",
+      "min": 0,
+      "max": 160,
+      "step": 8,
+      "unit": "px",
+      "default": 96
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Espaciado inferior",
+      "min": 0,
+      "max": 160,
+      "step": 8,
+      "unit": "px",
+      "default": 96
+    }
+  ],
+  "blocks": [
+    {
+      "type": "pillar",
+      "name": "Pilar",
+      "settings": [
+        {
+          "type": "select",
+          "id": "icon",
+          "label": "Icono",
+          "options": [
+            {
+              "value": "leaf",
+              "label": "Leaf"
+            },
+            {
+              "value": "moon",
+              "label": "Moon"
+            },
+            {
+              "value": "sun",
+              "label": "Sun"
+            },
+            {
+              "value": "shield",
+              "label": "Shield"
+            },
+            {
+              "value": "drop",
+              "label": "Drop"
+            },
+            {
+              "value": "lab",
+              "label": "Lab"
+            },
+            {
+              "value": "heart",
+              "label": "Heart"
+            },
+            {
+              "value": "check",
+              "label": "Check"
+            },
+            {
+              "value": "star",
+              "label": "Star"
+            },
+            {
+              "value": "globe",
+              "label": "Globe"
+            },
+            {
+              "value": "truck",
+              "label": "Truck"
+            },
+            {
+              "value": "return",
+              "label": "Return"
+            },
+            {
+              "value": "spark",
+              "label": "Spark"
+            },
+            {
+              "value": "clock",
+              "label": "Clock"
+            }
+          ],
+          "default": "leaf"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Título",
+          "default": "Origen natural"
+        },
+        {
+          "type": "textarea",
+          "id": "text",
+          "label": "Texto",
+          "default": "Extractos botánicos y minerales seleccionados por su pureza y trazabilidad."
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Sommalya · Pilares",
+      "blocks": [
+        {
+          "type": "pillar",
+          "settings": {
+            "icon": "leaf",
+            "title": "Origen natural",
+            "text": "Extractos botánicos y minerales seleccionados por su pureza, con origen documentado de cada lote."
+          }
+        },
+        {
+          "type": "pillar",
+          "settings": {
+            "icon": "lab",
+            "title": "Dosis con sentido",
+            "text": "Cantidades basadas en la literatura disponible, declaradas con transparencia en cada etiqueta."
+          }
+        },
+        {
+          "type": "pillar",
+          "settings": {
+            "icon": "shield",
+            "title": "Calidad verificada",
+            "text": "Cada lote se analiza para confirmar identidad, pureza y ausencia de contaminantes."
+          }
+        },
+        {
+          "type": "pillar",
+          "settings": {
+            "icon": "heart",
+            "title": "Atención cercana",
+            "text": "Te acompañamos antes y después de tu compra, con respuestas claras."
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

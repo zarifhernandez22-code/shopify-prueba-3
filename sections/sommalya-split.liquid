@@ -1,0 +1,181 @@
+
+<section {% render 'sommalya-section-attrs', settings: section.settings %}>
+  <div class="sm__wrap">
+    <div class="sm-split{% if section.settings.reverse %} sm-split--reverse{% endif %}">
+      <div class="sm-media sm-split__media">
+        {% render 'sommalya-media', image: section.settings.image, asset: section.settings.image_asset, label: section.settings.placeholder_label, sizes: '(min-width: 900px) 50vw, 100vw' %}
+      </div>
+      <div>
+        {%- if section.settings.eyebrow != blank -%}<p class="sm-eyebrow">{{ section.settings.eyebrow }}</p>{%- endif -%}
+        <h2 class="sm-h2">{{ section.settings.heading }}</h2>
+        {%- if section.settings.body != blank -%}<div class="sm-body" style="margin-top: 24px;">{{ section.settings.body }}</div>{%- endif -%}
+        {%- if section.blocks.size > 0 -%}
+          <ul class="sm-list">
+            {%- for block in section.blocks -%}
+              <li {{ block.shopify_attributes }}>{% render 'sommalya-icon', name: 'check' %}<span>{{ block.settings.text }}</span></li>
+            {%- endfor -%}
+          </ul>
+        {%- endif -%}
+        {%- if section.settings.button_label != blank -%}
+          <div class="sm-actions"><a class="sm-btn sm-btn--ghost" href="{{ section.settings.button_link | default: '#' }}">{{ section.settings.button_label }}</a></div>
+        {%- endif -%}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Sommalya · Imagen y texto",
+  "tag": "div",
+  "class": "sommalya-split",
+  "max_blocks": 8,
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Imagen"
+    },
+    {
+      "type": "text",
+      "id": "image_asset",
+      "label": "Imagen incluida en el tema",
+      "info": "Nombre de un archivo de assets/."
+    },
+    {
+      "type": "text",
+      "id": "placeholder_label",
+      "label": "Texto alternativo / etiqueta del frasco de muestra",
+      "default": "Esencial"
+    },
+    {
+      "type": "checkbox",
+      "id": "reverse",
+      "label": "Imagen a la derecha",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Antetítulo",
+      "default": "Nuestra historia"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "label": "Título",
+      "default": "Nacimos para simplificar <em>lo vital.</em>"
+    },
+    {
+      "type": "richtext",
+      "id": "body",
+      "label": "Texto",
+      "default": "<p>Sommalya surge de una idea sencilla: el bienestar no debería ser complicado. Dormir, digerir, tener energía y defenderse son funciones básicas, y merecen fórmulas serias, claras y naturales.</p>"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Botón",
+      "default": "Conocer más"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Enlace del botón"
+    },
+    {
+      "type": "header",
+      "content": "Apariencia"
+    },
+    {
+      "type": "select",
+      "id": "background",
+      "label": "Fondo",
+      "options": [
+        {
+          "value": "base",
+          "label": "Marfil (base)"
+        },
+        {
+          "value": "soft",
+          "label": "Lino suave"
+        },
+        {
+          "value": "sand",
+          "label": "Arena"
+        },
+        {
+          "value": "ink",
+          "label": "Oscuro"
+        }
+      ],
+      "default": "base"
+    },
+    {
+      "type": "color",
+      "id": "accent",
+      "label": "Color de acento",
+      "info": "Opcional. Por defecto usa el verde salvia de la paleta."
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Espaciado superior",
+      "min": 0,
+      "max": 160,
+      "step": 8,
+      "unit": "px",
+      "default": 96
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Espaciado inferior",
+      "min": 0,
+      "max": 160,
+      "step": 8,
+      "unit": "px",
+      "default": 96
+    }
+  ],
+  "blocks": [
+    {
+      "type": "point",
+      "name": "Punto",
+      "settings": [
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Texto",
+          "default": "Ingredientes trazables"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Sommalya · Imagen y texto",
+      "blocks": [
+        {
+          "type": "point",
+          "settings": {
+            "text": "Fórmulas cortas: solo lo que aporta"
+          }
+        },
+        {
+          "type": "point",
+          "settings": {
+            "text": "Etiquetas transparentes, con dosis declaradas"
+          }
+        },
+        {
+          "type": "point",
+          "settings": {
+            "text": "Cápsulas vegetales, sin colorantes"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

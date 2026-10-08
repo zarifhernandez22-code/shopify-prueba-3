@@ -1,0 +1,20 @@
+{% doc %}
+  Aviso de envío gratis en el primer pedido. Se muestra a visitantes sin
+  cuenta y a clientes que todavía no tienen pedidos.
+{% enddoc %}
+{%- liquid
+  assign show_first = false
+  if settings.sommalya_first_order_shipping and cart.item_count > 0
+    if customer == null or customer.orders_count == 0
+      assign show_first = true
+    endif
+  endif
+-%}
+{%- if show_first -%}
+  <div class="sm-cartbar is-complete" role="status">
+    <p class="sm-cartbar__text">
+      {% render 'sommalya-icon', name: 'truck' %}Tu primer pedido tiene <em>envío gratis.</em>
+    </p>
+    <p class="sm-cartbar__sub">Se aplica al finalizar la compra.</p>
+  </div>
+{%- endif -%}

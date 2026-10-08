@@ -1,0 +1,201 @@
+
+<section {% render 'sommalya-section-attrs', settings: section.settings %}>
+  <div class="sm__wrap">
+    <div class="sm-trustbar">
+      {%- for block in section.blocks -%}
+        <div class="sm-trustbar__item" {{ block.shopify_attributes }}>
+          <span class="sm-icon">{% render 'sommalya-icon', name: block.settings.icon %}</span>
+          <div><strong>{{ block.settings.title }}</strong><span>{{ block.settings.text }}</span></div>
+        </div>
+      {%- endfor -%}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Sommalya · Confianza",
+  "tag": "div",
+  "class": "sommalya-trustbar",
+  "max_blocks": 4,
+  "settings": [
+    {
+      "type": "header",
+      "content": "Apariencia"
+    },
+    {
+      "type": "select",
+      "id": "background",
+      "label": "Fondo",
+      "options": [
+        {
+          "value": "base",
+          "label": "Marfil (base)"
+        },
+        {
+          "value": "soft",
+          "label": "Lino suave"
+        },
+        {
+          "value": "sand",
+          "label": "Arena"
+        },
+        {
+          "value": "ink",
+          "label": "Oscuro"
+        }
+      ],
+      "default": "base"
+    },
+    {
+      "type": "color",
+      "id": "accent",
+      "label": "Color de acento",
+      "info": "Opcional. Por defecto usa el verde salvia de la paleta."
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Espaciado superior",
+      "min": 0,
+      "max": 160,
+      "step": 8,
+      "unit": "px",
+      "default": 48
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Espaciado inferior",
+      "min": 0,
+      "max": 160,
+      "step": 8,
+      "unit": "px",
+      "default": 48
+    }
+  ],
+  "blocks": [
+    {
+      "type": "item",
+      "name": "Elemento",
+      "settings": [
+        {
+          "type": "select",
+          "id": "icon",
+          "label": "Icono",
+          "options": [
+            {
+              "value": "leaf",
+              "label": "Leaf"
+            },
+            {
+              "value": "moon",
+              "label": "Moon"
+            },
+            {
+              "value": "sun",
+              "label": "Sun"
+            },
+            {
+              "value": "shield",
+              "label": "Shield"
+            },
+            {
+              "value": "drop",
+              "label": "Drop"
+            },
+            {
+              "value": "lab",
+              "label": "Lab"
+            },
+            {
+              "value": "heart",
+              "label": "Heart"
+            },
+            {
+              "value": "check",
+              "label": "Check"
+            },
+            {
+              "value": "star",
+              "label": "Star"
+            },
+            {
+              "value": "globe",
+              "label": "Globe"
+            },
+            {
+              "value": "truck",
+              "label": "Truck"
+            },
+            {
+              "value": "return",
+              "label": "Return"
+            },
+            {
+              "value": "spark",
+              "label": "Spark"
+            },
+            {
+              "value": "clock",
+              "label": "Clock"
+            }
+          ],
+          "default": "truck"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Título",
+          "default": "Envío gratis"
+        },
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Texto",
+          "default": "En tu primer pedido"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Sommalya · Confianza",
+      "blocks": [
+        {
+          "type": "item",
+          "settings": {
+            "icon": "truck",
+            "title": "Envío gratis",
+            "text": "En tu primer pedido"
+          }
+        },
+        {
+          "type": "item",
+          "settings": {
+            "icon": "heart",
+            "title": "Atención personalizada",
+            "text": "Te orientamos antes y después de tu compra"
+          }
+        },
+        {
+          "type": "item",
+          "settings": {
+            "icon": "leaf",
+            "title": "Origen natural",
+            "text": "Ingredientes trazables"
+          }
+        },
+        {
+          "type": "item",
+          "settings": {
+            "icon": "shield",
+            "title": "Pago seguro",
+            "text": "Datos cifrados de extremo a extremo"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

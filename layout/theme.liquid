@@ -13,6 +13,8 @@
         type="image/png"
         href="{{ settings.favicon | image_url: width: 32, height: 32 }}"
       >
+    {%- else -%}
+      <link rel="icon" type="image/png" href="{{ 'sommalya-logo.png' | asset_url }}">
     {%- endif -%}
 
     {%- render 'view-transition-opt-in' -%}
@@ -24,6 +26,7 @@
     {%- render 'scripts' -%}
     {%- render 'theme-styles-variables' -%}
     {%- render 'color-palette' -%}
+    {%- render 'sommalya-tokens' -%}
 
     {% if request.design_mode %}
       {%- render 'theme-editor' -%}

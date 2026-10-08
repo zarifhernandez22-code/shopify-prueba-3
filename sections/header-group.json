@@ -71,9 +71,42 @@
         "enable_transparent_header_product": true,
         "enable_transparent_header_collection": false
       }
+    },
+    "sommalya_avisos": {
+      "type": "sommalya-announcement",
+      "settings": {},
+      "blocks": {
+        "msg_1": {
+          "type": "message",
+          "settings": {
+            "text": "Envío gratis en tu primer pedido",
+            "link": ""
+          }
+        },
+        "msg_2": {
+          "type": "message",
+          "settings": {
+            "text": "Pago 100 % seguro",
+            "link": ""
+          }
+        },
+        "msg_3": {
+          "type": "message",
+          "settings": {
+            "text": "Productos hechos en EE. UU.",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "msg_1",
+        "msg_2",
+        "msg_3"
+      ]
     }
   },
   "order": [
+    "sommalya_avisos",
     "header_section"
   ]
 }

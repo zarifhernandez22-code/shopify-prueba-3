@@ -57,14 +57,18 @@
     {% endif %}
     data-testid="header-logo"
   >
-    {% render 'image',
-      image: settings.logo,
-      class: 'header-logo__image',
-      height: settings.logo_height,
-      alt_text_fallback: alt_text_fallback,
-      text_fallback: shop.name,
-      style: logo_style
-    %}
+    {%- if settings.logo == blank -%}
+      <span class="sm-wordmark"><img src="{{ 'sommalya-logo.png' | asset_url }}" alt="" width="34" height="34"><span>Sommalya</span></span>
+    {%- else -%}
+      {% render 'image',
+        image: settings.logo,
+        class: 'header-logo__image',
+        height: settings.logo_height,
+        alt_text_fallback: alt_text_fallback,
+        text_fallback: shop.name,
+        style: logo_style
+      %}
+    {%- endif -%}
   </span>
 
   {% if use_inverse_logo %}

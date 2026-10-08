@@ -1,0 +1,198 @@
+
+<section {% render 'sommalya-section-attrs', settings: section.settings %}>
+  <div class="sm__wrap">
+    {%- if section.settings.eyebrow != blank or section.settings.heading != blank or section.settings.text != blank -%}
+      <header class="sm-head sm-head--{{ section.settings.head_layout | default: 'center' }}">
+        <div>
+          {%- if section.settings.eyebrow != blank -%}<p class="sm-eyebrow{% if section.settings.head_layout == 'center' %} sm-eyebrow--plain{% endif %}">{{ section.settings.eyebrow }}</p>{%- endif -%}
+          {%- if section.settings.heading != blank -%}<h2 class="sm-h2">{{ section.settings.heading }}</h2>{%- endif -%}
+        </div>
+        {%- if section.settings.text != blank -%}<p class="sm-lead">{{ section.settings.text | newline_to_br }}</p>{%- endif -%}
+      </header>
+    {%- endif -%}
+    {%- if section.blocks.size > 0 -%}
+      <div class="sm-stats">
+        {%- for block in section.blocks -%}
+          <div class="sm-stat" {{ block.shopify_attributes }}><strong data-sm-count>{{ block.settings.value }}</strong><span>{{ block.settings.label }}</span></div>
+        {%- endfor -%}
+      </div>
+    {%- endif -%}
+    {%- if section.settings.button_label != blank -%}
+      <div class="sm-actions"{% if section.settings.head_layout == 'center' %} style="justify-content: center;"{% endif %}><a class="sm-btn sm-btn--ghost" href="{{ section.settings.button_link | default: '#' }}">{{ section.settings.button_label }}</a></div>
+    {%- endif -%}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Sommalya · Calidad",
+  "tag": "div",
+  "class": "sommalya-quality",
+  "max_blocks": 4,
+  "settings": [
+    {
+      "type": "header",
+      "content": "Encabezado"
+    },
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Antetítulo",
+      "default": "Compromiso de calidad"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "label": "Título",
+      "info": "Usa cursiva para resaltar una palabra con el color de acento.",
+      "default": "De la planta al frasco, <em>con rigor.</em>"
+    },
+    {
+      "type": "textarea",
+      "id": "text",
+      "label": "Texto",
+      "default": "Seleccionamos proveedores con trazabilidad documentada y analizamos cada lote antes de que llegue a tus manos."
+    },
+    {
+      "type": "select",
+      "id": "head_layout",
+      "label": "Disposición del encabezado",
+      "options": [
+        {
+          "value": "center",
+          "label": "Centrado"
+        },
+        {
+          "value": "split",
+          "label": "Dividido"
+        },
+        {
+          "value": "left",
+          "label": "Izquierda"
+        }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Botón",
+      "default": "Ver nuestro proceso"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Enlace del botón"
+    },
+    {
+      "type": "header",
+      "content": "Apariencia"
+    },
+    {
+      "type": "select",
+      "id": "background",
+      "label": "Fondo",
+      "options": [
+        {
+          "value": "base",
+          "label": "Marfil (base)"
+        },
+        {
+          "value": "soft",
+          "label": "Lino suave"
+        },
+        {
+          "value": "sand",
+          "label": "Arena"
+        },
+        {
+          "value": "ink",
+          "label": "Oscuro"
+        }
+      ],
+      "default": "ink"
+    },
+    {
+      "type": "color",
+      "id": "accent",
+      "label": "Color de acento",
+      "info": "Opcional. Por defecto usa el verde salvia de la paleta."
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Espaciado superior",
+      "min": 0,
+      "max": 160,
+      "step": 8,
+      "unit": "px",
+      "default": 96
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Espaciado inferior",
+      "min": 0,
+      "max": 160,
+      "step": 8,
+      "unit": "px",
+      "default": 96
+    }
+  ],
+  "blocks": [
+    {
+      "type": "stat",
+      "name": "Cifra",
+      "settings": [
+        {
+          "type": "text",
+          "id": "value",
+          "label": "Cifra",
+          "default": "100%"
+        },
+        {
+          "type": "text",
+          "id": "label",
+          "label": "Descripción",
+          "default": "Lotes analizados"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Sommalya · Calidad",
+      "blocks": [
+        {
+          "type": "stat",
+          "settings": {
+            "value": "100%",
+            "label": "Lotes analizados antes de su venta"
+          }
+        },
+        {
+          "type": "stat",
+          "settings": {
+            "value": "0",
+            "label": "Colorantes, saborizantes o rellenos artificiales"
+          }
+        },
+        {
+          "type": "stat",
+          "settings": {
+            "value": "GMP",
+            "label": "Fabricación bajo buenas prácticas"
+          }
+        },
+        {
+          "type": "stat",
+          "settings": {
+            "value": "EE. UU.",
+            "label": "País de fabricación"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

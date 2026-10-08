@@ -1,0 +1,246 @@
+
+<section {% render 'sommalya-section-attrs', settings: section.settings %}>
+  <div class="sm__wrap">
+    {%- if section.settings.eyebrow != blank or section.settings.heading != blank or section.settings.text != blank -%}
+      <header class="sm-head sm-head--{{ section.settings.head_layout | default: 'center' }}">
+        <div>
+          {%- if section.settings.eyebrow != blank -%}<p class="sm-eyebrow{% if section.settings.head_layout == 'center' %} sm-eyebrow--plain{% endif %}">{{ section.settings.eyebrow }}</p>{%- endif -%}
+          {%- if section.settings.heading != blank -%}<h2 class="sm-h2">{{ section.settings.heading }}</h2>{%- endif -%}
+        </div>
+        {%- if section.settings.text != blank -%}<p class="sm-lead">{{ section.settings.text | newline_to_br }}</p>{%- endif -%}
+      </header>
+    {%- endif -%}
+    <div class="sm-fb">
+      <div class="sm-fb__labels" aria-hidden="true">
+        <span>{{ section.settings.left_label }}</span><span>{{ section.settings.right_label }}</span>
+      </div>
+      {%- for block in section.blocks -%}
+        <div class="sm-fb__row" {{ block.shopify_attributes }}>
+          <div class="sm-fb__feature">
+            <span class="sm-icon">{% render 'sommalya-icon', name: block.settings.icon %}</span>
+            <div>
+              <strong>{{ block.settings.feature }}</strong>
+              {%- if block.settings.spec != blank -%}<span>{{ block.settings.spec }}</span>{%- endif -%}
+            </div>
+          </div>
+          <span class="sm-fb__arrow" aria-hidden="true"></span>
+          <p class="sm-fb__benefit">{{ block.settings.benefit }}</p>
+        </div>
+      {%- endfor -%}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Sommalya · Beneficios",
+  "tag": "div",
+  "class": "sommalya-features",
+  "max_blocks": 8,
+  "settings": [
+    {
+      "type": "header",
+      "content": "Encabezado"
+    },
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Antetítulo",
+      "default": "Características y beneficios"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "label": "Título",
+      "info": "Usa cursiva para resaltar una palabra con el color de acento.",
+      "default": "Lo que contiene, <em>lo que sientes.</em>"
+    },
+    {
+      "type": "textarea",
+      "id": "text",
+      "label": "Texto",
+      "default": "Cada ingrediente técnico se traduce en una ventaja que notas en tu día."
+    },
+    {
+      "type": "select",
+      "id": "head_layout",
+      "label": "Disposición del encabezado",
+      "options": [
+        {
+          "value": "center",
+          "label": "Centrado"
+        },
+        {
+          "value": "split",
+          "label": "Dividido"
+        },
+        {
+          "value": "left",
+          "label": "Izquierda"
+        }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "text",
+      "id": "left_label",
+      "label": "Título columna izquierda",
+      "default": "Lo que contiene"
+    },
+    {
+      "type": "text",
+      "id": "right_label",
+      "label": "Título columna derecha",
+      "default": "Lo que sientes"
+    },
+    {
+      "type": "header",
+      "content": "Apariencia"
+    },
+    {
+      "type": "select",
+      "id": "background",
+      "label": "Fondo",
+      "options": [
+        {
+          "value": "base",
+          "label": "Marfil (base)"
+        },
+        {
+          "value": "soft",
+          "label": "Lino suave"
+        },
+        {
+          "value": "sand",
+          "label": "Arena"
+        },
+        {
+          "value": "ink",
+          "label": "Oscuro"
+        }
+      ],
+      "default": "base"
+    },
+    {
+      "type": "color",
+      "id": "accent",
+      "label": "Color de acento",
+      "info": "Opcional. Por defecto usa el verde salvia de la paleta."
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Espaciado superior",
+      "min": 0,
+      "max": 160,
+      "step": 8,
+      "unit": "px",
+      "default": 96
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Espaciado inferior",
+      "min": 0,
+      "max": 160,
+      "step": 8,
+      "unit": "px",
+      "default": 96
+    }
+  ],
+  "blocks": [
+    {
+      "type": "row",
+      "name": "Beneficio",
+      "settings": [
+        {
+          "type": "select",
+          "id": "icon",
+          "label": "Icono",
+          "options": [
+            {
+              "value": "leaf",
+              "label": "Leaf"
+            },
+            {
+              "value": "moon",
+              "label": "Moon"
+            },
+            {
+              "value": "sun",
+              "label": "Sun"
+            },
+            {
+              "value": "shield",
+              "label": "Shield"
+            },
+            {
+              "value": "drop",
+              "label": "Drop"
+            },
+            {
+              "value": "lab",
+              "label": "Lab"
+            },
+            {
+              "value": "heart",
+              "label": "Heart"
+            },
+            {
+              "value": "check",
+              "label": "Check"
+            },
+            {
+              "value": "star",
+              "label": "Star"
+            },
+            {
+              "value": "globe",
+              "label": "Globe"
+            },
+            {
+              "value": "truck",
+              "label": "Truck"
+            },
+            {
+              "value": "return",
+              "label": "Return"
+            },
+            {
+              "value": "spark",
+              "label": "Spark"
+            },
+            {
+              "value": "clock",
+              "label": "Clock"
+            }
+          ],
+          "default": "leaf"
+        },
+        {
+          "type": "text",
+          "id": "feature",
+          "label": "Característica",
+          "default": "Ingrediente"
+        },
+        {
+          "type": "text",
+          "id": "spec",
+          "label": "Detalle técnico"
+        },
+        {
+          "type": "text",
+          "id": "benefit",
+          "label": "Beneficio para el cliente",
+          "default": "Lo que el cliente nota en su día."
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Sommalya · Beneficios"
+    }
+  ]
+}
+{% endschema %}

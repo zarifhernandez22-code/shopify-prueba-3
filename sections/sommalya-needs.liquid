@@ -1,0 +1,214 @@
+
+<section {% render 'sommalya-section-attrs', settings: section.settings %}>
+  <div class="sm__wrap">
+    {%- if section.settings.eyebrow != blank or section.settings.heading != blank or section.settings.text != blank -%}
+      <header class="sm-head sm-head--{{ section.settings.head_layout | default: 'center' }}">
+        <div>
+          {%- if section.settings.eyebrow != blank -%}<p class="sm-eyebrow{% if section.settings.head_layout == 'center' %} sm-eyebrow--plain{% endif %}">{{ section.settings.eyebrow }}</p>{%- endif -%}
+          {%- if section.settings.heading != blank -%}<h2 class="sm-h2">{{ section.settings.heading }}</h2>{%- endif -%}
+        </div>
+        {%- if section.settings.text != blank -%}<p class="sm-lead">{{ section.settings.text | newline_to_br }}</p>{%- endif -%}
+      </header>
+    {%- endif -%}
+    <div class="sm-needs">
+      {%- for block in section.blocks -%}
+        {%- liquid
+          assign p = block.settings.product
+          assign url = block.settings.link | default: p.url | default: routes.all_products_collection_url
+          assign title = block.settings.title | default: p.title
+          assign accent = block.settings.accent | default: 'var(--sm-sage)'
+        -%}
+        <a class="sm-need" href="{{ url }}" style="--sm-need-accent: {{ accent }};" {{ block.shopify_attributes }}>
+          <div class="sm-media sm-need__media">
+            {%- if block.settings.image == blank and block.settings.image_asset == blank and p.featured_image != blank -%}
+              {{ p.featured_image | image_url: width: 900 | image_tag: loading: 'lazy', sizes: '(min-width: 900px) 30vw, 90vw', alt: title }}
+            {%- else -%}
+              {% render 'sommalya-media', image: block.settings.image, asset: block.settings.image_asset, label: title, accent: accent, sizes: '(min-width: 900px) 30vw, 90vw' %}
+            {%- endif -%}
+            {%- if block.settings.tag != blank -%}<span class="sm-need__tag">{{ block.settings.tag }}</span>{%- endif -%}
+          </div>
+          <div class="sm-need__body">
+            <h3 class="sm-h3">{{ title }}</h3>
+            {%- if block.settings.text != blank -%}<p>{{ block.settings.text }}</p>{%- endif -%}
+          </div>
+          <div class="sm-need__foot">
+            <span>{{ block.settings.cta | default: 'Conocer' }}</span>
+            {%- if p != blank -%}<span class="sm-need__price">{{ p.price | money }}</span>{%- else -%}{% render 'sommalya-icon', name: 'arrow' %}{%- endif -%}
+          </div>
+        </a>
+      {%- endfor -%}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Sommalya · Necesidades",
+  "tag": "div",
+  "class": "sommalya-needs",
+  "max_blocks": 8,
+  "settings": [
+    {
+      "type": "header",
+      "content": "Encabezado"
+    },
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Antetítulo",
+      "default": "La colección"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "label": "Título",
+      "info": "Usa cursiva para resaltar una palabra con el color de acento.",
+      "default": "¿Qué necesitas <em>cuidar hoy?</em>"
+    },
+    {
+      "type": "textarea",
+      "id": "text",
+      "label": "Texto",
+      "default": "Fórmulas seleccionadas para acompañar tu bienestar."
+    },
+    {
+      "type": "select",
+      "id": "head_layout",
+      "label": "Disposición del encabezado",
+      "options": [
+        {
+          "value": "center",
+          "label": "Centrado"
+        },
+        {
+          "value": "split",
+          "label": "Dividido"
+        },
+        {
+          "value": "left",
+          "label": "Izquierda"
+        }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "header",
+      "content": "Apariencia"
+    },
+    {
+      "type": "select",
+      "id": "background",
+      "label": "Fondo",
+      "options": [
+        {
+          "value": "base",
+          "label": "Marfil (base)"
+        },
+        {
+          "value": "soft",
+          "label": "Lino suave"
+        },
+        {
+          "value": "sand",
+          "label": "Arena"
+        },
+        {
+          "value": "ink",
+          "label": "Oscuro"
+        }
+      ],
+      "default": "soft"
+    },
+    {
+      "type": "color",
+      "id": "accent",
+      "label": "Color de acento",
+      "info": "Opcional. Por defecto usa el verde salvia de la paleta."
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Espaciado superior",
+      "min": 0,
+      "max": 160,
+      "step": 8,
+      "unit": "px",
+      "default": 96
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Espaciado inferior",
+      "min": 0,
+      "max": 160,
+      "step": 8,
+      "unit": "px",
+      "default": 96
+    }
+  ],
+  "blocks": [
+    {
+      "type": "need",
+      "name": "Producto / necesidad",
+      "settings": [
+        {
+          "type": "product",
+          "id": "product",
+          "label": "Producto"
+        },
+        {
+          "type": "text",
+          "id": "tag",
+          "label": "Necesidad (etiqueta)",
+          "default": "Descanso"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Título",
+          "info": "Opcional. Por defecto usa el nombre del producto."
+        },
+        {
+          "type": "textarea",
+          "id": "text",
+          "label": "Descripción breve"
+        },
+        {
+          "type": "text",
+          "id": "cta",
+          "label": "Texto del enlace",
+          "default": "Conocer"
+        },
+        {
+          "type": "color",
+          "id": "accent",
+          "label": "Color de acento"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Imagen",
+          "info": "Opcional. Por defecto usa la imagen del producto."
+        },
+        {
+          "type": "text",
+          "id": "image_asset",
+          "label": "Imagen incluida en el tema",
+          "info": "Nombre de un archivo de assets/. Ej.: sommalya-graviola.jpg"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Enlace",
+          "info": "Opcional. Por defecto lleva al producto."
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Sommalya · Necesidades"
+    }
+  ]
+}
+{% endschema %}

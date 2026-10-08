@@ -1,0 +1,307 @@
+
+<div {% render 'sommalya-section-attrs', settings: section.settings, extra: 'sm-hero' %}>
+  <div class="sm-hero__grid sm-hero--{{ section.settings.layout }}">
+    <div class="sm-hero__content">
+      {%- if section.settings.eyebrow != blank -%}<p class="sm-eyebrow" data-sm-reveal>{{ section.settings.eyebrow }}</p>{%- endif -%}
+      <h1 class="sm-h1"{% if section.settings.text_animation == 'none' %} data-sm-reveal="2"{% else %} data-sm-text="{{ section.settings.text_animation }}"{% endif %}>{{ section.settings.heading }}</h1>
+      {%- if section.settings.text != blank -%}<p class="sm-lead" data-sm-reveal="3">{{ section.settings.text | newline_to_br }}</p>{%- endif -%}
+      {%- assign hero_product = section.settings.product -%}
+      {%- if hero_product != blank -%}
+        <p class="sm-hero__price" data-sm-reveal="3">{{ hero_product.price | money }}{% if hero_product.compare_at_price > hero_product.price %} <s>{{ hero_product.compare_at_price | money }}</s>{% endif %}</p>
+      {%- endif -%}
+      {%- assign rating = hero_product.metafields.reviews.rating.value -%}
+      {%- assign rating_count = hero_product.metafields.reviews.rating_count.value -%}
+      {%- if rating != blank or section.settings.proof != blank -%}
+        <div class="sm-hero__proof" data-sm-reveal="3">
+          {%- if rating != blank -%}
+            <span class="sm-hero__stars" aria-label="{{ rating.rating | round: 1 }} de {{ rating.scale_max }}">
+              {%- for i in (1..5) -%}{% render 'sommalya-icon', name: 'star' %}{%- endfor -%}
+            </span>
+            <span><strong>{{ rating.rating | round: 1 }}</strong>{% if rating_count %} · {{ rating_count }} reseñas{% endif %}</span>
+          {%- endif -%}
+          {%- if section.settings.proof != blank -%}<span>{{ section.settings.proof }}</span>{%- endif -%}
+        </div>
+      {%- endif -%}
+      {%- if section.settings.button_label != blank or section.settings.button2_label != blank -%}
+        <div class="sm-actions" data-sm-reveal="3">
+          {%- if section.settings.button_label != blank -%}
+            <a class="sm-btn" href="{{ section.settings.button_link | default: hero_product.url | default: routes.all_products_collection_url }}">{{ section.settings.button_label }} {% render 'sommalya-icon', name: 'arrow' %}</a>
+          {%- endif -%}
+          {%- if section.settings.button2_label != blank -%}
+            <a class="sm-btn sm-btn--ghost" href="{{ section.settings.button2_link | default: '#' }}">{{ section.settings.button2_label }}</a>
+          {%- endif -%}
+        </div>
+      {%- endif -%}
+      {%- if section.blocks.size > 0 -%}
+        <ul class="sm-hero__trust">
+          {%- for block in section.blocks -%}
+            <li {{ block.shopify_attributes }}><strong data-sm-count>{{ block.settings.value }}</strong><span>{{ block.settings.label }}</span></li>
+          {%- endfor -%}
+        </ul>
+      {%- endif -%}
+    </div>
+    <div class="sm-media sm-hero__media">
+      {% render 'sommalya-media', image: section.settings.image, asset: section.settings.image_asset, label: section.settings.placeholder_label, sizes: '(min-width: 900px) 50vw, 100vw', eager: true %}
+    </div>
+  </div>
+</div>
+{%- if section.settings.sticky_bar and hero_product != blank -%}
+  {%- assign sticky_variant = hero_product.selected_or_first_available_variant -%}
+  <div class="sm sm-stickybar" style="--sm-pt: 10px; --sm-pb: 10px;" aria-label="Compra rápida">
+    {%- if section.settings.image_asset != blank -%}
+      <img src="{{ section.settings.image_asset | asset_url }}" alt="" width="48" height="48" loading="lazy">
+    {%- elsif hero_product.featured_image != blank -%}
+      {{ hero_product.featured_image | image_url: width: 96 | image_tag: width: 48, height: 48, alt: '' }}
+    {%- endif -%}
+    <div class="sm-stickybar__info"><strong>{{ hero_product.title }}</strong><span>{{ hero_product.price | money }}</span></div>
+    {%- form 'product', hero_product -%}
+      <input type="hidden" name="id" value="{{ sticky_variant.id }}">
+      <button class="sm-btn" type="submit"{% unless sticky_variant.available %} disabled{% endunless %}>
+        {%- if sticky_variant.available -%}Agregar al carrito{%- else -%}Agotado{%- endif -%}
+      </button>
+    {%- endform -%}
+  </div>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Sommalya · Portada",
+  "tag": "section",
+  "class": "sommalya-hero",
+  "max_blocks": 3,
+  "settings": [
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Antetítulo",
+      "default": "Suplementos naturales"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "label": "Título",
+      "default": "Lo esencial, <em>bien hecho.</em>"
+    },
+    {
+      "type": "select",
+      "id": "text_animation",
+      "label": "Animación del título",
+      "options": [
+        {
+          "value": "words",
+          "label": "Revelado por palabras"
+        },
+        {
+          "value": "fade",
+          "label": "Aparición suave"
+        },
+        {
+          "value": "type",
+          "label": "Escritura"
+        },
+        {
+          "value": "light",
+          "label": "Iluminación al hacer scroll"
+        },
+        {
+          "value": "none",
+          "label": "Sin animación"
+        }
+      ],
+      "default": "words"
+    },
+    {
+      "type": "textarea",
+      "id": "text",
+      "label": "Texto",
+      "default": "Fórmulas de origen natural para cuidar lo básico que lo sostiene todo: dormir bien, digerir mejor, tener energía y defenderte. Sin rellenos, sin promesas vacías."
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Botón principal",
+      "default": "Descubrir la colección"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Enlace del botón principal"
+    },
+    {
+      "type": "text",
+      "id": "button2_label",
+      "label": "Botón secundario",
+      "default": "Nuestra filosofía"
+    },
+    {
+      "type": "url",
+      "id": "button2_link",
+      "label": "Enlace del botón secundario"
+    },
+    {
+      "type": "header",
+      "content": "Imagen"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Imagen",
+      "info": "Recomendado: fotografía vertical, luz natural, 1600×2000 px."
+    },
+    {
+      "type": "text",
+      "id": "image_asset",
+      "label": "Imagen incluida en el tema",
+      "info": "Nombre de un archivo de assets/, se usa si no eliges una imagen arriba. Ej.: sommalya-cortisol-calm.jpg"
+    },
+    {
+      "type": "text",
+      "id": "placeholder_label",
+      "label": "Texto alternativo / etiqueta del frasco de muestra",
+      "default": "Esencial"
+    },
+    {
+      "type": "select",
+      "id": "layout",
+      "label": "Disposición",
+      "options": [
+        {
+          "value": "studio",
+          "label": "Estudio (fondo gris claro)"
+        },
+        {
+          "value": "media_right",
+          "label": "Imagen a la derecha"
+        },
+        {
+          "value": "media_left",
+          "label": "Imagen a la izquierda"
+        }
+      ],
+      "default": "studio"
+    },
+    {
+      "type": "product",
+      "id": "product",
+      "label": "Producto destacado",
+      "info": "Opcional. Muestra su precio y enlaza el botón principal a él."
+    },
+    {
+      "type": "text",
+      "id": "proof",
+      "label": "Línea de confianza",
+      "info": "Si el producto tiene calificación de una app de reseñas, se muestra automáticamente junto a este texto.",
+      "default": "Hecho en EE. UU. · Pago 100 % seguro"
+    },
+    {
+      "type": "checkbox",
+      "id": "sticky_bar",
+      "label": "Barra de compra fija al bajar",
+      "info": "Requiere un producto destacado.",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "Apariencia"
+    },
+    {
+      "type": "select",
+      "id": "background",
+      "label": "Fondo",
+      "options": [
+        {
+          "value": "base",
+          "label": "Marfil (base)"
+        },
+        {
+          "value": "soft",
+          "label": "Lino suave"
+        },
+        {
+          "value": "sand",
+          "label": "Arena"
+        },
+        {
+          "value": "ink",
+          "label": "Oscuro"
+        }
+      ],
+      "default": "base"
+    },
+    {
+      "type": "color",
+      "id": "accent",
+      "label": "Color de acento",
+      "info": "Opcional. Por defecto usa el verde salvia de la paleta."
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Espaciado superior",
+      "min": 0,
+      "max": 160,
+      "step": 8,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Espaciado inferior",
+      "min": 0,
+      "max": 160,
+      "step": 8,
+      "unit": "px",
+      "default": 0
+    }
+  ],
+  "blocks": [
+    {
+      "type": "stat",
+      "name": "Dato de confianza",
+      "settings": [
+        {
+          "type": "text",
+          "id": "value",
+          "label": "Cifra",
+          "default": "100%"
+        },
+        {
+          "type": "text",
+          "id": "label",
+          "label": "Descripción",
+          "default": "Ingredientes de origen natural"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Sommalya · Portada",
+      "blocks": [
+        {
+          "type": "stat",
+          "settings": {
+            "value": "100%",
+            "label": "Ingredientes de origen natural"
+          }
+        },
+        {
+          "type": "stat",
+          "settings": {
+            "value": "0",
+            "label": "Colorantes ni rellenos artificiales"
+          }
+        },
+        {
+          "type": "stat",
+          "settings": {
+            "value": "EE. UU.",
+            "label": "País de fabricación"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

@@ -6,753 +6,518 @@
  * or related systems. Please exercise caution as any changes
  * made to this file may be overwritten.
  * ------------------------------------------------------------
- */{
+ */
+{
   "sections": {
-    "hero_iyt6zg": {
-      "type": "hero",
+    "portada": {
+      "type": "sommalya-hero",
+      "settings": {
+        "eyebrow": "Cortisol Calm · Producto estrella",
+        "heading": "Calma y enfoque, <em>todos los días.</em>",
+        "text": "Para adultos que viven con estrés diario: una fórmula liposomal con rhodiola, ashwagandha, L-teanina y magnesio que acompaña a tu cuerpo a recuperar la calma sin perder energía.",
+        "button_label": "Comprar Cortisol Calm",
+        "button_link": "/products/suplemento-cortisol-calm-megneta-60cp",
+        "button2_label": "Ver cómo funciona",
+        "button2_link": "/products/suplemento-cortisol-calm-megneta-60cp",
+        "proof": "Hecho en EE. UU. · Pago 100 % seguro · Envío gratis en tu primer pedido",
+        "sticky_bar": true,
+        "image_asset": "sommalya-cortisol-calm.jpg",
+        "placeholder_label": "Cortisol Calm de Sommalya",
+        "layout": "studio",
+        "product": "suplemento-cortisol-calm-megneta-60cp",
+        "background": "base",
+        "accent": "",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "text_animation": "words"
+      },
       "blocks": {
-        "text_tzGazA": {
-          "type": "text",
-          "name": "t:names.text",
+        "stat_1": {
+          "type": "stat",
           "settings": {
-            "text": "<h1>The Elements <br/>of Style</h1>",
-            "width": "fit-content",
-            "max_width": "normal",
-            "alignment": "left",
-            "type_preset": "h1",
-            "font": "var(--font-heading--family)",
-            "line_height": "tight",
-            "letter_spacing": "normal",
-            "case": "none",
-            "wrap": "pretty",
-            "text_color": "{{ settings.color_palette.background }}",
-            "background": false,
-            "background_color": "#00000026",
-            "corner_radius": 0,
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {}
+            "value": "759 mg",
+            "label": "Por porción"
+          }
+        },
+        "stat_2": {
+          "type": "stat",
+          "settings": {
+            "value": "1",
+            "label": "Cápsula al día"
+          }
+        },
+        "stat_3": {
+          "type": "stat",
+          "settings": {
+            "value": "60 días",
+            "label": "Por frasco"
+          }
         }
       },
       "block_order": [
-        "text_tzGazA"
-      ],
+        "stat_1",
+        "stat_2",
+        "stat_3"
+      ]
+    },
+    "cinta": {
+      "type": "sommalya-marquee",
       "settings": {
-        "media_type_1": "image",
-        "media_type_2": "image",
-        "stack_media_on_mobile": false,
-        "custom_mobile_media": false,
-        "media_type_1_mobile": "image",
-        "media_type_2_mobile": "image",
-        "open_in_new_tab": false,
-        "content_direction": "column",
-        "vertical_on_mobile": true,
-        "horizontal_alignment": "flex-start",
-        "vertical_alignment": "center",
-        "align_baseline": false,
-        "horizontal_alignment_flex_direction_column": "center",
-        "vertical_alignment_flex_direction_column": "center",
-        "gap": 16,
-        "section_width": "page-width",
-        "section_height": "full-screen",
-        "section_height_custom": 50,
-        "background_color": "rgba(0,0,0,0)",
-        "toggle_overlay": true,
-        "overlay_color": "#00000099",
-        "overlay_style": "gradient",
-        "gradient_direction": "to top",
-        "blurred_reflection": false,
-        "reflection_opacity": 75,
-        "padding-block-start": 0,
-        "padding-block-end": 0
+        "items": "Rhodiola, Ashwagandha, L-Teanina, Magnesio, Fosfatidilserina, Magnolia, Vitamina B6, Vitamina B12",
+        "icon": "spark",
+        "speed": 45,
+        "background": "base",
+        "accent": "#5F7A99",
+        "padding_top": 32,
+        "padding_bottom": 32
       }
     },
-    "collection_links_Ut4aMz": {
-      "type": "collection-links",
-      "blocks": {
-        "link": {
-          "type": "_collection-link",
-          "static": true,
-          "settings": {
-            "show_count": true
-          },
-          "blocks": {
-            "title": {
-              "type": "_inline-collection-title",
-              "static": true,
-              "settings": {
-                "font": "var(--font-heading--family)",
-                "line_height": "normal",
-                "letter_spacing": "normal",
-                "case": "none"
-              },
-              "blocks": {}
-            },
-            "image": {
-              "type": "_image",
-              "static": true,
-              "settings": {
-                "height": "medium",
-                "ratio": "portrait",
-                "border_radius": 0
-              },
-              "blocks": {}
-            }
-          },
-          "block_order": []
-        }
+    "confianza": {
+      "type": "sommalya-trustbar",
+      "settings": {
+        "background": "soft",
+        "accent": "",
+        "padding_top": 40,
+        "padding_bottom": 40
       },
-      "name": "t:names.collection_links",
-      "settings": {
-        "layout": "spotlight",
-        "section_width": "page-width",
-        "alignment": "left",
-        "image_position": "right",
-        "background_color": "{{ settings.color_palette.background }}",
-        "padding-block-start": 82,
-        "padding-block-end": 82
-      }
-    },
-    "featured_product_mTUbKC": {
-      "type": "featured-product",
       "blocks": {
-        "media": {
-          "type": "_media-without-appearance",
-          "static": true,
+        "item_1": {
+          "type": "item",
           "settings": {
-            "media_type": "image",
-            "video_loop": true,
-            "video_autoplay": false,
-            "image_position": "cover",
-            "video_position": "cover"
-          },
-          "blocks": {}
+            "icon": "truck",
+            "title": "Envío gratis",
+            "text": "En tu primer pedido"
+          }
         },
-        "featured-product": {
-          "type": "_featured-product",
-          "name": "t:names.product",
-          "static": true,
-          "settings": {},
-          "blocks": {
-            "featured-product-title": {
-              "type": "product-title",
-              "name": "t:names.title",
-              "static": true,
-              "settings": {
-                "width": "100%",
-                "max_width": "normal",
-                "alignment": "left",
-                "type_preset": "h5",
-                "font": "var(--font-body--family)",
-                "font_size": "1rem",
-                "line_height": "normal",
-                "letter_spacing": "normal",
-                "case": "none",
-                "wrap": "pretty",
-                "background": false,
-                "background_color": "#00000026",
-                "corner_radius": 0,
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
-              },
-              "blocks": {}
-            },
-            "featured-product-price": {
-              "type": "_featured-product-price",
-              "static": true,
-              "settings": {
-                "show_sale_price_first": true,
-                "type_preset": "h5"
-              },
-              "blocks": {}
-            },
-            "featured-product-gallery": {
-              "type": "_featured-product-gallery",
-              "name": "t:names.image",
-              "static": true,
-              "settings": {
-                "image_ratio": "adapt",
-                "constrain_to_viewport": "contain"
-              },
-              "blocks": {}
-            },
-            "featured-product-swatches": {
-              "type": "swatches",
-              "name": "t:content.swatches",
-              "static": true,
-              "settings": {
-                "product_swatches_alignment": "flex-start",
-                "product_swatches_alignment_mobile": "flex-start",
-                "hide_padding": false,
-                "product_swatches_padding_top": 4,
-                "product_swatches_padding_bottom": 4,
-                "product_swatches_padding_left": 0,
-                "product_swatches_padding_right": 0
-              },
-              "blocks": {}
-            }
-          },
-          "block_order": []
-        }
-      },
-      "name": "t:names.featured_product",
-      "settings": {
-        "layout": "media-left",
-        "background_color": "{{ settings.color_palette.color2 }}",
-        "padding-block-start": 0,
-        "padding-block-end": 0
-      }
-    },
-    "product_list_UwRqN4": {
-      "type": "product-list",
-      "blocks": {
-        "static-header": {
-          "type": "_product-list-content",
-          "static": true,
+        "item_2": {
+          "type": "item",
           "settings": {
-            "content_direction": "column",
-            "vertical_on_mobile": true,
-            "horizontal_alignment": "flex-start",
-            "vertical_alignment": "center",
-            "align_baseline": false,
-            "horizontal_alignment_flex_direction_column": "flex-start",
-            "vertical_alignment_flex_direction_column": "center",
-            "gap": 12,
-            "width": "fill",
-            "custom_width": 100,
-            "width_mobile": "fill",
-            "custom_width_mobile": 100,
-            "height": "fit",
-            "custom_height": 100,
-            "background_media": "none",
-            "video_position": "cover",
-            "background_image_position": "cover",
-            "border": "none",
-            "border_width": 1,
-            "border_opacity": 100,
-            "border_radius": 0,
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {
-            "product_list_text_zR8Cq9": {
-              "type": "_product-list-text",
-              "name": "t:names.collection_title",
-              "settings": {
-                "text": "<h3>New this season</h3>",
-                "width": "100%",
-                "max_width": "normal",
-                "alignment": "center",
-                "type_preset": "h4",
-                "font": "var(--font-body--family)",
-                "line_height": "normal",
-                "letter_spacing": "normal",
-                "case": "none",
-                "wrap": "pretty",
-                "background": false,
-                "background_color": "#00000026",
-                "corner_radius": 0,
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
-              },
-              "blocks": {}
-            }
-          },
-          "block_order": [
-            "product_list_text_zR8Cq9"
-          ]
+            "icon": "heart",
+            "title": "Atención personalizada",
+            "text": "Te orientamos antes y después de tu compra"
+          }
         },
-        "static-product-card": {
-          "type": "_product-card",
-          "name": "t:names.product_card",
-          "static": true,
+        "item_3": {
+          "type": "item",
           "settings": {
-            "product_card_gap": 8,
-            "border": "none",
-            "border_width": 1,
-            "border_opacity": 100,
-            "border_radius": 0,
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {
-            "product_card_gallery_4y78ah": {
-              "type": "_product-card-gallery",
-              "name": "t:names.product_card_media",
-              "settings": {
-                "image_ratio": "portrait",
-                "border": "none",
-                "border_width": 1,
-                "border_opacity": 100,
-                "border_radius": 0,
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
-              },
-              "blocks": {}
-            },
-            "group_JHtHYm": {
-              "type": "_product-card-group",
-              "settings": {
-                "content_direction": "row",
-                "vertical_on_mobile": true,
-                "horizontal_alignment": "space-between",
-                "vertical_alignment": "flex-start",
-                "align_baseline": false,
-                "horizontal_alignment_flex_direction_column": "flex-start",
-                "vertical_alignment_flex_direction_column": "center",
-                "gap": 12,
-                "width": "fill",
-                "custom_width": 100,
-                "width_mobile": "fill",
-                "custom_width_mobile": 100,
-                "height": "fit",
-                "custom_height": 100,
-                "background_media": "none",
-                "video_position": "cover",
-                "background_image_position": "cover",
-                "border": "none",
-                "border_width": 1,
-                "border_opacity": 100,
-                "border_radius": 0,
-                "toggle_overlay": false,
-                "overlay_color": "#00000026",
-                "overlay_style": "solid",
-                "gradient_direction": "to top",
-                "open_in_new_tab": false,
-                "padding-block-start": 2,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
-              },
-              "blocks": {
-                "group_KJDaTQ": {
-                  "type": "_product-card-group",
-                  "name": "t:names.group",
-                  "settings": {
-                    "content_direction": "column",
-                    "vertical_on_mobile": true,
-                    "horizontal_alignment": "flex-start",
-                    "vertical_alignment": "center",
-                    "align_baseline": false,
-                    "horizontal_alignment_flex_direction_column": "flex-start",
-                    "vertical_alignment_flex_direction_column": "flex-start",
-                    "gap": 0,
-                    "width": "fill",
-                    "custom_width": 70,
-                    "width_mobile": "fill",
-                    "custom_width_mobile": 100,
-                    "height": "fit",
-                    "custom_height": 100,
-                    "background_media": "none",
-                    "video_position": "cover",
-                    "background_image_position": "cover",
-                    "border": "none",
-                    "border_width": 1,
-                    "border_opacity": 100,
-                    "border_radius": 0,
-                    "toggle_overlay": false,
-                    "overlay_color": "#00000026",
-                    "overlay_style": "solid",
-                    "gradient_direction": "to top",
-                    "open_in_new_tab": false,
-                    "padding-block-start": 0,
-                    "padding-block-end": 0,
-                    "padding-inline-start": 0,
-                    "padding-inline-end": 0
-                  },
-                  "blocks": {
-                    "product_title_iRxawi": {
-                      "type": "product-title",
-                      "name": "t:names.product_title",
-                      "settings": {
-                        "width": "fit-content",
-                        "max_width": "normal",
-                        "alignment": "left",
-                        "type_preset": "h5",
-                        "font": "var(--font-body--family)",
-                        "font_size": "1rem",
-                        "line_height": "normal",
-                        "letter_spacing": "normal",
-                        "case": "none",
-                        "wrap": "pretty",
-                        "background": false,
-                        "background_color": "#00000026",
-                        "corner_radius": 0,
-                        "padding-block-start": 0,
-                        "padding-block-end": 0,
-                        "padding-inline-start": 0,
-                        "padding-inline-end": 0
-                      },
-                      "blocks": {}
-                    },
-                    "price_4XkbjB": {
-                      "type": "price",
-                      "settings": {
-                        "show_sale_price_first": true,
-                        "show_installments": false,
-                        "show_tax_info": false,
-                        "type_preset": "h5",
-                        "width": "100%",
-                        "alignment": "left",
-                        "font": "var(--font-body--family)",
-                        "font_size": "1rem",
-                        "line_height": "normal",
-                        "letter_spacing": "normal",
-                        "case": "none",
-                        "padding-block-start": 0,
-                        "padding-block-end": 0,
-                        "padding-inline-start": 0,
-                        "padding-inline-end": 0
-                      },
-                      "blocks": {}
-                    }
-                  },
-                  "block_order": [
-                    "product_title_iRxawi",
-                    "price_4XkbjB"
-                  ]
-                },
-                "group_cPyTRf": {
-                  "type": "_product-card-group",
-                  "name": "t:names.group",
-                  "settings": {
-                    "content_direction": "column",
-                    "vertical_on_mobile": true,
-                    "horizontal_alignment": "flex-start",
-                    "vertical_alignment": "center",
-                    "align_baseline": false,
-                    "horizontal_alignment_flex_direction_column": "flex-start",
-                    "vertical_alignment_flex_direction_column": "flex-start",
-                    "gap": 0,
-                    "width": "fill",
-                    "custom_width": 40,
-                    "width_mobile": "fill",
-                    "custom_width_mobile": 100,
-                    "height": "fit",
-                    "custom_height": 100,
-                    "background_media": "none",
-                    "video_position": "cover",
-                    "background_image_position": "cover",
-                    "border": "none",
-                    "border_width": 1,
-                    "border_opacity": 100,
-                    "border_radius": 0,
-                    "toggle_overlay": false,
-                    "overlay_color": "#00000026",
-                    "overlay_style": "solid",
-                    "gradient_direction": "to top",
-                    "open_in_new_tab": false,
-                    "padding-block-start": 0,
-                    "padding-block-end": 0,
-                    "padding-inline-start": 0,
-                    "padding-inline-end": 0
-                  },
-                  "blocks": {
-                    "swatches_tGqDq9": {
-                      "type": "swatches",
-                      "settings": {
-                        "product_swatches_alignment": "flex-end",
-                        "product_swatches_alignment_mobile": "flex-start",
-                        "hide_padding": false,
-                        "product_swatches_padding_top": 0,
-                        "product_swatches_padding_bottom": 0,
-                        "product_swatches_padding_left": 0,
-                        "product_swatches_padding_right": 0
-                      },
-                      "blocks": {}
-                    }
-                  },
-                  "block_order": [
-                    "swatches_tGqDq9"
-                  ]
-                }
-              },
-              "block_order": [
-                "group_KJDaTQ",
-                "group_cPyTRf"
-              ]
-            }
-          },
-          "block_order": [
-            "product_card_gallery_4y78ah",
-            "group_JHtHYm"
-          ]
-        }
-      },
-      "name": "t:names.product_list",
-      "settings": {
-        "collection": "all",
-        "layout_type": "grid",
-        "carousel_on_mobile": false,
-        "max_products": 4,
-        "columns": 4,
-        "mobile_columns": "2",
-        "mobile_card_size": "60cqw",
-        "columns_gap": 26,
-        "rows_gap": 36,
-        "icons_style": "arrow",
-        "icons_shape": "none",
-        "section_width": "page-width",
-        "horizontal_alignment": "flex-start",
-        "gap": 28,
-        "background_color": "{{ settings.color_palette.background }}",
-        "padding-block-start": 84,
-        "padding-block-end": 100
-      }
-    },
-    "hero_MVUtj6": {
-      "type": "hero",
-      "blocks": {
-        "text_69C6UJ": {
-          "type": "text",
-          "settings": {
-            "text": "<h2>Premium materials and<br/>hand-selected finishing touches</h2>",
-            "text_color": "{{ settings.color_palette.background }}",
-            "width": "fit-content",
-            "max_width": "none",
-            "alignment": "left",
-            "type_preset": "h3",
-            "font": "var(--font-body--family)",
-            "line_height": "normal",
-            "letter_spacing": "normal",
-            "case": "none",
-            "wrap": "pretty",
-            "background": false,
-            "background_color": "#00000026",
-            "corner_radius": 0,
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {}
+            "icon": "globe",
+            "title": "Hecho en EE. UU.",
+            "text": "Fabricación con estándares de calidad"
+          }
         },
-        "text_hzq6cM": {
-          "type": "text",
+        "item_4": {
+          "type": "item",
           "settings": {
-            "text": "<p><a href=\"/collections/all\" title=\"All products\">Shop now</a></p>",
-            "width": "fit-content",
-            "max_width": "normal",
-            "alignment": "right",
-            "type_preset": "h6",
-            "font": "var(--font-subheading--family)",
-            "line_height": "normal",
-            "letter_spacing": "normal",
-            "case": "uppercase",
-            "wrap": "nowrap",
-            "background": false,
-            "background_color": "#00000026",
-            "corner_radius": 0,
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {}
+            "icon": "shield",
+            "title": "Pago seguro",
+            "text": "Datos cifrados de extremo a extremo"
+          }
         }
       },
       "block_order": [
-        "text_69C6UJ",
-        "text_hzq6cM"
-      ],
-      "name": "t:names.hero",
-      "settings": {
-        "media_type_1": "image",
-        "media_type_2": "image",
-        "stack_media_on_mobile": false,
-        "custom_mobile_media": false,
-        "media_type_1_mobile": "image",
-        "media_type_2_mobile": "image",
-        "open_in_new_tab": false,
-        "content_direction": "row",
-        "vertical_on_mobile": true,
-        "horizontal_alignment": "space-between",
-        "vertical_alignment": "flex-end",
-        "align_baseline": false,
-        "horizontal_alignment_flex_direction_column": "flex-start",
-        "vertical_alignment_flex_direction_column": "flex-end",
-        "gap": 16,
-        "section_width": "page-width",
-        "section_height": "large",
-        "section_height_custom": 60,
-        "background_color": "{{ settings.color_palette.foreground }}",
-        "toggle_overlay": true,
-        "overlay_color": "#00000075",
-        "overlay_style": "gradient",
-        "gradient_direction": "to top",
-        "blurred_reflection": false,
-        "reflection_opacity": 75,
-        "padding-block-start": 0,
-        "padding-block-end": 40
-      }
+        "item_1",
+        "item_2",
+        "item_3",
+        "item_4"
+      ]
     },
-    "section_F9fMc4": {
-      "type": "section",
+    "beneficios": {
+      "type": "sommalya-features",
+      "settings": {
+        "eyebrow": "Características y beneficios",
+        "heading": "Lo que contiene, <em>lo que sientes.</em>",
+        "text": "Cada ingrediente técnico se traduce en una ventaja que notas en tu día.",
+        "head_layout": "split",
+        "left_label": "Lo que contiene",
+        "right_label": "Lo que sientes",
+        "background": "base",
+        "accent": "#5F7A99",
+        "padding_top": 112,
+        "padding_bottom": 96
+      },
       "blocks": {
-        "group_Q6JxNp": {
-          "type": "group",
-          "name": "t:names.content",
+        "row_1": {
+          "type": "row",
           "settings": {
-            "content_direction": "column",
-            "vertical_on_mobile": true,
-            "horizontal_alignment": "flex-start",
-            "vertical_alignment": "center",
-            "align_baseline": false,
-            "horizontal_alignment_flex_direction_column": "center",
-            "vertical_alignment_flex_direction_column": "center",
-            "gap": 16,
-            "width": "fill",
-            "custom_width": 100,
-            "width_mobile": "fill",
-            "custom_width_mobile": 100,
-            "height": "fill",
-            "custom_height": 100,
-            "background_media": "none",
-            "video_position": "cover",
-            "background_image_position": "cover",
-            "border": "none",
-            "border_width": 1,
-            "border_opacity": 100,
-            "border_radius": 0,
-            "toggle_overlay": false,
-            "overlay_color": "#00000026",
-            "overlay_style": "solid",
-            "gradient_direction": "to top",
-            "open_in_new_tab": false,
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {
-            "text_XmzkXY": {
-              "type": "text",
-              "name": "t:names.heading",
-              "settings": {
-                "text": "<h2>A size for every occasion</h2>",
-                "width": "fit-content",
-                "max_width": "normal",
-                "alignment": "left",
-                "type_preset": "h3",
-                "font": "var(--font-body--family)",
-                "font_size": "1rem",
-                "line_height": "normal",
-                "letter_spacing": "normal",
-                "case": "none",
-                "wrap": "pretty",
-                "background": false,
-                "background_color": "#00000026",
-                "corner_radius": 0,
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
-              },
-              "blocks": {}
-            },
-            "button_aCXUUG": {
-              "type": "button",
-              "name": "t:names.button",
-              "settings": {
-                "label": "SHOP NOW",
-                "link": "shopify://collections/all",
-                "open_in_new_tab": false,
-                "style_class": "button-unstyled",
-                "width": "fit-content",
-                "custom_width": 100,
-                "width_mobile": "fit-content",
-                "custom_width_mobile": 100
-              },
-              "blocks": {}
-            }
-          },
-          "block_order": [
-            "text_XmzkXY",
-            "button_aCXUUG"
-          ]
+            "icon": "spark",
+            "feature": "Rhodiola + Ashwagandha KSM-66",
+            "spec": "Adaptógenos",
+            "benefit": "Afrontas los días exigentes con más serenidad."
+          }
         },
-        "comparison_slider_YEKHnD": {
-          "type": "comparison-slider",
-          "name": "t:names.comparison_slider",
+        "row_2": {
+          "type": "row",
           "settings": {
-            "slider_style": "horizontal",
-            "show_text": false,
-            "text_position_horizontal": "start",
-            "text_position_vertical": "start",
-            "text_background": false,
-            "text_background_color": "#ffffff",
-            "text_corner_radius": 0,
-            "image_ratio": "landscape",
-            "width": "custom",
-            "custom_width": 50,
-            "width_mobile": "fill",
-            "custom_width_mobile": 100,
-            "height": "fit",
-            "border": "none",
-            "border_width": 1,
-            "border_opacity": 100,
-            "border_radius": 0,
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {}
+            "icon": "heart",
+            "feature": "L-Teanina",
+            "spec": "Aminoácido del té verde",
+            "benefit": "Calma sin somnolencia: sigues enfocado y productivo."
+          }
+        },
+        "row_3": {
+          "type": "row",
+          "settings": {
+            "icon": "moon",
+            "feature": "Magnesio + Vitamina B6",
+            "spec": "Función psicológica normal",
+            "benefit": "Tu sistema nervioso tiene el apoyo que necesita para desconectar al final del día."
+          }
+        },
+        "row_4": {
+          "type": "row",
+          "settings": {
+            "icon": "drop",
+            "feature": "Fórmula liposomal + pimienta negra",
+            "spec": "Absorción",
+            "benefit": "Aprovechas mejor cada cápsula."
+          }
+        },
+        "row_5": {
+          "type": "row",
+          "settings": {
+            "icon": "check",
+            "feature": "10 ingredientes · 759 mg",
+            "spec": "Todo en uno",
+            "benefit": "Un solo frasco en lugar de varios."
+          }
         }
       },
       "block_order": [
-        "group_Q6JxNp",
-        "comparison_slider_YEKHnD"
-      ],
-      "name": "t:names.section",
+        "row_1",
+        "row_2",
+        "row_3",
+        "row_4",
+        "row_5"
+      ]
+    },
+    "manifiesto": {
+      "type": "sommalya-statement",
       "settings": {
-        "content_direction": "row",
-        "vertical_on_mobile": true,
-        "horizontal_alignment": "space-between",
-        "vertical_alignment": "flex-start",
-        "align_baseline": false,
-        "horizontal_alignment_flex_direction_column": "flex-start",
-        "vertical_alignment_flex_direction_column": "center",
-        "gap": 50,
-        "section_width": "page-width",
-        "section_height": "small",
-        "section_height_custom": 50,
-        "background_media": "none",
-        "background_color": "{{ settings.color_palette.background }}",
-        "video_position": "cover",
-        "background_image_position": "cover",
-        "border": "none",
-        "border_width": 1,
-        "border_opacity": 100,
-        "border_radius": 0,
-        "toggle_overlay": false,
-        "overlay_color": "#00000026",
-        "overlay_style": "solid",
-        "gradient_direction": "to top",
-        "padding-block-start": 82,
-        "padding-block-end": 82
+        "eyebrow": "Por qué existe Cortisol Calm",
+        "text": "El estrés de cada día no se va solo. Dale a tu cuerpo lo que necesita para encontrar calma, claridad y descanso.",
+        "highlight": "calma,",
+        "byline": "Sommalya · Lo esencial, bien hecho",
+        "align": "center",
+        "background": "soft",
+        "accent": "#5F7A99",
+        "padding_top": 128,
+        "padding_bottom": 128
+      }
+    },
+    "formula": {
+      "type": "sommalya-ingredients",
+      "settings": {
+        "eyebrow": "La fórmula",
+        "heading": "Diez ingredientes, <em>una sola cápsula.</em>",
+        "text": "Cada ingrediente tiene una función concreta dentro de la fórmula.",
+        "head_layout": "split",
+        "note": "759 mg por porción · 1 cápsula al día · 60 cápsulas por frasco (60 días) · Fórmula liposomal.",
+        "background": "base",
+        "accent": "#5F7A99",
+        "padding_top": 112,
+        "padding_bottom": 96
+      },
+      "blocks": {
+        "ing_1": {
+          "type": "ingredient",
+          "settings": {
+            "name": "Rhodiola rosea",
+            "dose": "",
+            "origin": "Raíz · adaptógeno",
+            "text": "Planta adaptógena de uso tradicional para afrontar periodos de exigencia física y mental."
+          }
+        },
+        "ing_2": {
+          "type": "ingredient",
+          "settings": {
+            "name": "Ashwagandha",
+            "dose": "",
+            "origin": "KSM-66 · raíz",
+            "text": "Adaptógeno de la tradición ayurvédica, empleado para acompañar al cuerpo frente al estrés."
+          }
+        },
+        "ing_3": {
+          "type": "ingredient",
+          "settings": {
+            "name": "L-Teanina",
+            "dose": "",
+            "origin": "Aminoácido del té verde",
+            "text": "Asociada a un estado de relajación sin somnolencia."
+          }
+        },
+        "ing_4": {
+          "type": "ingredient",
+          "settings": {
+            "name": "Magnesio",
+            "dose": "",
+            "origin": "Mezcla de magnesio",
+            "text": "Contribuye al funcionamiento normal del sistema nervioso y a la función psicológica normal."
+          }
+        },
+        "ing_5": {
+          "type": "ingredient",
+          "settings": {
+            "name": "Fosfatidilserina",
+            "dose": "",
+            "origin": "Fosfolípido",
+            "text": "Componente natural de las membranas de las células del cerebro."
+          }
+        },
+        "ing_6": {
+          "type": "ingredient",
+          "settings": {
+            "name": "Magnolia",
+            "dose": "",
+            "origin": "Corteza",
+            "text": "Planta de uso tradicional asociada a la calma."
+          }
+        },
+        "ing_7": {
+          "type": "ingredient",
+          "settings": {
+            "name": "Vitamina C",
+            "dose": "",
+            "origin": "Antioxidante",
+            "text": "Contribuye a reducir el cansancio y la fatiga."
+          }
+        },
+        "ing_8": {
+          "type": "ingredient",
+          "settings": {
+            "name": "Vitamina B6",
+            "dose": "",
+            "origin": "Vitamina del grupo B",
+            "text": "Contribuye a la función psicológica normal."
+          }
+        },
+        "ing_9": {
+          "type": "ingredient",
+          "settings": {
+            "name": "Vitamina B12",
+            "dose": "",
+            "origin": "Vitamina del grupo B",
+            "text": "Contribuye al metabolismo energético normal y a reducir el cansancio."
+          }
+        },
+        "ing_10": {
+          "type": "ingredient",
+          "settings": {
+            "name": "Pimienta negra",
+            "dose": "",
+            "origin": "Extracto",
+            "text": "Favorece la absorción del resto de los ingredientes."
+          }
+        }
+      },
+      "block_order": [
+        "ing_1",
+        "ing_2",
+        "ing_3",
+        "ing_4",
+        "ing_5",
+        "ing_6",
+        "ing_7",
+        "ing_8",
+        "ing_9",
+        "ing_10"
+      ]
+    },
+    "uso": {
+      "type": "sommalya-steps",
+      "settings": {
+        "eyebrow": "Modo de uso",
+        "heading": "Un hábito <em>sencillo.</em>",
+        "text": "",
+        "head_layout": "left",
+        "background": "sand",
+        "accent": "#5F7A99",
+        "padding_top": 96,
+        "padding_bottom": 96
+      },
+      "blocks": {
+        "step_1": {
+          "type": "step",
+          "settings": {
+            "title": "1 cápsula al día",
+            "text": "Con un vaso de agua, de preferencia junto con una comida."
+          }
+        },
+        "step_2": {
+          "type": "step",
+          "settings": {
+            "title": "Mismo horario",
+            "text": "Elige un momento fijo del día. La regularidad ayuda a crear el hábito."
+          }
+        },
+        "step_3": {
+          "type": "step",
+          "settings": {
+            "title": "Sé constante",
+            "text": "Los adaptógenos actúan de forma progresiva: dale al menos 4 semanas de uso diario."
+          }
+        }
+      },
+      "block_order": [
+        "step_1",
+        "step_2",
+        "step_3"
+      ]
+    },
+    "testimonios": {
+      "type": "sommalya-testimonials",
+      "settings": {
+        "eyebrow": "Opiniones",
+        "heading": "Lo que dicen <em>quienes ya lo usan.</em>",
+        "text": "",
+        "head_layout": "center",
+        "background": "soft",
+        "accent": "#5F7A99",
+        "padding_top": 96,
+        "padding_bottom": 96
+      },
+      "blocks": {},
+      "block_order": []
+    },
+    "coleccion": {
+      "type": "sommalya-needs",
+      "settings": {
+        "eyebrow": "Completa tu rutina",
+        "heading": "También en <em>Sommalya.</em>",
+        "text": "Dos opciones más para acompañar tu bienestar.",
+        "head_layout": "split",
+        "background": "base",
+        "accent": "",
+        "padding_top": 112,
+        "padding_bottom": 112
+      },
+      "blocks": {
+        "need_1": {
+          "type": "need",
+          "settings": {
+            "tag": "Kit · 2 piezas",
+            "title": "Kit Inositol & Cortisol",
+            "text": "Myo-Inositol 16 en 1 y Corti-Soothe 13 en 1 para tu equilibrio y tu calma.",
+            "cta": "Conocer",
+            "accent": "#8A7FA0",
+            "product": "kit-inositol-cortisol-paquete-2-pcs",
+            "link": "/products/kit-inositol-cortisol-paquete-2-pcs",
+            "image_asset": "sommalya-kit-inositol-cortisol.jpg"
+          }
+        },
+        "need_2": {
+          "type": "need",
+          "settings": {
+            "tag": "Herbal",
+            "title": "Gotas de Guanábana",
+            "text": "Extracto concentrado de hoja y fruto de guanábana. 1800 mg, 60 ml.",
+            "cta": "Conocer",
+            "accent": "#7F9A6E",
+            "product": "gotas-de-guanabana-organico-digestion",
+            "link": "/products/gotas-de-guanabana-organico-digestion",
+            "image_asset": "sommalya-graviola.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "need_1",
+        "need_2"
+      ]
+    },
+    "preguntas": {
+      "type": "sommalya-faq",
+      "settings": {
+        "eyebrow": "Preguntas frecuentes",
+        "heading": "Antes de <em>decidirte.</em>",
+        "text": "",
+        "head_layout": "center",
+        "open_first": true,
+        "background": "soft",
+        "accent": "",
+        "padding_top": 112,
+        "padding_bottom": 112
+      },
+      "blocks": {
+        "q_1": {
+          "type": "question",
+          "settings": {
+            "question": "¿Cómo sé si Cortisol Calm es para mí?",
+            "answer": "<p>Revisa los ingredientes y el modo de uso de cada fórmula. Si tienes dudas, escríbenos y te orientamos antes de comprar.</p>"
+          }
+        },
+        "q_2": {
+          "type": "question",
+          "settings": {
+            "question": "¿Cuándo voy a notar la diferencia?",
+            "answer": "<p>Los adaptógenos actúan de forma progresiva. Lo habitual es notar cambios con 2 a 4 semanas de uso constante.</p>"
+          }
+        },
+        "q_3": {
+          "type": "question",
+          "settings": {
+            "question": "¿Me va a dar sueño durante el día?",
+            "answer": "<p>No contiene sedantes. La L-teanina se asocia a la relajación sin somnolencia, para que sigas enfocado.</p>"
+          }
+        },
+        "q_4": {
+          "type": "question",
+          "settings": {
+            "question": "¿Lo puedo tomar si tomo medicamentos?",
+            "answer": "<p>Consulta a tu médico antes de tomarlo si estás bajo tratamiento. No se recomienda durante el embarazo o la lactancia.</p>"
+          }
+        },
+        "q_5": {
+          "type": "question",
+          "settings": {
+            "question": "¿Qué significa que sea liposomal?",
+            "answer": "<p>Los ingredientes se presentan en una fórmula liposomal, una tecnología pensada para favorecer su absorción.</p>"
+          }
+        },
+        "q_6": {
+          "type": "question",
+          "settings": {
+            "question": "¿Cuánto tarda en llegar mi pedido?",
+            "answer": "<p>Preparamos los pedidos en 24 horas hábiles. La entrega estándar tarda de 2 a 5 días hábiles, según tu ubicación.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "q_1",
+        "q_2",
+        "q_3",
+        "q_4",
+        "q_5",
+        "q_6"
+      ]
+    },
+    "garantia": {
+      "type": "sommalya-cta",
+      "settings": {
+        "eyebrow": "Sommalya",
+        "heading": "Empieza hoy. <em>Recupera tu calma.</em>",
+        "text": "Calma y enfoque en una cápsula al día. Envío gratis en tu primer pedido.",
+        "button_label": "Comprar Cortisol Calm",
+        "button_link": "/products/suplemento-cortisol-calm-megneta-60cp",
+        "button2_label": "Ver todos los productos",
+        "button2_link": "/collections/all",
+        "disclaimer": "Este producto no es un medicamento. El consumo de este producto es responsabilidad de quien lo recomienda y de quien lo usa. Consulta a tu médico si estás embarazada, en lactancia o bajo tratamiento.",
+        "background": "sand",
+        "accent": "",
+        "padding_top": 128,
+        "padding_bottom": 96
       }
     }
   },
   "order": [
-    "hero_iyt6zg",
-    "collection_links_Ut4aMz",
-    "featured_product_mTUbKC",
-    "product_list_UwRqN4",
-    "hero_MVUtj6",
-    "section_F9fMc4"
+    "portada",
+    "cinta",
+    "confianza",
+    "beneficios",
+    "manifiesto",
+    "formula",
+    "uso",
+    "testimonios",
+    "coleccion",
+    "preguntas",
+    "garantia"
   ]
 }

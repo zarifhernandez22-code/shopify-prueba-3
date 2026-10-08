@@ -1,0 +1,57 @@
+
+{%- liquid
+  assign benefits = block.settings.benefits | newline_to_br | split: '<br />'
+  assign badges = block.settings.badges | split: ','
+-%}
+<div class="sm sm-summary" style="--sm-pt: 0px; --sm-pb: 0px; --sm-section-bg: transparent;{% if block.settings.accent != blank %} --sm-accent: {{ block.settings.accent }};{% endif %}" {{ block.shopify_attributes }}>
+  {%- if block.settings.tagline != blank -%}<p class="sm-summary__tagline">{{ block.settings.tagline }}</p>{%- endif -%}
+  {%- if block.settings.benefits != blank -%}
+    <ul class="sm-list" style="margin: 0;">
+      {%- for b in benefits -%}
+        {%- assign b = b | strip -%}
+        {%- if b != blank -%}<li>{% render 'sommalya-icon', name: 'check' %}<span>{{ b }}</span></li>{%- endif -%}
+      {%- endfor -%}
+    </ul>
+  {%- endif -%}
+  {%- if block.settings.badges != blank -%}
+    <ul class="sm-badges">
+      {%- for badge in badges -%}<li>{{ badge | strip }}</li>{%- endfor -%}
+    </ul>
+  {%- endif -%}
+</div>
+
+{% schema %}
+{
+  "name": "Sommalya · Resumen",
+  "settings": [
+    {
+      "type": "text",
+      "id": "tagline",
+      "label": "Frase",
+      "default": "Descanso profundo, de forma natural."
+    },
+    {
+      "type": "textarea",
+      "id": "benefits",
+      "label": "Beneficios (uno por línea)",
+      "default": "Beneficio uno\nBeneficio dos\nBeneficio tres"
+    },
+    {
+      "type": "text",
+      "id": "badges",
+      "label": "Insignias (separadas por coma)",
+      "default": "Vegano, Sin gluten, Sin colorantes"
+    },
+    {
+      "type": "color",
+      "id": "accent",
+      "label": "Color de acento"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Sommalya · Resumen"
+    }
+  ]
+}
+{% endschema %}

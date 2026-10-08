@@ -1,0 +1,176 @@
+
+<section {% render 'sommalya-section-attrs', settings: section.settings %}>
+  <div class="sm__wrap">
+    {%- if section.settings.eyebrow != blank or section.settings.heading != blank or section.settings.text != blank -%}
+      <header class="sm-head sm-head--{{ section.settings.head_layout | default: 'center' }}">
+        <div>
+          {%- if section.settings.eyebrow != blank -%}<p class="sm-eyebrow{% if section.settings.head_layout == 'center' %} sm-eyebrow--plain{% endif %}">{{ section.settings.eyebrow }}</p>{%- endif -%}
+          {%- if section.settings.heading != blank -%}<h2 class="sm-h2">{{ section.settings.heading }}</h2>{%- endif -%}
+        </div>
+        {%- if section.settings.text != blank -%}<p class="sm-lead">{{ section.settings.text | newline_to_br }}</p>{%- endif -%}
+      </header>
+    {%- endif -%}
+    <div class="sm-ingredients">
+      {%- for block in section.blocks -%}
+        <article class="sm-ingredient" {{ block.shopify_attributes }}>
+          <div class="sm-ingredient__top">
+            <h3 class="sm-h3">{{ block.settings.name }}</h3>
+            {%- if block.settings.dose != blank -%}<span class="sm-ingredient__dose">{{ block.settings.dose }}</span>{%- endif -%}
+          </div>
+          {%- if block.settings.origin != blank -%}<span class="sm-ingredient__origin">{{ block.settings.origin }}</span>{%- endif -%}
+          <p>{{ block.settings.text }}</p>
+        </article>
+      {%- endfor -%}
+    </div>
+    {%- if section.settings.note != blank -%}<p class="sm-note">{{ section.settings.note }}</p>{%- endif -%}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Sommalya · Ingredientes",
+  "tag": "div",
+  "class": "sommalya-ingredients",
+  "max_blocks": 16,
+  "settings": [
+    {
+      "type": "header",
+      "content": "Encabezado"
+    },
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Antetítulo",
+      "default": "Fórmula"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "label": "Título",
+      "info": "Usa cursiva para resaltar una palabra con el color de acento.",
+      "default": "Qué hay <em>dentro.</em>"
+    },
+    {
+      "type": "textarea",
+      "id": "text",
+      "label": "Texto",
+      "default": "Cada ingrediente tiene una razón para estar aquí. Nada más."
+    },
+    {
+      "type": "select",
+      "id": "head_layout",
+      "label": "Disposición del encabezado",
+      "options": [
+        {
+          "value": "center",
+          "label": "Centrado"
+        },
+        {
+          "value": "split",
+          "label": "Dividido"
+        },
+        {
+          "value": "left",
+          "label": "Izquierda"
+        }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "text",
+      "id": "note",
+      "label": "Nota al pie",
+      "default": "Dosis por porción diaria (2 cápsulas)."
+    },
+    {
+      "type": "header",
+      "content": "Apariencia"
+    },
+    {
+      "type": "select",
+      "id": "background",
+      "label": "Fondo",
+      "options": [
+        {
+          "value": "base",
+          "label": "Marfil (base)"
+        },
+        {
+          "value": "soft",
+          "label": "Lino suave"
+        },
+        {
+          "value": "sand",
+          "label": "Arena"
+        },
+        {
+          "value": "ink",
+          "label": "Oscuro"
+        }
+      ],
+      "default": "base"
+    },
+    {
+      "type": "color",
+      "id": "accent",
+      "label": "Color de acento",
+      "info": "Opcional. Por defecto usa el verde salvia de la paleta."
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Espaciado superior",
+      "min": 0,
+      "max": 160,
+      "step": 8,
+      "unit": "px",
+      "default": 96
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Espaciado inferior",
+      "min": 0,
+      "max": 160,
+      "step": 8,
+      "unit": "px",
+      "default": 96
+    }
+  ],
+  "blocks": [
+    {
+      "type": "ingredient",
+      "name": "Ingrediente",
+      "settings": [
+        {
+          "type": "text",
+          "id": "name",
+          "label": "Nombre",
+          "default": "Ingrediente"
+        },
+        {
+          "type": "text",
+          "id": "dose",
+          "label": "Dosis",
+          "default": "100 mg"
+        },
+        {
+          "type": "text",
+          "id": "origin",
+          "label": "Origen / forma"
+        },
+        {
+          "type": "textarea",
+          "id": "text",
+          "label": "Función"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Sommalya · Ingredientes"
+    }
+  ]
+}
+{% endschema %}

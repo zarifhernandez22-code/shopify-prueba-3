@@ -1,0 +1,26 @@
+{% doc %}
+  Sugerencia "Completa tu rutina" dentro del carrito. Solo aparece si el
+  producto elegido en Configuración del tema no está ya en el carrito.
+{% enddoc %}
+{%- assign suggested = settings.sommalya_cart_suggestion -%}
+{%- if suggested != blank and cart.item_count > 0 -%}
+  {%- assign in_cart = false -%}
+  {%- for item in cart.items -%}
+    {%- if item.product_id == suggested.id -%}{%- assign in_cart = true -%}{%- endif -%}
+  {%- endfor -%}
+  {%- unless in_cart -%}
+    <a class="sm-suggest" href="{{ suggested.url }}">
+      <span class="sm-suggest__media">
+        {%- if suggested.featured_image != blank -%}
+          {{ suggested.featured_image | image_url: width: 160 | image_tag: width: 64, height: 64, alt: '' , loading: 'lazy' }}
+        {%- endif -%}
+      </span>
+      <span class="sm-suggest__info">
+        <span class="sm-suggest__eyebrow">Completa tu rutina</span>
+        <span class="sm-suggest__title">{{ suggested.title }}</span>
+        <span class="sm-suggest__price">{{ suggested.price | money }}</span>
+      </span>
+      <span class="sm-suggest__cta">Ver {% render 'sommalya-icon', name: 'arrow' %}</span>
+    </a>
+  {%- endunless -%}
+{%- endif -%}

@@ -6,7 +6,8 @@
  * or related systems. Please exercise caution as any changes
  * made to this file may be overwritten.
  * ------------------------------------------------------------
- */{
+ */
+{
   "sections": {
     "main": {
       "type": "product-information",
@@ -67,6 +68,32 @@
             "padding-inline-end": 0
           },
           "blocks": {
+            "product_description_Kc9pzx": {
+              "type": "product-description",
+              "name": "t:names.product_description",
+              "settings": {
+                "text": "<h3>Myo-Inositol 16 en 1 (90 cápsulas veganas)</h3><ul><li>Apoya el equilibrio hormonal y la regularidad del ciclo menstrual</li><li>Ayuda al manejo saludable de la glucosa y la sensibilidad a la insulina</li><li>Reduce antojos y favorece el balance interno</li><li>Aporta vitaminas y minerales para el bienestar hormonal, óseo e inmune</li><li>Con myo-inositol, D-chiro inositol, berberina, sauzgatillo, DIM, vitamina D3+K2, magnesio y zinc</li></ul><h3>Corti-Soothe 13 en 1 (60 cápsulas veganas)</h3><ul><li>Ayuda a reducir el estrés y los niveles de cortisol</li><li>Favorece la calma mental sin sedación</li><li>Mejora el enfoque, la memoria y la energía mental</li><li>Apoya un sueño más profundo y reparador</li><li>Con ashwagandha, L-teanina, GABA, magnesio, fosfatidilserina, rhodiola, melena de león y valeriana</li></ul>",
+                "width": "fit-content",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "rte",
+                "font": "var(--font-body--family)",
+                "font_size": "1rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "text_color": "",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
             "text_9WaLn7": {
               "type": "text",
               "name": "t:names.title",
@@ -232,25 +259,35 @@
                 "padding-inline-end": 0
               },
               "blocks": {
-                "accordion_row_NdBezV": {
+                "row_1": {
                   "type": "_accordion-row",
                   "settings": {
-                    "heading": "Description",
+                    "heading": "",
+                    "open_by_default": true,
+                    "icon": "none",
+                    "width": 20
+                  },
+                  "blocks": {}
+                },
+                "row_2": {
+                  "type": "_accordion-row",
+                  "settings": {
+                    "heading": "Modo de uso",
                     "open_by_default": false,
                     "icon": "none",
                     "width": 20
                   },
                   "blocks": {
-                    "text_n7A9da": {
+                    "text_r2": {
                       "type": "text",
                       "settings": {
-                        "text": "{{ closest.product.description }}",
+                        "text": "<p>Sigue la dosis indicada en la etiqueta del producto.</p>",
                         "width": "100%",
                         "max_width": "normal",
                         "alignment": "left",
-                        "type_preset": "custom",
-                        "font": "var(--font-subheading--family)",
-                        "font_size": "1.125rem",
+                        "type_preset": "rte",
+                        "font": "var(--font-body--family)",
+                        "font_size": "1rem",
                         "line_height": "normal",
                         "letter_spacing": "normal",
                         "case": "none",
@@ -268,28 +305,28 @@
                     }
                   },
                   "block_order": [
-                    "text_n7A9da"
+                    "text_r2"
                   ]
                 },
-                "accordion_row_iJM37V": {
+                "row_3": {
                   "type": "_accordion-row",
                   "settings": {
-                    "heading": "Care",
+                    "heading": "Advertencias",
                     "open_by_default": false,
                     "icon": "none",
                     "width": 20
                   },
                   "blocks": {
-                    "text_VdG98J": {
+                    "text_r3": {
                       "type": "text",
                       "settings": {
-                        "text": "<p>To maintain the beauty and integrity of your purchase, we recommend treating it with care. Simple maintenance practices, such as gentle washing and proper storage, can effectively preserve the longevity of your favorites. We encourage you to refer to the care instructions included with each item, designed to help you keep your purchase in top condition.</p>",
+                        "text": "<p>Este producto no es un medicamento. El consumo de este producto es responsabilidad de quien lo recomienda y de quien lo usa. Consulta a tu médico si estás embarazada, en lactancia o bajo tratamiento.</p>",
                         "width": "100%",
                         "max_width": "normal",
                         "alignment": "left",
-                        "type_preset": "custom",
-                        "font": "var(--font-subheading--family)",
-                        "font_size": "1.125rem",
+                        "type_preset": "rte",
+                        "font": "var(--font-body--family)",
+                        "font_size": "1rem",
                         "line_height": "normal",
                         "letter_spacing": "normal",
                         "case": "none",
@@ -307,28 +344,28 @@
                     }
                   },
                   "block_order": [
-                    "text_VdG98J"
+                    "text_r3"
                   ]
                 },
-                "accordion_row_pLFDcD": {
+                "row_4": {
                   "type": "_accordion-row",
                   "settings": {
-                    "heading": "Design",
+                    "heading": "Envíos",
                     "open_by_default": false,
                     "icon": "none",
                     "width": 20
                   },
                   "blocks": {
-                    "text_qLGEN9": {
+                    "text_r4": {
                       "type": "text",
                       "settings": {
-                        "text": "<p>Our dedication to excellence extends beyond materials; it encompasses the artistry and craftsmanship illustrated in every piece we create.</p>",
+                        "text": "<p>Envío gratis en tu primer pedido. Entrega de 2 a 5 días hábiles.</p>",
                         "width": "100%",
                         "max_width": "normal",
                         "alignment": "left",
-                        "type_preset": "custom",
-                        "font": "var(--font-subheading--family)",
-                        "font_size": "1.125rem",
+                        "type_preset": "rte",
+                        "font": "var(--font-body--family)",
+                        "font_size": "1rem",
                         "line_height": "normal",
                         "letter_spacing": "normal",
                         "case": "none",
@@ -346,21 +383,22 @@
                     }
                   },
                   "block_order": [
-                    "text_qLGEN9"
+                    "text_r4"
                   ]
                 }
               },
               "block_order": [
-                "accordion_row_NdBezV",
-                "accordion_row_iJM37V",
-                "accordion_row_pLFDcD"
+                "row_1",
+                "row_2",
+                "row_3",
+                "row_4"
               ]
             },
             "disclosures_hFEnPD": {
               "type": "disclosures",
               "name": "t:names.disclosures",
               "settings": {
-                "heading": "Disclosures",
+                "heading": "Información",
                 "heading_preset": "h5",
                 "open_by_default": false,
                 "icon": "caret",
@@ -377,6 +415,7 @@
             }
           },
           "block_order": [
+            "product_description_Kc9pzx",
             "text_9WaLn7",
             "price_a7krng",
             "divider_HrJgFt",
@@ -399,14 +438,80 @@
         "padding-block-end": 0
       }
     },
-    "product_recommendations_qnzPkn": {
+    "confianza": {
+      "type": "sommalya-trustbar",
+      "blocks": {
+        "item_1": {
+          "type": "item",
+          "settings": {
+            "icon": "truck",
+            "title": "Envío gratis",
+            "text": "En tu primer pedido"
+          }
+        },
+        "item_2": {
+          "type": "item",
+          "settings": {
+            "icon": "heart",
+            "title": "Atención personalizada",
+            "text": "Te orientamos antes y después de tu compra"
+          }
+        },
+        "item_3": {
+          "type": "item",
+          "settings": {
+            "icon": "globe",
+            "title": "Hecho en EE. UU.",
+            "text": "Fabricación con estándares de calidad"
+          }
+        },
+        "item_4": {
+          "type": "item",
+          "settings": {
+            "icon": "shield",
+            "title": "Pago seguro",
+            "text": "Datos cifrados de extremo a extremo"
+          }
+        }
+      },
+      "block_order": [
+        "item_1",
+        "item_2",
+        "item_3",
+        "item_4"
+      ],
+      "settings": {
+        "background": "soft",
+        "accent": "",
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
+    },
+    "garantia": {
+      "type": "sommalya-cta",
+      "settings": {
+        "eyebrow": "Sommalya",
+        "heading": "Lo esencial, <em>bien hecho.</em>",
+        "text": "Fórmulas claras, hechas en EE. UU., con envío gratis en tu primer pedido.",
+        "button_label": "Comprar ahora",
+        "button_link": "",
+        "button2_label": "Ver todos los productos",
+        "button2_link": "/collections/all",
+        "disclaimer": "Este producto no es un medicamento. El consumo de este producto es responsabilidad de quien lo recomienda y de quien lo usa. Consulta a tu médico si estás embarazada, en lactancia o bajo tratamiento.",
+        "background": "sand",
+        "accent": "",
+        "padding_top": 112,
+        "padding_bottom": 96
+      }
+    },
+    "recomendados": {
       "type": "product-recommendations",
       "blocks": {
         "text_GbxcYC": {
           "type": "text",
           "name": "t:names.header",
           "settings": {
-            "text": "<h3>You may also like</h3>",
+            "text": "<h3>Completa tu rutina</h3>",
             "width": "100%",
             "max_width": "normal",
             "alignment": "center",
@@ -493,6 +598,7 @@
                 "border_opacity": 100,
                 "border_color": "",
                 "border_radius": 0,
+                "link": "",
                 "open_in_new_tab": false,
                 "padding-block-start": 2,
                 "padding-block-end": 0,
@@ -531,6 +637,7 @@
                     "border_opacity": 100,
                     "border_color": "",
                     "border_radius": 0,
+                    "link": "",
                     "open_in_new_tab": false,
                     "padding-block-start": 0,
                     "padding-block-end": 0,
@@ -622,6 +729,7 @@
                     "border_opacity": 100,
                     "border_color": "",
                     "border_radius": 0,
+                    "link": "",
                     "open_in_new_tab": false,
                     "padding-block-start": 0,
                     "padding-block-end": 0,
@@ -686,6 +794,8 @@
   },
   "order": [
     "main",
-    "product_recommendations_qnzPkn"
+    "confianza",
+    "garantia",
+    "recomendados"
   ]
 }

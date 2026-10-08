@@ -1,0 +1,136 @@
+
+<section {% render 'sommalya-section-attrs', settings: section.settings, extra: 'sm-cta' %}>
+  <div class="sm__wrap sm__wrap--narrow">
+    {%- if section.settings.eyebrow != blank -%}<p class="sm-eyebrow sm-eyebrow--plain">{{ section.settings.eyebrow }}</p>{%- endif -%}
+    <h2 class="sm-h2">{{ section.settings.heading }}</h2>
+    {%- if section.settings.text != blank -%}<p class="sm-lead">{{ section.settings.text | newline_to_br }}</p>{%- endif -%}
+    <div class="sm-actions">
+      {%- liquid
+        if section.settings.button_link != blank
+          assign cta_url = section.settings.button_link
+        elsif template.name == 'product'
+          assign cta_url = '#MainContent'
+        else
+          assign cta_url = routes.all_products_collection_url
+        endif
+      -%}
+      {%- if section.settings.button_label != blank -%}<a class="sm-btn" href="{{ cta_url }}">{{ section.settings.button_label }} {% render 'sommalya-icon', name: 'arrow' %}</a>{%- endif -%}
+      {%- if section.settings.button2_label != blank -%}<a class="sm-btn sm-btn--ghost" href="{{ section.settings.button2_link | default: '#' }}">{{ section.settings.button2_label }}</a>{%- endif -%}
+    </div>
+    {%- if section.settings.disclaimer != blank -%}<p class="sm-disclaimer" style="margin-top: 48px;">{{ section.settings.disclaimer }}</p>{%- endif -%}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Sommalya · Llamado",
+  "tag": "div",
+  "class": "sommalya-cta",
+  "settings": [
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Antetítulo",
+      "default": "Sommalya"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "label": "Título",
+      "default": "Lo esencial, <em>bien hecho.</em>"
+    },
+    {
+      "type": "textarea",
+      "id": "text",
+      "label": "Texto",
+      "default": "Fórmulas claras, hechas en EE. UU., con envío gratis en tu primer pedido."
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Botón principal",
+      "default": "Comprar ahora"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Enlace del botón principal"
+    },
+    {
+      "type": "text",
+      "id": "button2_label",
+      "label": "Botón secundario"
+    },
+    {
+      "type": "url",
+      "id": "button2_link",
+      "label": "Enlace del botón secundario"
+    },
+    {
+      "type": "textarea",
+      "id": "disclaimer",
+      "label": "Aviso legal",
+      "default": "Este producto no es un medicamento. El consumo de este producto es responsabilidad de quien lo recomienda y de quien lo usa. Consulta a tu médico si estás embarazada, en lactancia o bajo tratamiento."
+    },
+    {
+      "type": "header",
+      "content": "Apariencia"
+    },
+    {
+      "type": "select",
+      "id": "background",
+      "label": "Fondo",
+      "options": [
+        {
+          "value": "base",
+          "label": "Marfil (base)"
+        },
+        {
+          "value": "soft",
+          "label": "Lino suave"
+        },
+        {
+          "value": "sand",
+          "label": "Arena"
+        },
+        {
+          "value": "ink",
+          "label": "Oscuro"
+        }
+      ],
+      "default": "sand"
+    },
+    {
+      "type": "color",
+      "id": "accent",
+      "label": "Color de acento",
+      "info": "Opcional. Por defecto usa el verde salvia de la paleta."
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Espaciado superior",
+      "min": 0,
+      "max": 160,
+      "step": 8,
+      "unit": "px",
+      "default": 120
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Espaciado inferior",
+      "min": 0,
+      "max": 160,
+      "step": 8,
+      "unit": "px",
+      "default": 120
+    }
+  ],
+  "presets": [
+    {
+      "name": "Sommalya · Llamado"
+    }
+  ]
+}
+{% endschema %}

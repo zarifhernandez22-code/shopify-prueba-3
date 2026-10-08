@@ -1,0 +1,1123 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "product-information",
+      "blocks": {
+        "media-gallery": {
+          "type": "_product-media-gallery",
+          "static": true,
+          "settings": {
+            "media_presentation": "grid",
+            "media_columns": "one",
+            "image_gap": 0,
+            "large_first_image": false,
+            "icons_style": "arrow",
+            "slideshow_controls_style": "counter",
+            "slideshow_mobile_controls_style": "counter",
+            "thumbnail_position": "left",
+            "thumbnail_width": 57,
+            "thumbnail_radius": 0,
+            "aspect_ratio": "1/1.25",
+            "constrain_to_viewport": false,
+            "media_fit": "cover",
+            "media_radius": 0,
+            "extend_media": true,
+            "zoom": true,
+            "video_loop": false,
+            "hide_variants": true,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
+        "product-details": {
+          "type": "_product-details",
+          "static": true,
+          "settings": {
+            "width": "fill",
+            "custom_width": 100,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "fit",
+            "details_position": "flex-start",
+            "gap": 12,
+            "sticky_details_desktop": true,
+            "background_media": "none",
+            "background_color": "",
+            "video_position": "cover",
+            "background_image_position": "cover",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_color": "",
+            "border_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {
+            "text_9WaLn7": {
+              "type": "text",
+              "name": "t:names.title",
+              "settings": {
+                "text": "<h1>{{ closest.product.title }}</h1>",
+                "width": "100%",
+                "max_width": "normal",
+                "alignment": "center",
+                "type_preset": "h3",
+                "font": "var(--font-body--family)",
+                "font_size": "1rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "text_color": "",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 50,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "price_a7krng": {
+              "type": "price",
+              "settings": {
+                "show_sale_price_first": true,
+                "show_installments": true,
+                "show_tax_info": true,
+                "type_preset": "h5",
+                "width": "100%",
+                "alignment": "center",
+                "font": "var(--font-body--family)",
+                "font_size": "1rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "text_color": "",
+                "padding-block-start": 0,
+                "padding-block-end": 24,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "divider_HrJgFt": {
+              "type": "_divider",
+              "name": "t:names.divider",
+              "settings": {
+                "thickness": 1,
+                "corner_radius": "square",
+                "divider_color": "{{ settings.color_palette.color2 }}",
+                "width_percent": 100,
+                "padding-block-start": 12,
+                "padding-block-end": 12
+              },
+              "blocks": {}
+            },
+            "variant_picker_R3rGDr": {
+              "type": "variant-picker",
+              "settings": {
+                "variant_style": "buttons",
+                "show_swatches": true,
+                "option_label_text_color": "",
+                "variant_style_class": "default",
+                "custom_variant_background": "{{ settings.color_palette.background }}",
+                "custom_variant_text": "{{ settings.color_palette.foreground }}",
+                "custom_variant_border": "{{ settings.color_palette.foreground }}",
+                "selected_variant_style_class": "default",
+                "custom_selected_variant_background": "{{ settings.color_palette.foreground }}",
+                "custom_selected_variant_text": "{{ settings.color_palette.background }}",
+                "custom_selected_variant_border": "{{ settings.color_palette.foreground }}",
+                "alignment": "left",
+                "padding-block-start": 12,
+                "padding-block-end": 24,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "buy_buttons_eYQEYi": {
+              "type": "buy-buttons",
+              "settings": {
+                "stacking": false,
+                "text_color": "",
+                "show_pickup_availability": false,
+                "gift_card_form": true,
+                "recipient_button_style": "default",
+                "recipient_button_background": "{{ settings.color_palette.background }}",
+                "recipient_button_text": "{{ settings.color_palette.foreground }}",
+                "recipient_button_border": "{{ settings.color_palette.foreground }}",
+                "selected_recipient_button_style": "default",
+                "selected_recipient_button_background": "{{ settings.color_palette.foreground }}",
+                "selected_recipient_button_text": "{{ settings.color_palette.background }}",
+                "selected_recipient_button_border": "{{ settings.color_palette.foreground }}",
+                "input_style": "default",
+                "input_background_color": "{{ settings.color_palette.background }}",
+                "input_text_color": "{{ settings.color_palette.foreground }}",
+                "input_border_color": "{{ settings.color_palette.foreground }}",
+                "border_width": 1,
+                "border_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 24,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {
+                "quantity": {
+                  "type": "quantity",
+                  "disabled": true,
+                  "static": true,
+                  "settings": {
+                    "input_style": "custom",
+                    "input_background_color": "{{ settings.color_palette.background }}",
+                    "input_text_color": "{{ settings.color_palette.foreground }}",
+                    "input_border_color": "{{ settings.color_palette.foreground }}",
+                    "border_width": 1,
+                    "border_radius": 0
+                  },
+                  "blocks": {}
+                },
+                "add-to-cart": {
+                  "type": "add-to-cart",
+                  "static": true,
+                  "settings": {
+                    "style_class": "button",
+                    "custom_button_background": "{{ settings.color_palette.foreground }}",
+                    "custom_button_text": "{{ settings.color_palette.background }}",
+                    "custom_button_border": "{{ settings.color_palette.background }}"
+                  },
+                  "blocks": {}
+                },
+                "accelerated-checkout": {
+                  "type": "accelerated-checkout",
+                  "static": true,
+                  "settings": {},
+                  "blocks": {}
+                }
+              },
+              "block_order": []
+            },
+            "accordion_NKWPiW": {
+              "type": "accordion",
+              "name": "t:names.accordion",
+              "settings": {
+                "icon": "caret",
+                "dividers": true,
+                "divider_color": "{{ settings.color_palette.color2 }}",
+                "type_preset": "h6",
+                "background_color": "",
+                "text_color": "",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_color": "",
+                "border_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {
+                "row_1": {
+                  "type": "_accordion-row",
+                  "settings": {
+                    "heading": "Descripción",
+                    "open_by_default": true,
+                    "icon": "none",
+                    "width": 20
+                  },
+                  "blocks": {
+                    "text_r1": {
+                      "type": "text",
+                      "settings": {
+                        "text": "{{ closest.product.description }}",
+                        "width": "100%",
+                        "max_width": "normal",
+                        "alignment": "left",
+                        "type_preset": "custom",
+                        "font": "var(--font-subheading--family)",
+                        "font_size": "1.125rem",
+                        "line_height": "normal",
+                        "letter_spacing": "normal",
+                        "case": "none",
+                        "wrap": "pretty",
+                        "text_color": "",
+                        "background": false,
+                        "background_color": "#00000026",
+                        "corner_radius": 0,
+                        "padding-block-start": 12,
+                        "padding-block-end": 0,
+                        "padding-inline-start": 0,
+                        "padding-inline-end": 0
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "text_r1"
+                  ]
+                },
+                "row_2": {
+                  "type": "_accordion-row",
+                  "settings": {
+                    "heading": "Ingredientes",
+                    "open_by_default": false,
+                    "icon": "none",
+                    "width": 20
+                  },
+                  "blocks": {
+                    "text_r2": {
+                      "type": "text",
+                      "settings": {
+                        "text": "<ul><li><strong>Myo-Inositol 16 en 1</strong></li><li><strong>Corti-Soothe 13 en 1</strong></li></ul><p>Cantidades por porción diaria según la etiqueta de cada frasco. El kit rinde 30 días.</p>",
+                        "width": "100%",
+                        "max_width": "normal",
+                        "alignment": "left",
+                        "type_preset": "rte",
+                        "font": "var(--font-body--family)",
+                        "font_size": "1rem",
+                        "line_height": "normal",
+                        "letter_spacing": "normal",
+                        "case": "none",
+                        "wrap": "pretty",
+                        "text_color": "",
+                        "background": false,
+                        "background_color": "#00000026",
+                        "corner_radius": 0,
+                        "padding-block-start": 12,
+                        "padding-block-end": 0,
+                        "padding-inline-start": 0,
+                        "padding-inline-end": 0
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "text_r2"
+                  ]
+                },
+                "row_3": {
+                  "type": "_accordion-row",
+                  "settings": {
+                    "heading": "Modo de uso",
+                    "open_by_default": false,
+                    "icon": "none",
+                    "width": 20
+                  },
+                  "blocks": {
+                    "text_r3": {
+                      "type": "text",
+                      "settings": {
+                        "text": "<p>Myo-Inositol 16 en 1: 3 cápsulas al día. Corti-Soothe 13 en 1: 2 cápsulas al día. Tómalos con agua, de preferencia con alimentos. El kit rinde 30 días.</p>",
+                        "width": "100%",
+                        "max_width": "normal",
+                        "alignment": "left",
+                        "type_preset": "rte",
+                        "font": "var(--font-body--family)",
+                        "font_size": "1rem",
+                        "line_height": "normal",
+                        "letter_spacing": "normal",
+                        "case": "none",
+                        "wrap": "pretty",
+                        "text_color": "",
+                        "background": false,
+                        "background_color": "#00000026",
+                        "corner_radius": 0,
+                        "padding-block-start": 12,
+                        "padding-block-end": 0,
+                        "padding-inline-start": 0,
+                        "padding-inline-end": 0
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "text_r3"
+                  ]
+                },
+                "row_4": {
+                  "type": "_accordion-row",
+                  "settings": {
+                    "heading": "Advertencias",
+                    "open_by_default": false,
+                    "icon": "none",
+                    "width": 20
+                  },
+                  "blocks": {
+                    "text_r4": {
+                      "type": "text",
+                      "settings": {
+                        "text": "<p>Este producto no es un medicamento. El consumo de este producto es responsabilidad de quien lo recomienda y de quien lo usa. Consulta a tu médico si estás embarazada, en lactancia o bajo tratamiento. No exceder la dosis diaria recomendada. Mantener fuera del alcance de los niños. Conservar en un lugar fresco y seco.</p>",
+                        "width": "100%",
+                        "max_width": "normal",
+                        "alignment": "left",
+                        "type_preset": "rte",
+                        "font": "var(--font-body--family)",
+                        "font_size": "1rem",
+                        "line_height": "normal",
+                        "letter_spacing": "normal",
+                        "case": "none",
+                        "wrap": "pretty",
+                        "text_color": "",
+                        "background": false,
+                        "background_color": "#00000026",
+                        "corner_radius": 0,
+                        "padding-block-start": 12,
+                        "padding-block-end": 0,
+                        "padding-inline-start": 0,
+                        "padding-inline-end": 0
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "text_r4"
+                  ]
+                },
+                "row_5": {
+                  "type": "_accordion-row",
+                  "settings": {
+                    "heading": "Envíos",
+                    "open_by_default": false,
+                    "icon": "none",
+                    "width": 20
+                  },
+                  "blocks": {
+                    "text_r5": {
+                      "type": "text",
+                      "settings": {
+                        "text": "<p>Envío gratis en tu primer pedido. Entrega de 2 a 5 días hábiles.</p>",
+                        "width": "100%",
+                        "max_width": "normal",
+                        "alignment": "left",
+                        "type_preset": "rte",
+                        "font": "var(--font-body--family)",
+                        "font_size": "1rem",
+                        "line_height": "normal",
+                        "letter_spacing": "normal",
+                        "case": "none",
+                        "wrap": "pretty",
+                        "text_color": "",
+                        "background": false,
+                        "background_color": "#00000026",
+                        "corner_radius": 0,
+                        "padding-block-start": 12,
+                        "padding-block-end": 0,
+                        "padding-inline-start": 0,
+                        "padding-inline-end": 0
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "text_r5"
+                  ]
+                }
+              },
+              "block_order": [
+                "row_1",
+                "row_2",
+                "row_3",
+                "row_4",
+                "row_5"
+              ]
+            },
+            "disclosures_hFEnPD": {
+              "type": "disclosures",
+              "name": "t:names.disclosures",
+              "settings": {
+                "heading": "Información",
+                "heading_preset": "h5",
+                "open_by_default": false,
+                "icon": "caret",
+                "disclosure_heading_preset": "h5",
+                "text_color": "",
+                "dividers": true,
+                "divider_color": "{{ settings.color_palette.color2 }}",
+                "padding-block-start": 16,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "sommalya_summary": {
+              "type": "sommalya-summary",
+              "settings": {
+                "tagline": "Dos fórmulas, un mismo equilibrio.",
+                "benefits": "Incluye Myo-Inositol 16 en 1 (90 cápsulas) y Corti-Soothe 13 en 1 (60 cápsulas)\nEquilibrio hormonal y manejo del estrés en una sola rutina\nAmbos fabricados en EE. UU.",
+                "badges": "2 piezas, 30 días, Cápsulas veganas, Hecho en EE. UU.",
+                "accent": "#8A7FA0"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "text_9WaLn7",
+            "price_a7krng",
+            "sommalya_summary",
+            "divider_HrJgFt",
+            "variant_picker_R3rGDr",
+            "buy_buttons_eYQEYi",
+            "accordion_NKWPiW",
+            "disclosures_hFEnPD"
+          ]
+        }
+      },
+      "settings": {
+        "content_width": "content-full-width",
+        "desktop_media_position": "left",
+        "equal_columns": true,
+        "limit_details_width": true,
+        "gap": 0,
+        "enable_sticky_add_to_cart": true,
+        "background_color": "{{ settings.color_palette.background }}",
+        "padding-block-start": 0,
+        "padding-block-end": 0
+      }
+    },
+    "cinta": {
+      "type": "sommalya-marquee",
+      "settings": {
+        "items": "Myo-Inositol, D-Chiro Inositol, Ashwagandha, L-Teanina, Magnesio, Rhodiola, Bacopa, Melena de león",
+        "icon": "spark",
+        "speed": 45,
+        "background": "base",
+        "accent": "#8A7FA0",
+        "padding_top": 32,
+        "padding_bottom": 32
+      }
+    },
+    "confianza": {
+      "type": "sommalya-trustbar",
+      "settings": {
+        "background": "soft",
+        "accent": "#8A7FA0",
+        "padding_top": 40,
+        "padding_bottom": 40
+      },
+      "blocks": {
+        "item_1": {
+          "type": "item",
+          "settings": {
+            "icon": "truck",
+            "title": "Envío gratis",
+            "text": "En tu primer pedido"
+          }
+        },
+        "item_2": {
+          "type": "item",
+          "settings": {
+            "icon": "heart",
+            "title": "Atención personalizada",
+            "text": "Te orientamos antes y después de tu compra"
+          }
+        },
+        "item_3": {
+          "type": "item",
+          "settings": {
+            "icon": "globe",
+            "title": "Hecho en EE. UU.",
+            "text": "Fabricación con estándares de calidad"
+          }
+        },
+        "item_4": {
+          "type": "item",
+          "settings": {
+            "icon": "shield",
+            "title": "Pago seguro",
+            "text": "Datos cifrados de extremo a extremo"
+          }
+        }
+      },
+      "block_order": [
+        "item_1",
+        "item_2",
+        "item_3",
+        "item_4"
+      ]
+    },
+    "beneficios": {
+      "type": "sommalya-features",
+      "settings": {
+        "eyebrow": "Características y beneficios",
+        "heading": "Lo que contiene, <em>lo que sientes.</em>",
+        "text": "Un kit pensado para acompañar tu equilibrio hormonal y tu calma al mismo tiempo.",
+        "head_layout": "split",
+        "left_label": "Lo que contiene",
+        "right_label": "Lo que sientes",
+        "background": "base",
+        "accent": "#8A7FA0",
+        "padding_top": 112,
+        "padding_bottom": 96
+      },
+      "blocks": {
+        "row_1": {
+          "type": "row",
+          "settings": {
+            "icon": "heart",
+            "feature": "Myo-Inositol + D-Chiro Inositol",
+            "spec": "Fórmula 16 en 1",
+            "benefit": "Apoyas tu equilibrio hormonal día a día."
+          }
+        },
+        "row_2": {
+          "type": "row",
+          "settings": {
+            "icon": "spark",
+            "feature": "Magnesio, ashwagandha y L-teanina",
+            "spec": "Corti-Soothe 13 en 1",
+            "benefit": "Manejas mejor el estrés cotidiano."
+          }
+        },
+        "row_3": {
+          "type": "row",
+          "settings": {
+            "icon": "drop",
+            "feature": "Cromo, berberina y canela de Ceilán",
+            "spec": "Metabolismo",
+            "benefit": "Cuidas tu metabolismo. El cromo contribuye a mantener niveles normales de glucosa."
+          }
+        },
+        "row_4": {
+          "type": "row",
+          "settings": {
+            "icon": "check",
+            "feature": "Dos frascos complementarios",
+            "spec": "Kit de 2 piezas",
+            "benefit": "Una rutina completa, sin pensar qué combinar."
+          }
+        }
+      },
+      "block_order": [
+        "row_1",
+        "row_2",
+        "row_3",
+        "row_4"
+      ]
+    },
+    "para_quien": {
+      "type": "sommalya-split",
+      "settings": {
+        "image_asset": "sommalya-kit-inositol-cortisol.jpg",
+        "placeholder_label": "Kit Inositol & Cortisol",
+        "reverse": true,
+        "eyebrow": "Para quién es",
+        "heading": "Para quien quiere <em>cuidarse completa.</em>",
+        "body": "<p>El estrés y el equilibrio hormonal suelen ir de la mano. Este kit reúne las dos fórmulas para atenderlos juntos.</p>",
+        "button_label": "",
+        "button_link": "",
+        "background": "soft",
+        "accent": "#8A7FA0",
+        "padding_top": 112,
+        "padding_bottom": 112
+      },
+      "blocks": {
+        "point_1": {
+          "type": "point",
+          "settings": {
+            "text": "Buscas apoyar tu equilibrio hormonal"
+          }
+        },
+        "point_2": {
+          "type": "point",
+          "settings": {
+            "text": "Vives con estrés frecuente"
+          }
+        },
+        "point_3": {
+          "type": "point",
+          "settings": {
+            "text": "Quieres una rutina sencilla con dos productos complementarios"
+          }
+        }
+      },
+      "block_order": [
+        "point_1",
+        "point_2",
+        "point_3"
+      ]
+    },
+    "formula": {
+      "type": "sommalya-ingredients",
+      "settings": {
+        "eyebrow": "La fórmula",
+        "heading": "Qué hay <em>dentro.</em>",
+        "text": "Qué incluye el kit.",
+        "head_layout": "split",
+        "note": "Cantidades por porción diaria según la etiqueta de cada frasco. El kit rinde 30 días.",
+        "background": "base",
+        "accent": "#8A7FA0",
+        "padding_top": 112,
+        "padding_bottom": 96
+      },
+      "blocks": {
+        "ing_1": {
+          "type": "ingredient",
+          "settings": {
+            "name": "Myo-Inositol 16 en 1",
+            "dose": "3 cáps./día",
+            "origin": "90 cápsulas · 30 porciones",
+            "text": "Myo-inositol 750 mg, berberina 500 mg, canela de Ceilán 200 mg, sauzgatillo 150 mg, magnesio 150 mg, ashwagandha 100 mg, DIM 75 mg, D-chiro inositol 50 mg, melón amargo 50 mg, zinc 15 mg, bioperina 5 mg, folato 400 mcg, vitamina B12 100 mcg, cromo 100 mcg, vitamina K2 45 mcg y vitamina D3 25 mcg."
+          }
+        },
+        "ing_2": {
+          "type": "ingredient",
+          "settings": {
+            "name": "Corti-Soothe 13 en 1",
+            "dose": "2 cáps./día",
+            "origin": "60 cápsulas · 30 porciones",
+            "text": "Magnesio 200 mg, ashwagandha 150 mg (extracto 20:1), L-teanina 150 mg, fosfatidilserina 50 mg y mezcla Corti-Soothe 100 mg: melena de león, albahaca sagrada, ginkgo biloba, rhodiola rosea, bacopa monnieri, GABA, panax ginseng, raíz de valeriana y corteza de magnolia."
+          }
+        }
+      },
+      "block_order": [
+        "ing_1",
+        "ing_2"
+      ]
+    },
+    "uso": {
+      "type": "sommalya-steps",
+      "settings": {
+        "eyebrow": "Modo de uso",
+        "heading": "Un hábito <em>sencillo.</em>",
+        "text": "",
+        "head_layout": "left",
+        "background": "sand",
+        "accent": "#8A7FA0",
+        "padding_top": 96,
+        "padding_bottom": 96
+      },
+      "blocks": {
+        "step_1": {
+          "type": "step",
+          "settings": {
+            "title": "Myo-Inositol",
+            "text": "3 cápsulas al día con agua, de preferencia junto con una comida."
+          }
+        },
+        "step_2": {
+          "type": "step",
+          "settings": {
+            "title": "Corti-Soothe",
+            "text": "2 cápsulas al día con un vaso de agua."
+          }
+        },
+        "step_3": {
+          "type": "step",
+          "settings": {
+            "title": "Constancia",
+            "text": "Mantén la rutina diaria al menos 2 a 3 meses para evaluar cómo te sientes."
+          }
+        }
+      },
+      "block_order": [
+        "step_1",
+        "step_2",
+        "step_3"
+      ]
+    },
+    "testimonios": {
+      "type": "sommalya-testimonials",
+      "settings": {
+        "eyebrow": "Opiniones",
+        "heading": "Lo que dicen <em>quienes ya lo usan.</em>",
+        "text": "",
+        "head_layout": "center",
+        "background": "soft",
+        "accent": "#8A7FA0",
+        "padding_top": 96,
+        "padding_bottom": 96
+      },
+      "blocks": {},
+      "block_order": []
+    },
+    "preguntas": {
+      "type": "sommalya-faq",
+      "settings": {
+        "eyebrow": "Preguntas frecuentes",
+        "heading": "Antes de <em>decidirte.</em>",
+        "text": "",
+        "head_layout": "center",
+        "open_first": true,
+        "background": "base",
+        "accent": "#8A7FA0",
+        "padding_top": 96,
+        "padding_bottom": 112
+      },
+      "blocks": {
+        "q_1": {
+          "type": "question",
+          "settings": {
+            "question": "¿Cómo sé si es para mí?",
+            "answer": "<p>Revisa los ingredientes y el modo de uso de cada fórmula. Si tienes dudas, escríbenos y te orientamos antes de comprar.</p>"
+          }
+        },
+        "q_2": {
+          "type": "question",
+          "settings": {
+            "question": "¿Puedo tomar ambos el mismo día?",
+            "answer": "<p>Sí, están pensados para combinarse. Sigue la dosis indicada en la etiqueta de cada uno.</p>"
+          }
+        },
+        "q_3": {
+          "type": "question",
+          "settings": {
+            "question": "¿Cuánto dura el kit?",
+            "answer": "<p>30 días. Myo-Inositol trae 90 cápsulas (3 al día) y Corti-Soothe 60 cápsulas (2 al día).</p>"
+          }
+        },
+        "q_4": {
+          "type": "question",
+          "settings": {
+            "question": "¿Lo puedo tomar si estoy embarazada o en lactancia?",
+            "answer": "<p>No sin indicación médica. Consulta a tu médico antes de tomarlo.</p>"
+          }
+        },
+        "q_5": {
+          "type": "question",
+          "settings": {
+            "question": "¿Puedo combinarlo con Cortisol Calm?",
+            "answer": "<p>Sí. Si tomas medicamentos, consulta a tu médico antes de combinar suplementos.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "q_1",
+        "q_2",
+        "q_3",
+        "q_4",
+        "q_5"
+      ]
+    },
+    "garantia": {
+      "type": "sommalya-cta",
+      "settings": {
+        "eyebrow": "Sommalya",
+        "heading": "Dos fórmulas, <em>un solo hábito.</em>",
+        "text": "Hecho en EE. UU. Envío gratis en tu primer pedido y pago 100 % seguro.",
+        "button_label": "Comprar ahora",
+        "button_link": "",
+        "button2_label": "Ver todos los productos",
+        "button2_link": "/collections/all",
+        "disclaimer": "Este producto no es un medicamento. El consumo de este producto es responsabilidad de quien lo recomienda y de quien lo usa. Consulta a tu médico si estás embarazada, en lactancia o bajo tratamiento.",
+        "background": "sand",
+        "accent": "#8A7FA0",
+        "padding_top": 112,
+        "padding_bottom": 96
+      }
+    },
+    "recomendados": {
+      "type": "product-recommendations",
+      "blocks": {
+        "text_GbxcYC": {
+          "type": "text",
+          "name": "t:names.header",
+          "settings": {
+            "text": "<h3>Completa tu rutina</h3>",
+            "width": "100%",
+            "max_width": "normal",
+            "alignment": "center",
+            "type_preset": "h4",
+            "font": "var(--font-body--family)",
+            "font_size": "1rem",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "text_color": "",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
+        "static-product-card": {
+          "type": "_product-card",
+          "name": "t:names.product_card",
+          "static": true,
+          "settings": {
+            "product_card_gap": 16,
+            "background_color": "",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_color": "",
+            "border_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {
+            "product_card_gallery_YYPH6q": {
+              "type": "_product-card-gallery",
+              "name": "t:names.product_card_media",
+              "settings": {
+                "image_ratio": "portrait",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_color": "",
+                "border_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "group_396y6r": {
+              "type": "_product-card-group",
+              "settings": {
+                "content_direction": "row",
+                "vertical_on_mobile": true,
+                "horizontal_alignment": "space-between",
+                "vertical_alignment": "flex-start",
+                "align_baseline": false,
+                "horizontal_alignment_flex_direction_column": "flex-start",
+                "vertical_alignment_flex_direction_column": "center",
+                "gap": 12,
+                "width": "fill",
+                "custom_width": 100,
+                "width_mobile": "fill",
+                "custom_width_mobile": 100,
+                "height": "fit",
+                "custom_height": 100,
+                "background_media": "none",
+                "background_color": "",
+                "video_position": "cover",
+                "background_image_position": "cover",
+                "toggle_overlay": false,
+                "overlay_color": "#00000026",
+                "overlay_style": "solid",
+                "gradient_direction": "to top",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_color": "",
+                "border_radius": 0,
+                "open_in_new_tab": false,
+                "padding-block-start": 2,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {
+                "group_tEHPmM": {
+                  "type": "_product-card-group",
+                  "name": "t:names.group",
+                  "settings": {
+                    "content_direction": "column",
+                    "vertical_on_mobile": true,
+                    "horizontal_alignment": "flex-start",
+                    "vertical_alignment": "center",
+                    "align_baseline": false,
+                    "horizontal_alignment_flex_direction_column": "flex-start",
+                    "vertical_alignment_flex_direction_column": "flex-start",
+                    "gap": 0,
+                    "width": "custom",
+                    "custom_width": 60,
+                    "width_mobile": "fill",
+                    "custom_width_mobile": 100,
+                    "height": "fit",
+                    "custom_height": 100,
+                    "background_media": "none",
+                    "background_color": "",
+                    "video_position": "cover",
+                    "background_image_position": "cover",
+                    "toggle_overlay": false,
+                    "overlay_color": "#00000026",
+                    "overlay_style": "solid",
+                    "gradient_direction": "to top",
+                    "border": "none",
+                    "border_width": 1,
+                    "border_opacity": 100,
+                    "border_color": "",
+                    "border_radius": 0,
+                    "open_in_new_tab": false,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {
+                    "text_CayfE3": {
+                      "type": "text",
+                      "settings": {
+                        "text": "<h4>{{ closest.product.title }}</h4>",
+                        "width": "100%",
+                        "max_width": "normal",
+                        "alignment": "left",
+                        "type_preset": "h5",
+                        "font": "var(--font-body--family)",
+                        "font_size": "1rem",
+                        "line_height": "normal",
+                        "letter_spacing": "normal",
+                        "case": "none",
+                        "wrap": "pretty",
+                        "text_color": "",
+                        "background": false,
+                        "background_color": "#00000026",
+                        "corner_radius": 0,
+                        "padding-block-start": 0,
+                        "padding-block-end": 0,
+                        "padding-inline-start": 0,
+                        "padding-inline-end": 0
+                      },
+                      "blocks": {}
+                    },
+                    "price_ahRCgD": {
+                      "type": "price",
+                      "settings": {
+                        "show_sale_price_first": true,
+                        "show_installments": false,
+                        "show_tax_info": false,
+                        "type_preset": "h5",
+                        "width": "100%",
+                        "alignment": "left",
+                        "font": "var(--font-body--family)",
+                        "font_size": "1rem",
+                        "line_height": "normal",
+                        "letter_spacing": "normal",
+                        "case": "none",
+                        "text_color": "",
+                        "padding-block-start": 0,
+                        "padding-block-end": 0,
+                        "padding-inline-start": 0,
+                        "padding-inline-end": 0
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "text_CayfE3",
+                    "price_ahRCgD"
+                  ]
+                },
+                "group_PihxwT": {
+                  "type": "_product-card-group",
+                  "name": "t:names.group",
+                  "settings": {
+                    "content_direction": "column",
+                    "vertical_on_mobile": true,
+                    "horizontal_alignment": "flex-start",
+                    "vertical_alignment": "center",
+                    "align_baseline": false,
+                    "horizontal_alignment_flex_direction_column": "flex-start",
+                    "vertical_alignment_flex_direction_column": "flex-start",
+                    "gap": 0,
+                    "width": "fill",
+                    "custom_width": 40,
+                    "width_mobile": "fill",
+                    "custom_width_mobile": 100,
+                    "height": "fit",
+                    "custom_height": 100,
+                    "background_media": "none",
+                    "background_color": "",
+                    "video_position": "cover",
+                    "background_image_position": "cover",
+                    "toggle_overlay": false,
+                    "overlay_color": "#00000026",
+                    "overlay_style": "solid",
+                    "gradient_direction": "to top",
+                    "border": "none",
+                    "border_width": 1,
+                    "border_opacity": 100,
+                    "border_color": "",
+                    "border_radius": 0,
+                    "open_in_new_tab": false,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {
+                    "swatches_EdNBpW": {
+                      "type": "swatches",
+                      "settings": {
+                        "product_swatches_alignment": "flex-end",
+                        "product_swatches_alignment_mobile": "flex-start",
+                        "hide_padding": false,
+                        "product_swatches_padding_top": 0,
+                        "product_swatches_padding_bottom": 0,
+                        "product_swatches_padding_left": 0,
+                        "product_swatches_padding_right": 0
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "swatches_EdNBpW"
+                  ]
+                }
+              },
+              "block_order": [
+                "group_tEHPmM",
+                "group_PihxwT"
+              ]
+            }
+          },
+          "block_order": [
+            "product_card_gallery_YYPH6q",
+            "group_396y6r"
+          ]
+        }
+      },
+      "block_order": [
+        "text_GbxcYC"
+      ],
+      "name": "t:names.product_recommendations",
+      "settings": {
+        "product": "{{ closest.product }}",
+        "recommendation_type": "related",
+        "layout_type": "grid",
+        "carousel_on_mobile": false,
+        "max_products": 4,
+        "columns": 4,
+        "mobile_columns": "2",
+        "columns_gap": 16,
+        "rows_gap": 16,
+        "icons_style": "arrow",
+        "icons_shape": "none",
+        "section_width": "page-width",
+        "gap": 28,
+        "background_color": "{{ settings.color_palette.background }}",
+        "padding-block-start": 48,
+        "padding-block-end": 48
+      }
+    }
+  },
+  "order": [
+    "main",
+    "cinta",
+    "confianza",
+    "beneficios",
+    "para_quien",
+    "formula",
+    "uso",
+    "testimonios",
+    "preguntas",
+    "garantia",
+    "recomendados"
+  ]
+}

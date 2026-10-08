@@ -2116,5 +2116,37 @@
         "default": "equal-width-buttons"
       }
     ]
+  },
+  {
+    "name": "Sommalya · Carrito",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Envío gratis en el primer pedido"
+      },
+      {
+        "type": "checkbox",
+        "id": "sommalya_first_order_shipping",
+        "label": "Mostrar aviso de envío gratis en el primer pedido",
+        "info": "Configura el descuento de envío gratis para clientes nuevos en Shopify → Descuentos.",
+        "default": true
+      },
+      {
+        "type": "header",
+        "content": "Mensajes"
+      },
+      {
+        "type": "text",
+        "id": "sommalya_cart_note",
+        "label": "Mensaje de marca en el carrito",
+        "default": "Cada pedido se prepara a mano y con cuidado. Gracias por elegir Sommalya."
+      },
+      {
+        "type": "product",
+        "id": "sommalya_cart_suggestion",
+        "label": "Producto sugerido en el carrito",
+        "info": "Se muestra si todavía no está en el carrito."
+      }
+    ]
   }
 ]

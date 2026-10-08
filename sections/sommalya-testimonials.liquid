@@ -1,0 +1,176 @@
+
+{%- if section.blocks.size > 0 -%}
+<section {% render 'sommalya-section-attrs', settings: section.settings %}>
+  <div class="sm__wrap">
+    {%- if section.settings.eyebrow != blank or section.settings.heading != blank or section.settings.text != blank -%}
+      <header class="sm-head sm-head--{{ section.settings.head_layout | default: 'center' }}">
+        <div>
+          {%- if section.settings.eyebrow != blank -%}<p class="sm-eyebrow{% if section.settings.head_layout == 'center' %} sm-eyebrow--plain{% endif %}">{{ section.settings.eyebrow }}</p>{%- endif -%}
+          {%- if section.settings.heading != blank -%}<h2 class="sm-h2">{{ section.settings.heading }}</h2>{%- endif -%}
+        </div>
+        {%- if section.settings.text != blank -%}<p class="sm-lead">{{ section.settings.text | newline_to_br }}</p>{%- endif -%}
+      </header>
+    {%- endif -%}
+    <div class="sm-quotes">
+      {%- for block in section.blocks -%}
+        <figure class="sm-quote" {{ block.shopify_attributes }}>
+          <div class="sm-quote__stars" aria-label="{{ block.settings.rating }} de 5">
+            {%- for i in (1..block.settings.rating) -%}{% render 'sommalya-icon', name: 'star' %}{%- endfor -%}
+          </div>
+          <blockquote>“{{ block.settings.quote }}”</blockquote>
+          <figcaption><strong>{{ block.settings.name }}</strong>{{ block.settings.detail }}</figcaption>
+        </figure>
+      {%- endfor -%}
+    </div>
+  </div>
+</section>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Sommalya · Testimonios",
+  "tag": "div",
+  "class": "sommalya-testimonials",
+  "max_blocks": 6,
+  "settings": [
+    {
+      "type": "header",
+      "content": "Encabezado"
+    },
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Antetítulo",
+      "default": "Opiniones"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "label": "Título",
+      "info": "Usa cursiva para resaltar una palabra con el color de acento.",
+      "default": "Lo que dicen <em>quienes ya lo usan.</em>"
+    },
+    {
+      "type": "textarea",
+      "id": "text",
+      "label": "Texto"
+    },
+    {
+      "type": "select",
+      "id": "head_layout",
+      "label": "Disposición del encabezado",
+      "options": [
+        {
+          "value": "center",
+          "label": "Centrado"
+        },
+        {
+          "value": "split",
+          "label": "Dividido"
+        },
+        {
+          "value": "left",
+          "label": "Izquierda"
+        }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "header",
+      "content": "Apariencia"
+    },
+    {
+      "type": "select",
+      "id": "background",
+      "label": "Fondo",
+      "options": [
+        {
+          "value": "base",
+          "label": "Marfil (base)"
+        },
+        {
+          "value": "soft",
+          "label": "Lino suave"
+        },
+        {
+          "value": "sand",
+          "label": "Arena"
+        },
+        {
+          "value": "ink",
+          "label": "Oscuro"
+        }
+      ],
+      "default": "soft"
+    },
+    {
+      "type": "color",
+      "id": "accent",
+      "label": "Color de acento",
+      "info": "Opcional. Por defecto usa el verde salvia de la paleta."
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Espaciado superior",
+      "min": 0,
+      "max": 160,
+      "step": 8,
+      "unit": "px",
+      "default": 96
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Espaciado inferior",
+      "min": 0,
+      "max": 160,
+      "step": 8,
+      "unit": "px",
+      "default": 96
+    }
+  ],
+  "blocks": [
+    {
+      "type": "quote",
+      "name": "Testimonio",
+      "settings": [
+        {
+          "type": "paragraph",
+          "content": "Usa únicamente reseñas reales de clientes, con su autorización. La sección no se muestra hasta que agregues al menos una."
+        },
+        {
+          "type": "textarea",
+          "id": "quote",
+          "label": "Cita"
+        },
+        {
+          "type": "text",
+          "id": "name",
+          "label": "Nombre"
+        },
+        {
+          "type": "text",
+          "id": "detail",
+          "label": "Detalle",
+          "info": "Ej.: Cliente verificado · Descanso"
+        },
+        {
+          "type": "range",
+          "id": "rating",
+          "label": "Valoración",
+          "min": 1,
+          "max": 5,
+          "step": 1,
+          "default": 5
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Sommalya · Testimonios"
+    }
+  ]
+}
+{% endschema %}

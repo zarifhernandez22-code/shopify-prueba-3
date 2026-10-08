@@ -1,0 +1,14 @@
+{% doc %}
+  Tokens de color de Sommalya. Se derivan de la paleta del tema para que
+  cambiar los colores en el editor actualice también las secciones Sommalya.
+{% enddoc %}
+{{ 'sommalya.css' | asset_url | stylesheet_tag }}
+<style>
+  :root {
+    --sm-bg: {{ settings.color_palette.background | default: '#F8F6F1' }};
+    --sm-ink: {{ settings.color_palette.foreground | default: '#1F2A24' }};
+    --sm-sage: {{ settings.color_palette.color1 | default: '#6B7B67' }};
+    --sm-sand: {{ settings.color_palette.color2 | default: '#E9E4DA' }};
+  }
+</style>
+<script src="{{ 'sommalya.js' | asset_url }}" defer></script>
