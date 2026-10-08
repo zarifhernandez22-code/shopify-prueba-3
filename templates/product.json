@@ -350,7 +350,7 @@
                 "row_4": {
                   "type": "_accordion-row",
                   "settings": {
-                    "heading": "Envíos y garantía",
+                    "heading": "Envíos",
                     "open_by_default": false,
                     "icon": "none",
                     "width": 20
@@ -359,7 +359,7 @@
                     "text_r4": {
                       "type": "text",
                       "settings": {
-                        "text": "<p>Envío gratis en pedidos desde $799. Entrega de 2 a 5 días hábiles. Garantía de satisfacción de 30 días.</p>",
+                        "text": "<p>Envío gratis en pedidos desde $799. Entrega de 2 a 5 días hábiles.</p>",
                         "width": "100%",
                         "max_width": "normal",
                         "alignment": "left",
@@ -452,9 +452,9 @@
         "item_2": {
           "type": "item",
           "settings": {
-            "icon": "return",
-            "title": "Garantía de 30 días",
-            "text": "Si no es para ti, te devolvemos tu dinero"
+            "icon": "heart",
+            "title": "Atención personalizada",
+            "text": "Te orientamos antes y después de tu compra"
           }
         },
         "item_3": {
@@ -490,9 +490,9 @@
     "garantia": {
       "type": "sommalya-cta",
       "settings": {
-        "eyebrow": "Garantía Sommalya",
-        "heading": "Pruébalo 30 días. <em>Sin riesgo.</em>",
-        "text": "Si no es para ti, te devolvemos tu dinero.",
+        "eyebrow": "Sommalya",
+        "heading": "Lo esencial, <em>bien hecho.</em>",
+        "text": "Fórmulas claras, hechas en EE. UU., con envío gratis en pedidos desde $799.",
         "button_label": "Comprar ahora",
         "button_link": "",
         "button2_label": "Ver todos los productos",

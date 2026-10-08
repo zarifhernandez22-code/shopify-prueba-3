@@ -19,7 +19,7 @@
         "button_link": "/products/suplemento-cortisol-calm-megneta-60cp",
         "button2_label": "Ver cómo funciona",
         "button2_link": "/products/suplemento-cortisol-calm-megneta-60cp",
-        "proof": "Hecho en EE. UU. · Garantía de 30 días · Envío gratis desde $799",
+        "proof": "Hecho en EE. UU. · Pago 100 % seguro · Envío gratis desde $799",
         "sticky_bar": true,
         "image_asset": "sommalya-cortisol-calm.jpg",
         "placeholder_label": "Cortisol Calm de Sommalya",
@@ -92,9 +92,9 @@
         "item_2": {
           "type": "item",
           "settings": {
-            "icon": "return",
-            "title": "Garantía de 30 días",
-            "text": "Si no es para ti, te devolvemos tu dinero"
+            "icon": "heart",
+            "title": "Atención personalizada",
+            "text": "Te orientamos antes y después de tu compra"
           }
         },
         "item_3": {
@@ -440,8 +440,8 @@
         "q_1": {
           "type": "question",
           "settings": {
-            "question": "¿Y si no me funciona?",
-            "answer": "<p>Tienes 30 días de garantía de satisfacción. Si Cortisol Calm no es para ti, escríbenos y te devolvemos tu dinero.</p>"
+            "question": "¿Cómo sé si Cortisol Calm es para mí?",
+            "answer": "<p>Revisa los ingredientes y el modo de uso de cada fórmula. Si tienes dudas, escríbenos y te orientamos antes de comprar.</p>"
           }
         },
         "q_2": {
@@ -492,9 +492,9 @@
     "garantia": {
       "type": "sommalya-cta",
       "settings": {
-        "eyebrow": "Garantía Sommalya",
-        "heading": "Empieza hoy. <em>Pruébalo 30 días.</em>",
-        "text": "Si no es para ti, te devolvemos tu dinero. Así de seguros estamos de Cortisol Calm.",
+        "eyebrow": "Sommalya",
+        "heading": "Empieza hoy. <em>Recupera tu calma.</em>",
+        "text": "Calma y enfoque en una cápsula al día. Envío gratis en pedidos desde $799.",
         "button_label": "Comprar Cortisol Calm",
         "button_link": "/products/suplemento-cortisol-calm-megneta-60cp",
         "button2_label": "Ver todos los productos",

@@ -32,14 +32,14 @@ Sigue la estructura de una landing que convierte:
    - Una línea de confianza. La calificación aparece sola si instalas una app de reseñas.
    - El botón de compra y contadores animados.
 2. **Cinta de ingredientes** en movimiento.
-3. **Barra de confianza**: envío, garantía, hecho en EE. UU. y pago seguro.
+3. **Barra de confianza**: envío gratis, atención personalizada, hecho en EE. UU. y pago seguro.
 4. **Características y beneficios**: "lo que contiene" frente a "lo que sientes", como el ejemplo de Tesla.
 5. **Manifiesto**: una frase que se ilumina palabra por palabra al hacer scroll.
 6. **La fórmula** y el **modo de uso**, con una línea de progreso.
 7. **Testimonios**: se muestran solos en cuanto agregues reseñas reales.
 8. **Completa tu rutina**: el Kit y las Gotas de Guanábana.
 9. **Preguntas frecuentes** que responden objeciones.
-10. **Llamada a la acción final** con garantía.
+10. **Llamada a la acción final**.
 11. **Pie de página** con boletín.
 
 Al bajar aparece una barra de compra fija con Cortisol Calm.
@@ -51,7 +51,7 @@ Al bajar aparece una barra de compra fija con Cortisol Calm.
 2. **Cinta** con los ingredientes de Cortisol Calm.
 3. **Cuadrícula de productos** de Shopify, con filtros.
 4. **Manifiesto** de Cortisol Calm.
-5. **Barra de confianza** y **garantía**.
+5. **Barra de confianza** y **llamada a la acción final**.
 
 **Animaciones de texto**: los títulos de sección se revelan palabra por palabra de forma automática. En la portada y en el catálogo puedes elegir entre cinco opciones en *Animación del título*: revelado por palabras, aparición suave, escritura, iluminación al hacer scroll o sin animación.
 
@@ -75,7 +75,7 @@ Cada landing tiene:
 7. Modo de uso.
 8. Testimonios.
 9. Preguntas frecuentes con objeciones.
-10. Garantía.
+10. Llamada a la acción final.
 11. Productos recomendados.
 
 No hay opción de suscripción.
@@ -104,5 +104,6 @@ Las fotos ya están cargadas en cada producto de Shopify, antes de la foto origi
 
 - **Dosis**: según las etiquetas, Cortisol Calm se toma 1 cápsula al día (60 días), Myo-Inositol 3 cápsulas al día y Corti-Soothe 2 cápsulas al día (30 días). De las Gotas de Guanábana no hay dosis en las fotos, así que la landing remite al empaque.
 - **Declaraciones de salud**: están redactadas con lenguaje prudente. Revísalas con tu asesor regulatorio (COFEPRIS).
-- **Envío gratis desde $799** y **garantía de 30 días**: ajústalos a tu política real.
+- **Envío gratis desde $799**: ajústalo a tu política real.
+- **Sin garantía de devolución**: la tienda no promete devoluciones ni reembolsos. Los mensajes de confianza hablan de pago seguro, atención personalizada, fabricación en EE. UU. y envío. Revisa que tu política de reembolso en Configuración → Políticas diga lo mismo.
 - **Fotos**: se quitó la marca de agua de "Hyper Moda". Confirma con tu proveedor que puedes usar sus fotos sin ella. Los frascos siguen mostrando las marcas de los fabricantes (Megneta y Zoyava).

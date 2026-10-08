@@ -392,7 +392,7 @@
                 "row_5": {
                   "type": "_accordion-row",
                   "settings": {
-                    "heading": "Envíos y garantía",
+                    "heading": "Envíos",
                     "open_by_default": false,
                     "icon": "none",
                     "width": 20
@@ -401,7 +401,7 @@
                     "text_r5": {
                       "type": "text",
                       "settings": {
-                        "text": "<p>Envío gratis en pedidos desde $799. Entrega de 2 a 5 días hábiles. Garantía de satisfacción de 30 días: si no es para ti, te devolvemos tu dinero.</p>",
+                        "text": "<p>Envío gratis en pedidos desde $799. Entrega de 2 a 5 días hábiles.</p>",
                         "width": "100%",
                         "max_width": "normal",
                         "alignment": "left",
@@ -523,9 +523,9 @@
         "item_2": {
           "type": "item",
           "settings": {
-            "icon": "return",
-            "title": "Garantía de 30 días",
-            "text": "Si no es para ti, te devolvemos tu dinero"
+            "icon": "heart",
+            "title": "Atención personalizada",
+            "text": "Te orientamos antes y después de tu compra"
           }
         },
         "item_3": {
@@ -764,8 +764,8 @@
         "q_1": {
           "type": "question",
           "settings": {
-            "question": "¿Y si no me funciona?",
-            "answer": "<p>Tienes 30 días de garantía de satisfacción. Si no es para ti, te devolvemos tu dinero.</p>"
+            "question": "¿Cómo sé si es para mí?",
+            "answer": "<p>Revisa los ingredientes y el modo de uso de cada fórmula. Si tienes dudas, escríbenos y te orientamos antes de comprar.</p>"
           }
         },
         "q_2": {
@@ -808,9 +808,9 @@
     "garantia": {
       "type": "sommalya-cta",
       "settings": {
-        "eyebrow": "Garantía Sommalya",
+        "eyebrow": "Sommalya",
         "heading": "Dos fórmulas, <em>un solo hábito.</em>",
-        "text": "Pruébalo durante 30 días. Si no es para ti, te devolvemos tu dinero.",
+        "text": "Hecho en EE. UU. Envío gratis en pedidos desde $799 y pago 100 % seguro.",
         "button_label": "Comprar ahora",
         "button_link": "",
         "button2_label": "Ver todos los productos",
