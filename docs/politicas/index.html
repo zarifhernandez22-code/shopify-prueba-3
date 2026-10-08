@@ -1,0 +1,185 @@
+<title>Políticas Sommalya</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;1,6..72,300&family=Red+Hat+Text:wght@400;500&display=swap">
+<style>
+/* Layout: una columna de lectura; pestañas arriba, documento listo para copiar abajo. */
+:root {
+  --bg: #F8F6F1; --paper: #FFFFFF; --ink: #1F2A24; --muted: #5F6862; --line: #E1DCD2; --sage: #6B7B67; --warn: #8A6A2E; --warn-bg: #F6EEDC;
+  --serif: 'Newsreader', Georgia, serif; --sans: 'Red Hat Text', 'Helvetica Neue', Arial, sans-serif;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --bg: #141917; --paper: #1C2320; --ink: #ECEAE4; --muted: #A3ABA5; --line: #2F3833; --sage: #9DB098; --warn: #E3C27A; --warn-bg: #2C2718; color-scheme: dark; } }
+:root[data-theme="dark"] { --bg: #141917; --paper: #1C2320; --ink: #ECEAE4; --muted: #A3ABA5; --line: #2F3833; --sage: #9DB098; --warn: #E3C27A; --warn-bg: #2C2718; color-scheme: dark; }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--sans); font-size: 15px; line-height: 1.6; }
+.wrap { max-width: 820px; margin: 0 auto; padding: 40px 16px 72px; display: grid; gap: 24px; }
+h1 { margin: 0; font-family: var(--serif); font-weight: 300; font-size: clamp(32px, 5vw, 46px); line-height: 1.1; text-wrap: balance; }
+h1 em { color: var(--sage); }
+.lead { margin: 10px 0 0; color: var(--muted); max-width: 62ch; }
+.steps { margin: 0; padding: 18px 20px 18px 40px; background: var(--paper); border: 1px solid var(--line); display: grid; gap: 6px; }
+.warn { margin: 0; padding: 14px 18px; background: var(--warn-bg); color: var(--ink); border-left: 3px solid var(--warn); font-size: 14px; }
+.tabs { display: flex; flex-wrap: wrap; gap: 6px; border-bottom: 1px solid var(--line); }
+.tab { padding: 10px 16px; border: 0; border-bottom: 2px solid transparent; background: none; color: var(--muted); font: inherit; font-size: 14px; cursor: pointer; margin-bottom: -1px; }
+.tab[aria-selected="true"] { color: var(--ink); border-bottom-color: var(--sage); font-weight: 500; }
+.tab:focus-visible, .copy:focus-visible { outline: 2px solid var(--sage); outline-offset: 2px; }
+.pol { display: grid; gap: 16px; }
+.pol-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: end; gap: 12px; }
+.eyebrow { margin: 0 0 4px; font-size: 11px; letter-spacing: .16em; text-transform: uppercase; color: var(--muted); }
+.pol h2 { margin: 0; font-family: var(--serif); font-weight: 300; font-size: 28px; }
+.copy { min-height: 44px; padding: 0 20px; border: 1px solid var(--ink); background: var(--ink); color: var(--bg); font: inherit; font-size: 12px; font-weight: 500; letter-spacing: .14em; text-transform: uppercase; cursor: pointer; }
+.copy.ok { background: var(--sage); border-color: var(--sage); }
+.doc { background: var(--paper); border: 1px solid var(--line); padding: clamp(20px, 4vw, 40px); min-width: 0; }
+.doc h2 { margin: 24px 0 8px; font-family: var(--serif); font-weight: 400; font-size: 20px; }
+.doc p, .doc ul { margin: 0 0 12px; }
+.doc ul { padding-left: 20px; }
+.doc em { color: var(--muted); }
+</style>
+<div class="wrap">
+  <header>
+    <h1>Políticas de <em>Sommalya</em></h1>
+    <p class="lead">Las tres políticas que faltan en tu tienda, en español y alineadas con lo que dice el sitio: sin devoluciones de productos en buen estado, envío gratis en el primer pedido y entrega de 2 a 5 días hábiles.</p>
+  </header>
+  <ol class="steps">
+    <li>Abre Shopify → <strong>Configuración → Políticas</strong>.</li>
+    <li>Elige la pestaña de abajo, pulsa <strong>Copiar política</strong> y pega el texto en el campo correspondiente de Shopify.</li>
+    <li>Repite con las otras dos y guarda.</li>
+  </ol>
+  <p class="warn"><strong>Antes de publicar:</strong> la Ley Federal de Protección al Consumidor puede darle a tus clientes derechos que una política no elimina. Por eso cada texto incluye esa aclaración. Pide a un abogado que revise los textos, sobre todo la política de reembolsos.</p>
+  <nav class="tabs" role="tablist" aria-label="Políticas"><button type="button" class="tab" data-tab="reembolsos" aria-selected="true">Reembolsos</button><button type="button" class="tab" data-tab="envios" aria-selected="false">Envíos</button><button type="button" class="tab" data-tab="terminos" aria-selected="false">Términos</button></nav>
+  
+<section class="pol" id="reembolsos" data-panel="reembolsos" aria-labelledby="t-reembolsos">
+  <div class="pol-head">
+    <div><p class="eyebrow">Configuración → Políticas → Política de reembolsos</p><h2 id="t-reembolsos">Política de reembolsos</h2></div>
+    <button class="copy" type="button" data-copy="reembolsos">Copiar política</button>
+  </div>
+  <article class="doc" data-doc="reembolsos"><p><em>Última actualización: 8 de octubre de 2026</em></p>
+<p>En SOMMALYA cuidamos cada pedido desde que lo preparamos hasta que llega a tus manos. Por tratarse de suplementos alimenticios de consumo personal, y para proteger la higiene y la seguridad de todos nuestros clientes, aplicamos la siguiente política.</p>
+
+<h2>1. No aceptamos devoluciones ni cambios</h2>
+<p>No aceptamos devoluciones, cambios ni reembolsos de productos entregados en buen estado, incluidos los casos de:</p>
+<ul>
+<li>Cambio de opinión o arrepentimiento de compra.</li>
+<li>Expectativas personales sobre los resultados del producto.</li>
+<li>Productos abiertos, usados o con el sello de seguridad roto.</li>
+<li>Errores en la elección del producto por parte del cliente.</li>
+</ul>
+<p>Te recomendamos revisar con calma los ingredientes, el modo de uso y las advertencias de cada producto antes de comprar. Si tienes dudas, escríbenos y te orientamos.</p>
+
+<h2>2. Cuándo sí te ayudamos</h2>
+<p>Si tu pedido llega con alguno de estos problemas, lo resolvemos sin costo para ti:</p>
+<ul>
+<li>El producto llegó dañado, roto o con el sello de seguridad abierto.</li>
+<li>Recibiste un producto distinto al que compraste o faltan productos.</li>
+<li>El producto llegó caducado.</li>
+<li>Tu pedido no fue entregado.</li>
+</ul>
+<p>Para atenderte, escríbenos a <strong>carlosgarzasalazar5@gmail.com</strong> dentro de los <strong>5 días naturales</strong> siguientes a la entrega. Incluye tu número de pedido y fotos del producto y del empaque. Una vez que revisemos tu caso, te enviaremos el producto correcto o un reemplazo. Si no es posible, te reembolsaremos el importe pagado por ese producto, con el mismo método de pago, en un plazo de hasta 10 días hábiles.</p>
+
+<h2>3. Cancelaciones</h2>
+<p>Puedes cancelar tu pedido sin costo mientras no haya sido enviado. Escríbenos lo antes posible con tu número de pedido. Si tu pedido ya salió de nuestro almacén, ya no es posible cancelarlo.</p>
+
+<h2>4. Tus derechos como consumidor</h2>
+<p>Esta política no limita los derechos que te otorga la Ley Federal de Protección al Consumidor. Si consideras que tus derechos no fueron respetados, puedes acudir a la Procuraduría Federal del Consumidor (PROFECO).</p>
+
+<h2>5. Contacto</h2>
+<p>SOMMALYA · Venado, 77760 Tulum, Quintana Roo, México · carlosgarzasalazar5@gmail.com</p>
+</article>
+</section>
+<section class="pol" id="envios" data-panel="envios" hidden aria-labelledby="t-envios">
+  <div class="pol-head">
+    <div><p class="eyebrow">Configuración → Políticas → Política de envíos</p><h2 id="t-envios">Política de envíos</h2></div>
+    <button class="copy" type="button" data-copy="envios">Copiar política</button>
+  </div>
+  <article class="doc" data-doc="envios"><p><em>Última actualización: 8 de octubre de 2026</em></p>
+
+<h2>1. Cobertura</h2>
+<p>Realizamos envíos a toda la República Mexicana.</p>
+
+<h2>2. Tiempos</h2>
+<ul>
+<li><strong>Preparación:</strong> preparamos tu pedido en un plazo de 24 horas hábiles a partir de la confirmación del pago.</li>
+<li><strong>Entrega:</strong> la entrega estándar tarda de 2 a 5 días hábiles, según tu ubicación. En zonas extendidas o de difícil acceso puede tardar algunos días más.</li>
+</ul>
+<p>Los días hábiles son de lunes a viernes, sin contar días festivos. Los tiempos son estimados y pueden variar por causas ajenas a nosotros, como clima o retrasos de la paquetería.</p>
+
+<h2>3. Costo de envío</h2>
+<p><strong>Tu primer pedido tiene envío gratis.</strong> El descuento se aplica al finalizar la compra. En los siguientes pedidos, el costo de envío se calcula y se muestra en el checkout antes de que pagues.</p>
+
+<h2>4. Seguimiento</h2>
+<p>Cuando tu pedido salga de nuestro almacén, te enviaremos un correo con el número de guía para que puedas rastrearlo.</p>
+
+<h2>5. Dirección de entrega</h2>
+<p>Revisa que tu dirección esté completa y correcta antes de pagar. Si el paquete regresa por una dirección incorrecta o incompleta, o porque nadie pudo recibirlo después de los intentos de la paquetería, el nuevo envío tendrá un costo adicional.</p>
+
+<h2>6. Paquetes dañados, extraviados o incompletos</h2>
+<p>Si tu paquete llega dañado o incompleto, o no lo recibes en el tiempo estimado, escríbenos dentro de los 5 días naturales siguientes a la fecha de entrega estimada, con tu número de pedido y fotos si aplica. Lo resolveremos de acuerdo con nuestra Política de reembolsos.</p>
+
+<h2>7. Contacto</h2>
+<p>SOMMALYA · Venado, 77760 Tulum, Quintana Roo, México · carlosgarzasalazar5@gmail.com</p>
+</article>
+</section>
+<section class="pol" id="terminos" data-panel="terminos" hidden aria-labelledby="t-terminos">
+  <div class="pol-head">
+    <div><p class="eyebrow">Configuración → Políticas → Términos del servicio</p><h2 id="t-terminos">Términos del servicio</h2></div>
+    <button class="copy" type="button" data-copy="terminos">Copiar política</button>
+  </div>
+  <article class="doc" data-doc="terminos"><p><em>Última actualización: 8 de octubre de 2026</em></p>
+
+<h2>1. Quiénes somos</h2>
+<p>Este sitio es operado por SOMMALYA, con domicilio en Venado, 77760 Tulum, Quintana Roo, México, y correo de contacto carlosgarzasalazar5@gmail.com. La tienda funciona sobre la plataforma Shopify. Al navegar en el sitio o hacer una compra aceptas estos Términos del servicio, junto con nuestras políticas de privacidad, envíos y reembolsos.</p>
+
+<h2>2. Sobre nuestros productos</h2>
+<ul>
+<li>Nuestros productos son suplementos alimenticios. <strong>No son medicamentos</strong> y no están destinados a diagnosticar, tratar, curar ni prevenir ninguna enfermedad.</li>
+<li>El consumo de estos productos es responsabilidad de quien los recomienda y de quien los usa.</li>
+<li>Consulta a tu médico antes de consumirlos si estás embarazada, en lactancia, bajo tratamiento médico o tienes alguna condición de salud. No se recomiendan para menores de edad.</li>
+<li>No excedas la dosis indicada en la etiqueta. Mantén los productos fuera del alcance de los niños.</li>
+<li>Las imágenes son ilustrativas. La información de la etiqueta del producto que recibas prevalece sobre la del sitio.</li>
+</ul>
+
+<h2>3. Precios y disponibilidad</h2>
+<p>Los precios están en pesos mexicanos (MXN) e incluyen impuestos, salvo que se indique otra cosa. Podemos modificar precios, promociones y productos en cualquier momento, sin afectar los pedidos ya confirmados. Algunos productos pueden ofrecerse como edición limitada y estar sujetos a existencias.</p>
+
+<h2>4. Pedidos y pagos</h2>
+<p>Tu pedido se confirma cuando el pago es aprobado. Los pagos se procesan a través de proveedores seguros. SOMMALYA no almacena los datos completos de tu tarjeta. Podemos cancelar un pedido por falta de existencias, error evidente en el precio o sospecha de fraude. En ese caso te reembolsaremos el importe completo.</p>
+
+<h2>5. Envíos, cancelaciones y reembolsos</h2>
+<p>Los tiempos y costos de envío se rigen por nuestra Política de envíos. Las cancelaciones y los casos de producto dañado, incorrecto o no entregado se rigen por nuestra Política de reembolsos. No aceptamos devoluciones de productos entregados en buen estado.</p>
+
+<h2>6. Uso del sitio</h2>
+<p>No puedes usar el sitio para fines ilegales, intentar dañar su funcionamiento ni copiar su contenido para uso comercial. Los textos, imágenes, logotipos y el diseño del sitio pertenecen a SOMMALYA o a sus respectivos titulares, y están protegidos por las leyes de propiedad intelectual.</p>
+
+<h2>7. Responsabilidad</h2>
+<p>En la medida permitida por la ley, SOMMALYA no es responsable por el uso inadecuado de los productos, por no seguir las indicaciones de la etiqueta ni por daños indirectos derivados del uso del sitio. Nada en estos términos limita los derechos que te otorga la Ley Federal de Protección al Consumidor.</p>
+
+<h2>8. Privacidad</h2>
+<p>El tratamiento de tus datos personales se describe en nuestra Política de privacidad.</p>
+
+<h2>9. Cambios a estos términos</h2>
+<p>Podemos actualizar estos términos en cualquier momento. La versión vigente siempre estará publicada en este sitio con su fecha de actualización.</p>
+
+<h2>10. Ley aplicable</h2>
+<p>Estos términos se rigen por las leyes de los Estados Unidos Mexicanos. Para cualquier controversia, puedes acudir a la Procuraduría Federal del Consumidor (PROFECO) o a los tribunales competentes de México.</p>
+</article>
+</section>
+</div>
+<script>
+document.querySelectorAll('[data-tab]').forEach(t => t.addEventListener('click', () => {
+  document.querySelectorAll('[data-tab]').forEach(x => x.setAttribute('aria-selected', String(x === t)));
+  document.querySelectorAll('[data-panel]').forEach(p => p.hidden = p.dataset.panel !== t.dataset.tab);
+}));
+function done(btn) { btn.classList.add('ok'); btn.textContent = 'Copiada'; setTimeout(() => { btn.classList.remove('ok'); btn.textContent = 'Copiar política'; }, 1800); }
+function selectCopy(el, btn) {
+  const r = document.createRange(); r.selectNodeContents(el); const s = getSelection(); s.removeAllRanges(); s.addRange(r);
+  let ok = false; try { ok = document.execCommand('copy'); } catch (e) {}
+  if (ok) { s.removeAllRanges(); done(btn); } else { btn.textContent = 'Texto seleccionado: cópialo'; }
+}
+document.querySelectorAll('[data-copy]').forEach(btn => btn.addEventListener('click', () => {
+  const el = document.querySelector(`[data-doc="${btn.dataset.copy}"]`);
+  try {
+    if (window.ClipboardItem && navigator.clipboard && navigator.clipboard.write) {
+      const item = new ClipboardItem({ 'text/html': new Blob([el.innerHTML], { type: 'text/html' }), 'text/plain': new Blob([el.innerText], { type: 'text/plain' }) });
+      navigator.clipboard.write([item]).then(() => done(btn), () => selectCopy(el, btn));
+    } else { selectCopy(el, btn); }
+  } catch (e) { selectCopy(el, btn); }
+}));
+</script>
