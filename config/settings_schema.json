@@ -2116,5 +2116,37 @@
         "default": "equal-width-buttons"
       }
     ]
+  },
+  {
+    "name": "Sommalya · Carrito",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Envío gratis"
+      },
+      {
+        "type": "number",
+        "id": "sommalya_free_shipping",
+        "label": "Monto para envío gratis (MXN)",
+        "info": "Debe coincidir con tu tarifa de envío gratis en Configuración → Envíos. Deja 0 para ocultar la barra.",
+        "default": 799
+      },
+      {
+        "type": "header",
+        "content": "Mensajes"
+      },
+      {
+        "type": "text",
+        "id": "sommalya_cart_note",
+        "label": "Mensaje de marca en el carrito",
+        "default": "Cada pedido se prepara a mano y con cuidado. Gracias por elegir Sommalya."
+      },
+      {
+        "type": "product",
+        "id": "sommalya_cart_suggestion",
+        "label": "Producto sugerido en el carrito",
+        "info": "Se muestra si todavía no está en el carrito."
+      }
+    ]
   }
 ]

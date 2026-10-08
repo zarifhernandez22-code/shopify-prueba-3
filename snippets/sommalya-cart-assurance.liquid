@@ -1,0 +1,20 @@
+{% doc %}
+  Confianza bajo el botón de pago: pago seguro, garantía, envío y mensaje de marca.
+{% enddoc %}
+<div class="sm-assure">
+  <p class="sm-assure__secure">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="10.5" width="14" height="10" rx="1.5"/><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3"/></svg>
+    Pago 100 % seguro · Tus datos viajan cifrados
+  </p>
+  <ul class="sm-assure__list" role="list">
+    <li>{% render 'sommalya-icon', name: 'return' %}<span>Garantía de 30 días</span></li>
+    <li>{% render 'sommalya-icon', name: 'truck' %}<span>Entrega en 2 a 5 días</span></li>
+    <li>{% render 'sommalya-icon', name: 'globe' %}<span>Hecho en EE. UU.</span></li>
+  </ul>
+  {%- if settings.sommalya_cart_note != blank -%}
+    <p class="sm-assure__note">
+      <img src="{{ 'sommalya-logo.png' | asset_url }}" alt="" width="22" height="22" loading="lazy">
+      <span>{{ settings.sommalya_cart_note }}</span>
+    </p>
+  {%- endif -%}
+</div>

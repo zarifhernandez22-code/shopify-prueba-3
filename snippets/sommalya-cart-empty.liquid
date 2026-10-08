@@ -1,0 +1,15 @@
+{% doc %}
+  Carrito vacío con la voz de Sommalya.
+{% enddoc %}
+<div class="sm-cartempty">
+  <img src="{{ 'sommalya-logo.png' | asset_url }}" alt="" width="56" height="56" loading="lazy">
+  <p class="sm-cartempty__title">Tu carrito está <em>en calma.</em></p>
+  <p class="sm-cartempty__text">Cuando encuentres tu fórmula, aparecerá aquí.</p>
+  <div class="sm-cartempty__actions">
+    {%- assign suggested = settings.sommalya_cart_suggestion -%}
+    {%- if suggested != blank -%}
+      <a class="sm-btn" href="{{ suggested.url }}">Descubrir el producto estrella</a>
+    {%- endif -%}
+    <a class="sm-link" href="{{ routes.all_products_collection_url }}">Seguir comprando</a>
+  </div>
+</div>
