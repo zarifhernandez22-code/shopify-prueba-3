@@ -82,14 +82,27 @@ No hay opción de suscripción.
 
 Las fotos de producto están en `assets/` y las secciones las usan mediante el campo *Imagen incluida en el tema*. Si eliges otra imagen en el editor, esa tiene prioridad.
 
-## Puesta en marcha en Shopify
+## Fotos de producto
 
-1. En cada producto, en *Plantilla del tema*, elige la que le corresponde. Al Kit asígnale `product.kit-inositol-cortisol`.
-2. Limpia la descripción de los 3 productos: hoy incluyen el enlace al grupo de WhatsApp del proveedor, y la landing la muestra en la pestaña *Descripción*.
+Las fotos editadas están en `docs/fotos-producto/` y también en `assets/sommalya-foto-*`. Tienen fondo de estudio Sommalya, no llevan la marca de agua del proveedor y sus textos están en español.
+
+| Producto | Fotos |
+| --- | --- |
+| Cortisol Calm | Frasco; datos (759 mg, 1 cápsula al día, 60 días); ingredientes |
+| Kit Inositol & Cortisol | Los dos frascos; estilo de vida; cada frasco por separado; ficha nutrimental de cada uno |
+| Gotas de Guanábana | Frasco y caja; estilo de vida; datos (1800 mg, 60 ml, hoja y fruto) |
+
+Las fotos ya están cargadas en cada producto de Shopify, antes de la foto original del proveedor. Para regenerarlas, usa el script de imágenes con las fotos originales.
+
+## Estado en Shopify
+
+- Cada producto tiene asignada su plantilla: `cortisol-calm`, `kit-inositol-cortisol` y `graviola`.
+- Las descripciones están reescritas en español con los datos de las etiquetas, sin el enlace al grupo de WhatsApp del proveedor.
+- `templates/product.json` es la plantilla general y la editas tú desde Shopify. No se sobrescribe desde el repositorio.
 
 ## Antes de publicar: validar
 
-- **Dosis**: las landings remiten a "la dosis indicada en la etiqueta". Si quieres mostrar la dosis exacta, cópiala de cada etiqueta.
+- **Dosis**: según las etiquetas, Cortisol Calm se toma 1 cápsula al día (60 días), Myo-Inositol 3 cápsulas al día y Corti-Soothe 2 cápsulas al día (30 días). De las Gotas de Guanábana no hay dosis en las fotos, así que la landing remite al empaque.
 - **Declaraciones de salud**: están redactadas con lenguaje prudente. Revísalas con tu asesor regulatorio (COFEPRIS).
 - **Envío gratis desde $799** y **garantía de 30 días**: ajústalos a tu política real.
-- **Fotos**: los frascos muestran las marcas de los fabricantes (Megneta, Corti-Soothe, etc.), y la foto de Graviola lleva la marca de agua de "Hyper Moda". Para una imagen de marca coherente, conviene usar fotos propias o confirmar que tienes permiso de uso.
+- **Fotos**: se quitó la marca de agua de "Hyper Moda". Confirma con tu proveedor que puedes usar sus fotos sin ella. Los frascos siguen mostrando las marcas de los fabricantes (Megneta y Zoyava).
