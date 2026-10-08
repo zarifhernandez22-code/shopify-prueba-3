@@ -99,6 +99,10 @@ Las fotos ya están cargadas en cada producto de Shopify, antes de la foto origi
 - Cada producto tiene asignada su plantilla: `cortisol-calm`, `kit-inositol-cortisol` y `graviola`.
 - Las descripciones están reescritas en español con los datos de las etiquetas, sin el enlace al grupo de WhatsApp del proveedor.
 - `templates/product.json` es la plantilla general y la editas tú desde Shopify. No se sobrescribe desde el repositorio.
+- Productos renombrados: Cortisol Calm, Kit Inositol & Cortisol y Gotas de Guanábana. Proveedor: Sommalya. Tipo: Suplementos. Los handles no cambiaron.
+- Se eliminó la foto original del proveedor de cada producto.
+- Las 7 páginas de ejemplo están en español: Contacto, Nosotros, Preguntas frecuentes, Política de devoluciones (sin devoluciones), Envíos, Términos y condiciones, y Rastrea tu pedido. Sus textos están en `docs/paginas/` y `docs/politicas/`.
+- Las políticas de *Configuración → Políticas* hay que pegarlas a mano: la conexión con Shopify no tiene permiso para editarlas.
 
 ## Antes de publicar: validar
 
