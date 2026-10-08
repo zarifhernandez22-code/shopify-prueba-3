@@ -278,6 +278,77 @@ td svg { width: 18px; height: 18px; vertical-align: middle; }
 .stickybar .btn { min-height: 46px; padding: 0 18px; }
 @media (max-width: 480px) { .stickybar img { display: none; } }
 @media (prefers-reduced-motion: reduce) { .marquee .track { animation: none; } .hero.studio .media { animation: none; } }
+
+/* ---------- Carrito Sommalya ---------- */
+.cartbtn { background: none; border: 0; padding: 0; font: inherit; font-size: 13px; color: inherit; cursor: pointer; }
+.scrim { position: fixed; inset: 0; z-index: 60; background: rgb(31 42 36 / .32); opacity: 0; pointer-events: none; transition: opacity .35s; }
+.scrim.on { opacity: 1; pointer-events: auto; }
+.drawer { position: fixed; top: 0; right: 0; bottom: 0; z-index: 61; width: min(440px, 100%); display: flex; flex-direction: column; background: var(--bg); border-left: 1px solid var(--line); transform: translateX(105%); transition: transform .5s cubic-bezier(.2,.7,.2,1); padding-top: env(safe-area-inset-top, 0px); }
+.drawer.on { transform: none; }
+.dr-head { position: relative; display: flex; justify-content: space-between; align-items: center; padding: 22px 24px 18px; border-bottom: 1px solid var(--line); }
+.dr-head::after { content: ''; position: absolute; left: 24px; bottom: -1px; width: 56px; height: 2px; background: var(--sage); }
+.dr-head h2 { display: flex; align-items: center; gap: 10px; font-size: 30px; }
+.dr-badge { display: inline-grid; place-items: center; min-width: 22px; height: 22px; padding: 0 6px; border-radius: 999px; background: var(--sage); color: var(--bg); font-family: var(--sans); font-size: 11px; font-weight: 500; }
+.dr-close { width: 36px; height: 36px; border: 1px solid var(--line); border-radius: 50%; background: none; cursor: pointer; font-size: 18px; color: var(--ink); }
+.dr-body { flex: 1; overflow: auto; padding: 18px 24px; }
+.bar { margin-bottom: 18px; padding: 14px 16px 16px; background: color-mix(in srgb, var(--sand) 55%, var(--bg)); }
+.bar.done { background: color-mix(in srgb, var(--sage) 14%, var(--bg)); }
+.bar p { display: flex; gap: 8px; align-items: center; margin: 0 0 10px; font-size: 13px; }
+.bar em { font-family: var(--serif); font-size: 15px; color: var(--sage); }
+.bar strong { font-weight: 500; font-variant-numeric: tabular-nums; }
+.bar p svg { width: 16px; height: 16px; flex: none; color: var(--sage); }
+.track { position: relative; height: 3px; border-radius: 3px; background: rgb(31 42 36 / .1); overflow: hidden; }
+.track span { position: absolute; inset: 0 auto 0 0; background: linear-gradient(90deg, color-mix(in srgb, var(--sage) 70%, var(--bg)), var(--sage)); transition: width .8s cubic-bezier(.2,.7,.2,1); }
+.track span::after { content: ''; position: absolute; inset: 0; background: linear-gradient(90deg, transparent, rgb(255 255 255 / .55), transparent); animation: shine 2.6s ease-in-out infinite; }
+@keyframes shine { from { transform: translateX(-100%); } to { transform: translateX(100%); } }
+.line { display: grid; grid-template-columns: 84px minmax(0,1fr) auto; gap: 14px; align-items: start; padding: 16px 0; border-bottom: 1px solid var(--line); }
+.line .ph2 { width: 84px; height: 84px; overflow: hidden; background: #EBEBEB; }
+.line .ph2 img { width: 100%; height: 100%; object-fit: cover; transform: scale(1.3); }
+.line h3 { font-size: 19px; }
+.line small { display: block; margin-top: 4px; color: var(--muted); font-size: 12px; }
+.pill { display: inline-flex; align-items: center; margin-top: 10px; border: 1px solid rgb(31 42 36 / .18); border-radius: 999px; }
+.pill button { width: 32px; height: 32px; border: 0; background: none; cursor: pointer; color: var(--ink); }
+.pill output { min-width: 18px; text-align: center; font-size: 13px; }
+.line .pr { font-variant-numeric: tabular-nums; font-size: 14px; }
+.line .rm { display: block; margin-top: 8px; border: 0; background: none; padding: 0; font: inherit; font-size: 11px; color: var(--muted); text-decoration: underline; cursor: pointer; }
+.sug { display: grid; grid-template-columns: 64px minmax(0,1fr) auto; gap: 14px; align-items: center; margin-top: 18px; padding: 12px; border: 1px dashed color-mix(in srgb, var(--sage) 55%, transparent); cursor: pointer; background: none; width: 100%; text-align: left; font: inherit; color: inherit; }
+.sug:hover { background: color-mix(in srgb, var(--sage) 7%, transparent); border-style: solid; }
+.sug img { width: 64px; height: 64px; object-fit: cover; background: #EBEBEB; mix-blend-mode: multiply; }
+.sug .e { font-size: 10px; letter-spacing: .18em; text-transform: uppercase; color: var(--sage); }
+.sug .t { display: block; font-family: var(--serif); font-size: 16px; }
+.sug .p { font-size: 13px; color: var(--muted); }
+.sug .c { font-size: 11px; letter-spacing: .14em; text-transform: uppercase; }
+.dr-foot { padding: 18px 24px calc(20px + env(safe-area-inset-bottom, 0px)); border-top: 1px solid var(--line); box-shadow: 0 -18px 30px -24px rgb(31 42 36 / .25); }
+.tot { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 4px; }
+.tot span { font-size: 11px; font-weight: 500; letter-spacing: .2em; text-transform: uppercase; }
+.tot strong { font-family: var(--serif); font-size: 28px; font-weight: 300; font-variant-numeric: tabular-nums; }
+.taxes { margin: 0 0 14px; font-size: 12px; color: var(--muted); }
+.pay { display: flex; align-items: center; justify-content: center; gap: 10px; width: 100%; min-height: 56px; border: 0; background: var(--ink); color: var(--bg); font: inherit; font-size: 12px; font-weight: 500; letter-spacing: .16em; text-transform: uppercase; cursor: pointer; position: relative; overflow: hidden; }
+.pay::after { content: ''; position: absolute; inset: 0; background: linear-gradient(110deg, transparent 30%, rgb(255 255 255 / .16) 50%, transparent 70%); transform: translateX(-120%); transition: transform .9s; }
+.pay:hover::after { transform: translateX(120%); }
+.assure { display: grid; gap: 12px; margin-top: 14px; text-align: center; }
+.assure .sec { margin: 0; font-size: 12px; color: var(--muted); display: inline-flex; justify-content: center; align-items: center; gap: 8px; }
+.assure ul { display: grid; grid-template-columns: repeat(3,1fr); gap: 6px; margin: 0; padding: 12px 0 0; list-style: none; border-top: 1px solid var(--line); }
+.assure li { display: grid; justify-items: center; gap: 6px; font-size: 11px; color: var(--muted); }
+.assure li svg { width: 18px; height: 18px; color: var(--sage); }
+.assure .note { display: flex; align-items: center; justify-content: center; gap: 10px; margin: 0; font-family: var(--serif); font-style: italic; font-size: 14px; color: #3f4a44; text-align: left; }
+.assure .note img { width: 22px; height: 22px; }
+.empty { display: grid; justify-items: center; gap: 12px; padding: 48px 8px; text-align: center; }
+.empty img { width: 56px; } .empty p.t { margin: 0; font-family: var(--serif); font-size: 32px; font-weight: 300; } .empty p.t em { color: var(--sage); }
+.empty p.s { margin: 0; font-size: 14px; color: var(--muted); }
+/* Confirmación de compra (simulación del checkout) */
+.thanks { position: fixed; inset: 0; z-index: 70; display: grid; place-items: center; padding: 24px; background: var(--bg); opacity: 0; pointer-events: none; transition: opacity .5s; overflow: auto; }
+.thanks.on { opacity: 1; pointer-events: auto; }
+.thanks .card { max-width: 560px; width: 100%; display: grid; gap: 18px; justify-items: center; text-align: center; }
+.thanks .seal { width: 84px; height: 84px; display: grid; place-items: center; border: 1px solid var(--line); border-radius: 50%; }
+.thanks .seal img { width: 44px; }
+.thanks h2 { font-size: clamp(36px, 6vw, 56px); }
+.thanks h2 em { color: var(--sage); }
+.thanks .msg { margin: 0; max-width: 46ch; font-size: 16px; line-height: 1.65; color: var(--muted); }
+.thanks .sig { margin: 0; font-family: var(--serif); font-style: italic; font-size: 18px; }
+.thanks .ord { width: 100%; padding: 16px 20px; border: 1px solid var(--line); display: flex; justify-content: space-between; font-size: 13px; color: var(--muted); }
+.thanks .ord strong { color: var(--ink); font-weight: 500; }
+.thanks .lab { font-size: 11px; letter-spacing: .16em; text-transform: uppercase; color: var(--muted); }
 </style>
 
 <div class="proto" role="toolbar" aria-label="Navegación de la maqueta">
@@ -289,10 +360,27 @@ td svg { width: 18px; height: 18px; vertical-align: middle; }
 <header class="header">
   <nav><a data-go="home">Tienda</a><a data-go="home">Nuestra filosofía</a><a data-go="home">Calidad</a></nav>
   <a class="logo" data-go="home"><img src="img/sommalya-logo.png" alt="">Sommalya</a>
-  <div class="tools"><span>Buscar</span><span>Cuenta</span><span>Carrito (<span id="cartCount">0</span>)</span></div>
+  <div class="tools"><span>Buscar</span><span>Cuenta</span><button class="cartbtn" type="button" id="openCart">Carrito (<span id="cartCount">0</span>)</button></div>
 </header>
 
 <main id="page" class="page"></main>
+<div class="scrim" id="scrim"></div>
+<aside class="drawer" id="drawer" aria-label="Carrito" aria-hidden="true">
+  <div class="dr-head"><h2>Tu selección <span class="dr-badge" id="drBadge">0</span></h2><button class="dr-close" type="button" id="closeCart" aria-label="Cerrar carrito">×</button></div>
+  <div class="dr-body" id="drBody"></div>
+  <div class="dr-foot" id="drFoot"></div>
+</aside>
+<section class="thanks" id="thanks" aria-live="polite">
+  <div class="card">
+    <span class="lab">Simulación de la página de confirmación</span>
+    <div class="seal"><img src="img/sommalya-logo.png" alt=""></div>
+    <h2>Gracias por <em>elegirnos.</em></h2>
+    <p class="msg">Tu pedido ya está en preparación. Cada frasco se empaca con cuidado para que llegue a ti en perfecto estado. Te enviaremos un correo con el seguimiento de tu envío.</p>
+    <p class="sig">Con cariño, el equipo de Sommalya</p>
+    <div class="ord"><span>Pedido <strong id="ordNum">#1001</strong></span><span>Total <strong id="ordTot"></strong></span></div>
+    <button class="btn" type="button" id="keepShopping">Seguir comprando</button>
+  </div>
+</section>
 
 <footer class="footer">
   <div class="cols">
@@ -376,7 +464,7 @@ function home() {
   </div></section>
   <section class="sm soft" style="padding-block:112px"><div class="wrap narrow">${head('Preguntas frecuentes','Antes de <em>decidirte.</em>','')}${faq(HOME_FAQ)}</div></section>
   ${cta('Empieza hoy. <em>Pruébalo 30 días.</em>','Comprar Cortisol Calm','data-go="cortisol-calm"')}
-  <div class="stickybar" id="sticky"><img src="${c.img}" alt=""><div class="inf"><strong>Cortisol Calm</strong><span>${money(c.price)}</span></div><a class="btn" data-go="cortisol-calm">Agregar al carrito</a></div>`;
+  <div class="stickybar" id="sticky"><img src="${c.img}" alt=""><div class="inf"><strong>Cortisol Calm</strong><span>${money(c.price)}</span></div><a class="btn" data-addcart="cortisol-calm">Agregar al carrito</a></div>`;
 }
 
 function product(k) {
@@ -479,12 +567,13 @@ function wireProduct(k) {
   const out = document.getElementById('qty'), status = document.getElementById('status');
   document.querySelectorAll('[data-q]').forEach(b => b.addEventListener('click', () => { qty = Math.min(9, Math.max(1, qty + Number(b.dataset.q))); out.textContent = qty; }));
   document.getElementById('addBtn').addEventListener('click', () => {
-    cart += qty; document.getElementById('cartCount').textContent = cart;
-    status.textContent = `Agregado: ${qty} × ${P[k].name}. (Simulación de la maqueta)`;
+    addToCart(k, qty);
+    status.textContent = `Agregado: ${qty} × ${P[k].name}.`;
   });
 }
 
 document.addEventListener('click', e => {
+  const ac = e.target.closest('[data-addcart]'); if (ac) { e.preventDefault(); addToCart(ac.dataset.addcart, 1); return; }
   const go = e.target.closest('[data-go]'); if (go) { e.preventDefault(); render(go.dataset.go); return; }
   const sc = e.target.closest('[data-scroll]'); if (sc) { e.preventDefault(); document.getElementById(sc.dataset.scroll)?.scrollIntoView({ behavior: 'smooth' }); return; }
   if (e.target.closest('[data-top]')) { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); }
@@ -492,4 +581,52 @@ document.addEventListener('click', e => {
 document.getElementById('newsForm').addEventListener('submit', e => { e.preventDefault(); document.getElementById('newsMsg').textContent = 'Gracias. En la tienda real, este formulario guarda tu correo en Shopify.'; });
 
 render((location.hash || '#home').slice(1));
+
+/* ---------- Carrito Sommalya (maqueta) ---------- */
+const FREE = 799;
+const LOCK = '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="10.5" width="14" height="10" rx="1.5"/><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3"/></svg>';
+const lines = {};
+const cartTotal = () => Object.entries(lines).reduce((s, [k, q]) => s + (P[k].price || 0) * q, 0);
+const cartQty = () => Object.values(lines).reduce((s, q) => s + q, 0);
+function addToCart(k, q) { lines[k] = (lines[k] || 0) + q; drawCart(); openCart(); }
+function openCart() { document.getElementById('drawer').classList.add('on'); document.getElementById('drawer').setAttribute('aria-hidden', 'false'); document.getElementById('scrim').classList.add('on'); }
+function closeCart() { document.getElementById('drawer').classList.remove('on'); document.getElementById('drawer').setAttribute('aria-hidden', 'true'); document.getElementById('scrim').classList.remove('on'); }
+function drawCart() {
+  const n = cartQty(), total = cartTotal();
+  document.getElementById('cartCount').textContent = n;
+  document.getElementById('drBadge').textContent = n;
+  const body = document.getElementById('drBody'), foot = document.getElementById('drFoot');
+  if (!n) {
+    body.innerHTML = `<div class="empty"><img src="img/sommalya-logo.png" alt=""><p class="t">Tu carrito está <em>en calma.</em></p><p class="s">Cuando encuentres tu fórmula, aparecerá aquí.</p><a class="btn" data-go="cortisol-calm" data-close>Descubrir el producto estrella</a><a class="link" href="#" data-go="home" data-close style="font-size:12px;letter-spacing:.16em;text-transform:uppercase;border-bottom:1px solid currentColor;text-decoration:none">Seguir comprando</a></div>`;
+    foot.innerHTML = ''; foot.hidden = true; return;
+  }
+  foot.hidden = false;
+  const left = FREE - total, pct = Math.min(100, Math.round(total / FREE * 100));
+  const bar = `<div class="bar${left <= 0 ? ' done' : ''}"><p>${left > 0 ? `Te faltan <strong>${money(left)}</strong> para tu <em>envío gratis.</em>` : `${ic('check')} Tu pedido tiene <em>envío gratis.</em>`}</p><div class="track"><span style="width:${pct}%"></span></div></div>`;
+  const items = Object.entries(lines).map(([k, q]) => `<div class="line"><span class="ph2"><img src="${P[k].img}" alt=""></span><div><h3>${P[k].name}</h3><small>${P[k].tagline}</small><div class="pill"><button type="button" data-l="${k}" data-d="-1" aria-label="Quitar uno">–</button><output>${q}</output><button type="button" data-l="${k}" data-d="1" aria-label="Agregar uno">+</button></div></div><div style="text-align:right"><span class="pr">${money((P[k].price || 0) * q)}</span><button class="rm" type="button" data-rm="${k}">Quitar</button></div></div>`).join('');
+  const sugK = lines['cortisol-calm'] ? (lines['kit-inositol-cortisol'] ? (lines['graviola'] ? null : 'graviola') : 'kit-inositol-cortisol') : 'cortisol-calm';
+  const sug = sugK ? `<button class="sug" type="button" data-add="${sugK}"><img src="${P[sugK].img}" alt=""><span><span class="e">Completa tu rutina</span><span class="t">${P[sugK].name}</span><span class="p">${money(P[sugK].price)}</span></span><span class="c">Agregar</span></button>` : '';
+  body.innerHTML = bar + items + sug;
+  foot.innerHTML = `<div class="tot"><span>Total</span><strong>${money(total)}</strong></div><p class="taxes">Impuestos incluidos. El envío se calcula al pagar.</p><button class="pay" type="button" id="payBtn">${LOCK} Finalizar compra segura</button><div class="assure"><p class="sec">${LOCK} Pago 100 % seguro · Tus datos viajan cifrados</p><ul><li>${ic('ret')}<span>Garantía de 30 días</span></li><li>${ic('truck')}<span>Entrega en 2 a 5 días</span></li><li>${ic('globe')}<span>Hecho en EE. UU.</span></li></ul><p class="note"><img src="img/sommalya-logo.png" alt=""><span>Cada pedido se prepara a mano y con cuidado. Gracias por elegir Sommalya.</span></p></div>`;
+}
+document.getElementById('openCart').addEventListener('click', () => { drawCart(); openCart(); });
+document.getElementById('closeCart').addEventListener('click', closeCart);
+document.getElementById('scrim').addEventListener('click', closeCart);
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeCart(); });
+document.getElementById('drawer').addEventListener('click', e => {
+  const d = e.target.closest('[data-d]'); if (d) { const k = d.dataset.l; lines[k] = Math.max(0, lines[k] + Number(d.dataset.d)); if (!lines[k]) delete lines[k]; drawCart(); return; }
+  const rm = e.target.closest('[data-rm]'); if (rm) { delete lines[rm.dataset.rm]; drawCart(); return; }
+  const add = e.target.closest('[data-add]'); if (add) { lines[add.dataset.add] = (lines[add.dataset.add] || 0) + 1; drawCart(); return; }
+  if (e.target.closest('[data-close]')) closeCart();
+  if (e.target.closest('#payBtn')) {
+    document.getElementById('ordTot').textContent = money(cartTotal());
+    document.getElementById('ordNum').textContent = '#' + (1001 + Math.floor(Math.random() * 80));
+    closeCart(); document.getElementById('thanks').classList.add('on');
+  }
+});
+document.getElementById('keepShopping').addEventListener('click', () => {
+  Object.keys(lines).forEach(k => delete lines[k]); drawCart();
+  document.getElementById('thanks').classList.remove('on'); render('home');
+});
+drawCart();
 </script>

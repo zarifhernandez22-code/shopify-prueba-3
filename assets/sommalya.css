@@ -1168,7 +1168,7 @@ html:not(.sm-js) .sm-fb__arrow::before { width: 100%; }
   border-radius: 2px;
   overflow: hidden;
 }
-.cart-items__media img { mix-blend-mode: multiply; }
+.cart-items__media img { mix-blend-mode: multiply; transform: scale(1.25); }
 .cart-items__title {
   font-family: var(--font-heading--family) !important;
   font-weight: 300 !important;
