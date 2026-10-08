@@ -1327,3 +1327,5 @@ html:not(.sm-js) .sm-fb__arrow::before { width: 100%; }
 .cart-items__wrapper:has(.sm-cartempty) .cart-items__empty-button { display: none; }
 .cart-page--empty .cart-title { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
 .sm-cartempty, .sm-assure, .sm-cartbar, .sm-suggest { --sm-accent: var(--sm-sage); }
+.sm-cartbar__sub { margin: 0; padding-left: 24px; font-size: 12px; color: color-mix(in srgb, var(--sm-ink) 60%, var(--sm-bg)); }
+.sm-cartbar.is-complete .sm-cartbar__text { margin-bottom: 2px; }

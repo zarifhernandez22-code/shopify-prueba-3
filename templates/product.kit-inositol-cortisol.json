@@ -401,7 +401,7 @@
                     "text_r5": {
                       "type": "text",
                       "settings": {
-                        "text": "<p>Envío gratis en pedidos desde $799. Entrega de 2 a 5 días hábiles.</p>",
+                        "text": "<p>Envío gratis en tu primer pedido. Entrega de 2 a 5 días hábiles.</p>",
                         "width": "100%",
                         "max_width": "normal",
                         "alignment": "left",
@@ -517,7 +517,7 @@
           "settings": {
             "icon": "truck",
             "title": "Envío gratis",
-            "text": "En pedidos desde $799"
+            "text": "En tu primer pedido"
           }
         },
         "item_2": {
@@ -810,7 +810,7 @@
       "settings": {
         "eyebrow": "Sommalya",
         "heading": "Dos fórmulas, <em>un solo hábito.</em>",
-        "text": "Hecho en EE. UU. Envío gratis en pedidos desde $799 y pago 100 % seguro.",
+        "text": "Hecho en EE. UU. Envío gratis en tu primer pedido y pago 100 % seguro.",
         "button_label": "Comprar ahora",
         "button_link": "",
         "button2_label": "Ver todos los productos",

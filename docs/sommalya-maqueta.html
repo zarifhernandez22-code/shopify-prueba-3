@@ -356,7 +356,7 @@ td svg { width: 18px; height: 18px; vertical-align: middle; }
   <nav id="protoNav"></nav>
 </div>
 
-<div class="announce"><span>Envío gratis en pedidos desde $799</span><span>Pago 100 % seguro</span><span>Hecho en EE. UU.</span></div>
+<div class="announce"><span>Envío gratis en tu primer pedido</span><span>Pago 100 % seguro</span><span>Hecho en EE. UU.</span></div>
 <header class="header">
   <nav><a data-go="home">Tienda</a><a data-go="home">Nuestra filosofía</a><a data-go="home">Calidad</a></nav>
   <a class="logo" data-go="home"><img src="img/sommalya-logo.png" alt="">Sommalya</a>
@@ -414,7 +414,7 @@ const I = {
   clock:'<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>', arrow:'<path d="M4 12h16M14 6l6 6-6 6"/>'
 };
 const ic = n => `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${I[n] || I.leaf}</svg>`;
-const TRUST = [['truck','Envío gratis','En pedidos desde $799'],['heart','Atención personalizada','Te orientamos antes y después de tu compra'],['globe','Hecho en EE. UU.','Fabricación con estándares de calidad'],['shield','Pago seguro','Datos cifrados de extremo a extremo']];
+const TRUST = [['truck','Envío gratis','En tu primer pedido'],['heart','Atención personalizada','Te orientamos antes y después de tu compra'],['globe','Hecho en EE. UU.','Fabricación con estándares de calidad'],['shield','Pago seguro','Datos cifrados de extremo a extremo']];
 const DISC = 'Este producto no es un medicamento. El consumo de este producto es responsabilidad de quien lo recomienda y de quien lo usa. Consulta a tu médico si estás embarazada, en lactancia o bajo tratamiento.';
 const money = n => n == null ? 'Precio por confirmar' : '$' + n.toLocaleString('es-MX') + ' MXN';
 const photo = (p) => `<img class="photo" src="${p.img}" alt="${p.name}">`;
@@ -426,7 +426,7 @@ const steps = list => `<ol class="steps">${list.map(([t,s]) => `<li><h3>${t}</h3
 const faq = list => `<div class="faq">${list.map(([q,a],k) => `<details${k===0?' open':''}><summary>${q}</summary><p>${a}</p></details>`).join('')}</div>`;
 const ingredients = (p, withDose=true) => `<div class="ingredients">${p.ing.map(([n,d,o,t]) => `<article class="ing"><div class="top"><h3>${n}</h3>${withDose && d ? `<span class="dose">${d}</span>` : ''}</div><span class="orig">${o}</span><p>${t}</p></article>`).join('')}</div><p class="note">${p.note}</p>`;
 const card = k => { const p = P[k], [tag, txt] = CARDS[k]; return `<button class="need" data-go="${k}" style="--accent:${p.accent}"><div class="m">${photo(p)}<span class="tag">${tag}</span></div><div class="b"><h3>${p.name}</h3><p>${txt}</p></div><div class="f"><span>Conocer</span><b>${money(p.price)}</b></div></button>`; };
-const cta = (h, label, attr) => `<section class="sm sandbg cta center"><div class="wrap narrow"><p class="eyebrow">Sommalya</p><h2>${h}</h2><p class="lead">Hecho en EE. UU. Envío gratis en pedidos desde $799 y pago 100 % seguro.</p><div class="actions"><a class="btn" ${attr}>${label} ${ic('arrow')}</a></div><p class="disclaimer">${DISC}</p></div></section>`;
+const cta = (h, label, attr) => `<section class="sm sandbg cta center"><div class="wrap narrow"><p class="eyebrow">Sommalya</p><h2>${h}</h2><p class="lead">Hecho en EE. UU. Envío gratis en tu primer pedido y pago 100 % seguro.</p><div class="actions"><a class="btn" ${attr}>${label} ${ic('arrow')}</a></div><p class="disclaimer">${DISC}</p></div></section>`;
 
 
 const OBJ = { 'cortisol-calm': [['¿Cómo sé si es para mí?', 'Revisa los ingredientes y el modo de uso de cada fórmula. Si tienes dudas, escríbenos y te orientamos antes de comprar.']], 'kit-inositol-cortisol': [['¿Cómo sé si es para mí?', 'Revisa los ingredientes y el modo de uso de cada fórmula. Si tienes dudas, escríbenos y te orientamos antes de comprar.']], 'graviola': [['¿Cómo sé si es para mí?', 'Revisa los ingredientes y el modo de uso de cada fórmula. Si tienes dudas, escríbenos y te orientamos antes de comprar.']] };
@@ -444,7 +444,7 @@ function home() {
       <h1 data-r="2">Calma y enfoque, <em>todos los días.</em></h1>
       <p class="lead" data-r="3">Para adultos que viven con estrés diario: una fórmula liposomal con rhodiola, ashwagandha, L-teanina y magnesio que acompaña a tu cuerpo a recuperar la calma sin perder energía.</p>
       <p class="price-tag" data-r="3">${money(c.price)}</p>
-      <div class="proof" data-r="3"><span>Hecho en EE. UU. · Pago 100 % seguro · Envío gratis desde $799</span></div>
+      <div class="proof" data-r="3"><span>Hecho en EE. UU. · Pago 100 % seguro · Envío gratis en tu primer pedido</span></div>
       <div class="actions" data-r="3"><a class="btn" data-go="cortisol-calm">Comprar Cortisol Calm ${ic('arrow')}</a><a class="btn ghost" data-scroll="beneficios">Ver cómo funciona</a></div>
       <ul class="trust3"><li><strong data-count>759 mg</strong><span>Por porción</span></li><li><strong data-count>1</strong><span>Cápsula al día</span></li><li><strong data-count>60 días</strong><span>Por frasco</span></li></ul>
     </div>
@@ -488,7 +488,7 @@ function product(k) {
         <details><summary>Ingredientes</summary><div class="in"><ul>${p.ing.map(([n]) => `<li>${n}</li>`).join('')}</ul><p style="margin:8px 0 0">${p.note}</p></div></details>
         <details><summary>Modo de uso</summary><div class="in">${p.dose}</div></details>
         <details><summary>Advertencias</summary><div class="in">${DISC} No exceder la dosis diaria recomendada. Mantener fuera del alcance de los niños.${p.warn}</div></details>
-        <details><summary>Envíos</summary><div class="in">Envío gratis en pedidos desde $799. Entrega de 2 a 5 días hábiles.</div></details>
+        <details><summary>Envíos</summary><div class="in">Envío gratis en tu primer pedido. Entrega de 2 a 5 días hábiles.</div></details>
       </div>
     </div>
   </section>
@@ -583,7 +583,6 @@ document.getElementById('newsForm').addEventListener('submit', e => { e.preventD
 render((location.hash || '#home').slice(1));
 
 /* ---------- Carrito Sommalya (maqueta) ---------- */
-const FREE = 799;
 const LOCK = '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="10.5" width="14" height="10" rx="1.5"/><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3"/></svg>';
 const lines = {};
 const cartTotal = () => Object.entries(lines).reduce((s, [k, q]) => s + (P[k].price || 0) * q, 0);
@@ -601,8 +600,7 @@ function drawCart() {
     foot.innerHTML = ''; foot.hidden = true; return;
   }
   foot.hidden = false;
-  const left = FREE - total, pct = Math.min(100, Math.round(total / FREE * 100));
-  const bar = `<div class="bar${left <= 0 ? ' done' : ''}"><p>${left > 0 ? `Te faltan <strong>${money(left)}</strong> para tu <em>envío gratis.</em>` : `${ic('check')} Tu pedido tiene <em>envío gratis.</em>`}</p><div class="track"><span style="width:${pct}%"></span></div></div>`;
+  const bar = `<div class="bar done"><p>${ic('truck')} Tu primer pedido tiene <em>envío gratis.</em></p><p style="margin:0;padding-left:24px;font-size:12px;color:var(--muted)">Se aplica al finalizar la compra.</p></div>`;
   const items = Object.entries(lines).map(([k, q]) => `<div class="line"><span class="ph2"><img src="${P[k].img}" alt=""></span><div><h3>${P[k].name}</h3><small>${P[k].tagline}</small><div class="pill"><button type="button" data-l="${k}" data-d="-1" aria-label="Quitar uno">–</button><output>${q}</output><button type="button" data-l="${k}" data-d="1" aria-label="Agregar uno">+</button></div></div><div style="text-align:right"><span class="pr">${money((P[k].price || 0) * q)}</span><button class="rm" type="button" data-rm="${k}">Quitar</button></div></div>`).join('');
   const sugK = lines['cortisol-calm'] ? (lines['kit-inositol-cortisol'] ? (lines['graviola'] ? null : 'graviola') : 'kit-inositol-cortisol') : 'cortisol-calm';
   const sug = sugK ? `<button class="sug" type="button" data-add="${sugK}"><img src="${P[sugK].img}" alt=""><span><span class="e">Completa tu rutina</span><span class="t">${P[sugK].name}</span><span class="p">${money(P[sugK].price)}</span></span><span class="c">Agregar</span></button>` : '';

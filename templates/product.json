@@ -359,7 +359,7 @@
                     "text_r4": {
                       "type": "text",
                       "settings": {
-                        "text": "<p>Envío gratis en pedidos desde $799. Entrega de 2 a 5 días hábiles.</p>",
+                        "text": "<p>Envío gratis en tu primer pedido. Entrega de 2 a 5 días hábiles.</p>",
                         "width": "100%",
                         "max_width": "normal",
                         "alignment": "left",
@@ -446,7 +446,7 @@
           "settings": {
             "icon": "truck",
             "title": "Envío gratis",
-            "text": "En pedidos desde $799"
+            "text": "En tu primer pedido"
           }
         },
         "item_2": {
@@ -492,7 +492,7 @@
       "settings": {
         "eyebrow": "Sommalya",
         "heading": "Lo esencial, <em>bien hecho.</em>",
-        "text": "Fórmulas claras, hechas en EE. UU., con envío gratis en pedidos desde $799.",
+        "text": "Fórmulas claras, hechas en EE. UU., con envío gratis en tu primer pedido.",
         "button_label": "Comprar ahora",
         "button_link": "",
         "button2_label": "Ver todos los productos",

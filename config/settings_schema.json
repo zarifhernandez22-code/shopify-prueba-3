@@ -2122,14 +2122,14 @@
     "settings": [
       {
         "type": "header",
-        "content": "Envío gratis"
+        "content": "Envío gratis en el primer pedido"
       },
       {
-        "type": "number",
-        "id": "sommalya_free_shipping",
-        "label": "Monto para envío gratis (MXN)",
-        "info": "Debe coincidir con tu tarifa de envío gratis en Configuración → Envíos. Deja 0 para ocultar la barra.",
-        "default": 799
+        "type": "checkbox",
+        "id": "sommalya_first_order_shipping",
+        "label": "Mostrar aviso de envío gratis en el primer pedido",
+        "info": "Configura el descuento de envío gratis para clientes nuevos en Shopify → Descuentos.",
+        "default": true
       },
       {
         "type": "header",

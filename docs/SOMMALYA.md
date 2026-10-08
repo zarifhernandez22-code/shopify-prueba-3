@@ -104,6 +104,6 @@ Las fotos ya están cargadas en cada producto de Shopify, antes de la foto origi
 
 - **Dosis**: según las etiquetas, Cortisol Calm se toma 1 cápsula al día (60 días), Myo-Inositol 3 cápsulas al día y Corti-Soothe 2 cápsulas al día (30 días). De las Gotas de Guanábana no hay dosis en las fotos, así que la landing remite al empaque.
 - **Declaraciones de salud**: están redactadas con lenguaje prudente. Revísalas con tu asesor regulatorio (COFEPRIS).
-- **Envío gratis desde $799**: ajústalo a tu política real.
+- **Envío gratis en tu primer pedido**: ajústalo a tu política real.
 - **Sin garantía de devolución**: la tienda no promete devoluciones ni reembolsos. Los mensajes de confianza hablan de pago seguro, atención personalizada, fabricación en EE. UU. y envío. Revisa que tu política de reembolso en Configuración → Políticas diga lo mismo.
 - **Fotos**: se quitó la marca de agua de "Hyper Moda". Confirma con tu proveedor que puedes usar sus fotos sin ella. Los frascos siguen mostrando las marcas de los fabricantes (Megneta y Zoyava).
